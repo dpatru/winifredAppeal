@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{trace}
+\begin{document}
+\edef\oldamp{\&}
+\newcommand\stringify[1]{\def\&{\string&}#1\let\&\oldamp}
+\def\testbad#1{{%
+    \traceon%
+  \edef\name{\stringify{#1}}%
+  \expandafter\def\csname\name\endcsname{Running #1\par}
+  \csname\name\endcsname%
+  \traceoff%
+}}
+\def\test#1{{%
+  \def\&{\string&}%
+  \expandafter\def\csname#1\endcsname{{\def\&{\string\&}Running #1\par}}%
+  \csname#1\endcsname%
+}}
+\traceon
+testing hello: \test{hello}
+testing a\&b: \test{a\&b}
+\traceoff
+
+% \edef\oldamp{\&}
+% \def\&{\string&}
+% \expandafter\def\csname a\&b\endcsname{printing a \& b}
+% \def\&{\oldamp}
+% trying it out: \csname a\&b\endcsname
+
+\end{document}

@@ -1,0 +1,34 @@
+\documentclass{minimal}
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{trace}
+
+\begin{document}
+Testing:
+
+\begingroup 
+\def\&{\string&}
+\csname a \& b\endcsname 
+\endgroup 
+
+% \def\mycsname#1\&#2\endcsname{\csname #1&#2&\endcsname}
+% this is intended as an almost dropin replacement for csname that 
+% changes a single \& (not allowed in a csname) to & (allowed in 
+% csname). 
+% Call it as: \mycsname#1\&\&\endcsname 
+% Note the two \&. The resulting token will change a single \& token 
+% in the input to a &. If there is no \&, one & will be appended. 
+\def\mycsname#1\&#2\&#3\endcsname{\csname #1&#2\endcsname}
+
+\mycsname a, b, \& c\&\&\endcsname
+
+\def\Def#1#2{\expandafter\expandafter\expandafter\def\mycsname#1\&\&\endcsname{#2}}
+
+\traceon
+\Def{a, b, \& c}{In a, b, \& c}
+\traceoff
+\def\Call#1{\mycsname#1\&\&\endcsname}
+
+\Call{a, b, \& c}
+
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass{minimal}
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{trace}
+\makeatletter
+
+\begingroup
+  \catcode0=12 %
+  \gdef\chrdef#1#2{%
+    \begingroup
+      \lccode0=\numexpr(#2)\relax
+    \lowercase{\endgroup
+      \def#1{^^@}%
+    }%
+  }%
+\endgroup
+
+\def\title@A{a A}
+\def\title@B{b B}
+
+\def\gettitle#1{
+  \IfInteger{#1}{%
+    \chrdef\@tmp{#1}%
+    \ifcsundef{title@\@tmp}{\@tmp}{\csname title@\@tmp\endcsname}%
+  }{%
+    \ifcsundef{title@#1}{#1}{\csname title@#1\endcsname}%
+  }
+}
+\begin{document}
+% \traceon\gettitle{65}\traceoff\par
+\lccode\&=\numexpr(67)\relax%
+The lowercase of \& is (\lowercase{\&})\par
+% \gettitle{A}
+
+% \gettitle{66}  \gettitle{B}
+
+% \gettitle{67}  \gettitle{C}
+\end{document}
