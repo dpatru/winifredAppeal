@@ -1,0 +1,200 @@
+%
+% This is one of the samples from the lawtex package:
+% http://lawtex.sourceforge.net/
+% LawTeX is licensed under the GNU General Public License 
+%
+\providecommand{\documentclassflag}{}
+\documentclass[12pt,\documentclassflag]{michiganCourtOfAppealsBrief} 
+\usepackage{etoolbox}
+\usepackage[margin=1in]{geometry}
+\usepackage{newcent,microtype}
+\usepackage{setspace,xcolor}
+\usepackage[hyperindex=false,linkbordercolor=white]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{trace}
+\makeandletter% use \makeandtab to turn off
+
+% Use this to show a line grid
+% \usepackage[fontsize=12pt,baseline=24pt,lines=27]{grid}
+% \usepackage{atbegshi,picture,xcolor} % https://tex.stackexchange.com/a/191004/135718
+% \AtBeginShipout{%
+%   \AtBeginShipoutUpperLeft{%
+%     {\color{red}%
+%     \put(\dimexpr -1in-\oddsidemargin,%
+%          -\dimexpr 1in+\topmargin+\headheight+\headsep+\topskip)%
+%       {%
+%        \vtop to\dimexpr\vsize+\baselineskip{%
+%          \hrule%
+%          \leaders\vbox to\baselineskip{\hrule width\hsize\vfill}\vfill%
+%        }%
+%       }%
+%   }}%
+% }
+%   \linespread{1}
+
+\usepackage[modulo]{lineno}% use \linenumbers to show line numbers, see https://texblog.org/2012/02/08/adding-line-numbers-to-documents/
+
+\chardef\_=`_% https://tex.stackexchange.com/a/301984/135718 
+
+%%Citations
+ 
+%The command \makeandletter turns the ampersand into a printable character, rather than a special alignment tab \makeandletter
+
+\citecase{Arbaugh v. Y&H Corp., 546 U.S. 500 (2006)}
+\citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 772 N.W.2d 753 (2010)}
+\citecase[Coyne]{Coyne v Highland Twp, 169 Mich. App. 401; 425 N.W.2d 567 (1988)}
+\citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
+% \traceon\citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}\traceoff
+\citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
+\citecase[SBC Health Midwest]{SBC Health Midwest, Inc. v City of Kentwood,  \_\_  Mich \_\_ (decided May 1, 2017)}
+\citecase[Malpass]{Malpass v Dep't of Treasury, 494 Mich. 237; 833 N.W.2d 272 (2013)}
+
+\newstatute{MCL}{}
+\def\mathieuGast{\pincite[l]{MCL}{211.27(2)}}
+
+\newstatute{Wayne Ordinance}{}
+\def\inspectionOrdinance{\pincite{Wayne Ordinance}{\S1484.04}}
+\long\def\inspectionOrdinanceText{\begin{quote}
+1484.04  CERTIFICATE REQUIRED PRIOR TO SALE. 
+   It shall be unlawful to sell, convey or transfer an ownership interest, or act as a broker or agent for the sale, conveyance or transfer of an ownership interest, in any residential dwelling unless and until a valid Certificate of Compliance is first issued. 
+(Ord. 1991-10.  Passed 7-16-91.) 
+\end{quote}}
+
+\newstatute{MCR}{}
+
+
+\newmisc{STC Bulletin No. 7 of 2014}{Michigan State Tax Commission (STC) Bulletin No. 7 of 2014}
+
+% %Set the information for the title page (later produced by \makefrontmatter)
+% \docket{No. 10-553} 
+% \appellant{Daniel Patru}
+% \appellee{City of Wayne}
+% \court{Michigan Court of Appeals}
+% \circuit{Sixth}
+% \brieffor{Appellant}
+% \author{Daniel Patru, P74387\\{\em Petitioner}}
+% \address{25239 Andover Drive \\ Dearborn Heights, MI 48125\\ (734) 274-9624}
+
+\newcommand{\makeAbbreviation}[3]{% ensure that the first time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
+  \newcommand{#1}[0]{#3 (#2)\renewcommand{#1}[0]{#2}}}
+
+\makeAbbreviation{\MLS}{MLS}{Multiple Listing Service}
+\makeAbbreviation{\MTT}{MTT}{Michigan Tax Tribunal}
+\makeAbbreviation{\STC}{STC}{State Tax Commission}
+
+
+\begin{document}
+\singlespacing
+
+\begin{centering}
+\bf\scshape State of Michigan\\In the Court of Appeals\\Detroit Office\\~\\ 
+\rm 
+
+\makeandtab
+\begin{tabular}{p{.45\textwidth}|p{.45\textwidth}}
+\cline{1-1}
+  {~
+
+  \raggedright Daniel Patru,\par
+  \hfill\textit{Appellant,}
+  \vspace{.5\baselineskip}
+  \centerline{v}
+  \vspace{.5\baselineskip}
+  \raggedright City of Wayne,\par
+  \hfill\textit{Appellee.}
+  
+  ~} &  {
+      \hfill Court of Appeals No. 337547\par
+      \hfill Lower Court No. 16-001828-TT\par\vspace{\baselineskip}
+      \hfill \textbf{Appellant's Brief}\par
+      \hfill \textbf{Proof of Service}
+  }
+  \\ \cline{1-1}\vspace{2mm}
+  Daniel Patru, P74387, Appellant\newline%
+  25239 Andover Drive\newline%
+  Dearborn Heights, MI 48125\newline%
+  (734) 274-9624\newline\newline%
+  City of Wayne, Appellee\newline%
+  3355 South Wayne Rd,\newline%
+  Wayne, MI 48184\newline%
+  (734) 722-2000%
+  % \end{verbatim}
+  & \\ 
+\end{tabular}
+\makeandletter
+
+\end{centering}
+
+\pagestyle{romanparen}
+\pagenumbering{roman}
+\newpage
+
+\section*{Table of Contents}
+
+\tableofcontents
+
+\newpage
+\tableofauthorities
+
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+%This commands creates the title page, table of contents, and table of authorities
+% \makefrontmatter{Brief\\Proof of Service}
+
+
+%Sets the formatting for the entire document after the front matter
+\parindent=2.5em 
+% \setlength{\parskip}{1.25ex plus 2ex minus .5ex} 
+% \setstretch{1.45}
+\doublespacing
+\linenumbers
+
+\section{Jurisdiction}
+
+The Court of Appeals has jurisdiction over this claim of appeal under \pincite{MCL}{205.753(2)} (allowing appeals from a final order of the Tax Tribunal) and \pincite{MCR}{7.204(A)(1)(b)} (requiring appeals to be made within 21 days after the entry of an order deciding a motion for reconsideration). The Final Opinion and Judgment from the Tax Tribunal was entered 1/26/2017. A motion for reconsideration was filed 2/16/2017. The order denying reconsideration was entered 3/6/2017. The claim of appeal for this case was filed 3/21/2017, within the 21 days required.
+
+\section{Introduction}
+
+To collect property tax on a property, cities are required to make an estimate of what the property will sell for. The estimate is called the True Cash Value. When a property is actually sold, the True Cash Value can be checked against the real true cash value. Every year, cities do a ratio study where they compare the actual value of properties that sold against their True Cash Values. This results in an Economic Condition Factor that which is used to adjust all of the True Cash Values so that, on average, the True Cash Value is correct.
+
+\pincite{STC Bulletin No. 7 of 2014}{2} specifies that ``When a property having . . . Mathieu-Gast con-consideration itmes is sold, the property \underline{may not} be excluded from ratio or Economic Condition Factor studies . . .''
+
+To illustrate, imagine a simplified case where a city has only two identical houses, one owned by a brother and the other by his sister. The city has given both houses have a True Cash Value of \$100,000. When the brother's house sells for \$110,000, the ratio or Economic Condition Factor study concludes that the True Cash Value is a 10\% too low and an Economic Condition Factor is applied that results in both houses being taxed as if they were worth \$110,000. This would be ok if the assessment were too low because of simple error. But, what if the True Cash Value were too low because of Mathieu-Gast? If the city knew that \$10,000 of repairs had been done, but had not considered them, then the assessment was actually correct. The \$110,000 sale price reflected the \$100,000 True Cash Value and the \$10,000 in excluded repairs. What effect does including the brother's sale in the ratio study  have on the sister? The sister's house will still have a True Cash Value of \$100,000, but she will be paying taxes as if the house were worth \$100,000.
+
+If the sister had not done repairs, then her house would still be worth \$100,000, but she will pay tax as if it were worth \$110,000. The fact that her brother did repairs will raise her taxes.
+
+If the sister had done the same repairs as her brother, then she should be benefiting from \$10,000 of nonconsideration. But because her brother sold, her benefit under Mathieu-Gast will be wiped out.
+
+Including houses that benefit from Mathieu-Gast in the ratio study will have the effect of raising taxes on everyone, both people who are benefiting from Mathieu-Gast and people who are not benefiting.
+
+The situation above is simplified. To make it resemble real life, imagine that instead of one sister, there are ten sisters, each with an identical house to the brother. The brother, having benefitted from \$10,000 of Mathieu-Gast repairs, sells. The ratio study concludes that True Cash Values are 10\% too low. Each sister's tax will go up 10\%. The city will collect ten times more in taxes (once for each of the ten sisters) than it had to give up because of Mathieu-Gast benefits to the brother. When a house benefitting from Mathieu-Gast sells, everyone else pays a higher tax.
+
+It is true that \cite{STC Bulletin No. 7 of 2014} does not \emph{require} that sales of properties benefiting from Mathieu-Gast be excluded. Assessors may exclude such sales if they do extra work: ``The true cash cash value of the property at the time of the sale \underline{[may not} be adjusted for study purposes to reflect inclusion of previously excluded Mathieu-Gast itmes, unless an initial calculation of true cash value in the assessment year following the year the qualifying change is made and unless the amount of the true cash value contribution made by the non-consideration item in the year of the sale is fully documented and reflects the current contribution made to true cash, after giving due consideration to depreciation of the item.'' \pincite{STC Bulletin No. 7 of 2014}{2}. In other words, assessors are given an option: 1) they can do more work and decrease the City's (i.e., their employer's) revenue, or 2) they can do less work and increase the City's revenue.
+
+In other words, the members of the State Tax Commission have given assessors instructions that they know will result in overtaxation unless the assessors voluntarily do extra work to avoid it.
+
+
+ 
+ 
+\section{Conclusion}
+
+ 
+
+ 
+The judgment of the Court of Appeals should be reversed.
+
+\vspace{1\baselineskip}
+
+{ \setlength{\leftskip}{3.5in}
+
+  Respectfully Submitted,
+
+  Daniel Patru
+
+  July 24, 2017
+
+  \setlength{\leftskip}{0pt}}
+
+
+\end{document}
