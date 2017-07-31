@@ -67,9 +67,9 @@
 % \def\subsection{\@startsection{subsection}{2}{0pt}{.5\baselineskip}{.5\baselineskip}{\hyphenpenalty=10000\normalsize\bfseries}}%
 % \def\subsubsection{\@startsection{subsubsection}{3}{\parindent}{.5\baselineskip}{.5\baselineskip}{\hyphenpenalty=10000\bfseries}}%
 % \renewcommand\cftsecaftersnum{.}
-\def\section{\@startsection{section}{1}{0pt}{-.999\baselineskip}{0.001\baselineskip}{\centering\normalsize\bfseries}}%
-\def\subsection{\@startsection{subsection}{2}{0pt}{-.999\baselineskip}{0.001\baselineskip}{\hyphenpenalty=10000\normalsize\bfseries}}%
-\def\subsubsection{\@startsection{subsubsection}{3}{\parindent}{-.999\baselineskip}{0.001\baselineskip}{\hyphenpenalty=10000\bfseries}}%
+\def\section{\@startsection{section}{1}{0pt}{-.999\baselineskip}{0.001\baselineskip}{\singlespacing\centering\normalsize\bfseries}}%
+\def\subsection{\@startsection{subsection}{2}{0pt}{-.999\baselineskip}{0.001\baselineskip}{\singlespacing\hyphenpenalty=10000\normalsize\bfseries}}%
+\def\subsubsection{\@startsection{subsubsection}{3}{\parindent}{-.999\baselineskip}{0.001\baselineskip}{\singlespacing\hyphenpenalty=10000\bfseries}}%
 
 \DeclareRobustCommand{\@seccntformat}[1]{%https://tex.stackexchange.com/a/308739/135718
   \def\temp@@a{#1}%
