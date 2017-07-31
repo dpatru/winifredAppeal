@@ -56,6 +56,8 @@
 \newstatute[1]{MCL}{}% place MCL first
 \def\mathieuGast{\pincite[l]{MCL}{211.27(2)}}
 \newstatute[2]{MCR}{}
+\newstatute[3]{TTR}{}
+\def\ttr287{\pincite[s]{TTR}{287}}
 \newstatute[4]{Dearborn Ordinance}{}% place this fourth
 \newstatute[5]{Wayne Ordinance}{}
 \def\inspectionOrdinance{\pincite{Wayne Ordinance}{\S1484.04}}
@@ -85,7 +87,8 @@
 \makeAbbreviation{\MLS}{MLS}{Multiple Listing Service}
 \makeAbbreviation{\MTT}{MTT}{Michigan Tax Tribunal}
 \makeAbbreviation{\STC}{STC}{State Tax Commission}
-
+\makeAbbreviation{\FOJ}{FOJ}{Final Opinion and Judgment}
+\makeAbbreviation{\POJ}{POJ}{Proposed Opinion and Judgment}
 
 \begin{document}
 \singlespacing
@@ -131,7 +134,7 @@
 
 \pagestyle{romanparen}
 \pagenumbering{roman}
-\newpage
+\newpage 
 
 \section*{Table of Contents}
 
@@ -152,113 +155,126 @@
 % \setlength{\parskip}{1.25ex plus 2ex minus .5ex} 
 % \setstretch{1.45}
 \doublespacing
-\linenumbers
+% \linenumbers
 
 \section{Jurisdiction}
 
-The Court of Appeals has jurisdiction over this claim of appeal under \pincite{MCL}{205.753(2)} (allowing appeals from a final order of the Tax Tribunal) and \pincite{MCR}{7.204(A)(1)(b)} (requiring appeals to be made within 21 days after the entry of an order deciding a motion for reconsideration). The Final Opinion and Judgment from the Tax Tribunal was entered 1/26/2017. A motion for reconsideration was filed 2/16/2017. The order denying reconsideration was entered 3/6/2017. The claim of appeal for this case was filed 3/21/2017, within the 21 days required.
+The Court of Appeals has jurisdiction over this claim of appeal under \pincite{MCL}{205.753(2)} (allowing appeals from a final order of the Tax Tribunal) and \pincite{MCR}{7.204(A)(1)(b)} (requiring appeals to be made within 21 days after the entry of an order deciding a motion for reconsideration). The \FOJ\ from the Tax Tribunal was entered 1/26/2017. A motion for reconsideration was filed 2/16/2017. The order denying reconsideration was entered 3/6/2017. The claim of appeal for this case was filed 3/21/2017, within the 21 days required.
 
 \section{Introduction}
 
 Appellant bought a house that needed repairs. He repaired it. He wants to be taxed based on the value of the house as it was when he bought it (before repairs) because the \mathieuGast instructs the assessor not to consider normal repairs. 
 
-Appellee, the City of Wayne, wants to tax based on the value of the house after repairs. The Tax Tribunal agreed with Appellee. It refused to offer Appellant the benefits of \mathieuGast. It set the assessed value to the value of the house after repairs.
+Appellee, the City of Wayne, wants to tax based on the value of the house after repairs.
+
+The Tax Tribunal agreed with Appellee. It refused to offer Appellant the benefits of \mathieuGast. It set the assessed value to the value of the house after repairs.
 
 
+\newpage 
 \section{Questions Involved}
 
-\noindent 1. Did the Tax Tribunal err in its \mathieuGast analysis when failed to separately consider which repairs were normal and what the value of the property was before repairs?
+\noindent 1. Did the Tax Tribunal err in its \mathieuGast analysis when it failed to separately consider which repairs were normal and what the value of the property was before repairs?
 
 The Tax Tribunal and Appellee answer no. Appellant answers yes. 
-
+\vspace{\baselineskip}
 
 \noindent 2. Did the Tax Tribunal err in finding that the repairs were not normal because the property was bought in substandard condition  and the city required the repairs?
 
 The Tax Tribunal and Appellee answer no. Appellant answers yes.
-
+\vspace{\baselineskip}
 
 \noindent 3. Did the Tax Tribunal err in finding that the property did not sell for its true cash value because it was a bank sale and the seller may have been under financial duress?
 
 The Tax Tribunal and Appellee answer no. Appellant answers yes. 
-
+\vspace{\baselineskip}
 
 \noindent 4. Did the Tax Tribunal fail in its duty to independently determine the true cash value of the property when it disposed of the case without properly determining which repairs qualified for nonconsideration?
 
 The Tax Tribunal and Appellee answer no. Appellant answers yes.
-
+\newpage 
 
 \section{Facts}
 The subject of this case is a house, 5073 Winifred, in the City of Wayne. Appellant bought the house in August 2015 for \$32,000 from the US Department of Housing and Urban Development (HUD). The City of Wayne, assessed the property for 2016 at \$50,400 True Cash Value (\$25,200 Taxable Value). Appellant appealed to the Board of Review in March 2016. The Board of Review found that the property was properly assessed. Appellant then appealed to the Small Claims division of Michigan Tax Tribunal. A hearing was held 10/27/2016 before a Referee at the \MTT.
 
 \subsection{Hearing before the MTT}
 
-The \MTT\ Rule 287 requires that the parties serve each other with any written evidence they will be relying on not less than 21 days before the hearing, so that the opposing side may have time to consider and evaluate the evidence.
+\ttr287 requires that the parties serve each other with any written evidence they will be relying on not less than 21 days before the hearing, so that the opposing side may have time to consider and evaluate the evidence.
 
-Prior to the hearing, in accord with Rule 287, Appellant served Appellee with \MLS\ listing data for his property, as well as the other properties used by Appellee as comparables. The listing data showed information about each property and the marketing history. 
+Prior to the hearing, in accord with \ttr287, Appellant served Appellee with \MLS\ listing data for his property, as well as the other properties used by Appellee as comparables. The listing data showed information about each property and the marketing history. Appellant did not serve Appellee with a list of the repairs done to the property.
 
-At the hearing, Appellant used his previously submitted evidence to show that real estate brokers had been trying to sell the house for more than two years before he bought it. The \MLS\ marketing history showed: 
+At the hearing, Appellant used his previously submitted evidence to show that real estate brokers had been trying to sell the house since April 2013. The \MLS\ marketing history showed: 
 
 % see http://mirrors.rit.edu/CTAN/macros/latex/contrib/enumitem/enumitem.pdf for documentation 
 \begin{description}[style=multiline,leftmargin=3cm,font=\normalfont,itemsep=.5\baselineskip,align=right]
-\singlespacing 
+  \singlespacing 
 \item[3/16/2005] HUD buys the house for \$119,271, presumably by foreclosure. 
-\item[4/3/2013] Listed on the MLS (the Multiple Listing Service, the database used by real estate brokers to market properties) for \$29,900. 
-\item[5/3/2013] An offer was accepted and the status was ``Pending''. 
-\item[10/24/2013] On 10/24/2014 the property was withdrawn from the MLS because the listing contract with the real estate broker had expired. 
-\item[6/17/2015] On 6/17/2015 the property was listed by another broker on the MLS for \$32,000. 
+\item[4/3/2013] Listed on the \MLS\ for \$29,900. 
+\item[5/3/2013] An offer was accepted and the status was ``Pending''.
+\item[10/23/2013] The status changes from ``Pending'' to ``Conditionally Withdrawn''. 
+\item[10/24/2013] Property was withdrawn from the MLS because the listing contract with the real estate broker had expired. 
+\item[6/17/2015] Property was listed by another broker on the MLS for \$32,000. 
 \item[6/29/2015] An offer was accepted and the MLS status was ``Pending''. 
-\item[7/3/2015] The status was changed to ``Active''. (The contract was terminated without sale.) 
-\item[7/6/2015] The status was changed to ``Pending'' (because the seller accepted Appellant's offer). 
+\item[7/3/2015] The status changes from ``Pending'' to ``Active''.
+\item[7/6/2015] The status changes from ``Active''  to ``Pending''.
 \item[8/19/2015] Appellant closed on the property, paying \$32,000. 
 \end{description}
 
-Appellant also testified that the City of Wayne had given him two pages of repairs. (Before any house is sold in the City of Wayne, the City inspects the house and prepares a list of repairs that must be done before it will grant a Certificate of Compliance.) Appellant testified that the repairs were of the type classified as ``normal repairs'' per \mathieuGast\ including carpentry, electrical, and cement work. Appellant testified that the repairs had been completed as of tax day (December 31, 2015). (Proposed Opinion at 3)
+Appellant also testified that the City of Wayne had given him two pages of repairs. (Before any house is sold in the City of Wayne, the City inspects the house and prepares a list of repairs that must be done before it will grant a Certificate of Compliance.) Appellant testified that the repairs were of the type classified as ``normal repairs'' under \mathieuGast\ including carpentry, electrical, and cement work. Appellant testified that the repairs had been completed as of tax day (December 31, 2015). (\POJ\ at 3)
 
 When the Referee asked Appellant to estimate the value of the repairs, Appellant estimated less than \$10,000. (Appellant's Exceptions at 5)
 
-At the hearing, Appellee's representative challenged the claim that the house had sold for its fair market value. He pointed out that the property was being sold by HUD, as-is, and by electronic bid only. He also pointed out that the house required repairs. (Proposed Opinion at 4)
+At the hearing, Appellee's representative challenged the claim that the house had sold for its fair market value. He pointed out that the property was being sold by HUD, as-is, and by electronic bid only. He also pointed out that the house required repairs. (\POJ\ at 4)
 
-As to the property's actual market value before repairs, Appellee's representative did not opine or offer any evidence. Appellee's evidence was focused on establishing the value of the property as it was after repairs, on tax day. (Proposed Opinion at 5)
+As to the property's actual market value before repairs, Appellee's representative did not opine or offer any evidence. Appellee's evidence was focused on establishing the value of the property as it was after repairs, on tax day. (\POJ\ at 5)
 
 \subsection{Proposed Opinion}
 
-The Referee issued the Proposed Opinion on December 1, 2016. The Referee refused to apply \mathieuGast\ non-consideration because the fair market value of the property before repairs was not its selling price because it  was sold by a bank, the seller may have been under financial duress, the property may have been sold for less than its market value, the property needed repairs at the time of purchase, and the city required that the repairs be completed before the house could be occupied. The Referee made this analysis and determination in one long paragraph. It is reproduced later where Appellant will base a claim of error on it.
+The Referee issued the \POJ\ on December 1, 2016. The Referee refused to apply \mathieuGast\ non-consideration essentially because 1) the property's purchase price was not its true cash value, 2) the repairs were done on the house when it was in substandard condition and were required by the city,  and 3) on tax day, the house was repaired.
 
+The Referee made this analysis and determination in one long paragraph. It is reproduced later where Appellant will base a claim of error on it.
 
-After refusing to apply \mathieuGast\ the Referee found that as of tax day, 12/31/2015, the repairs had been completed and the house was in average condition. The Referee used the comparables submitted by the respondent/appellee and concluded the true cash value of the house should be \$50,400. 
+After refusing to apply \mathieuGast\ the Referee compared the respondent/appellee's comparables to the house as of tax day, 12/31/2015, and concluded the true cash value of the house should be \$50,400. 
 
 \subsection{Exceptions}
 
-On 12/21/2016 Appellant filed Exceptions to the Proposed Opinion. He argued that the Proposed Opinion erred because Its \mathieuGast\ analysis was improper because it did not follow the steps given in by the \STC\ or caselaw. Appellant also objected to the Proposed Opinion's 
+On 12/21/2016 Appellant filed Exceptions to the \POJ. He argued that the \POJ\ erred in its \mathieuGast\ analysis because it did not follow the steps given by the \STC\ or caselaw. 
 
-Also, He argued the STC (State Tax Commission) Bulletin No. 7 of 2014 (June 11, 2014) suggested that in a case involving \mathieuGast\ the issue of whether the repairs were normal should be determined before the before-repair value of the property was determined. So appellant addressed this issue first. He argued that the Referee's criteria for determining whether repairs were normal were unsupported by the statute's language. \mathieuGast\ does not restrict repairs based on the condition of the house or the requirements of the city. On the contrary, the statute characterizes normal repairs by the nature of the repair itself. The statute says include replacing the siding, roof, porches, steps, sidewalks, or drives, complete rewiring, and other expensive repairs that are normally only done on houses that need them, i.e., house that are ``substandard'' at least with respect to the repairs needed. Appellant also submitted a brochure published by the City of Wayne (Appellee) which showed that the normal repairs contemplated by the statute were also some of the most common repairs required by the City. 
+He also argued that the Referee's criteria for determining whether repairs were normal were unsupported by the statute's language. \mathieuGast\ does not restrict repairs based on the condition of the house or the requirements of the city. 
 
-Regarding the before-repair fair market value of the property, Appellant argued that its selling price should be used because the property had spent over two years on the market, it had had multiple offers, it sold for its asking price, and the price was consistent with the selling price of three of the comparable properties submitted by Appellee. Further, the Referee's speculation that the bank-seller was under financial duress and sold the property for less than market value had no evidentiary support and was unreasonable in light of the fact that the seller had raised the price, not lowered it in the two years the house was on the market.
+Appellant also submitted a brochure published by the City of Wayne (Appellee) which showed that the normal repairs contemplated by the statute were also some of the most common repairs required by the City. 
 
-Appellant did not contest that the Referee's finding that the after-repair value of the house was \$50,400, but argued that it should merely be used to help value the repairs according to the procedure given in the STC Bulletin. The True Cash Value would calculated as: 
-$TrueCashValue = Value_{AfterRepair} - RepairValue$
-where $RepairValue = Value_{AfterRepair} - Value_{BeforeRepair}$. After substituting the formula for $RepairValue$, the after-repair values cancel and the formula becomes $TrueCashValue = Value_{BeforeRepair}$. In other words, the True Cash Value is simply the value of the house before the repairs were done, because the difference between the before and after repair values is the value of the repairs, which under \pincite[l]{MCL}{211.27(2)} cannot be considered.
+Appellant argued that the selling price of the property should be used as its before-repair fair market value because the property had first been put on the market more than two years before it sold, it had had multiple offers, it sold for its asking price, and the price was consistent with the selling price of three of the comparable properties submitted by Appellee. Further, the Referee's speculation that the bank-seller was under financial duress and sold the property for less than market value had no evidentiary support and was unreasonable in light of the fact that the seller had raised the price, not lowered it in the two years the house had not been sold.
 
-Appellant also included in his Exceptions a list of all the repairs he had done along with an estimated value for each. This was done because his estimate of \$10,000 for the repairs was given off the cuff.
+Appellant did not contest that the Referee's finding that the after-repair value of the house was \$50,400, but argued that it should merely be used to help value the repairs according to the procedure given in the STC Bulletin.
 
-Appellee did not file exceptions to the Proposed Opinion or respond to Appellant's Exceptions.
+Appellant also included in his Exceptions a list of all the repairs he had done along with an estimated value for each. This was done to clarify the record because his estimate at the hearing of \$10,000 for the repairs was given off the cuff.
+
+Appellee did not file exceptions to the \POJ\ or respond to Appellant's Exceptions.
 
 \subsection{Final Opinion}
-On 1/26/2017, Tribunal Judge Lasher issued a Final Opinion and Judgment saying that the Referee properly considered the testimony and evidence provided. Then he says,
+On 1/26/2017, Tribunal Judge Lasher issued a \FOJ\ saying that the Referee properly considered the testimony and evidence provided. Then he says,
 
 \begin{quote}%
-Though the Tribunal is not persuaded that [the property's] substandard condition necessarily renders all subsequent improvements outside the scope of normal repairs and maintenance as indicated by the Referee, Petitioner has failed to present timely evidence establishing the improvements qualified as normal repairs and maintenance so as to properly be excluded from the assessment. Notably, at the time of hearing, Petitioner had presented for the Tribunal's review only the Board of Review Decision and market listings and listing histories for the subject and comparable properties provided by Respondent. Though additional documentation was filed with Petitioner's exceptions, the parties are required to submit any and all documentation they wish to have considered to both the Tribunal and the opposing party at least 21 days prior to the hearing, or it may not be considered [cite to TTR 287].
+Though the Tribunal is not persuaded that [the property's] substandard condition necessarily renders all subsequent improvements outside the scope of normal repairs and maintenance as indicated by the Referee, Petitioner has failed to present timely evidence establishing the improvements qualified as normal repairs and maintenance so as to properly be excluded from the assessment. Notably, at the time of hearing, Petitioner had presented for the Tribunal's review only the Board of Review Decision and market listings and listing histories for the subject and comparable properties provided by Respondent. Though additional documentation was filed with Petitioner's exceptions, the parties are required to submit any and all documentation they wish to have considered to both the Tribunal and the opposing party at least 21 days prior to the hearing, or it may not be considered [cite to \ttr287].
 \end{quote}
 
+The \FOJ\ then denies Appellant's request for modification of the \POJ\ or rehearing and expressly ``adopts the \POJ\ as the Tribunal's final decision in this case.''
+
 \subsection{Motion for Reconsideration}
-On 2/16/2017, Appellant filed a motion requesting reconsideration. Appellant reiterated his contention that Proposed Opinion used the wrong legal standard for determining whether repairs were normal under \pincite[l]{MCL}{211.27(2)} and that therefore the Final Opinion was flawed. 
 
-Also, Appellant pointed out that the sentiment expressed in quote above from the Final Opinion (a little more evidence by Appellant might swing the result his way, but that more evidence will not be allowed) contradicted the holding of at least two appellate cases, one of which involved the very statute at issue here. In both \cite{Jones & Laughlin} and \cite{Fisher} when the submitted evidence was not enough to resolve the issues in the case, the Court of Appeals ordered the Tax Tribunal to give the taxpayer plaintiffs more opportunity to present proofs. 
+On 2/16/2017, Appellant filed a motion requesting reconsideration. Appellant reiterated his contention that \POJ\ used the wrong legal standard for determining whether repairs were normal under \mathieuGast.
 
-Appellant also argued that enough evidence had already been presented by Appellant's sworn testimony at the hearing, and that Appellee had opportunity to rebut additional evidence presented in the Exceptions but chose not to.
-Appellant also contrasted the repairs done to his property with the repairs done in \textit{Fisher}. The court commented on repairs that were ``far in excess of normal repairs. . . . the old porch was extremely narrow, of wood construction and without stairs. The porch following its improvement has been widened and restyled and brick stairs of a highly attractive design of superior quality have been installed.'' (Fisher at 742). In contrast, Appellant's repairs merely brought the property back to good condition (roof, sidewalk leveling, painting, replace broken window glass, etc.) or updated it to meet current codes (electrical). Most of the repairs were required by the city when it conducted its standard presale inspection to prevent blight.
+Also, Appellant pointed out that the sentiment expressed in the quote above from the \FOJ\ contradicted the teaching of at least two appellate cases, one of which involved the very statute at issue here. In both \cite{Jones & Laughlin} and \cite[s]{Fisher}, when the submitted evidence was not enough to resolve the issues in the case, the Court of Appeals ordered the Tax Tribunal to give the taxpayer plaintiffs more opportunity to present proofs. 
 
-Appellant concluded his motion by comparing the increase in value of his own property with the three properties presented by Appellee as comparable. This showed that far from being an abnormal or uncommon situation, most of Appellee's own evidence demonstrated the same swing in value. 
+Applicant further argued that the additional evidence should be admitted because Appellee had opportunity to rebut it or object to it but did not.
+
+Appellant also argued that he should prevail even without additional evidence because  he had already given enough evidence in testimony at the hearing.
+
+Appellant also contrasted the repairs done to his property with the repairs done in \cite[s]{Fisher}. The court commented on repairs that were ``far in excess of normal repairs. . . . the old porch was extremely narrow, of wood construction and without stairs. The porch following its improvement has been widened and restyled and brick stairs of a highly attractive design of superior quality have been installed.'' (Fisher at 742). In contrast, Appellant's repairs merely brought the property back to good condition (roof, sidewalk leveling, painting, replace broken window glass, etc.) or updated it to meet current codes (electrical). Most of the repairs were required by the city when it conducted its standard presale inspection to prevent blight.
+
+Appellant concluded his motion by comparing the increase in value of his own property with three of the five properties presented by Appellee as comparable. This showed the scale of the repairs was normal because most of the comparables chosen by the Appellee had undergone repairs on a similar scale.
+
+\subsection{Order Denying the Motion for Reconsideration}
 
 On 3/6/2017, Judge Lasher issued an order denying Appellant's motion for reconsideration. The Judge wrote that \pincite[l]{MCL}{211.27(2)} cannot apply because the value of the house before the repairs is not been proved. Specifically, the seller was a bank, Appellant had not proved that the purchase price was an arm's length sale, and the Referee found that bank sales were not common in the jurisdiction. 
 
@@ -266,112 +282,143 @@ The Judge wrote that the valuation is supported by both the cost and sales compa
 
 Regarding his refusal to admit more evidence, the Judge said he was in compliance with the Tribunal's rules. He did not distinguish the two cases cited by Appellant. 
 
-
-
 \section{Argument}
 
 Following are four independent allegations of error, any of which is enough to cause a remand. 
 
 When reviewing Tax Tribunal cases, this Court looks for misapplication of the law or adoption of a wrong principle. Factual findings must be supported by competent, material, and substantial evidence on the whole record. Statutory interpretation is reviewed de novo. \pincite{Briggs}{75; 757-758}
 
-\subsection{The Tax Tribunal's MCL 211.27(2) analysis was not coherent.} \label{incoherent}
+\subsection{The Tax Tribunal's MCL 211.27(2) analysis was flawed because it did not separately consider which repairs were normal and what the value of the property was before repairs.} \label{incoherent}
 
-\mathieuGast\ reads:
+\mathieuGast\ reads in relevant part:
 
 \begin{quote}
-  The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction. The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. This subsection applies only to residential property. The following repairs are considered normal maintenance if they are not part of a structural addition or completion:
-(a) Outside painting. (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives. (c) Repainting, repairing, or replacing existing masonry. (d) Replacing awnings. (e) Adding or replacing gutters and downspouts. (f) Replacing storm windows or doors. (g) Insulating or weatherstripping. (h) Complete rewiring. (i) Replacing plumbing and light fixtures. (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner. (k) Repairing plaster, inside painting, or other redecorating. (l) New ceiling, wall, or floor surfacing. (m) Removing partitions to enlarge rooms. (n) Replacing an automatic hot water heater. (o) Replacing dated interior woodwork.
+  The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. . . . The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. This subsection applies only to residential property. The following repairs are considered normal maintenance if they are not part of a structural addition or completion:
+
+  (a) Outside painting.
+
+  (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
+
+  (c) Repainting, repairing, or replacing existing masonry.
+
+  (d) Replacing awnings.
+
+  (e) Adding or replacing gutters and downspouts.
+
+  (f) Replacing storm windows or doors.
+
+  (g) Insulating or weatherstripping.
+
+  (h) Complete rewiring.
+
+  (i) Replacing plumbing and light fixtures.
+
+  (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner.
+
+  (k) Repairing plaster, inside painting, or other redecorating.
+
+  (l) New ceiling, wall, or floor surfacing.
+
+  (m) Removing partitions to enlarge rooms.
+
+  (n) Replacing an automatic hot water heater.
+
+  (o) Replacing dated interior woodwork.
 \end{quote}
 
-\mathieuGast\ clearly directs the assessors not to consider the increase in the true cash value resulting from the normal repairs. To apply this statute, it is necessary to first consider whether a repair is normal. If it is, then the next task is to figure out how this should change the true cash value. In applying this statute, this Court has followed this methodology. In \cite{Coyne}, the Court separately reviewed all the repairs at issue (removing the screens from the porch and filling the spaces with concrete block, removing the wall between the living room and porch, replacing windows with vinyl-clad windows, replacing a wood door with a steel insulated door, repairing water damage to the ceiling and floor, and adding a new roof) and made a determination whether they were within the act. In \cite{Fisher}, the Court did not do this work itself, but instead remanded the case to the Tax Tribunal with instructions give the petitioner credit for all of repairs, replacement, or maintenance on proof that these were reasonable and normal.
+\mathieuGast\ directs the assessors not to consider the increase in the true cash value resulting from the normal repairs. To apply this statute, it is necessary to first consider whether a repair is normal. If it is, then the next task is to figure out how this should change the true cash value. In applying this statute, this Court has followed this methodology. In \cite{Coyne}, the Court separately reviewed all the repairs at issue (removing the screens from the porch and filling the spaces with concrete block, removing the wall between the living room and porch, replacing windows with vinyl-clad windows, replacing a wood door with a steel insulated door, repairing water damage to the ceiling and floor, and adding a new roof) and made a determination whether they were within the act. In \cite{Fisher}, the Court did not do this work itself, but instead remanded the case to the Tax Tribunal with instructions give the petitioner credit for all of repairs, replacement, or maintenance on proof that these were reasonable and normal.
 
-In contrast, the Tax Tribunal in this case analyzed \mathieuGast\ in a single, jumbled paragraph that appears to be trying directed as showing that the purchase price of the property was not its true cash value. Here is the paragraph from the Proposed Opinion at 5-6:
+Once the repairs are found to be normal under the statute, they must be valued. The \STC\ instructs assessors to value the repairs by appraising the property both before and after the repairs and subtracting the before value from the after value. \pincite{STC Bulletin No. 7 of 2014}{paragraph 3}.
 
-\begin{quote} Petitioner contends that under MCL 211.27(2), the subject’s purchase price of \$32,000 reflects the subject’s true cash value. In addition, under the statute, the assessor shall not consider normal repairs and maintenance in determining the property’s true cash value until the property is sold. First, the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred. [See MCL 211.27(6).] In order for the purchase price to be accepted as the subject’s true cash value, it must have sold for market value. Market value is defined as ``[t]he most probable price, as of a specified date, in cash, or in terms equivalent to cash, or in other precisely revealed terms, for which the specified property rights should sell after reasonable exposure in a competitive market under all conditions requisite to a fair sale, with the buyer and seller each acting prudently, knowledgeably, and for self-interest, and assuming that neither is under undue duress.'' [See MCL 211.27(6).] The subject property sold in a bank sale. The seller may have been under financial duress and sold the property for less than the market value. Also, Petitioner testified that the subject property was in need of repair at the time of purchase. He presented two pages of repairs that the city required to be completed until the property could be occupied. Petitioner testified that he put approximately \$10,000 in materials into the subject property and that he completed most of the repairs himself. Petitioner further testified that the repairs were completed by December 31, 2015. Under MCL 211.2(2), the relevant date of valuation for the 2016 tax year is December 31, 2015. Therefore, the subject’s purchase price reflected the condition of the subject property prior to the repairs and the repairs were completed by tax day. Petitioner claims that under MCL 211.27(2) we should not increase the subject’s true cash value for normal repairs and maintenance until the subjects property sold. However, Petitioner even admitted that the subject was in substandard condition at the time of purchase and the city required that the repairs be made. Therefore, the Tribunal does not find that the repairs completed by Petitioner were normal repairs and maintenance as noted by the statute. Instead, the subject was in substandard condition at the time of sale and the purchase price reflected the subject’s condition at the time. The repairs were completed and the subject had a certificate of occupancy by December 31, 2015; therefore, the subject’s purchase price is not a reliable indicator of value. 
+In contrast, the Tax Tribunal in this case analyzed \mathieuGast\ in a single, jumbled paragraph that appears to be trying to show that the purchase price of the property was not its true cash value. Here is the paragraph from the \POJ\ at 5-6:
+
+\begin{quote} Petitioner contends that under MCL 211.27(2), the subject's purchase price of \$32,000 reflects the subject's true cash value. In addition, under the statute, the assessor shall not consider normal repairs and maintenance in determining the property's true cash value until the property is sold. First, the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred. [See MCL 211.27(6).] In order for the purchase price to be accepted as the subject's true cash value, it must have sold for market value. Market value is defined as ``[t]he most probable price, as of a specified date, in cash, or in terms equivalent to cash, or in other precisely revealed terms, for which the specified property rights should sell after reasonable exposure in a competitive market under all conditions requisite to a fair sale, with the buyer and seller each acting prudently, knowledgeably, and for self-interest, and assuming that neither is under undue duress.'' [See MCL 211.27(6).] The subject property sold in a bank sale. The seller may have been under financial duress and sold the property for less than the market value. In addition, Respondent's representative testified that foreclosed sales were not a common method of acquisition in the subject's area to deem such sales reliable indicators of value. Also, Petitioner testified that the subject property was in need of repair at the time of purchase. He presented two pages of repairs that the city required to be completed until the property could be occupied. Petitioner testified that he put approximately \$10,000 in materials into the subject property and that he completed most of the repairs himself. Petitioner further testified that the repairs were completed by December 31, 2015. Under MCL 211.2(2), the relevant date of valuation for the 2016 tax year is December 31, 2015. Therefore, the subject's purchase price reflected the condition of the subject property prior to the repairs and the repairs were completed by tax day. Petitioner claims that under MCL 211.27(2) we should not increase the subject's true cash value for normal repairs and maintenance until the subject property sold. However, Petitioner even admitted that the subject was in substandard condition at the time of purchase and the city required that the repairs be made. Therefore, the Tribunal does not find that the repairs completed by Petitioner were normal repairs and maintenance as noted by the statute. Instead, the subject was in substandard condition at the time of sale and the purchase price reflected the subject's condition at the time. The repairs were completed and the subject had a certificate of occupancy by December 31, 2015; therefore, the subject's purchase price is not a reliable indicator of value. 
 \end{quote}
 
-This language comes from the Proposed Opinion, which is written by a Referee, but the Tribunal Judge did nothing to correct it after Appellant complained about it in his Exceptions. Instead, the Tribunal Judge endorses it. ``The Tribunal has considered the exceptions and the case file and finds that the Hearing Referee properly considered the testimony and evidence provided in the rendering of the POJ [Proposed Opinion and Judgement].'' Final Opinion at 1. And later, ``[T]he Tribunal adopts the POJ as the Tribunal's final decision in this case.'' Id. at 2.
+This language comes from the \POJ, which is written by a Referee, but the Tribunal Judge did nothing to correct it after Appellant complained about it in his Exceptions. Instead, the Tribunal Judge endorsed it. ``The Tribunal has considered the exceptions and the case file and finds that the Hearing Referee properly considered the testimony and evidence provided in the rendering of the POJ [Proposed Opinion and Judgement].'' \FOJ\ at 1. And later, ``[T]he Tribunal adopts the POJ as the Tribunal's final decision in this case.'' Id. at 2.
 
-The rest of the Proposed Opinion is directed at determining the value of the house after it was repaired. The paragraph quoted above is the sum of the \mathieuGast\ analysis.
+The rest of the \POJ\ is directed at determining the value of the house after it was repaired. The paragraph quoted above is the sum of the \mathieuGast\ analysis.
 
-The Tax Tribunal did not properly analyze the \mathieuGast\ and this Court should not let its decision stand. 
+The Tax Tribunal did not properly analyze the \mathieuGast. Specifically there was no attempt to separately consider which repairs were normal and arrive at a valuation of the property based on a before and after valuation. This is an error of law and this Court should reverse.
 
 \subsection{The Tax Tribunal used improper criteria to find the repairs were not normal.}
 
-Besides the general incoherency of the Tax Tribunal's \mathieuGast\ analysis, the Tax Tribunal got the details wrong. Specifically, the Tax Tribunal found that the repairs were not normal. This finding will be addressed here. The next section will deal with the selling price of the property.
+The Tax Tribunal also erred when it found that the repairs were not normal. \mathieuGast\ allows only {normal repairs, replacement, and maintenance to get the benefit of non-consideration. Normal is not specifically defined, but the statute lists fifteen categories of repairs that ``are considered normal maintenance if they are not part of a structural addition or completion.'' The fifteen categories are very broad and most repairs qualify unless they were part of a structural addition. For example, in \cite{Coyne} the Court found that removing screens from porch openings and filling the openings with concrete block did not quality under the statute because the repair was a structural addition or completion.
 
-\mathieuGast\ allows only \emph{normal} repairs, replacement, and maintenance to get the benefit of non-consideration. Normal is not specifically defined, but the statute lists fifteen categories of repairs that ``are considered normal maintenance if they are not part of a structural addition or completion.'' The fifteen categories are very broad and most repairs qualify. In the cases where repairs were found to not qualify, there is usually a structural addition. For example, in \cite{Coyne} the Court found that removing screens from porch openings and filling the openings with concrete block did not quality under the statute because the repair was a structural addition or completion. Repairs can also be fail to qualify if they are too much. In \cite{Fisher}, the Court said, ``We think that some of petitioners' repairs were far in excess of normal repairs. Based on the photographs submitted, petitioners took an old dilapidated farmhouse, which may have been of average quality and design in its day, and completely changed its external and internal appearance into a higher quality modern residence. . . . the old porch was extremely narrow, of wood construction, and without stairs. The porch following its improvement has been widened and restyled and brick stairs of a highly attractive design of superior quality have been installed.'' \pincite{Fisher}{742}.
+  Repairs can also be fail to qualify if they are too much. In \cite{Fisher}, the Court said, ``We think that some of petitioners' repairs were far in excess of normal repairs. Based on the photographs submitted, petitioners took an old dilapidated farmhouse, which may have been of average quality and design in its day, and completely changed its external and internal appearance into a higher quality modern residence. . . . the old porch was extremely narrow, of wood construction, and without stairs. The porch following its improvement has been widened and restyled and brick stairs of a highly attractive design of superior quality have been installed.'' \pincite{Fisher}{742}.
 
-In this case, there explicit criteria of \mathieuGast\ were not at issue. Appellant testified that the repairs fit within the statute and the Appellee did not argue that the repairs involved structural additions or were outside the fifteen categories of repairs of the statute. Instead, the Tax Tribunal rejected the repairs as not normal because ``the subject was in substandard condition and the city required that the repairs be made.'' Proposed Opinion at 6. These are criteria are not found or implied by the statute. The Tax Tribunal's criteria would frustrate the statute by allowing only repairs that are not needed. (Any property that needs repairs is can be said to be substandard.) For example, replacing the roof and the drive are explicitly included in \pincite{MCL}{211.27(2)(b)}. These are major, expensive repairs that are not normally done unless they are needed. But by the Tribunal's logic, as soon as a house's roof and drive become worn out and in need of replacement, the repairs would fall outside of the statute because the house would be substandard.
+  In this case, the explicit criteria of \mathieuGast\ were not at issue. Appellant testified that the repairs fit within the statute and the Appellee did not argue that the repairs involved structural additions or were outside the fifteen categories of repairs of the statute.
 
-It is true that most of the repairs were required by the city. But all of the required repairs except two (the installation of smoke detectors and carbon monoxide detector) fit within one of the fifteen categories of the statute. See the spreadsheet attached to Appellant's Exceptions. The city's antiblight and code ordinances overlap \mathieuGast. But they do not nullify it.
+  Rather than reject the repairs on a statutory basis, the Tax Tribunal rejected the repairs because ``the subject was in substandard condition and the city required that the repairs be made.'' \POJ\ at 6. These criteria would actually frustrate the statute by allowing repairs only when they are not needed. (Any property that needs repairs is can be said to be substandard.) For example, replacing the roof and the drive are explicitly included in \pincite[s]{MCL}{211.27(2)(b)}. These are major, expensive repairs that are not normally done unless they are needed. But by the Tribunal's logic, as soon as a house's roof and drive become worn out and in need of replacement, the repairs would fall outside of the statute because the house would be substandard.
 
-In \cite{Plymouth}, the City of Dearborn asked this Court to command the Wayne County Board of Commissioners to exclude from their sales ratio study the cost of repairs required under \pincite{Dearborn Ordinance}{63-1439}. (This ordinance prohibits home sales until the City of Dearborn has inspected the home and generated a list of required repairs. The analogous ordinance which produced the repair requirement in this case is \inspectionOrdinance.)  This Court said that ``[c]ertificate of occupancy and fix-up costs made pursuant to the ordinance are largely duplicative of statutory costs. Certain costs which are known to the assessor shall be excluded from true cash value, MCL 211.27(2), subds (a) through (o) . . . are duplicative of the fix-up costs required under the ordinance. Thus, it would be error to exclude such costs under both the ordinance and the statute.'' \pincite{Plymouth}{758}. The Court recognized that the same repair value (or fix-up cost) could qualify under both the city ordinance and \mathieuGast and that excluding costs under both the ordinance and the statute would double-count. Had Court adopted the Tax Tribunal's reasoning, that the city's requirement of a repair rendered it outside \mathieuGast, the Court could not have reasoned this way, because a repair under the ordinance would not have qualified under the statute.
+It is true that most of the repairs were required by the city. But almost all of the required repairs fit within one of the fifteen categories of the statute. See the spreadsheet attached to Appellant's Exceptions. The city's antiblight and code ordinances overlap \mathieuGast. But they do not nullify it.
 
-Therefore the Tax Tribunal's finding that the repairs were not normal repairs was in error and this Court should reverse it.
+In \cite{Plymouth}, the City of Dearborn asked this Court to command the Wayne County Board of Commissioners to exclude from their sales ratio study the cost of repairs required under \pincite{Dearborn Ordinance}{63-1439}. (This ordinance prohibits home sales until the City of Dearborn has inspected the home and generated a list of required repairs. The analogous ordinance which produced the repair requirement in this case is \inspectionOrdinance.)  This Court said that ``[c]ertificate of occupancy and fix-up costs made pursuant to the ordinance are largely duplicative of statutory costs. Certain costs which are known to the assessor shall be excluded from true cash value, MCL 211.27(2), subds (a) through (o) . . . are duplicative of the fix-up costs required under the ordinance. Thus, it would be error to exclude such costs under both the ordinance and the statute.'' \pincite{Plymouth}{758}. This Court recognized that the same repair value (or fix-up cost) could qualify under both the city ordinance and \mathieuGast and that excluding costs under both the ordinance and the statute would double-count. Had Court adopted the Tax Tribunal's reasoning, that the city's requirement of a repair rendered it outside \mathieuGast, the Court could not have reasoned this way, because a repair under the ordinance would not have also qualified under the statute.
 
-\subsection{The Tax Tribunal conclusion that the property did not sell for its true cash value is not supported by the evidence.}
+Therefore the Tax Tribunal's finding that the repairs were not normal repairs was in error and this Court should reverse.
 
-The value of \mathieuGast\ repairs are determined by subtracting the value of the house before repairs from the value of the house after repairs. \pincite{STC Bulletin No. 7 of 2014}{note 3}. In this case the Tax Tribunal's valuation of the house's value after repairs was fine. But the Tax Tribunal did not even try to make a valuation of the house's value before repairs. This finding is required to complete the \mathieuGast\ analysis.
+\subsection{The Tax Tribunal's conclusion that the property did not sell for its true cash value is not supported by the evidence.}
 
-Appellant contends that the before-repair value should be the price he paid for the property in the August before tax day. The house at the time of sale was in the before-repair condition. It had been for sale on the \MLS\ for over two years, listed by professional brokers who were incentivized to sell it because they only make money when the property sells.
+The value of \mathieuGast\ repairs are determined by subtracting the value of the house before repairs from the value of the house after repairs. \pincite{STC Bulletin No. 7 of 2014}{note 3}. In this case the Tax Tribunal's valuation of the house's value after repairs was fine. But the Tax Tribunal did not even try to make a valuation of the house's value before repairs. This finding is required to complete the \mathieuGast\ analysis and is addressed in this section.
+
+Appellant contends that the before-repair value should be the price he paid for the property in the August before tax day. The house at the time of sale was in the before-repair condition. It had first been offered for sale on the \MLS\ more than two years before he bought it, and it listed by professional brokers who were incentivized to sell it because they only make money when the property sells. During the time the house was on the market, the seller actually raised the price.
 
 The Tax Tribunal rejected Appellant's argument in the paragraph quoted above in section \ref{incoherent}. Part of the Tax Tribunal's argument was that at the time of sale, the house needed repairs. The Tax Tribunal seems to be confusing the before-repair valuation with the after-repair valuation. This argument is irrelevant here.
 
-The relevant portion of the Tax Tribunal's argument is that the property's sale price was not its true cash value because 1) ``the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred'' (citing MCL 211.27(6)), 2)  it was ``sold in a bank sale'' and 3) ``[t]he seller may have been under financial duress and sold the property for less than the market value.'' Each of these will be addressed in turn.
+The relevant portion of the Tax Tribunal's argument is that the property's sale price was not its true cash value because 1) ``the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred'' (\pincite[s]{MCL}{211.27(6)}), 2)  it was ``sold in a bank sale'' and 3) ``[t]he seller may have been under financial duress and sold the property for less than the market value.'' Each of these will be addressed in turn.
 
-It is true that the purchase price of a property is not presumptive evidence of its value. \pincite{MCL}{211.27(6)} provides:
+It is true that the purchase price of a property is not presumptive evidence of its value. \pincite[s]{MCL}{211.27(6)} provides: 
 
-\begin{quote} (6) Except as otherwise provided in subsection (7), the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred. In determining the true cash value of transferred property, an assessing officer shall assess that property using the same valuation method used to value all other property of that same classification in the assessing jurisdiction. As used in this subsection and subsection (7), "purchase price" means the total consideration agreed to in an arms-length transaction and not at a forced sale paid by the purchaser of the property, stated in dollars, whether or not paid in dollars.
+\begin{quote} (6) Except as otherwise provided in subsection (7), the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred. In determining the true cash value of transferred property, an assessing officer shall assess that property using the same valuation method used to value all other property of that same classification in the assessing jurisdiction. As used in this subsection and subsection (7), ``purchase price'' means the total consideration agreed to in an arms-length transaction and not at a forced sale paid by the purchaser of the property, stated in dollars, whether or not paid in dollars.
 \end{quote}
 
-In \cite{Antisdale}, a case often cited for the proposition that a property's sale price is not necessarily its true cash value, the Tax Tribunal set the true cash value of a federally subsidized apartment building to its probable purchase price even though part of the purchase price would go to assume a mortgage with a below-market interest rate. The Supreme Court reversed, ruling that the cash value of the mortgage was not its face value, but rather its present value (the amount of money required to be invested at the current interest rate to make the payments on the mortgage.)
+Even though \pincite[s]{MCL}{211.27(6)} is technically the law, in real life, an arms-length sale is strong evidence of true cash value. The exceptions are illustrative. In \cite[s]{Antisdale}, the Tax Tribunal set the true cash value of a federally subsidized apartment building to its probable purchase price, even though part of the purchase price would go to assume a mortgage with a below-market interest rate. The Supreme Court reversed, ruling that the cash value of the mortgage was not its face value, but rather its present value (the amount of money required to be invested at the current interest rate to make the payments on the mortgage.) 
 
-Unlike in \cite[s]{Antisdale}, in this case, there is no assumable, below-market federally subsidized mortgage involved. Instead, it is a simple case of a house in a residential neighborhood that sold after two years on the market for \$32,000 cash.
+Unlike \cite[s]{Antisdale}, this case is normal. There is no assumable, below-market federally subsidized mortgage involved. Instead, it is a simple case of a house in a residential neighborhood that sold after about two years on the market for \$32,000 cash.
 
-The sale price of the property, while not the conclusive, is evidence of its value. When the Tax Tribunal held: ``A sale that occurs after the tax date has little or no bearing on the assessment made prior to the sale'', this Court in \pincite{Jones & Laughlin}{354} disagreed. ``Unlike some situations [where] a hypothetical buyer must be posited, in this case the equipment was actually sold in a commercial transaction, albeit after the tax date. We believe that evidence of the price at which an item of property actually sold is most certainly relevant evidence of its value at an earlier time within the meaning of the term ``relevant evidence.'' MRE 401. . . . While the tribunal correctly noted that the sale price of a particular piece of property does not control its determination of the value of that property . . . the tribunal's opinion that the evidence "has little or no bearing" on the property's earlier value suggests that the evidence was rejected out of hand. Such cursory rejection would be erroneous.''
+The sale price of the property, while not the conclusive, is evidence of its value. When the Tax Tribunal held: ``A sale that occurs after the tax date has little or no bearing on the assessment made prior to the sale'', this Court in \pincite{Jones & Laughlin}{354}, disagreed. ``Unlike some situations [where] a hypothetical buyer must be posited, in this case the equipment was actually sold in a commercial transaction, albeit after the tax date. We believe that evidence of the price at which an item of property actually sold is most certainly relevant evidence of its value at an earlier time within the meaning of the term ``relevant evidence.'' MRE 401. . . . While the tribunal correctly noted that the sale price of a particular piece of property does not control its determination of the value of that property . . . the tribunal's opinion that the evidence ``has little or no bearing'' on the property's earlier value suggests that the evidence was rejected out of hand. Such cursory rejection would be erroneous.''
 
-Regarding the Tax Tribunal's objection that the property ``sold in a bank sale'' (the house was actually sold by HUD, not a bank), the fact that the seller was an institution and not a physical person does not necessarily mean that the sale was not at the true cash value.
+Regarding the Tax Tribunal's objection that the property ``sold in a bank sale'' (the house was actually sold by HUD, not a bank), the fact that the seller was an institution and not a physical person is irrelevant to whether the sale was for the true cash value.
 
 \cite{MCL}{211.27(1)} defines ``true cash value'' as:
 
 \begin{quote}
-  (1) As used in this act, "true cash value" means the usual selling price at the place where the property to which the term is applied is at the time of assessment, being the price that could be obtained for the property at private sale, and not at auction sale except as otherwise provided in this section, or at forced sale. The usual selling price may include sales at public auction held by a nongovernmental agency or person if those sales have become a common method of acquisition in the jurisdiction for the class of property being valued. The usual selling price does not include sales at public auction if the sale is part of a liquidation of the seller's assets in a bankruptcy proceeding or if the seller is unable to use common marketing techniques to obtain the usual selling price for the property. A sale or other disposition by this state or an agency or political subdivision of this state of land acquired for delinquent taxes or an appraisal made in connection with the sale or other disposition or the value attributed to the property of regulated public utilities by a governmental regulatory agency for rate-making purposes is not controlling evidence of true cash value for assessment purposes. In determining the true cash value, the assessor shall also consider the advantages and disadvantages of location; quality of soil; zoning; existing use; present economic income of structures, including farm structures; present economic income of land if the land is being farmed or otherwise put to income producing use; quantity and value of standing timber; water power and privileges; minerals, quarries, or other valuable deposits not otherwise exempt under this act known to be available in the land and their value. In determining the true cash value of personal property owned by an electric utility cooperative, the assessor shall consider the number of kilowatt hours of electricity sold per mile of distribution line compared to the average number of kilowatt hours of electricity sold per mile of distribution line for all electric utilities.
+  (1) As used in this act, ``true cash value'' means the usual selling price . . . being the price that could be obtained for the property at private sale, and not at auction sale except as otherwise provided in this section, or at forced sale. The usual selling price may include sales at public auction held by a nongovernmental agency or person if those sales have become a common method of acquisition in the jurisdiction for the class of property being valued. The usual selling price does not include sales at public auction if the sale is part of a liquidation of the seller's assets in a bankruptcy proceeding or if the seller is unable to use common marketing techniques to obtain the usual selling price for the property. . . . 
 \end{quote}
 
-The statute specifically excludes forced sales, liquidations in a bankruptcy proceeding, tax sales, or, in general, unusual sales where the seller is ``unable to use common marketing techniques to obtain the usual selling price for the property.'' In this case, the sale was not a forced, or rushed sale. It was not a foreclosure or sheriff's sale. Instead, the house was marketed for more than two years by at two brokers on the \MLS\ which is the common, normal way residential property is sold. The Tax Tribunal should not be able to waive away an otherwise good market sale with the magic words ``bank sale'', or in this case ``HUD sale.'' There needs to be some additional evidence that proves that the sale method was defective in a way that prevented the seller from obtaining the usual selling price.
+Note that the statute excludes on the manner of sale, not the category or identity of the seller. Excluded sales include forced sales, liquidations in a bankruptcy proceeding, tax sales, and, in general, unusual sales where the seller is ``unable to use common marketing techniques to obtain the usual selling price for the property.'' In this case, the house was marketed on the \MLS\ which is the common, normal way residential property is sold. The Tax Tribunal should not be able to waive away an otherwise good market sale with the magic words ``bank sale'', or in this case ``HUD sale.'' There needs to be some additional evidence that proves that the sale method was defective in a way that prevented the seller from obtaining the usual selling price.
 
-Regarding the Tax Tribunal's objection that ``[t]he seller may have been under financial duress and sold the property for less than the market value'', this is pure, even absurd, speculation. There is no evidence that HUD, a federal department, was under financial duress and sold the house at a discount to help make ends meet. The evidence points the other way in fact. The house was kept on the market for two years, starting at \$29,000 and then relisted at \$32,000, the price at which it sold. This is not the kind of marketing behaviour one would expect of a distressed seller in a hurry to sell.
+Regarding the Tax Tribunal's objection that ``[t]he seller may have been under financial duress and sold the property for less than the market value'', this is speculation. There is no evidence that HUD, a federal department, was under financial duress. The evidence points the other way in fact. The house took more than two years to sell, starting at \$29,000 and then relisted at \$32,000, the price at which it sold. This is not the kind of marketing behaviour one would expect of a distressed seller in a hurry to sell.
 
 None of the Tax Tribunal's objections to the property's purchase price can negate the facts that 1) the sale price is evidence of the true cash value of the house before the repairs, 2) to resolve the \mathieuGast analysis, it is necessary to determine the before-repair true cash value, and 3) there was no better evidence offered as to the value of the property before repairs. Under these facts, the Tax Tribunal must conclude that the sale price was the true cash value of the house before the repairs.
 
 \subsection{The Tax Tribunal disposed of the case without determining the true cash value of the property.}
 
-The previous sections have been mainly focused on the errors in the Proposed Opinion which was endorsed by the Tribunal Judge in the Final Opinion (``The Tribunal has considered the exceptions and the case file and finds that the Hearing Referee properly considered the testimony and evidence provided in the rendering of the POJ [Proposed Opinion and Judgement].'' Final Opinion at 1. And later, ``[T]he Tribunal adopts the POJ as the Tribunal's final decision in this case.'' Id. at 2.) This section focuses specifically on the errors in the Final Opinion and in the Order Denying Petitioner's Motion to Reconsider.
+The previous sections have been mainly focused on the errors originating in the \POJ. This section focuses specifically on the errors in the \FOJ\ and in the Order Denying Petitioner's Motion to Reconsider.
 
-In the Final Opinion at 1, the Tribunal Judge writes:
+In the \FOJ\ at 1, the Tribunal Judge writes:
 
 \begin{quote}
-Though the Tribunal is not persuaded that its [the house's] substandard condition necessarily renders all subsequent improvements outside the scope of normal repairs and maintenance as indicated by the Referee, Petitioner failed to present timely evidence establishing the improvements qualified as normal repairs and maintenance so as to properly be excluded from the assessment. Notably, at the time of hearing, Petitioner had presented for the Tribunal's review only the Board of Review Decision and market listings and listing histories for the subject and comparable properties provided by Respondent. Though additional documentation was filed with Petitioner's exceptions, the parties are required to submit any and all documentation they wish to have considered to both the Tribunal and the opposing party at least 21 days prior to the hearing, or it may not be considered. [citing TTR 287]
+Though the Tribunal is not persuaded that its [the house's] substandard condition necessarily renders all subsequent improvements outside the scope of normal repairs and maintenance as indicated by the Referee, Petitioner failed to present timely evidence establishing the improvements qualified as normal repairs and maintenance so as to properly be excluded from the assessment. Notably, at the time of hearing, Petitioner had presented for the Tribunal's review only the Board of Review Decision and market listings and listing histories for the subject and comparable properties provided by Respondent. Though additional documentation was filed with Petitioner's exceptions, the parties are required to submit any and all documentation they wish to have considered to both the Tribunal and the opposing party at least 21 days prior to the hearing, or it may not be considered. [citing \ttr287]
 \end{quote}
 
-In other words, the Tribunal needed more evidence to determine whether the repairs qualify for nonconsideration under \pincite[l]{MCL}{211.27(2)}, but because the time for submitting evidence has passed, it would not accept any more evidence. 
+In other words, the Tax Tribunal admits that it was not convinced that the Referee analyzed the repairs correctly. It needed more evidence. But because the time for submitting evidence had passed, it would not accept any more evidence. 
 
-Appellant believes that he provided enough evidence through oral testimony at the hearing to prove to the Tax Tribunal that the repairs he made to the property were normal under \mathieuGast. There was no issue at the hearing that the repairs were not normal in the sense of adding new structure or not fitting in the fifteen categories of the statute. The Proposed Opinion, though very flawed, did not allege or find that the repairs did not conform to the statutory criteria. After reading the Proposed Opinion, Appellant filed Exceptions in which he criticized the Proposed Opinion using arguments similar to the ones presented here. He also filed with the Exceptions a spreadsheet showing in detail the repairs that were done, their estimated cost, and the statutory categories they fit under. Most of the repairs were required by the Appellee. Appellee's representative also did not file a response to the Exceptions, even though he had the opportunity.
+Appellant believes that he has provided enough evidence through both the written submissions and oral testimony at the hearing to prove to the Tax Tribunal that the repairs he made to the property were normal under \mathieuGast. There was no issue at the hearing that the repairs were not normal in the sense of adding new structure or not fitting in the fifteen categories of the statute. The \POJ, though very flawed, did not allege or find that the repairs did not conform to the statutory criteria. Nor did Appellee allege error in this respect. So the Tax Tribunal's claim that more evidence is needed is not supported by the Referee or the Appellee, the only other people besides the Appellant who were actually at the hearing and heard the testimony.
 
-The Tax Tribunal relies on Rule 287 to dismiss the case without accepting more proof. Rule 287 reads:
+But, even if more evidence was needed, Appellant filed it with the Exceptions. He filed with the Exceptions a spreadsheet showing in detail the repairs that were done, their estimated cost, and the statutory categories they fit under. Most of the repairs were required by the Appellee. At this point Appellee could have objected, especially if the submitted evidence was surprising in light of the testimony at the hearing. But the Appellee did not object.
+
+The Tax Tribunal relies on \ttr287 to dismiss the case without accepting more proof. The relevant part of Rule 287 reads:
 
 \begin{quote}
   R 792.10287 Evidence.
   
-  Rule 287. (1) A copy of all evidence to be offered in support of a party’s contentions shall be filed with the tribunal and served upon the opposing party or parties not less than 21 days before the date of the scheduled hearing, unless otherwise provided by the tribunal. Failure to comply with this subrule may result in the exclusion of the valuation disclosure or other written evidence at the time of the hearing because the opposing party or parties may have been denied the opportunity to adequately consider and evaluate the valuation disclosure or other written evidence before the date of the scheduled hearing.
-  
-(2) Service of the evidence shall be made on the opposing party or parties unless an attorney or authorized representative has entered an appearance in the contested case on behalf of that opposing party or parties and then service shall be made on the attorney or authorized representative.
+  Rule 287. (1) A copy of all evidence to be offered in support of a party's contentions shall be filed with the tribunal and served upon the opposing party or parties not less than 21 days before the date of the scheduled hearing, unless otherwise provided by the tribunal. Failure to comply with this subrule may result in the exclusion of the valuation disclosure or other written evidence at the time of the hearing because the opposing party or parties may have been denied the opportunity to adequately consider and evaluate the valuation disclosure or other written evidence before the date of the scheduled hearing.
 \end{quote}
 
-The rule says that written evidence \emph{may} be excluded ``because the opposing party . . . may have been denied the opportunity to adequately consider and evaluate the . . . written evidence before . . . the . . .  hearing.'' The opposing party in this case has not complained. The extra written evidence was largely generated by its own agents and it retained a copy of it. (The inspection report was written by the City's inspectors and the City retained a copy. Most of the repairs were done to satisfy the City's requirements.) Also, the City's agents inspected the house after the repairs were complete, about a year before the hearing.
+The rule says that written evidence \emph{may} be excluded ``because the opposing party . . . may have been denied the opportunity to adequately consider and evaluate the . . . written evidence before . . . the . . .  hearing.'' The opposing party in this case has not complained. The extra written evidence was largely generated by its own agents and it retained copies. (The inspection report was written by the City's inspectors and the City retained a copy. Most of the repairs were done to satisfy the City's requirements.) Also, two of the City's inspectors inspected the house after the repairs were complete, about a year before the hearing.
 
-The Tax Tribunal's reliance on Rule 287 was flawed and does not withstand scrutiny. But even if the Tax Tribunal's reliance on Rule 287 were not flawed, the Tribunal's premature dismissal violated its duty to independently determine the true cash value of the property. This Court has declared in \cite{Jones & Laughlin}{354-357}:
+The Tax Tribunal's reliance on \ttr287 was flawed and does not withstand scrutiny. But there is a deeper, more serious error here. The Tax Tribunal's premature dismissal violated its duty to independently determine the true cash value of the property. This Court has declared in \pincite[s]{Jones & Laughlin}{354-357}:
 
 \begin{quote}
 The [tax] tribunal . . . erred in failing to make an independent determination of the true cash value of the property. The tribunal apparently believed that no such determination was necessary after it concluded that petitioner had failed to meet its burden of proof and dismissed petitioner's appeal. The tribunal correctly noted that the burden of proof was on petitioner, MCL 205.737(3); MSA 7.650(37)(3). This burden encompasses two separate concepts: (1) the burden of persuasion, which does not shift during the course of the hearing; and (2) the burden of going forward with the evidence, which may shift to the opposing party. [citations omitted] The tribunal's decision, however, seems analogous to the entry of a directed verdict upon the failure of a plaintiff's proofs. To the extent this analogy may be accurate in this case, the entry of judgment against petitioner for its failure to provide sufficient evidence was erroneous because, while petitioner may not have met its burden of persuasion, it did meet its burden of going forward with evidence.
@@ -379,16 +426,16 @@ The [tax] tribunal . . . erred in failing to make an independent determination o
   Even if the tribunal had correctly concluded that petitioner's proofs had failed, the tribunal still would be required to make an independent determination of the true cash value of the property. The tribunal may not automatically accept a respondent's assessment, but must make its own findings of fact and arrive at a legally supportable true cash value. [citations omitted] . . . On remand, the tribunal shall make an independent determination of true cash value. We note that the tribunal is not bound to accept either of the parties' theories of valuation. It may accept one theory and reject the other, it may reject both theories, or it may utilize a combination of both in arriving at its determination. [citations omitted] . . . If the tribunal believes it to be necessary, it may reopen proofs in order to resolve these issues.
 \end{quote}
 
-The Tax Tribunal in this case, like the one in \cite[s]{Jones & Laughlin}, has concluded that the Appellant has failed to meet his burden of proof and has closed the case.  This despite admitting that it is ``not persuaded that [the house's] substandard condition necessarily renders all subsequent improvements outside the scope of normal repairs.'' Final Opinion at 1. This Court, like the count in \cite[s]{Jones & Laughlin}, should order the Tax Tribunal to make an independent determination of the true cash value of the property, reopening proofs if necessary.
+The Tax Tribunal in this case, like the one in \cite[s]{Jones & Laughlin}, has concluded that the Appellant has failed to meet his burden of proof and has closed the case.  But the Tax Tribunal has admitted that it is ``not persuaded that [the house's] substandard condition necessarily renders all subsequent improvements outside the scope of normal repairs.'' \FOJ\ at 1. In other words, the Tax Tribunal has not determined in full the true cash value at issue. This Court, like the Court in \cite[s]{Jones & Laughlin}, should order the Tax Tribunal to make an independent determination of the true cash value of the property, reopening proofs if necessary.
 
 This Court in \cite{Fisher} was asked to decide if certain repairs were normal under \mathieuGast. Because the existing evidence was not determinative, it instructed the Tax Tribunal to allow petitioner to submit more evidence: ``we are not convinced from the record presented that petitioners submitted sufficient proofs showing that these expenditures were reasonable and normal, rather than constituting a betterment. We remand to the Tax Tribunal for a rehearing. Petitioners shall be afforded further opportunity to submit proofs.'' \pincite{Fisher}{743}.
 
-In both \cite[s]{Jones & Laughlin} and \cite[s]{Fisher}, rule 287 was not allowed to prevent the Tribunal from making its required determination of true cash value.
+In both \cite[s]{Jones & Laughlin} and \cite[s]{Fisher}, \ttr287 was not allowed to prevent the Tribunal from making its required determination of true cash value. In short, even if more evidence is needed, and even if the additional evidence that was submitted somehow prejudiced the Appellee so that it should be excluded under \ttr287, the fact that the Tax Tribunal dismissed the case without completing its independent determination of the true cash value is error. 
 
  
 \section{Conclusion}
 
-The judgment of the Tax Tribunal should be reversed. 
+Applicant has presented here four relatively independent allegations error. He respectfully asks this Court to reverse the ruling of the Tax Tribunal. 
  
 
 \section{Proof of Service}
@@ -402,7 +449,7 @@ On July 31, 2017, I served a copy of the Brief on the Appellee, the City of Wayn
 
   Respectfully Submitted,
 
-  Daniel Patru
+  /s/ Daniel Patru
 
   July 31, 2017
 
