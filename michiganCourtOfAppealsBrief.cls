@@ -40,12 +40,14 @@
 \usepackage[T1]{fontenc}
 
 \newcommand{\@RunMakeIndex}{%
-	\immediate\closeout\Case@idxfile%
-	\immediate\closeout\Statute@idxfile%
-	\immediate\closeout\Other@idxfile%
-	\write18{makeindex -r -s lawcitations.ist Case}%
-	\write18{makeindex -L -r -s lawcitations.ist Statute}%
-	\write18{makeindex -r -s lawcitations.ist Other}%
+  \message{At the end, running Index...\par}
+  \immediate\closeout\Case@idxfile%
+  \immediate\closeout\Statute@idxfile%
+  \immediate\closeout\Other@idxfile%
+  \write18{makeindex -r -s lawcitations.ist Case}%
+  \write18{makeindex -L -r -s lawcitations.ist Statute}%
+  \write18{makeindex -r -s lawcitations.ist Other}%
+  \message{Ran make index\par}
 }
 
 \AtEndDocument{%
