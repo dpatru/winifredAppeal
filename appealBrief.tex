@@ -54,14 +54,15 @@
 \citecase[Randolf]{Dep't of Transportation v Randolph, 461 Mich. 757; 610 NW2d 893 (2000)}
 \citecase[SBC Health Midwest]{SBC Health Midwest, Inc. v City of Kentwood,  \_\_  Mich \_\_ (decided May 1, 2017)}
 \citecase[Stevens]{Stevens v Bangor Twp, 150 Mich App 756; 389 NW2d 176 (1986)}
-
-\newstatute[1]{MCL}{}% place MCL first
+{\makeatletter % needed for optional argument to newstatute.
+\newstatute[1@]{MCL}{}% place MCL first
+\newstatute[2@]{MCR}{}
+\newstatute[3@]{TTR}{}
+\newstatute[4@]{Dearborn Ordinance}{}% place this fourth
+\newstatute[5@]{Wayne Ordinance}{}
+} % end makeatletter block
 \def\mathieuGast{\pincite[l]{MCL}{211.27(2)}}
-\newstatute[2]{MCR}{}
-\newstatute[3]{TTR}{}
 \def\ttr287{\pincite[s]{TTR}{287}}
-\newstatute[4]{Dearborn Ordinance}{}% place this fourth
-\newstatute[5]{Wayne Ordinance}{}
 \def\inspectionOrdinance{\pincite{Wayne Ordinance}{\S1484.04}}
 \long\def\inspectionOrdinanceText{\begin{quote}
 1484.04  CERTIFICATE REQUIRED PRIOR TO SALE. 
