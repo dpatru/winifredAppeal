@@ -502,7 +502,12 @@
 \renewenvironment{quote}%
 {\begin{singlespacing}\list{}{\rightmargin=\leftmargin\topsep=0pt\itemsep=0pt\parsep=0pt}\item\relax}%
 {\endlist\end{singlespacing}}
-% \AtBeginEnvironment{quote}{\singlespacing}%\small}
+%\AtBeginEnvironment{quote}{\singlespacing}%\small}
+
+\renewenvironment{quotation}%
+%{\begin{singlespacing}\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}%
+{\begin{singlespacing}\list{}{}\item\relax}%
+{\endlist\end{singlespacing}}
 
 
 % vim: set syntax=tex :
