@@ -6,3 +6,5 @@ Statute.*
 *.gz
 *.toc
 *.out
+*.fls
+*.dvi
