@@ -8,3 +8,4 @@ Statute.*
 *.out
 *.fls
 *.dvi
+*.fdb_latexmk
