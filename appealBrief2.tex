@@ -9,10 +9,9 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{newcent,microtype}
 \usepackage{setspace,xcolor}
-\usepackage[hyperindex=false,linkbordercolor=white]{hyperref}
-\usepackage[T1]{fontenc}
 \usepackage{trace}
-\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[hyperindex=false,linkbordercolor=white]{hyperref}
 \makeandletter% use \makeandtab to turn off
 
 % Use this to show a line grid-
@@ -41,26 +40,12 @@
  
 %The command \makeandletter turns the ampersand into a printable character, rather than a special alignment tab \makeandletter
 
-\citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
-\citecase{Arbaugh v. Y&H Corp., 546 U.S. 500 (2006)}
-\citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 772 NW2d 753 (2010)}
-\citecase[CAF]{CAF Investment Co. v Saginaw Twp, 410 Mich 428; 302 NW2d 164 (1981)}
-\citecase[Coyne]{Coyne v Highland Twp, 169 Mich. App. 401; 425 NW2d 567 (1988)}
-\citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
-\citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
-\citecase[Malpass]{Malpass v Dep't of Treasury, 494 Mich. 237; 833 NW2d 272 (2013)}
-\citecase[Meadowlanes]{Meadowlanes Ltd Dividend Housing Ass'n v City of Holland, 437 Mich 473; 473 NW2d 636 (1991)}
-\citecase[Plymouth]{Plymouth Twp. v Wayne County Board of Commissioners, 137 Mich App 738; 359 NW2d 547 (1984)}
-\citecase[Professional Plaza]{Professional Plaza v City of Detroit, 647 NW2d 529; 250 Mich. App. 473  (2002)}
-\citecase[Randolf]{Dep't of Transportation v Randolph, 461 Mich. 757; 610 NW2d 893 (2000)}
-\citecase[SBC Health Midwest]{SBC Health Midwest, Inc. v City of Kentwood,  \_\_  Mich \_\_ (decided May 1, 2017)}
-\citecase[Stevens]{Stevens v Bangor Twp, 150 Mich App 756; 389 NW2d 176 (1986)}
-\citeunpublishedcase[patru v wayne]{Patru v City of Wayne}{unpublished per curiam opinion of the Michigan Court of Appeals issued May 8, 2018 (docket no. 337547)}
 {\makeatletter % needed for optional argument to newstatute.
 \newstatute[1@]{MCL}{}% place MCL first
 \newstatute[2@]{MCR}{}
 \newstatute[3@]{TTR}{}
 \newstatute[4@]{Dearborn Ordinance}{}% place this fourth
+
 \newstatute[5@]{Wayne Ordinance}{}
 } % end makeatletter block
 \def\mathieuGast{\pincite[l]{MCL}{211.27(2)}}
@@ -98,6 +83,23 @@
 \makeAbbreviation{\orderDenying}{Order Denying Reconsideration}{Order Denying Petitioner's Motion for Reconsideration}
 \begin{document}
 \singlespacing
+
+% \citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Michigan Court of Appeals issued May 8, 2018 (docket no. 337547)}
+\citecase[Patru]{Patru v City of Wayne, unpublished (docket no. 337547)}
+\citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
+\citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 772 NW2d 753 (2010)}
+\citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
+\citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
+% \citecase{Arbaugh v. Y&H Corp., 546 U.S. 500 (2006)}
+% \citecase[CAF]{CAF Investment Co. v Saginaw Twp, 410 Mich 428; 302 NW2d 164 (1981)}
+% \citecase[Coyne]{Coyne v Highland Twp, 169 Mich. App. 401; 425 NW2d 567 (1988)}
+% \citecase[Malpass]{Malpass v Dep't of Treasury, 494 Mich. 237; 833 NW2d 272 (2013)}
+% \citecase[Meadowlanes]{Meadowlanes Ltd Dividend Housing Ass'n v City of Holland, 437 Mich 473; 473 NW2d 636 (1991)}
+% \citecase[Plymouth]{Plymouth Twp. v Wayne County Board of Commissioners, 137 Mich App 738; 359 NW2d 547 (1984)}
+% \citecase[Professional Plaza]{Professional Plaza v City of Detroit, 647 NW2d 529; 250 Mich. App. 473  (2002)}
+% \citecase[Randolf]{Dep't of Transportation v Randolph, 461 Mich. 757; 610 NW2d 893 (2000)}
+% %\citecase[SBC Health Midwest]{SBC Health Midwest, Inc. v City of Kentwood,  \_\_  Mich \_\_ (decided May 1, 2017)}
+% \citecase[Stevens]{Stevens v Bangor Twp, 150 Mich App 756; 389 NW2d 176 (1986)}
 
 \begin{centering}
 \bf\scshape State of Michigan\\In the Court of Appeals\\Detroit Office\\~\\ 
@@ -200,7 +202,7 @@ Appellant answers yes. The Tax Tribunal anwers no. The Appellee's answer is unkn
 Appellant answers yes. The Tax Tribunal anwers no. The Appellee's answer is unknown. 
 \vspace{\baselineskip}
 
-\noindent III. Did the Tax Tribunal err when it gave the selling price of the property "no weight or credibility" as to the market value of the property based solely on the fact that the seller was a government entity and speculation that the seller may not have been motivated to receive market value?
+\noindent III. Did the Tax Tribunal err when it gave the selling price of the property ``no weight or credibility'' as to the market value of the property based solely on the fact that the seller was a government entity and speculation that the seller may not have been motivated to receive market value?
 
 Appellant answers yes. The Tax Tribunal anwers no. The Appellee's answer is unknown. 
 \vspace{\baselineskip}
@@ -236,22 +238,36 @@ The Court of Appeals ruled that the referee had erred by adding a requirement to
 
 The Court of Appeals also ruled that the Tax Tribunal erred by assuming that the evidence of normal repairs in the spreadsheet was not testified to at the hearing. So the Court of Appeals reversed and remanded for a rehearing to determine whether the repairs were normal repairs.
 
-The rehearing was held in December 2018. Tax Tribunal Judge Marcus L. Abood ruled among other things that the repairs were normal repairs, that the repairs were worth approximately \$10,000, but that \mathieuGast\ nevertheless did not apply in this case because the "property assessment did not change by virtue of the repairs Petitioner made to the subject property." \FOJ at 5.
+The rehearing was held in December 2018. Tax Tribunal Judge Marcus L. Abood ruled among other things that the repairs were normal repairs, that the repairs were worth approximately \$10,000, but that \mathieuGast\ nevertheless did not apply in this case because the ``property assessment did not change by virtue of the repairs Petitioner made to the subject property.'' \FOJ\ at 5.
 
 Appellant responded to the \FOJ\ with a motion for reconsideration. Tax Tribunal Judge David B. Marmon responded with an \orderDenying\ which sharpens the reasoning of the \FOJ. 
 
 The clearest arguments in the \orderDenying are made in two paragraphs and a footnate on page 2 reproduced here:
 
 \begin{quotation}
-To begin, there is nothing in MCL 211.27(2) requiring “before repair” and “after repair” appraisals when determining whether an assessment includes the true cash value of the normal repairs. [See footnote 7] Rather, in a proceeding before the Tribunal, Petitioner bears the burden of proof. Further, the Tribunal cannot conclude that the FOJ erred when it concluded that Petitioner’s contentions concerning the purchase price, i.e. the true cash value before repairs, was entitled to no weight or credibility. The selling price of a property is not is presumptive true cash value. Despite Petitioner’s assertions that the marketing efforts for the subject show that the sale was a “market sale,” the home was being sold by the U.S. Department of Housing and Urban Development (“HUD”). Because the subject was being sold by a government entity, that entity’s motivation may not have been to receive market value for the property.
+To begin, there is nothing in MCL 211.27(2) requiring ``before repair'' and ``after repair'' appraisals when determining whether an assessment includes the true cash value of the normal repairs. [See footnote 7] Rather, in a proceeding before the Tribunal, Petitioner bears the burden of proof. Further, the Tribunal cannot conclude that the FOJ erred when it concluded that Petitioner's contentions concerning the purchase price, i.e. the true cash value before repairs, was entitled to no weight or credibility. The selling price of a property is not is presumptive true cash value. Despite Petitioner's assertions that the marketing efforts for the subject show that the sale was a ``market sale,'' the home was being sold by the U.S. Department of Housing and Urban Development (``HUD''). Because the subject was being sold by a government entity, that entity's motivation may not have been to receive market value for the property.
 
-The Tribunal also concludes that it was not a palpable error to conclude that the assessment did not consider the “normal repairs.” This is supported by the fact that the property record card indicates that Respondent believed the true cash value of the subject to be \$48,000 before Petitioner purchased the property10 and \$50,400 as of December 31, 2015, after the repairs were complete. An increase of \$2,400 in true cash value (5\%) is easily attributable to inflation and increases in the market. In addition, as stated by the FOJ, the interior photographs depict a property in average condition before Petitioner acquired it. Although not necessarily evidence of true cash value, this evidence supports the property’s assessment as a property in average condition both at the time Petitioner acquired it and after he completed the normal repairs. In other words, the record evidence supports the conclusion that the assessment did not consider the increase in true cash value that was the result of normal repairs.
+The Tribunal also concludes that it was not a palpable error to conclude that the assessment did not consider the ``normal repairs.'' This is supported by the fact that the property record card indicates that Respondent believed the true cash value of the subject to be \$48,000 before Petitioner purchased the property10 and \$50,400 as of December 31, 2015, after the repairs were complete. An increase of \$2,400 in true cash value (5\%) is easily attributable to inflation and increases in the market. In addition, as stated by the FOJ, the interior photographs depict a property in average condition before Petitioner acquired it. Although not necessarily evidence of true cash value, this evidence supports the property's assessment as a property in average condition both at the time Petitioner acquired it and after he completed the normal repairs. In other words, the record evidence supports the conclusion that the assessment did not consider the increase in true cash value that was the result of normal repairs.
 
-\textit{footnote 7} MCL 211.27(2) allows an assessor to increase “construction quality classification or reduce the effective age for depreciation purposes” if the “appraisal of the property was erroneous before non-consideration of the normal repair.” It also prevents an assessor from assigning an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction. Neither situation is at issue here. Although State Tax Commission Bulletin No. 7 of 2014 requires “before” and “after” appraisals, such appraisals are only required “[i]f the true cash value of non-consideration items is shown on the assessment roll. . . .” As described herein, the true cash value of the non-consideration items is not shown on the assessment roll and the STC requirement does not apply. In addition, STC guidance lacks the force of law. In re Complaint of Rovas Against SBC Michigan, 482 Mich 90, 103; 754 NW2d 259, 267 (2008).
+\textit{footnote 7} MCL 211.27(2) allows an assessor to increase ``construction quality classification or reduce the effective age for depreciation purposes'' if the ``appraisal of the property was erroneous before non-consideration of the normal repair.'' It also prevents an assessor from assigning an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction. Neither situation is at issue here. Although State Tax Commission Bulletin No. 7 of 2014 requires ``before'' and ``after'' appraisals, such appraisals are only required ``[i]f the true cash value of non-consideration items is shown on the assessment roll. . . .'' As described herein, the true cash value of the non-consideration items is not shown on the assessment roll and the STC requirement does not apply. In addition, STC guidance lacks the force of law. In re Complaint of Rovas Against SBC Michigan, 482 Mich 90, 103; 754 NW2d 259, 267 (2008).
 
 \end{quotation}
 
-Res
+The Appellant believes that these arguments were not put forth by the Appellee. The \FOJ\ at 4 records Appellee's argument this way:
+
+\begin{quotation}
+	Respondent argues that the change in the property assessment was not based on Petitioner's repairs but based on the purchase of the property in 2015 which uncapped the assessment for 2016. Respondent assessed the property as ``average'' condition as of December 31, 2015. The changes were not substantial and were based on the rate of inflation.
+	
+	On rebuttal, Respondent argues mass appraisal does not account for properties on-by-on. In other words, properties are assessed uniformly and Respondent assumes properties are in average condition.
+\end{quotation}
+
+Appellant believes that the Tax Tribunal's characterization of Appellee's argument in the first paragraph quoted above is a little nonsensical. It appears to confuse the assessed value (which is determined every year independent of sales) with the taxable value (which uncaps based on sales or transfers). What was probably meant in the first paragraph was something like: 
+
+\begin{quote}
+	Respondent argues that the increase in property taxes was caused by an uncapping because of the transfer of the property in 2015. The actual assessed value (or true cash value which is twice the assessed value) changed minimally from 2015 to 2016 based on the rate of inflation and not because of repairs done to the property. The assessor did not have to consider the repairs to justify the 2016 assessment. 
+\end{quote}
+
+In any case, Appellant believes that however Appellee's arguments are characterized, because the repairs had not yet been ruled to be normal repairs, Appellee's arguments were not as wrong as the arguments put forth by the Tax Tribunal in the \FOJ\ and \orderDenying. The Tax Tribunal appears to argue that the assessor may simply ignore normal repairs under certain circumstances. Appellee has not asserted this so far in this case.
 
 \section{Argument}
 
@@ -282,49 +298,49 @@ When reviewing Tax Tribunal cases, this Court looks for misapplication of the la
 	The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. . . . The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. . . .
 \end{quote}
 
-The \STC\ in Bulletin 7 of 2014 addressing the Mathieu Gast Act, says on page 2 that "2. Assessors are required to give non-consideration treatment to known qualifying changes to real property, regardless of whether the taxpayer has filed a form L-4293."
+The \STC\ in Bulletin 7 of 2014 addressing the Mathieu Gast Act, says on page 2 that ``2. Assessors are required to give non-consideration treatment to known qualifying changes to real property, regardless of whether the taxpayer has filed a form L-4293.''
 
 The plain language of the statute and its interpretation by the \STC\ make clear that once normal repairs are known to the assessor, the assessor must give them non-consideration treatment. The assessor is not free to just continue assessing the property as if there had been no normal repairs. The whole point of the statute is that normal repairs must not be allowed to contribute to the house's true cash value for assessment purposes.
 
 In the \orderDenying\ at 3, footnote 7, the Tax Tribunal attempts to explain why it is not required to preform before-repair and after-repair appraisals. It says: 
 
 \begin{quote}
-	Although State Tax Commission Bulletin No. 7 of 2014 requires “before” and “after” appraisals, such appraisals are only required “[i]f the true cash value of non-consideration items is shown on the assessment roll. . . .” As	described herein, the true cash value of the non-consideration items is not shown on the assessment roll	and the STC requirement does not apply.
+	Although State Tax Commission Bulletin No. 7 of 2014 requires ``before'' and ``after'' appraisals, such appraisals are only required ``[i]f the true cash value of non-consideration items is shown on the assessment roll. . . .'' As described herein, the true cash value of the non-consideration items is not shown on the assessment roll	and the STC requirement does not apply.
 \end{quote}
 
 The Tax Tribunal has misinterpreted the \STC\ Bulletin. A fuller quotation of the passage on page 2 with my clarifying emphasis is as follows:
 
 \begin{quotation}
-3. If the true cash value of non-consideration items is shown on the assessment roll \textit{in the first year after the qualifying change is made}, then the true cash value of the item shall be calculated by performing “before” and “after” appraisals and then deducting the “before” true cash value from the “after” true cash value.
+3. If the true cash value of non-consideration items is shown on the assessment roll \textit{in the first year after the qualifying change is made}, then the true cash value of the item shall be calculated by performing ``before'' and ``after'' appraisals and then deducting the ``before'' true cash value from the ``after'' true cash value.
 
-4. If the true cash value of non-consideration items is shown on the assessment roll \textit{in years subsequent to the first year after the qualifying change}, then the true cash value of the item shall be calculated each year by performing “before” and “after” appraisals and then deducting the “before” true cash value from the “after” true cash value to determine the true cash value contribution of the item for that assessment year. The purpose of this approach is to reflect the current contribution, rather than the initial contribution, to true cash value which is provided by the item.
+4. If the true cash value of non-consideration items is shown on the assessment roll \textit{in years subsequent to the first year after the qualifying change}, then the true cash value of the item shall be calculated each year by performing ``before'' and ``after'' appraisals and then deducting the ``before'' true cash value from the ``after'' true cash value to determine the true cash value contribution of the item for that assessment year. The purpose of this approach is to reflect the current contribution, rather than the initial contribution, to true cash value which is provided by the item.
 \end{quotation}
 
 Paragraphs 3 and 4 of the Bulletin distinguish between two cases: if the repairs are accounted for in the first year or in years after the first year. The paragraphs detail \textit{how} the repairs are to be valued not \textit{if} they are to be valued. The statute itself and paragraph 2 of the bulletin quoted above makes it clear that once a normal repair is known, it must be given non-consideration treatment. Paragraphs 3 and 4 of the bulletin describe what non-consideration treatment involves in the two common cases.
 
-\subsection{The Tax Tribunal erred when it gave the selling price of the property "no weight or credibility" as to the market value of the property based solely on the fact that the seller was a government entity and speculation that the seller may not have been motivated to receive market value}
+\subsection{The Tax Tribunal erred when it gave the selling price of the property ``no weight or credibility'' as to the market value of the property based solely on the fact that the seller was a government entity and speculation that the seller may not have been motivated to receive market value}
 
-The Tax Tribunal's factual findings are accepted as final by this Court "provided they are supported by competent, material, and substantial evidence. Substantial evidence must be more than a scintilla of evidence, although it may be substantially less than a preponderance of the evidence." \pincite{Jones & Laughlin}{352-53} (citations omitted).
+The Tax Tribunal's factual findings are accepted as final by this Court ``provided they are supported by competent, material, and substantial evidence. Substantial evidence must be more than a scintilla of evidence, although it may be substantially less than a preponderance of the evidence.'' \pincite{Jones & Laughlin}{352-53} (citations omitted).
 
-In \cite[s]{Jones & Laughlin} this Court considered how the Tax Tribunal treated petitioner's evidence regarding the sale. “The tribunal held: 'A sale that occurs \textit{after} the tax date has little or no bearing on the assessment made prior to the sale.' (Emphasis in original.)” \pincite{Jones & Laughlin}{354}. This court held:
+In \cite[s]{Jones & Laughlin} this Court considered how the Tax Tribunal treated petitioner's evidence regarding the sale. ``The tribunal held: `A sale that occurs \textit{after} the tax date has little or no bearing on the assessment made prior to the sale.' (Emphasis in original.)'' \pincite{Jones & Laughlin}{354}. This court held:
 
 \begin{quote}
-[E]vidence of the price at which an item of property actually sold is most certainly relevant evidence of its value at an earlier time within the meaning of the term 'relevant evidence.' MRE 401. Although the sale to Youngstown Industrial occurred approximately nine months after the tax date, the lapse in time is important only with respect to the weight that should be given the evidence, not to the relevance of the evidence. While the tribunal correctly noted that the sale price of a particular piece of property does not control its determination of the value of that property, \pincite{Antisdale}{278}, the tribunal's opinion that the evidence "has little or no bearing" on the property's earlier value suggests that the evidence was rejected out of hand. Such cursory rejection would be erroneous. \pincite{Jones & Laughlin}{354}
+[E]vidence of the price at which an item of property actually sold is most certainly relevant evidence of its value at an earlier time within the meaning of the term 'relevant evidence.' MRE 401. Although the sale to Youngstown Industrial occurred approximately nine months after the tax date, the lapse in time is important only with respect to the weight that should be given the evidence, not to the relevance of the evidence. While the tribunal correctly noted that the sale price of a particular piece of property does not control its determination of the value of that property, \pincite{Antisdale}{278}, the tribunal's opinion that the evidence ``has little or no bearing'' on the property's earlier value suggests that the evidence was rejected out of hand. Such cursory rejection would be erroneous. \pincite{Jones & Laughlin}{354}
 \end{quote} 
 
-As in \cite{Jones & Laughlin}, the Tax Tribunal in this case cursorily rejected the sale of the property. In the \FOJ\ this took just four sentences: 
+As in \cite[s]{Jones & Laughlin}, the Tax Tribunal in this case cursorily rejected the sale of the property. In the \FOJ\ this took just four sentences: 
 
 \begin{quote}
-	Lastly, Petitioner did not contend that his purchase of the subject property was an arm's length sale transaction under the definition of \textit{market value}. [footnote cite to Dictionary of Real Estate Appraisal.] The grantor in this bank sale transaction was the the U.S. Department of Housing and Urban Development (HUD). Petitioner's purchase price is not the presumptive determination of market value. Therefore, Petitioner's contentions related to his purchase price and "normal" repairs are given no weight or credibility in the determination of market value for the subject property. \FOJ\ at 6.
+	Lastly, Petitioner did not contend that his purchase of the subject property was an arm's length sale transaction under the definition of \textit{market value}. [footnote cite to Dictionary of Real Estate Appraisal.] The grantor in this bank sale transaction was the the U.S. Department of Housing and Urban Development (HUD). Petitioner's purchase price is not the presumptive determination of market value. Therefore, Petitioner's contentions related to his purchase price and ``normal'' repairs are given no weight or credibility in the determination of market value for the subject property. \FOJ\ at 6.
 \end{quote}
 
 The \orderDenying\ is similarly cursory:
 
 \begin{quote}
-	Further, the Tribunal cannot conclude that the FOJ erred when it	concluded that Petitioner’s contentions concerning the purchase price, i.e. the true cash value before repairs, was entitled to no weight or credibility. The selling price of a property is not is presumptive true cash value. [footnote cite to MCL 211.27(5)] Despite Petitioner’s assertions that the marketing efforts for the subject show that the sale was a “market sale,” the home was being sold by the U.S. Department of Housing and Urban Development (“HUD”). Because the subject was being sold by a government entity, that entity’s motivation may not have been to receive market value for the property. \orderDenying\ at 2.
+	Further, the Tribunal cannot conclude that the FOJ erred when it	concluded that Petitioner's contentions concerning the purchase price, i.e. the true cash value before repairs, was entitled to no weight or credibility. The selling price of a property is not is presumptive true cash value. [footnote cite to MCL 211.27(5)] Despite Petitioner's assertions that the marketing efforts for the subject show that the sale was a ``market sale,'' the home was being sold by the U.S. Department of Housing and Urban Development (``HUD''). Because the subject was being sold by a government entity, that entity's motivation may not have been to receive market value for the property. \orderDenying\ at 2.
 \end{quote}
 
-Besides being cursory, the Tax Tribunal's rejection of the sale is not based on any evidence or even logic, but rather solely on the fact that the seller was HUD along with the speculation that the seller's "motivation may not been to receive market value for the property." There is no proof offered for why this speculation may be true in the general case or in this instance. There is not even a scintilla of evidence here, certainly not the competent, material, and substantial evidence that is required.
+Besides being cursory, the Tax Tribunal's rejection of the sale is not based on any evidence or even logic, but rather solely on the fact that the seller was HUD along with the speculation that the seller's ``motivation may not been to receive market value for the property.'' There is no proof offered for why this speculation may be true in the general case or in this instance. There is not even a scintilla of evidence here, certainly not the competent, material, and substantial evidence that is required.
 
 \subsection{It is a wrong interpretation of law for the Tax Tribunal to believe that the assessor did not violate \mathieuGast\ as long as she had some reason to believe that repairs were not needed to justify the true cash value}
 
@@ -335,7 +351,7 @@ The Tax Tribunal appears to believe that the assessor is free to ignore  normal 
 The Tax Tribunal does not seem to think that it need verify for itself that the assessor's belief about the property's values be actually true. It is enough that there exists some supporting evidence:
 
 \begin{quote}
-	Although not necessarily evidence of true cash value, this evidence supports the property’s assessment as a property in average condition both at the time Petitioner acquired it and after he completed the normal repairs. In other words, the record evidence supports the conclusion that the assessment did not consider the increase in true cash value that was the result of normal repairs." \orderDenying\ at 2. 
+	Although not necessarily evidence of true cash value, this evidence supports the property's assessment as a property in average condition both at the time Petitioner acquired it and after he completed the normal repairs. In other words, the record evidence supports the conclusion that the assessment did not consider the increase in true cash value that was the result of normal repairs. \orderDenying\ at 2. 
 \end{quote}
 
 \mathieuGast\ reads in relevant part:
@@ -344,23 +360,23 @@ The Tax Tribunal does not seem to think that it need verify for itself that the 
 	The assessor \textit{shall} not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. . . . The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value \textit{shall} be indicated on the assessment roll. . . . (emphasis mine)
 \end{quote}
 
-The assessor must never ignore normal repairs. The statute uses the word "shall", not "may", to indicate that the assessor is not free to ignore the contribution of normal repairs in determining the true cash value and indicating the value of the repairs in the assessment roll. 
+The assessor must never ignore normal repairs. The statute uses the word ``shall'', not ``may'', to indicate that the assessor is not free to ignore the contribution of normal repairs in determining the true cash value and indicating the value of the repairs in the assessment roll. 
 
-Additionally, when it takes up a case, the  Tax Tribunal is "required to make an independent determination of the true cash value of the property. The tribunal may not automatically accept a respondent's assessment, but must make its own finding of fact and arrive at a legally supportable true cash value." \pincite{Jones & Laughlin}{355}. Simply pointing out some evidence that may support the assessor's prior determination falls short of this requirement.
+Additionally, when it takes up a case, the  Tax Tribunal is ``required to make an independent determination of the true cash value of the property. The tribunal may not automatically accept a respondent's assessment, but must make its own finding of fact and arrive at a legally supportable true cash value.'' \pincite{Jones & Laughlin}{355}. Simply pointing out some evidence that may support the assessor's prior determination falls short of this requirement.
 
 \subsection{The Tax Tribunal's implication that the property had been in average condition at the time of sale based on the property record card and the MLS pictures is not supported by competent, material, and substantial evidence on the whole record}
 
 When reviewing Tax Tribunal cases, this Court looks for misapplication of the law or adoption of a wrong principle. Factual findings must be supported by competent, material, and substantial evidence on the whole record. Statutory interpretation is reviewed de novo. \pincite{Briggs}{75; 757-758} This is an issue of fact. 
 
-While the Tax Tribunal stops short of making a finding of fact that the property had been in average condition at the time of sale, it asserts that the assessor had reason to believe this. "Although not necessarily evidence of true cash value, this evidence supports the property’s assessment as a property in average condition both at the time Petitioner acquired it and after he completed the normal repairs." \orderDenying\ at 2. Appellant has addressed the error of law regarding this above, but here the Appellant would like to point out that the property was not in fact in average condition at the time of sale. 
+While the Tax Tribunal stops short of making a finding of fact that the property had been in average condition at the time of sale, it asserts that the assessor had reason to believe this. ``Although not necessarily evidence of true cash value, this evidence supports the property's assessment as a property in average condition both at the time Petitioner acquired it and after he completed the normal repairs.'' \orderDenying\ at 2. Appellant has addressed the error of law regarding this above, but here the Appellant would like to point out that the property was not in fact in average condition at the time of sale. 
 
-The Tax Tribunal points to two facts to support the idea that the property was in good condition at the time of sale. First, at the time of sale, the assessor had valued the property at \$48,000, a value consistent with it being in average condition. \orderDenying\ at 2. But the Tax Tribunal overlooks the fact that the assessor's valuation is not based on a personal inspection of the property, but on computerized mass appraisal that \textit{assumes} that each property is in average condition. "On rebuttal, Respondent argues mass appraisal does not account for properties one-by-one. In other words, properties are assessed uniformly and Respondent assumes properties are in 'average' condition." \FOJ\ at 2. The fact that a property is assumed to be in average condition is is not evidence that it is in average condition.
+The Tax Tribunal points to two facts to support the idea that the property was in good condition at the time of sale. First, at the time of sale, the assessor had valued the property at \$48,000, a value consistent with it being in average condition. \orderDenying\ at 2. But the Tax Tribunal overlooks the fact that the assessor's valuation is not based on a personal inspection of the property, but on computerized mass appraisal that \textit{assumes} that each property is in average condition. ``On rebuttal, Respondent argues mass appraisal does not account for properties one-by-one. In other words, properties are assessed uniformly and Respondent assumes properties are in 'average' condition.'' \FOJ\ at 2. The fact that a property is assumed to be in average condition is is not evidence that it is in average condition.
 
 Second, the Tax Tribunal looks at the MLS marketing photos of the property and finds that they depict a property in average condition. \orderDenying\ at 2. The Tax Tribunal does not mention that the photos are part of a listing of the property where the asking price is \$32,000. Apparently the agent who included the pictures in the listing, a licensed expert who is paid a percentage of the sale, did not realize that the asking price should have been 50\% higher.
 
 The Tax Tribunal also does not attempt to explain why \$10,000 would have to be done to a property that was already in average condition, nor why the City's inspectors would require such repairs.
 
-Until the Tax Tribunal's latest \FOJ, everyone involved in the case, the Appellent/Petitioner, the Appellee/Respondent, the Tax Tribunal, and the Court of Appeals, believed that the property was in substandard condition at the time of sale. This Court begins its recitation of the facts of this case by saying, "It is undisputed that, when he purchased the property, it was in substandard condition and required numerous repairs to make it livable." \pincite{patru v wayne}{1}. Indeed the property's poor condition was one of the bases on which the Tax Tribunal intially ruled that the repairs were not normal. This Court corrected that in \cite{patru v wayne}.
+Until the Tax Tribunal's latest \FOJ, everyone involved in the case, the Appellent/Petitioner, the Appellee/Respondent, the Tax Tribunal, and the Court of Appeals, believed that the property was in substandard condition at the time of sale. This Court begins its recitation of the facts of this case by saying, ``It is undisputed that, when he purchased the property, it was in substandard condition and required numerous repairs to make it livable.'' \pincite{Patru}{1}. Indeed the property's poor condition was one of the bases on which the Tax Tribunal intially ruled that the repairs were not normal. This Court corrected that in \cite[s]{Patru}.
 
 Also, in the latest hearing, the Appellee did not advance the theory that the property at the time of sale was in average condition. The \FOJ\ and \orderDenying\ do not claim that Appellee argued this. Although the Appellee has not submitted their brief yet, Appellant believes that the Appellee will not attempt to argue this point here. 
 

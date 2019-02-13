@@ -169,31 +169,43 @@
   % Debug
   % parenpos = (\@parenpos)\par paren = (\@paren)\par withoutparen = (\@withoutparen)\par%
   % 
-  % With the parenthetical gone, we look for the LAST comma,
-  % and assume the citation is there to the end, parallel cites are
-  % separated by a semicolon.
-  \StrCount{\@withoutparen}{,}[\@commacount]%
-  \StrPosition[\@commacount]{\@withoutparen}{,}[\@lastcommapos]%
-  \StrGobbleLeft{\@withoutparen}{\numexpr \@lastcommapos+1}[\@citation]%
-  \StrLeft{\@withoutparen}{\numexpr \@lastcommapos-1}[\@casename]%
-  %
-  % Debug
-  % citation = (\@citation)\par casename = (\@casename)\par%
-  %
-  \let\reporters\empty\let\startpages\empty%
-  % Parsing Citations: (\@citation)
-  \expandafter\parseCitations\@citation; X X X; %
-
-  % Set the short name
-  \IfEq{#1}{\empty}{% Short name was not given explicitly
-    % Deriving shortname\par%
-    % an edef here causes an error
-    \deriveShortCaseName[\@shortname]{\@casename}%
-  }{% else a short name is given explicitly, use that
-  % Using explicit shortname (#1)\par%
-    \edef\@shortname{#1}%edef throws error here
+  % With the parenthetical gone, we check if this case is unpublished.
+  \IfSubStr[1]{#2}{, unpublished}{% case is unpublished
+    \edef\unpublished{unpublished}%
+    \StrBefore{\@withoutparen}{, unpublished}[\@casename]%
+    \StrDel[1]{\@withoutparen}{\@casename ,}[\reporters]%
+    \def\startpages{\empty}% 
+    \wlog{Unpublished case: #2}%
+    \wlog{casename: \@casename}%
+    \wlog{reporters: \reporters}%
+  }{% case is published
+    \edef\unpublished{\empty}%
+    % we look for the LAST comma,
+    % and assume the citation is there to the end, parallel cites are
+    % separated by a semicolon.
+    \StrCount{\@withoutparen}{,}[\@commacount]%
+    \StrPosition[\@commacount]{\@withoutparen}{,}[\@lastcommapos]%
+    \StrGobbleLeft{\@withoutparen}{\numexpr \@lastcommapos+1}[\@citation]%
+    \StrLeft{\@withoutparen}{\numexpr \@lastcommapos-1}[\@casename]%
+    %
+    % Debug
+    % citation = (\@citation)\par casename = (\@casename)\par%
+    %
+    \let\reporters\empty\let\startpages\empty%
+    % Parsing Citations: (\@citation)
+    \expandafter\parseCitations\@citation; X X X; %
+    }% end unpublished/published split
+    % Set the short name
+    \wlog{setting short name}%
+    \IfEq{#1}{\empty}{% Short name was not given explicitly
+      % Deriving shortname\par%
+      % an edef here causes an error
+      \deriveShortCaseName[\@shortname]{\@casename}%
+    }{% else a short name is given explicitly, use that
+      % Using explicit shortname (#1)\par%
+      \edef\@shortname{#1}%edef throws error here
   }%
-  #3{\@shortname}{\@casename}{\reporters}{\startpages}{\@paren}%
+  #3[\unpublished]{\@shortname}{\@casename}{\reporters}{\startpages}{\@paren}%
 } % end parseCase
 
 \newcommand{\citecase}[2][]{%
@@ -221,6 +233,7 @@
 %%
 \newcommand{\newcase}[6][empty]{%
   % \par newcase 1(#1), 2(#2), 3(#3), 4(#4), 5(#5), 6(#6)\par%
+  \IfSubStr{unpublished}{#1}{\EDef{#2@Unpublished}{unpublished}}{\EDef{#2@Unpublished}{\empty}}%
   \EDef{#2@Type}{Case}%
   % \par setting index type\par%
   \EDef{#2@IndexType}{Case}%
@@ -311,6 +324,9 @@
   \if\relax\detokenize{#1}\relax\else; #2\fi}
 
 \def\bbCaseLongCitationsHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
+  % #1 = page of 1st reporter, #2 = page of 2nd reporter, #3 = page of 3rd reporter
+  % #4 = overflow junk
+  % #5 = shortname, #7 slip
   \bbFirstReporterLong{\ReporterA{#5}}{\StartPageA{#5}}{#1}{#7}%
   \bbFollowingReporterLong{\ReporterB{#5}}{\StartPageB{#5}}{#2}{#7}%
   \bbFollowingReporterLong{\ReporterC{#5}}{\StartPageC{#5}}{#3}{#7} %
@@ -318,8 +334,11 @@
   \bbSlipParenthetical{#7}{#1}%
 }%
 
-\newcommand{\bbCaseLongCitations}[2]{% 1: shortname, 3: page 
-  \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}
+\newcommand{\bbCaseLongCitations}[2]{% 1: shortname, 2: page
+  \ifempty{#1@Unpublished}{%
+    \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}{%
+    \ReporterA{#1} \Call{#1@Parenthetical}%
+    \ifempty{#2}{\empty}{, p #2}}}%
 
 \def\bbCaseShortCitationsHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
   \bbFirstReporterShort{\ReporterA{#5}}{\StartPageA{#5}}{#1}{#7}%
@@ -328,7 +347,7 @@
   \bbSlipParenthetical{#7}{#1}%
 }%
 \newcommand{\bbCaseShortCitations}[2]{% 1: shortname, 3: page 
-  \bbCaseShortCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}
+  \bbCaseShortCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}%
 
 \def\bbCaseShortCitationsWithCommaHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
   \bbFirstReporterShortWithComma{\ReporterA{#5}}{\StartPageA{#5}}{#1}{#7}%
@@ -707,8 +726,8 @@
 %% will not be added automatically.
 %%
 
-\newcommand{\Id}[1][]{\@ifnextchar.{\@bbId{#1}{I.}\@absorbperiod}{\@bbId{#1}{I}}}
-\newcommand{\id}[1][]{\@ifnextchar.{\@bbId{#1}{i.}\@absorbperiod}{\@bbId{#1}{i}}}
+\newcommand{\Id}[1][]{doing Id\@ifnextchar.{\@bbId{#1}{I.}\@absorbperiod}{\@bbId{#1}{I}}}
+\newcommand{\id}[1][]{doing id\@ifnextchar.{\@bbId{#1}{i.}\@absorbperiod}{\@bbId{#1}{i}}}
 \def\@bbId#1#2{\@bbsource{\@bbLastSource}{\ifempty{#1}{\@bbLastPinPage}{#1}}{#2}}
 
 %%\cmd{citetext}{Arbitrary text}[Automatically place law review citations in footnotes.]
@@ -942,8 +961,7 @@
 
 %Inner command that performs the citations
 % #1 is cite handle, #2 is pin or blank, #3 can include any of 'lsniIp' 
-\newcommand{\@bbsource}[3] 
-{%
+\newcommand{\@bbsource}[3]{%
 	%Check that this source is defined
 	\ifcsname #1@Type\endcsname%
 		\relax%
@@ -1029,7 +1047,13 @@
 				\IfSubStr{#3}{i}{\def\@Id{id}}{}%
 %
 				%Choose either ``at'' or just a space based on the type of authority
-				\def\@At{\ifthenelse{\equal{\SrcType{#1}}{Statute}}{~}{~at~}}%
+				%\def\@At{\ifthenelse{\equal{\SrcType{#1}}{Statute}}{~}{~at~}}%
+                                \ifthenelse{\equal{\SrcType{#1}}{Statute}}{%
+                                  \def\@At{~}}{%
+                                  \expandafter\ifempty{\Call{#1@Unpublished}}{%
+                                    \def\@At{~at~}}{%
+                                    \def\@At{~p~}}}%
+                                %
 				%ALTERNATE: Use "at" iff the pin is numeric
                                 % But how to test for numeric range?
                                 % (e.g., 7-12) We need to strip out
@@ -1045,7 +1069,7 @@
                                 {\ifthenelse{\equal{\SrcType{#1}}{Case} \and%
                                     \boolean{@multiplepin}}{%
                                     \@autofootnote{\@bbSignal\FillIn{}{\@vol}{%
-                                      }\emph{\@Id.}, \Call{#1@ShortCitations}{#2}
+                                      }\emph{\@Id.}, \Call{#1@ShortCitations}{#2}%
                                       % 
                                       % note comma is used before the
                                       % call to ShortCitations, this
@@ -1074,7 +1098,7 @@
 			}%
 		}%
 	}%
-%
+        % 
 	%Indicate that this source has been used, so subsequent uses use short form
 	%This gets into the internals of ifthen.sty, basically \setboolean calls the macro \<Boolean-Variable-Name><true-or-false>
 	%By default, \setboolean is local to the group; we do the following to make the change global
