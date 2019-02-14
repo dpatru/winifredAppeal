@@ -10,3 +10,5 @@ Statute.*
 *.dvi
 *.fdb_latexmk
 *.synctex
+*.synctex(busy)
+auto/
