@@ -175,9 +175,9 @@
     \StrBefore{\@withoutparen}{, unpublished}[\@casename]%
     \StrDel[1]{\@withoutparen}{\@casename ,}[\reporters]%
     \def\startpages{\empty}% 
-    \wlog{Unpublished case: #2}%
-    \wlog{casename: \@casename}%
-    \wlog{reporters: \reporters}%
+    % \wlog{Unpublished case: #2}%
+    % \wlog{casename: \@casename}%
+    % \wlog{reporters: \reporters}%
   }{% case is published
     \edef\unpublished{\empty}%
     % we look for the LAST comma,
@@ -189,7 +189,7 @@
     \StrLeft{\@withoutparen}{\numexpr \@lastcommapos-1}[\@casename]%
     %
     % Debug
-    % citation = (\@citation)\par casename = (\@casename)\par%
+    % published case\par citation = (\@citation)\par casename = (\@casename)\par%
     %
     \let\reporters\empty\let\startpages\empty%
     % Parsing Citations: (\@citation)
@@ -233,7 +233,8 @@
 %%
 \newcommand{\newcase}[6][empty]{%
   % \par newcase 1(#1), 2(#2), 3(#3), 4(#4), 5(#5), 6(#6)\par%
-  \IfSubStr{unpublished}{#1}{\EDef{#2@Unpublished}{unpublished}}{\EDef{#2@Unpublished}{\empty}}%
+  \newboolean{#2@Unpublished}
+  \IfSubStr{unpublished}{#1}{\setboolean{#2@Unpublished}{true}}{\setboolean{#2@Unpublished}{false}}%
   \EDef{#2@Type}{Case}%
   % \par setting index type\par%
   \EDef{#2@IndexType}{Case}%
@@ -266,7 +267,16 @@
   }%
   \edef\helpertwo{\noexpand\helper#4; ; ; ;;#5; ; ; ;;}%
   \helpertwo%
-  \egroup% erase helper and helpertwo 
+  \egroup% erase helper and helpertwo
+  newcase:\par\ 
+  #2@Type: \Call{#2@Type}\par
+  #2@IndexType: \Call{#2@IndexType}\par
+  #2@ShortName: \Call{#2@ShortName}\par
+  #2@FullName: \Call{#2@FullName}\par
+  #2@Reporter: \Call{#2@Reporter}\par
+  #2@StartPage: \Call{#2@StartPage}\par
+  #2@Parenthetical: \Call{#2@Parenthetical}\par
+  unpublished: \ifthenelse{\boolean{\Unpublished{#2}}}{yes}{no}\par
 }%end \newcase definition
 
 \newcommand{\bbFirstReporterLong}[4]{%1: reporter, 2: start page, 3:
@@ -335,7 +345,7 @@
 }%
 
 \newcommand{\bbCaseLongCitations}[2]{% 1: shortname, 2: page
-  \ifempty{#1@Unpublished}{%
+  \ifthenelse{\boolean{\Unpublished{#1}}}{%
     \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}{%
     \ReporterA{#1} \Call{#1@Parenthetical}%
     \ifempty{#2}{\empty}{, p #2}}}%
@@ -877,6 +887,7 @@
 \newcommand{\LastNote}[1]{\Call{#1@LastNote}}
 \newcommand{\LongCite}[2]{\Call{@bb\SrcType{#1}LongCite}{#1}{#2}}
 \newcommand{\ShortCite}[2]{\Call{@bb\SrcType{#1}ShortCite}{#1}{#2}}
+\newcommand{\Unpublished}[1]{#1@Unpublished}
 
 %%
 %% \cmd{SetIndexType}{Short Name}{New Index Type}[Change a source's destination index / table of authorities] 
@@ -1050,7 +1061,7 @@
 				%\def\@At{\ifthenelse{\equal{\SrcType{#1}}{Statute}}{~}{~at~}}%
                                 \ifthenelse{\equal{\SrcType{#1}}{Statute}}{%
                                   \def\@At{~}}{%
-                                  \expandafter\ifempty{\Call{#1@Unpublished}}{%
+                                  \ifthenelse{\boolean{\Unpublished{#1}}}{%
                                     \def\@At{~at~}}{%
                                     \def\@At{~p~}}}%
                                 %
