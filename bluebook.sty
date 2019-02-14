@@ -76,7 +76,8 @@
 \def\SafeUnskip{\ifvmode\relax\else\unskip\fi}
 \def\globalsetboolean#1#2{\globaldefs=1\setboolean{#1}{#2}\globaldefs=0\relax}
 
-\def\ifempty#1#2#3{\if\relax\expandafter\detokenize\expandafter{#1}\relax #2\else #3\fi} 
+\def\ifempty#1#2#3{\if\relax\expandafter\detokenize\expandafter{#1}\relax #2\else #3\fi}
+%\def\eifempty#1#2#3{\def\temp{#1}\if\relax\temp\relax #2\else #3\fi}
 \def\ifpin#1{\ifempty{##2}{}{#1}}
 \def\FillIn#1#2#3{\noexpand\edef\@tmp{#2}\ifempty{\@tmp}{}{#1#2#3}}
 \def\IfFootnote#1{\ifthenelse{\boolean{@bbInFootnote}}{#1}{}}
@@ -196,12 +197,12 @@
     \expandafter\parseCitations\@citation; X X X; %
     }% end unpublished/published split
     % Set the short name
-    \wlog{setting short name}%
+    %\wlog{setting short name}%
     \IfEq{#1}{\empty}{% Short name was not given explicitly
       % Deriving shortname\par%
       % an edef here causes an error
       \deriveShortCaseName[\@shortname]{\@casename}%
-    }{% else a short name is given explicitly, use that
+    }{% else a short name is gqiven explicitly, use that
       % Using explicit shortname (#1)\par%
       \edef\@shortname{#1}%edef throws error here
   }%
@@ -233,8 +234,9 @@
 %%
 \newcommand{\newcase}[6][empty]{%
   % \par newcase 1(#1), 2(#2), 3(#3), 4(#4), 5(#5), 6(#6)\par%
-  \newboolean{#2@Unpublished}
-  \IfSubStr{unpublished}{#1}{\setboolean{#2@Unpublished}{true}}{\setboolean{#2@Unpublished}{false}}%
+  \IfSubStr{unpublished}{#1}{\EDef{#2@Unpublished}{unpublished}}{\EDef{#2@Unpublished}{}}%
+  %\newboolean{#2@Unpublished}
+  %\IfSubStr{unpublished}{#1}{\setboolean{#2@Unpublished}{true}}{\setboolean{#2@Unpublished}{false}}%
   \EDef{#2@Type}{Case}%
   % \par setting index type\par%
   \EDef{#2@IndexType}{Case}%
@@ -268,15 +270,17 @@
   \edef\helpertwo{\noexpand\helper#4; ; ; ;;#5; ; ; ;;}%
   \helpertwo%
   \egroup% erase helper and helpertwo
-  newcase:\par\ 
-  #2@Type: \Call{#2@Type}\par
-  #2@IndexType: \Call{#2@IndexType}\par
-  #2@ShortName: \Call{#2@ShortName}\par
-  #2@FullName: \Call{#2@FullName}\par
-  #2@Reporter: \Call{#2@Reporter}\par
-  #2@StartPage: \Call{#2@StartPage}\par
-  #2@Parenthetical: \Call{#2@Parenthetical}\par
-  unpublished: \ifthenelse{\boolean{\Unpublished{#2}}}{yes}{no}\par
+  % newcase:\par\ 
+  % #2@Type: \Call{#2@Type}\par
+  % #2@IndexType: \Call{#2@IndexType}\par
+  % #2@ShortName: \Call{#2@ShortName}\par
+  % #2@FullName: \Call{#2@FullName}\par
+  % #2@Reporter: \Call{#2@Reporter}\par
+  % #2@StartPage: \Call{#2@StartPage}\par
+  % #2@Parenthetical: \Call{#2@Parenthetical}\par
+  % unpublished: \Unpublished{#2}
+  % \edef\temp{\Unpublished{#2}} \if\relax\temp\relax no\else yes\fi
+  % \eifempty{\Unpublished{#2}}{no}{yes}\par
 }%end \newcase definition
 
 \newcommand{\bbFirstReporterLong}[4]{%1: reporter, 2: start page, 3:
@@ -345,10 +349,30 @@
 }%
 
 \newcommand{\bbCaseLongCitations}[2]{% 1: shortname, 2: page
-  \ifthenelse{\boolean{\Unpublished{#1}}}{%
-    \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}{%
-    \ReporterA{#1} \Call{#1@Parenthetical}%
-    \ifempty{#2}{\empty}{, p #2}}}%
+  %bbCaseLongCitations 1: (#1) 2:(#2) %
+  % \eifempty{\Unpublished{#1}}{%
+  %   \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}{%
+  %   \ReporterA{#1} \Call{#1@Parenthetical}%
+  %   \ifempty{#2}{\empty}{, p #2}}}%
+  % \def\temp{\Unpublished{#1}}%
+  % \if\relax\temp\relax%
+  % \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
+  % \else%
+  % \ReporterA{#1} \Call{#1@Parenthetical}%
+  % \ifempty{#2}{\empty}{, p #2}%
+  % \fi%
+  % \IfStrEq{}{\Unpublished{#1}}{%
+  %   \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
+  %   }{%
+  %     \ReporterA{#1} \Call{#1@Parenthetical}%
+  %     \ifempty{#2}{\empty}{, p #2}}%
+  \expandafter\if\Call{#1@Unpublished}\relax\relax%
+  \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
+  \else%
+  \ReporterA{#1} \Call{#1@Parenthetical}%
+  \ifempty{#2}{\empty}{, p #2}%
+  \fi%
+}%
 
 \def\bbCaseShortCitationsHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
   \bbFirstReporterShort{\ReporterA{#5}}{\StartPageA{#5}}{#1}{#7}%
@@ -357,7 +381,8 @@
   \bbSlipParenthetical{#7}{#1}%
 }%
 \newcommand{\bbCaseShortCitations}[2]{% 1: shortname, 3: page 
-  \bbCaseShortCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}%
+  \bbCaseShortCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
+}%
 
 \def\bbCaseShortCitationsWithCommaHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
   \bbFirstReporterShortWithComma{\ReporterA{#5}}{\StartPageA{#5}}{#1}{#7}%
@@ -887,7 +912,7 @@
 \newcommand{\LastNote}[1]{\Call{#1@LastNote}}
 \newcommand{\LongCite}[2]{\Call{@bb\SrcType{#1}LongCite}{#1}{#2}}
 \newcommand{\ShortCite}[2]{\Call{@bb\SrcType{#1}ShortCite}{#1}{#2}}
-\newcommand{\Unpublished}[1]{#1@Unpublished}
+\newcommand{\Unpublished}[1]{\Call{#1@Unpublished}}
 
 %%
 %% \cmd{SetIndexType}{Short Name}{New Index Type}[Change a source's destination index / table of authorities] 
@@ -1060,10 +1085,11 @@
 				%Choose either ``at'' or just a space based on the type of authority
 				%\def\@At{\ifthenelse{\equal{\SrcType{#1}}{Statute}}{~}{~at~}}%
                                 \ifthenelse{\equal{\SrcType{#1}}{Statute}}{%
-                                  \def\@At{~}}{%
-                                  \ifthenelse{\boolean{\Unpublished{#1}}}{%
-                                    \def\@At{~at~}}{%
-                                    \def\@At{~p~}}}%
+                                  \def\@At{~}}{% <- Statute
+                                  \ifthenelse{\equal{\SrcType{#1}}{Case} \and%
+                                    \equal{\Unpublished{#1}}{unpublished}}{%
+                                    \def\@At{~p~}}{%
+                                    \def\@At{~at~}}}%
                                 %
 				%ALTERNATE: Use "at" iff the pin is numeric
                                 % But how to test for numeric range?
