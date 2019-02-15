@@ -1,0 +1,95 @@
+%
+% This is one of the samples from the lawtex package:
+% http://lawtex.sourceforge.net/
+% LawTeX is licensed under the GNU General Public License 
+%
+\providecommand{\documentclassflag}{}
+\documentclass[12pt,\documentclassflag]{michiganCourtOfAppealsBrief} 
+\usepackage{etoolbox}
+\usepackage[margin=1in]{geometry}
+\usepackage{newcent,microtype}
+\usepackage{setspace,xcolor}
+\usepackage{trace}
+\usepackage[T1]{fontenc}
+\usepackage[hyperindex=false,linkbordercolor=white]{hyperref}
+\makeandletter% use \makeandtab to turn off
+
+\usepackage[modulo]{lineno}% use \linenumbers to show line numbers, see https://texblog.org/2012/02/08/adding-line-numbers-to-documents/
+
+\chardef\_=`_% https://tex.stackexchange.com/a/301984/135718 
+
+
+\begin{document}
+\singlespacing
+
+\newcommand{\makeAbbreviation}[3]{% ensure that the frsit time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
+  \IfBeginWith{#3}{#2}{%
+    \newcommand{#1}[0]{#3\renewcommand{#1}[0]{#2}}}{%
+    \newcommand{#1}[0]{#3 (#2)\renewcommand{#1}[0]{#2}}}}
+
+\begin{centering}
+\bf\scshape State of Michigan\\In the Court of Appeals\\Detroit Office\\~\\ 
+\rm 
+
+\makeandtab
+\begin{tabular}{p{.45\textwidth}|p{.45\textwidth}}
+\cline{1-1}
+  {~
+
+  \raggedright Daniel Patru,\par
+  \hfill\textit{Appellant,}
+  \vspace{.5\baselineskip}
+  \centerline{v}
+  \vspace{.5\baselineskip}
+  \raggedright City of Wayne,\par
+  \hfill\textit{Appellee.}
+  
+  ~} &  {
+      \hfill Court of Appeals No. 346894\par
+      \hfill Lower Court No. 16-001828-TT\par\vspace{\baselineskip}
+      \hfill \textbf{Proof of Service of Docketing Statement}
+  }
+  \\ \cline{1-1}\vspace{2mm}
+  Daniel Patru, P74387, Appellant\newline%
+  3309 Solway\newline%
+  Knoxville, TN 37931\newline%
+  (734) 274-9624\newline\newline%
+  City of Wayne, Appellee\newline%
+  3355 South Wayne Rd,\newline%
+  Wayne, MI 48184\newline%
+  (734) 722-2000%
+  % \end{verbatim}
+  & \\ 
+\end{tabular}
+\makeandletter
+
+\end{centering}
+
+\pagestyle{romanparen}
+\pagenumbering{roman}
+
+\section{Proof of Service}
+
+On 2/15/2019, I served a copy of the Docketing Statement on the Appellee, the City of Wayne, by first class mail to: 3355 S. Wayne Rd, Wayne, MI 48184. 
+
+\vspace{1\baselineskip}
+
+{ \setlength{\leftskip}{3.5in}
+
+  Respectfully Submitted,
+
+  /s/ Daniel Patru
+
+  2/15/2019
+
+  \setlength{\leftskip}{0pt}}
+
+\newpage\empty% we need a new page so that the index entries on the last
+        % page get written out to the right file.
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
