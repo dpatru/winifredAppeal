@@ -270,6 +270,7 @@
   \edef\helpertwo{\noexpand\helper#4; ; ; ;;#5; ; ; ;;}%
   \helpertwo%
   \egroup% erase helper and helpertwo
+  % Debug
   % newcase:\par\ 
   % #2@Type: \Call{#2@Type}\par
   % #2@IndexType: \Call{#2@IndexType}\par
@@ -368,7 +369,7 @@
   %     \ifempty{#2}{\empty}{, p #2}}%
   \expandafter\if\Call{#1@Unpublished}\relax\relax%
   \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
-  \else%
+  \else% unpublished, check for page
   \ReporterA{#1} \Call{#1@Parenthetical}%
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
