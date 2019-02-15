@@ -382,7 +382,11 @@
   \bbSlipParenthetical{#7}{#1}%
 }%
 \newcommand{\bbCaseShortCitations}[2]{% 1: shortname, 3: page 
+  \expandafter\if\Call{#1@Unpublished}\relax\relax%
   \bbCaseShortCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
+  \else% unpublished, check for page
+  \ifempty{#2}{\empty}{, p #2}%
+  \fi%
 }%
 
 \def\bbCaseShortCitationsWithCommaHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
@@ -392,8 +396,12 @@
   \bbSlipParenthetical{#7}{#1}%
 }%
 \newcommand{\bbCaseShortCitationsWithComma}[2]{% 1: shortname, 3: page 
-  \bbCaseShortCitationsWithCommaHelper#2; ; ; XXX#1XXX#2slipXXX}
-
+  \expandafter\if\Call{#1@Unpublished}\relax\relax%
+  \bbCaseShortCitationsWithCommaHelper#2; ; ; XXX#1XXX#2slipXXX%
+  \else% unpublished, check for page
+  \ifempty{#2}{\empty}{, p #2}%
+  \fi%
+}%
 
 %%
 %%\cmd{newbook}{Short Name}{Authors}{Title}{Parenthetical}[Define a new book citation.]
