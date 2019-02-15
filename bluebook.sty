@@ -983,7 +983,7 @@
 \newcommand{\@bbInCollectionLongCite}[2]{\Authors{#1}, {\ATF\Title{#1}}, \emph{in} \@bbsource{\CollectionTitle{#1}}{\StartPage{#1}, #2}{}}
 \newcommand{\@bbInSingleAuthorCollectionLongCite}[2]{\FillIn{}{\@vol}{ }{\BAF\Authors{#1}}, {\ATF\Title{#1}}, \emph{in} \@bbsource{\CollectionTitle{#1}}{\StartPage{#1}, #2}{}}
 \newcommand{\@bbCollectionLongCite}[2]{\FillIn{}{\@vol}{ }{\BTF\Title{#1}}\FillIn{, }{#2}{} \Parenthetical{#1}}
-\def\@bbMiscLongCite#1#2{{\def\pin##1##2{\FillIn{##1}{#2}{##2}}\FullName{#1}}}
+\def\@bbMiscLongCite#1#2{{\def\pin##1##2{\FillIn{##1}{#2}{##2}}\FullName{#1}\ifpin{ #2}}}
 
 % Short-form citation, with and without a pin cite
 \newcommand{\@bbCaseShortCite}[2]{%
