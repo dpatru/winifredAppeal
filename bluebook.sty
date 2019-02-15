@@ -754,9 +754,14 @@
 \def\@absorbperiod.{}
 %\def\absorbcomma,{}
 
-\renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}\xspace}}
-\newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}\xspace}}
+%remove xspace
+\renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}\xspace}}%
+\newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}\xspace}}%
 
+% \renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}}}%
+% \newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}}}%
+
+\def\nobreakseq{\nobreak \hskip 0pt \hbox}
 %%
 %%\cmd{Id, \textbackslash{}id}[Pin Page][Cite the previous source]
 %% \begin{Example}
