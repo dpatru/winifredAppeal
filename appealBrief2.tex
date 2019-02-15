@@ -68,11 +68,13 @@
 % \court{Michigan Court of Appeals}
 % \circuit{Sixth}
 % \brieffor{Appellant}
-% \author{Daniel Patru, P74387\\{\em Petitioner}}
-% \address{25239 Andover Drive \\ Dearborn Heights, MI 48125\\ (734) 274-9624}
+% \author{Daniel Patru , P74387\\{\em Petitioner}}
+% \address{3309 Solway \\ Knoxville, TN 37931\\ (734) 274-9624}
 
-\newcommand{\makeAbbreviation}[3]{% ensure that the first time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
-  \newcommand{#1}[0]{#3 (#2)\renewcommand{#1}[0]{#2}}}
+\newcommand{\makeAbbreviation}[3]{% ensure that the frsit time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
+  \IfBeginWith{#3}{#2}{%
+    \newcommand{#1}[0]{#3\renewcommand{#1}[0]{#2}}}{%
+    \newcommand{#1}[0]{#3 (#2)\renewcommand{#1}[0]{#2}}}}
 
 \makeAbbreviation{\MLS}{MLS}{Multiple Listing Service}
 \makeAbbreviation{\MTT}{MTT}{Michigan Tax Tribunal}
@@ -131,8 +133,8 @@
   }
   \\ \cline{1-1}\vspace{2mm}
   Daniel Patru, P74387, Appellant\newline%
-  25239 Andover Drive\newline%
-  Dearborn Heights, MI 48125\newline%
+  3309 Solway\newline%
+  Knoxville, TN 37931\newline%
   (734) 274-9624\newline\newline%
   City of Wayne, Appellee\newline%
   3355 South Wayne Rd,\newline%
@@ -172,7 +174,7 @@
 
 \section{Jurisdictional Statement}
  
-The Court of Appeals has jurisdiction over this claim of appeal under \pincite{MCL}{205.753(2)} (allowing appeals from a final order of the Tax Tribunal) and \pincite{MCR}{7.204(A)(1)(b)} (requiring appeals to be made within 21 days after the entry of an order deciding a motion for reconsideration). The \FOJ\ from the Tax Tribunal was entered 12/04/2018. A motion for reconsideration was filed 12/05/2018. The order denying reconsideration was entered 12/14/2018. The claim of appeal for this case was filed 12/18/2018, within the 21 days required.
+The Court of Appeals has jurisdiction over this claim of appeal under \pincite[l]{MCL}{205.753(2)} (allowing appeals from a final order of the Tax Tribunal) and \pincite{MCR}{7.204(A)(1)(b)} (requiring appeals to be made within 21 days after the entry of an order deciding a motion for reconsideration). The \FOJ\ from the Tax Tribunal was entered 12/04/2018. A motion for reconsideration was filed 12/05/2018. The order denying reconsideration was entered 12/14/2018. The claim of appeal for this case was filed 12/18/2018, within the 21 days required.
 
 \section{Introduction}
 
@@ -211,7 +213,7 @@ Appellant answers yes. The Tax Tribunal answers no. The Appellee's answer is unk
 Appellant answers yes. The Tax Tribunal anwers no. The Appellee's answer is unknown. 
 
 \section{Facts}
-The dispute in this case is about the true cash value as of 12/31/2015, tax day, of a house in the City of Wayne that Appellant purchased in August 2015 for \$32,000. \mlsprintout. The house had been sold by the Department of Housing and Urban Development (HUD). \textit{Id.} At the time of purchase, the house needed numerous repairs; most of them were required by the City of Wayne as a condition of obtaining a Certificate of Occupancy. \repairs. By tax day the house had been repaired and rented. \FOJ\ at 4 and 5.
+The dispute in this case is about the true cash value as of 12/31/2015, tax day, of a house in the City of Wayne that Appellant purchased in August 2015 for \$32,000. \mlsprintout. The house had been sold by the Department of Housing and Urban Development (HUD). \mlsprintout. At the time of purchase, the house needed numerous repairs; most of them were required by the City of Wayne as a condition of obtaining a Certificate of Occupancy. \repairs. By tax day the house had been repaired and rented. \FOJ\ at 4 and 5.
 
 Appellant contends that the true cash value should be what he paid for it and that the additional value the house gained after he bought it was due to normal repairs which under \mathieuGast\ cannot be considered until after it sells. \explanatoryLetter. The City of Wayne contends that the true cash value should be the value of the house as was on tax day and that \mathieuGast\ does not changed this result. \FOJ\ at 4.
 
