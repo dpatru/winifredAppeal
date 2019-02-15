@@ -40,27 +40,6 @@
  
 %The command \makeandletter turns the ampersand into a printable character, rather than a special alignment tab \makeandletter
 
-{\makeatletter % needed for optional argument to newstatute.
-\newstatute[1@]{MCL}{}% place MCL first
-\newstatute[2@]{MCR}{}
-\newstatute[3@]{TTR}{}
-\newstatute[4@]{Dearborn Ordinance}{}% place this fourth
-
-\newstatute[5@]{Wayne Ordinance}{}
-} % end makeatletter block
-\def\mathieuGast{\pincite[l]{MCL}{211.27(2)}}
-\def\ttr287{\pincite[s]{TTR}{287}}
-\def\inspectionOrdinance{\pincite{Wayne Ordinance}{\S1484.04}}
-\long\def\inspectionOrdinanceText{\begin{quote}
-1484.04  CERTIFICATE REQUIRED PRIOR TO SALE. 
-   It shall be unlawful to sell, convey or transfer an ownership interest, or act as a broker or agent for the sale, conveyance or transfer of an ownership interest, in any residential dwelling unless and until a valid Certificate of Compliance is first issued. 
-(Ord. 1991-10.  Passed 7-16-91.) 
-\end{quote}}
-
-
-\newmisc{STC Bulletin 6 of 2007}{Michigan State Tax Commission (STC) Bulletin No. 6 of 2007 (Foreclosure Guidelines)}
-\newmisc{STC Bulletin 7 of 2014}{Michigan State Tax Commission (STC) Bulletin No. 7 of 2014 (Mathieu Gast Act)}
-
 % %Set the information for the title page (later produced by \makefrontmatter)
 % \docket{No. 10-553} 
 % \appellant{Daniel Patru}
@@ -70,6 +49,52 @@
 % \brieffor{Appellant}
 % \author{Daniel Patru , P74387\\{\em Petitioner}}
 % \address{3309 Solway \\ Knoxville, TN 37931\\ (734) 274-9624}
+
+\begin{document}
+\singlespacing
+\citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}
+\citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
+\citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 780 NW2d 753 (2010)}
+\citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
+\citecase[Rovas]{In re Complaint of Rovas Against SBC Michigan, 482 Mich 90; 754 NW2d 259 (2008)}
+%\citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
+% \citecase{Arbaugh v. Y&H Corp., 546 U.S. 500 (2006)}
+% \citecase[CAF]{CAF Investment Co. v Saginaw Twp, 410 Mich 428; 302 NW2d 164 (1981)}
+% \citecase[Coyne]{Coyne v Highland Twp, 169 Mich. App. 401; 425 NW2d 567 (1988)}
+% \citecase[Malpass]{Malpass v Dep't of Treasury, 494 Mich. 237; 833 NW2d 272 (2013)}
+% \citecase[Meadowlanes]{Meadowlanes Ltd Dividend Housing Ass'n v City of Holland, 437 Mich 473; 473 NW2d 636 (1991)}
+% \citecase[Plymouth]{Plymouth Twp. v Wayne County Board of Commissioners, 137 Mich App 738; 359 NW2d 547 (1984)}
+% \citecase[Professional Plaza]{Professional Plaza v City of Detroit, 647 NW2d 529; 250 Mich. App. 473  (2002)}
+% \citecase[Randolf]{Dep't of Transportation v Randolph, 461 Mich. 757; 610 NW2d 893 (2000)}
+% %\citecase[SBC Health Midwest]{SBC Health Midwest, Inc. v City of Kentwood,  \_\_  Mich \_\_ (decided May 1, 2017)}
+% \citecase[Stevens]{Stevens v Bangor Twp, 150 Mich App 756; 389 NW2d 176 (1986)}
+ 
+{\makeatletter % needed for optional argument to newstatute.
+  % \newstatute[1@]{MCL}{}% place MCL first
+  % \newstatute[2@]{MCR}{}
+  % \newstatute[3@]{TTR}{}
+  % \newstatute[4@]{Dearborn Ordinance}{}% place this fourth
+  % \newstatute[5@]{Wayne Ordinance}{}
+  \newstatute{MCL 211.27(2)}{}
+
+  \newstatute{MCL 205.753(2)}{}% allows appeals from a final order of the Tax Tribunal
+
+  \newstatute{MCR 7.204(A)(1)(b)}{}% allows appeals within 21 days of an order on a motion for reconsideration
+  
+} % end makeatletter block
+% \def\mathieuGast{\pincite[l]{MCL}{211.27(2)}}
+\def\mathieuGast{\cite[s]{MCL 211.27(2)}}%
+%\def\ttr287{\pincite[s]{TTR}{287}}
+%\def\inspectionOrdinance{\pincite{Wayne Ordinance}{\S1484.04}}
+% \long\def\inspectionOrdinanceText{\begin{quote}
+% 1484.04  CERTIFICATE REQUIRED PRIOR TO SALE. 
+%    It shall be unlawful to sell, convey or transfer an ownership interest, or act as a broker or agent for the sale, conveyance or transfer of an ownership interest, in any residential dwelling unless and until a valid Certificate of Compliance is first issued. 
+% (Ord. 1991-10.  Passed 7-16-91.) 
+% \end{quote}}
+
+
+%\newmisc{STC Bulletin 6 of 2007}{Michigan State Tax Commission (STC) Bulletin No. 6 of 2007 (Foreclosure Guidelines)}
+\newmisc{STC Bulletin 7 of 2014}{Michigan State Tax Commission (STC) Bulletin No. 7 of 2014 (Mathieu Gast Act)}
 
 \newcommand{\makeAbbreviation}[3]{% ensure that the frsit time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
   \IfBeginWith{#3}{#2}{%
@@ -87,25 +112,6 @@
 \makeAbbreviation{\mlsprintout}{MLS Printout}{MLS Printout, filed by Appellant/Petitioner with Tax Tribunal on 9/7/2016}
 \makeAbbreviation{\explanatoryLetter}{Explanatory Letter}{Explanatory Letter submitted by Appellant to the Tax Tribunal on 9/6/2018}
 
-\begin{document}
-\singlespacing
-\citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}
-\citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
-\citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 772 NW2d 753 (2010)}
-\citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
-\citecase[Rovas]{In re Complaint of Rovas Against SBC Michigan, 482 Mich 90; 754 NW2d 259 (2008)}
-%\citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
-% \citecase{Arbaugh v. Y&H Corp., 546 U.S. 500 (2006)}
-% \citecase[CAF]{CAF Investment Co. v Saginaw Twp, 410 Mich 428; 302 NW2d 164 (1981)}
-% \citecase[Coyne]{Coyne v Highland Twp, 169 Mich. App. 401; 425 NW2d 567 (1988)}
-% \citecase[Malpass]{Malpass v Dep't of Treasury, 494 Mich. 237; 833 NW2d 272 (2013)}
-% \citecase[Meadowlanes]{Meadowlanes Ltd Dividend Housing Ass'n v City of Holland, 437 Mich 473; 473 NW2d 636 (1991)}
-% \citecase[Plymouth]{Plymouth Twp. v Wayne County Board of Commissioners, 137 Mich App 738; 359 NW2d 547 (1984)}
-% \citecase[Professional Plaza]{Professional Plaza v City of Detroit, 647 NW2d 529; 250 Mich. App. 473  (2002)}
-% \citecase[Randolf]{Dep't of Transportation v Randolph, 461 Mich. 757; 610 NW2d 893 (2000)}
-% %\citecase[SBC Health Midwest]{SBC Health Midwest, Inc. v City of Kentwood,  \_\_  Mich \_\_ (decided May 1, 2017)}
-% \citecase[Stevens]{Stevens v Bangor Twp, 150 Mich App 756; 389 NW2d 176 (1986)}
- 
 \begin{centering}
 \bf\scshape State of Michigan\\In the Court of Appeals\\Detroit Office\\~\\ 
 \rm 
