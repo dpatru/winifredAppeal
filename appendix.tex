@@ -13,6 +13,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{pdfpages}
 \usepackage{fancyhdr}
+\usepackage{xr-hyper}
+\usepackage{hyperref}
 \setlength{\headheight}{15.2pt}
 \pagestyle{fancy}
 \fancyhf{}
@@ -34,17 +36,32 @@
 \fancyfoot[C]{Appendix page \thepage: \leftmark\rightmark}
 \renewcommand{\subsectionmark}[1]{\markright{/#1}} % Pick up non-first subsections
 
+% Place a label on each page so that we can reference the page numbers.
+% Use code from https://tex.stackexchange.com/a/25113/135718
+\newcounter{includepdfpage}
+\newcounter{currentpagecounter}
+\newcommand{\addLabelsToAllIncludedPages}[1]{%
+   \refstepcounter{includepdfpage}%
+   \stepcounter{currentpagecounter}%
+   \label{#1.\thecurrentpagecounter}}%
+
+ % Note that the page label, the toc label, the linkname, and the filename all match. 
+\newcommand{\myincludepdf}[2]{% 1:  label, 2: toc
+  \setcounter{currentpagecounter}{0}%
+  \includepdf[pages=-,pagecommand=\addLabelsToAllIncludedPages{#1},link=true,linkname=#1,addtotoc={#2,#1}]%
+  {appendix/#1.pdf}}%
+  
+  
 \renewcommand{\sectionmark}[1]{\markboth{#1}{/Explanatory Letter}} % must put the first subsection
-\includepdf[pages=-,pagecommand={},addtotoc={1,section,1,Submitted Evidence,evidence,1,subsection,2,Explanatory Letter,explanatoryLetter}]{appendix/001-Evidence_Cover_3_5073_Winifred_-_Google_Docs.pdf}
-\includepdf[pages=-,pagecommand={},addtotoc={1,subsection,2,MLS History,mlshistory}]{appendix/001-winifredHistory.pdf}
-\includepdf[pages=-,pagecommand={},addtotoc={1,subsection,2,MLS Listing Sheet, mlslisting}]{appendix/001-MLS-5073_Winifred.pdf}
-\includepdf[pages=-,pagecommand={},addtotoc={1,subsection,2,List of Repairs,repairlist}]{appendix/001-5073_Winifred_List_of_Repairs_for_2016.pdf}
-\includepdf[pages=-,pagecommand={},addtotoc={1,subsection,2,Form 865 Mathieu Gast Nonconsideration,form865}]{appendix/001-Form865.pdf}
+\myincludepdf{explanatoryLetter}{1,section,1,Submitted Evidence,evidence,1,subsection,2,Explanatory Letter}
+\myincludepdf{mlsHistory}{1,subsection,2,MLS History}
+\myincludepdf{mlsListing}{1,subsection,2,MLS Listing Sheet}
+\myincludepdf{repairs}{1,subsection,2,List of Repairs}
+\myincludepdf{form865}{1,subsection,2,Form 865 Mathieu Gast Nonconsideration}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}} % must put the first subsection
-\includepdf[pages=-,pagecommand={},addtotoc={1,section,1,Final Opinion and Judgement,foj}]{appendix/002-FOJ.pdf}
-\includepdf[pages=-,pagecommand={},addtotoc={1,section,1,Motion For Reconsideration,motionForReconsideration}]{appendix/003-MotionForReconsideration.pdf}
-\includepdf[pages=-,pagecommand={},addtotoc={1,section,1,Reconsideration Denied,reconsiderationDenied}]{appendix/004-reconsiderationDeny.pdf}
-%\includepdf[pages=-,pagecommand={},addtotoc={1,section,1,Bulletin 7 of 2014 Mathieu Gast,bulletin7}]{appendix/Bulletin_7_of_2014_Mathieu_Gast_458960_7.pdf}
+\myincludepdf{foj}{1,section,1,Final Opinion and Judgement}
+\myincludepdf{motionForReconsideration}{1,section,1,Motion For Reconsideration}
+\myincludepdf{reconsiderationDenied}{1,section,1,Reconsideration Denied}
 
 \newpage\empty% we need a new page so that the index entries on the last
         % page get written out to the right file.
