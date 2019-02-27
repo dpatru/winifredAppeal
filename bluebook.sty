@@ -376,13 +376,14 @@
 }%
 
 \def\bbCaseShortCitationsHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
+  %bbCaseShortCitationsHelper (#1) (#2) (#3) (#4) (#5) (#6) (#7)\par%
   \bbFirstReporterShort{\ReporterA{#5}}{\StartPageA{#5}}{#1}{#7}%
   \expandafter\bbFollowingReporterShort\expandafter{\ReporterB{#5}}{\StartPageB{#5}}{#2}{#7}%
   \expandafter\bbFollowingReporterShort\expandafter{\ReporterC{#5}}{\StartPageC{#5}}{#3}{#7}%
   \bbSlipParenthetical{#7}{#1}%
 }%
-\newcommand{\bbCaseShortCitations}[2]{% 1: shortname, 3: page 
-  \expandafter\if\Call{#1@Unpublished}\relax\relax%
+\newcommand{\bbCaseShortCitations}[2]{% 1: shortname, 2: page 
+  \expandafter\if\Call{#1@Unpublished}\relax\relax% This is true if the case is NOT unpublished.
   \bbCaseShortCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
   \else% unpublished, check for page
   \ifempty{#2}{\empty}{, p #2}%
