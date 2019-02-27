@@ -14,32 +14,7 @@
 
 % From tex.stackexchange.com (https://tex.stackexchange.com/a/142258/135718)
 \usepackage{xcolor}
-\usepackage{stackengine}
-\setstackgap{L}{.5\baselineskip}
-\newcommand\markabove[2]{{\sffamily\color{red}\hsmash{$\uparrow$}%
-  \smash{\toplap{#1}{\scriptsize\bfseries#2}}}}
-\newcommand\markbelow[2]{{\sffamily\color{red}\hsmash{$\downarrow$}%
-  \smash{\bottomlap{#1}{\scriptsize\bfseries#2}}}}
-\usepackage{ifthen}
-\newcounter{todoindex}
-\setcounter{todoindex}{0}
-\newcommand\TODO[1]{%
-  \addtocounter{todoindex}{1}%
-  \expandafter\def\csname todo\roman{todoindex}\endcsname{#1}%
-  \markabove{c}{\Alph{todoindex}}%
-}
-\newcounter{showtodoindex}
-\newcommand\showTODOs{%
-  \vspace{5ex}%
-  \rule{10ex}{.5ex}\textcolor{red}{TO-DO LIST}\rule{10ex}{.5ex}\\%
-  \setcounter{showtodoindex}{0}%
-  \whiledo{\value{showtodoindex} < \value{todoindex}}{%
-    \addtocounter{showtodoindex}{1}%
-    \markabove{c}{\Alph{showtodoindex}}  \csname todo\roman{showtodoindex}\endcsname\\%
-  }%
-}%
-% end todo
-
+\usepackage{todonotes}
 % horizontal rule with text, https://tex.stackexchange.com/a/15122/135718
 \newcommand*\ruleline[1]{%
   \par\noindent%
@@ -443,7 +418,8 @@ The Tax Tribunal has misinterpreted the \STC\ Bulletin. A fuller quotation of th
 Paragraphs 3 and 4 of the Bulletin distinguish between two cases: if the repairs are accounted for in the first year or in years after the first year. The paragraphs detail \textit{how} the repairs are to be valued not \textit{if} they are to be valued. The statute itself and paragraph 2 of the bulletin quoted above makes it clear that once a normal repair is known, its value must be noted on the assessment roll. The fact that the repairs were not on the assessment roll does not excuse before-repair and after-repair appraisals, it is evidence that the statute was violated.
 
 \begin{draft}
-After misinterpreting the State Tax Commission's guidance, the Tax Tribunal brushes it aside by saying that STC guidance lacks the force of law, citing \cite{Rovas}. \foj[2]. The implication is that even if the STC supports Appellant's position, the Tax Tribunal is free to ignore it. This is troubling because here Appellant has submitted to the Assessor a list of normal repairs and the City has ignored them -- \mathieuGast\ has not affected in the least how the City has assessed Appellant's property. The Appellant appeals to the Michigan Tax Tribunal and the Tribunal rules that the City has done no wrong to ignore the repairs, and that the City does not have to obey the guidance of the STC in this matter. Under this reasoning, the STC is never binding on assessors if the Tax Tribunal agrees with the assessors. Even without reading \textit{Rovas}, it is clear that the case could not stand for this proposition. The STC guidelines are written for the assessors, but also for the taxpayers. And when a taxpayer seeks the protection of the tax law, it is unseemly to allow the taxing authority to speak with a divided voice.
+  \listoftodos
+  After misinterpreting the State Tax Commission's guidance, the Tax Tribunal brushes it aside by saying that STC guidance lacks the force of law, citing \cite{Rovas}. \foj[2]. The implication \todo{show don't tell} is that even if the STC supports Appellant's position, the Tax Tribunal is free to ignore it. This is troubling because here Appellant has submitted to the Assessor a list of normal repairs and the City has ignored them -- \mathieuGast\ has not affected in the least how the City has assessed Appellant's property. The Appellant appeals to the Michigan Tax Tribunal and the Tribunal rules that the City has done no wrong to ignore the repairs, and that the City does not have to obey the guidance of the STC in this matter. Under this reasoning, the STC is never binding on assessors if the Tax Tribunal agrees with the assessors. Even without reading \textit{Rovas}, it is clear that the case could not stand for this proposition. The STC guidelines are written for the assessors, but also for the taxpayers. And when a taxpayer seeks the protection of the tax law, it is unseemly to allow the taxing authority to speak with a divided voice.
 
 What do I want to say here? What is the problem?
 
