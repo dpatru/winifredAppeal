@@ -756,11 +756,11 @@
 %\def\absorbcomma,{}
 
 %remove xspace
-\renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}\xspace}}%
-\newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}\xspace}}%
+%\renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}\xspace}}%
+%\newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}\xspace}}%
 
-% \renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}}}%
-% \newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}}}%
+\renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}}}%
+\newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}}}%
 
 \def\nobreakseq{\nobreak \hskip 0pt \hbox}
 %%
