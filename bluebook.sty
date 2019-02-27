@@ -993,7 +993,7 @@
   \bbCaseShortCitationsWithComma{#1}{#2}%
 }
 \newcommand{\@bbBookShortCite}[2]{\FillIn{}{\@vol}{ }{\BTF\ShortName{#1}}, {\em supra}\IfFootnote{ note \SupraNote{#1}}\ifpin{, at #2}}
-\newcommand{\@bbStatuteShortCite}[2]{\ShortName{#1} #2}
+\newcommand{\@bbStatuteShortCite}[2]{\ShortName{#1}\if\relax#2\relax\relax\else #2\fi}% no space if no page
 \newcommand{\@bbArticleShortCite}[2]{\ShortName{#1}, {\em supra}\IfFootnote{ note \SupraNote{#1}}\ifpin{, at #2}}
 \newcommand{\@bbInCollectionShortCite}[2]{\ShortName{#1}, {\em supra}\IfFootnote{ note \SupraNote{#1}}\ifpin{, at #2}}
 \newcommand{\@bbInSingleAuthorCollectionShortCite}[2]{\FillIn{}{\@vol}{ }{\BTF\ShortName{#1}}, {\em supra}\IfFootnote{ note \SupraNote{#1}}\ifpin{, at #2}}
