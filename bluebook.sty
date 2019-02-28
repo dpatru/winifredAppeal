@@ -79,6 +79,7 @@
 \def\ifempty#1#2#3{\if\relax\expandafter\detokenize\expandafter{#1}\relax #2\else #3\fi}
 %\def\eifempty#1#2#3{\def\temp{#1}\if\relax\temp\relax #2\else #3\fi}
 \def\ifpin#1{\ifempty{##2}{}{#1}}
+%\def\ifpin#1{\eifempty{##2}{(empty)}{(not empty)#1}}
 \def\FillIn#1#2#3{\noexpand\edef\@tmp{#2}\ifempty{\@tmp}{}{#1#2#3}}
 \def\IfFootnote#1{\ifthenelse{\boolean{@bbInFootnote}}{#1}{}}
 
@@ -998,7 +999,8 @@
 \newcommand{\@bbInCollectionShortCite}[2]{\ShortName{#1}, {\em supra}\IfFootnote{ note \SupraNote{#1}}\ifpin{, at #2}}
 \newcommand{\@bbInSingleAuthorCollectionShortCite}[2]{\FillIn{}{\@vol}{ }{\BTF\ShortName{#1}}, {\em supra}\IfFootnote{ note \SupraNote{#1}}\ifpin{, at #2}}
 \newcommand{\@bbCollectionShortCite}[2]{\FillIn{}{\@vol}{ }{\BTF\Title{#1}}, \emph{supra}\IfFootnote{ note \SupraNote{#1}},\ifpin{ at #2}}
-\newcommand{\@bbMiscShortCite}[2]{\ShortName{#1}\ifpin{ #2}}
+% \newcommand{\@bbMiscShortCite}[2]{bbMiscShortCite (#1)(#2)[\ShortName{#1}|\ifpin{ #2}]}
+\newcommand{\@bbMiscShortCite}[2]{\ShortName{#1}\if\relax#1\relax\empty\else#2\fi}
 
 %Reporter-number-only citation, with and without a pin cite
 \newcommand{\@bbReporterOnlyCite}[1]{\Call{#1@ShortCitations}{}}
