@@ -218,8 +218,19 @@
   \fi%
 }
 
+\newcommand{\caserecord}[2]{% 1: short name, 2: record
+  \expandafter\renewcommand\expandafter{\csname#1@record\endcsname}[1][]{%
+    \ (Appendix at \if\relax##1\relax\pageref{#2}\else%
+    \IfSubStr{##1}{-}{%
+      \def\pageRefRange####1-####2XXX{\pageref{#2.####1}-\pageref{#2.####2}}%
+      \pageRefRange##1XXX}%
+    {\pageref{#2.##1}}%
+    \fi%
+    )}}%
     
-%%
+
+
+%% 
 %%\cmd{newcase}{Short Name}{Full Name}{Reporter}{Starting Page}{Parenthetical}[Defines a new case citation.]
 %% \newcase{Marbury}{Marbury v. Madison}{5 U.S. (1 Cranch)}{137}{(1803)}
 %% \begin{Example}
@@ -234,6 +245,7 @@
 %%% Actually invoke the commands for the documentation:
 %%
 \newcommand{\newcase}[6][empty]{%
+  \expandafter\newcommand\expandafter{\csname#2@record\endcsname}[1][]{default case record}%
   % \par newcase 1(#1), 2(#2), 3(#3), 4(#4), 5(#5), 6(#6)\par%
   \IfSubStr{unpublished}{#1}{\EDef{#2@Unpublished}{unpublished}}{\EDef{#2@Unpublished}{}}%
   %\newboolean{#2@Unpublished}
@@ -374,6 +386,8 @@
   \ReporterA{#1} \Call{#1@Parenthetical}%
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
+  %\ Long Citations\ %
+  \Call{#1@record}[#2]%
 }%
 
 \def\bbCaseShortCitationsHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
@@ -389,13 +403,15 @@
   \else% unpublished, check for page
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
+  %short citations %
+  \if\relax#2\relax\else\Call{#1@record}[#2]\fi% Refer to the record only if there is a page
 }%
 
 \def\bbCaseShortCitationsWithCommaHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
   \bbFirstReporterShortWithComma{\ReporterA{#5}}{\StartPageA{#5}}{#1}{#7}%
   \expandafter\bbFollowingReporterShort\expandafter{\ReporterB{#5}}{\StartPageB{#5}}{#2}{#7}%
   \expandafter\bbFollowingReporterShort\expandafter{\ReporterC{#5}}{\StartPageC{#5}}{#3}{#7}%
-  \bbSlipParenthetical{#7}{#1}%
+  \bbSlipParenthetical{#7}{#1}% 
 }%
 \newcommand{\bbCaseShortCitationsWithComma}[2]{% 1: shortname, 3: page 
   \expandafter\if\Call{#1@Unpublished}\relax\relax%
@@ -403,6 +419,8 @@
   \else% unpublished, check for page
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
+  %\ short citation with comma\ %
+  \if\relax#2\relax\else\Call{#1@record}[#2]\fi% Refer to the record only if there is a page
 }%
 
 %%
