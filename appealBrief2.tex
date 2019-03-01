@@ -79,7 +79,7 @@
 \begin{document}
 \singlespacing
 \citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}
-\caserecord{Patru}{patruvwayne}
+\caseReference{Patru}{patruvwayne}
 \citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
 \citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 780 NW2d 753 (2010)}
 \citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
@@ -145,13 +145,14 @@
   \expandafter\makeAbbreviation\csname #1Abbr\endcsname{#2}{#3}%
   \expandafter\newcommand\csname #1\endcsname[1][]{%
     \Call{#1Abbr}%
-    \if\relax##1\relax\empty, Appendix at \pageref{#1}\else, page ##1, Appendix at %
+    \if\relax##1\relax\empty\ (Appendix at \pageref{#1})%
+    \else, p ##1 (Appendix at %
     % Check for page range
     \IfSubStr{##1}{-}{%
       \def\pageRefRange####1-####2XXX{\pageref{#1.####1}-\pageref{#1.####2}}%
       \pageRefRange##1XXX}%
     {\pageref{#1.##1}}%
-    \fi%
+    )\fi%
   }%
 }%
 

@@ -218,17 +218,27 @@
   \fi%
 }
 
-\newcommand{\caserecord}[2]{% 1: short name, 2: record
-  \expandafter\renewcommand\expandafter{\csname#1@record\endcsname}[1][]{%
-    \ (Appendix at \if\relax##1\relax\pageref{#2}\else%
-    \IfSubStr{##1}{-}{%
-      \def\pageRefRange####1-####2XXX{\pageref{#2.####1}-\pageref{#2.####2}}%
+%% \cmd{caserecord}{ShortName}{reference name}[Links a case to an appendix record]
+%% \citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}
+%% \caseReference{Patru}{patruvwayne}
+%% \begin{Example}
+%%   \citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}
+%%   \caseReference{Patru}{patruvwayne}
+%% \end{Example}
+
+%% \noindent The _\caseReference_ command links a case to an appendix. Call it after you've defined a case. Whenever you cite to the case, a reference will be made to the right page in the Appendix. In Michigan, unpublished cases must be provided. This command makes it easy for people to look up the case in the appendix.
+
+\newcommand{\caseReference}[3][Appendix]{% 1: Optional Appendix name
+  % override 2: short name, 3: reference
+  \expandafter\renewcommand\expandafter{\csname#2@Reference\endcsname}[1][]{%
+    \ (#1 at \if\relax##1\relax\pageref{#3}\else%
+    \IfSubStr{##1}{-}{% Check for multiple pages, eg 3-10
+      \def\pageRefRange####1-####2XXX{\pageref{#3.####1}-\pageref{#3.####2}}%
       \pageRefRange##1XXX}%
-    {\pageref{#2.##1}}%
+    {\pageref{#3.##1}}%
     \fi%
     )}}%
     
-
 
 %% 
 %%\cmd{newcase}{Short Name}{Full Name}{Reporter}{Starting Page}{Parenthetical}[Defines a new case citation.]
@@ -245,7 +255,7 @@
 %%% Actually invoke the commands for the documentation:
 %%
 \newcommand{\newcase}[6][empty]{%
-  \expandafter\newcommand\expandafter{\csname#2@record\endcsname}[1][]{default case record}%
+  \expandafter\newcommand\expandafter{\csname#2@Reference\endcsname}[1][]{default case record}%
   % \par newcase 1(#1), 2(#2), 3(#3), 4(#4), 5(#5), 6(#6)\par%
   \IfSubStr{unpublished}{#1}{\EDef{#2@Unpublished}{unpublished}}{\EDef{#2@Unpublished}{}}%
   %\newboolean{#2@Unpublished}
@@ -387,7 +397,7 @@
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
   %\ Long Citations\ %
-  \Call{#1@record}[#2]%
+  \Call{#1@Reference}[#2]%
 }%
 
 \def\bbCaseShortCitationsHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
@@ -404,7 +414,7 @@
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
   %short citations %
-  \if\relax#2\relax\else\Call{#1@record}[#2]\fi% Refer to the record only if there is a page
+  \if\relax#2\relax\else\Call{#1@Reference}[#2]\fi% Refer to the record only if there is a page
 }%
 
 \def\bbCaseShortCitationsWithCommaHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
@@ -420,7 +430,7 @@
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
   %\ short citation with comma\ %
-  \if\relax#2\relax\else\Call{#1@record}[#2]\fi% Refer to the record only if there is a page
+  \if\relax#2\relax\else\Call{#1@Reference}[#2]\fi% Refer to the record only if there is a page
 }%
 
 %%
