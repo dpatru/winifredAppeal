@@ -73,6 +73,7 @@
 \def\ProtectedXDef#1#2{\expandafter\protected@xdef\csname#1\endcsname{#2}}
 \def\GDef#1#2{\expandafter\gdef\csname#1\endcsname{#2}}
 \def\Call#1{\csname#1\endcsname}
+\def\IfCall#1{\ifcsname #1\endcsname\relax\csname#1\endcsname\else\empty\fi}
 \def\SafeUnskip{\ifvmode\relax\else\unskip\fi}
 \def\globalsetboolean#1#2{\globaldefs=1\setboolean{#1}{#2}\globaldefs=0\relax}
 
@@ -230,14 +231,19 @@
 
 \newcommand{\caseReference}[3][Appendix]{% 1: Optional Appendix name
   % override 2: short name, 3: reference
-  \expandafter\renewcommand\expandafter{\csname#2@Reference\endcsname}[1][]{%
-    \ (#1 at \if\relax##1\relax\pageref{#3}\else%
+  \expandafter\newcommand\expandafter{\csname#2@Reference\endcsname}{%
+    \ (#1 at \pageref{#3})}%
+  \expandafter\newcommand\expandafter{\csname#2@ReferenceP\endcsname}[1][]{%
+    \ (#1 at %
+    \if\relax##1\relax\pageref{#3}\else%
     \IfSubStr{##1}{-}{% Check for multiple pages, eg 3-10
-      \def\pageRefRange####1-####2XXX{\pageref{#3.####1}-\pageref{#3.####2}}%
+      \def\pageRefRange####1-####2XXX{%
+        \pageref{#3.####1}-\pageref{#3.####2}}%
       \pageRefRange##1XXX}%
     {\pageref{#3.##1}}%
     \fi%
-    )}}%
+    )}%
+}%
     
 
 %% 
@@ -255,11 +261,10 @@
 %%% Actually invoke the commands for the documentation:
 %%
 \newcommand{\newcase}[6][empty]{%
-  \expandafter\newcommand\expandafter{\csname#2@Reference\endcsname}[1][]{default case record}%
   % \par newcase 1(#1), 2(#2), 3(#3), 4(#4), 5(#5), 6(#6)\par%
-  \IfSubStr{unpublished}{#1}{\EDef{#2@Unpublished}{unpublished}}{\EDef{#2@Unpublished}{}}%
-  %\newboolean{#2@Unpublished}
-  %\IfSubStr{unpublished}{#1}{\setboolean{#2@Unpublished}{true}}{\setboolean{#2@Unpublished}{false}}%
+  \IfSubStr{unpublished}{#1}%
+  {\EDef{#2@Unpublished}{unpublished}}%
+  {\EDef{#2@Unpublished}{}}%
   \EDef{#2@Type}{Case}%
   % \par setting index type\par%
   \EDef{#2@IndexType}{Case}%
@@ -278,6 +283,8 @@
   % \par setting first use\par%
   \setboolean{#2@FirstUse}{true}%
   % \par setting last note\par%
+  %\traceon%
+  \ProtectedXDef{#2@CaseIndexCitations}{\bbCaseLongCitations{#2}{}}%
   \XDef{#2@LastNote}{0}%
   \bgroup%
   \def\helper##1; ##2; ##3; ##4;;##5; ##6; ##7; ##8;;{%%
@@ -292,7 +299,7 @@
   }%
   \edef\helpertwo{\noexpand\helper#4; ; ; ;;#5; ; ; ;;}%
   \helpertwo%
-  \egroup% erase helper and helpertwo
+  \egroup% end group - erase helper and helpertwo
   % Debug
   % newcase:\par\ 
   % #2@Type: \Call{#2@Type}\par
@@ -304,7 +311,6 @@
   % #2@Parenthetical: \Call{#2@Parenthetical}\par
   % unpublished: \Unpublished{#2}
   % \edef\temp{\Unpublished{#2}} \if\relax\temp\relax no\else yes\fi
-  % \eifempty{\Unpublished{#2}}{no}{yes}\par
 }%end \newcase definition
 
 \newcommand{\bbFirstReporterLong}[4]{%1: reporter, 2: start page, 3:
@@ -315,12 +321,6 @@
   \if\relax\detokenize{#3}\relax\else%
   \if\relax\detokenize{#4}\relax, #3\else, #2%
   \fi\fi\fi}
-
-% \newcommand{\bbFollowingReporterLong}[4]{%1: reporter, 2: start page,
-%                                 %3: page, 4: slip presence
-%   \ifdefempty{#1}{}{; #1 #2%
-%     \ifdefempty{#3}{}{%
-%       \ifdefempty{#4}{, #3}{}}}}
 
 \newcommand{\bbFollowingReporterLong}[4]{%1: reporter, 2: start page,
                                 %3: page, 4: slip presence
@@ -374,30 +374,16 @@
 
 \newcommand{\bbCaseLongCitations}[2]{% 1: shortname, 2: page
   %bbCaseLongCitations 1: (#1) 2:(#2) %
-  % \eifempty{\Unpublished{#1}}{%
-  %   \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX}{%
-  %   \ReporterA{#1} \Call{#1@Parenthetical}%
-  %   \ifempty{#2}{\empty}{, p #2}}}%
-  % \def\temp{\Unpublished{#1}}%
-  % \if\relax\temp\relax%
-  % \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
-  % \else%
-  % \ReporterA{#1} \Call{#1@Parenthetical}%
-  % \ifempty{#2}{\empty}{, p #2}%
-  % \fi%
-  % \IfStrEq{}{\Unpublished{#1}}{%
-  %   \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
-  %   }{%
-  %     \ReporterA{#1} \Call{#1@Parenthetical}%
-  %     \ifempty{#2}{\empty}{, p #2}}%
   \expandafter\if\Call{#1@Unpublished}\relax\relax%
   \bbCaseLongCitationsHelper#2; ; ; XXX#1XXX#2slipXXX%
   \else% unpublished, check for page
   \ReporterA{#1} \Call{#1@Parenthetical}%
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
-  %\ Long Citations\ %
-  \Call{#1@Reference}[#2]%
+  \ifcsname #1@Reference\endcsname%
+  \if\relax#2\relax\protect\Call{#1@Reference}%
+  \else\Call{#1@ReferenceP}[#2]\fi%
+  \else\relax\fi%
 }%
 
 \def\bbCaseShortCitationsHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
@@ -414,7 +400,7 @@
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
   %short citations %
-  \if\relax#2\relax\else\Call{#1@Reference}[#2]\fi% Refer to the record only if there is a page
+  \ifcsname#1@Reference\endcsname\if\relax#2\relax\else\Call{#1@ReferenceP}[#2]\fi\fi% Refer to the record only if there is a page
 }%
 
 \def\bbCaseShortCitationsWithCommaHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
@@ -430,9 +416,10 @@
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
   %\ short citation with comma\ %
-  \if\relax#2\relax\else\Call{#1@Reference}[#2]\fi% Refer to the record only if there is a page
+  \ifcsname#1@Reference\endcsname%
+  \if\relax#2\relax\else\Call{#1@ReferenceP}[#2]\fi%
+  \fi% Refer to the record only if there is a page
 }%
-
 %%
 %%\cmd{newbook}{Short Name}{Authors}{Title}{Parenthetical}[Define a new book citation.]
 %% \begin{Example}
@@ -991,7 +978,9 @@
 \newcommand{\@bbLink}[1]{#1}
 
 \newcommand{\@bbCaseIndexCite}[2]{%
-  #1@{\CF\FullName{#1}},\idxbreak\ \bbCaseLongCitations{#1}{}%
+  #1@{\CF\FullName{#1}},\idxbreak\ \Call{#1@CaseIndexCitations}%
+  % #1@{\CF\FullName{#1}},\idxbreak\ \bbCaseLongCitations{#1}{}%
+  %#1@{\CF\FullName{#1}},\idxbreak\   facts (\pageref{patruvwayne}) bbCaseLongCitations{#1}{}%
 }%
 %\newcommand{\@bbBookIndexCite}[2]{\Authors{#1},\idxbreak\ \FillIn{}{\@vol}{ }{\em\Title{#1}} \Parenthetical{#1}}
 \newcommand{\@bbBookIndexCite}[2]{\Authors{#1},\idxbreak\ {\em\Title{#1}} \Parenthetical{#1}}

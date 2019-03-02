@@ -33,9 +33,11 @@
 % 
 % 
 
-\usepackage{xr-hyper}
-\usepackage[hyperindex=false,linkbordercolor=white]{hyperref}
+% \usepackage{xr-hyper}
+\usepackage{xr}
 \externaldocument{appendix}
+\usepackage[hyperindex=false,linkbordercolor=white]{hyperref}
+
 
 \makeandletter% use \makeandtab to turn off
 
@@ -75,16 +77,26 @@
 % \author{Daniel Patru , P74387\\{\em Petitioner}}
 % \address{3309 Solway \\ Knoxville, TN 37931\\ (734) 274-9624}
 
-
 \begin{document}
 \singlespacing
-\citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}
-\caseReference{Patru}{patruvwayne}
+\citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}%
+citecase patru done\par%
+\caseReference{Patru}{patruvwayne}% 
+case reference done\par%
+patru reference (\Call{Patru@Reference})\par%
+patru referencep (\Call{Patru@ReferenceP}[4])\par%
+long citation (\bbCaseLongCitations{Patru}{})\par
+long citation p4 (\bbCaseLongCitations{Patru}{4})\par
+
+long citation (\bbCaseLongCitations{Patru}{})\par
+long citation p4 (\bbCaseLongCitations{Patru}{4})\par
+case index citations (\Call{Patru@CaseIndexCitations})\par
 \citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
 \citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 780 NW2d 753 (2010)}
 \citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
 \citecase[Rovas]{In re Complaint of Rovas Against SBC Michigan, 482 Mich 90; 754 NW2d 259 (2008)}
-%\citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
+
+% \citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
 % \citecase{Arbaugh v. Y&H Corp., 546 U.S. 500 (2006)}
 % \citecase[CAF]{CAF Investment Co. v Saginaw Twp, 410 Mich 428; 302 NW2d 164 (1981)}
 % \citecase[Coyne]{Coyne v Highland Twp, 169 Mich. App. 401; 425 NW2d 567 (1988)}
@@ -134,7 +146,6 @@
 %\makeAbbreviation{\FOJ}{FOJ}{First Final Opinion and Judgment (2017)}
 % \makeAbbreviation{\explanatoryLetterAbbr}{Explanatory Letter}{Explanatory Letter submitted by Appellant to the Tax Tribunal on 9/6/2018}
 % \newcommand{\explanatoryLetter}[1][]{\explanatoryLetterAbbr\if\relax#1\relax\empty, Appendix at \pageref{explanatoryLetter}\else, page #1, Appendix at \pageref{explanatoryLetter.#1}\fi}
-
 
 % Note that the command/handle must match the appendix
 % labels. Minimize the variations of names.  \makeAbbreviationToRecord
@@ -308,21 +319,21 @@ The City of Wayne contends that the true cash value should be the value of the h
 
 The Referee who first heard the case at the Tax Tribunal ruled that \mathieuGast\ did not apply because the repairs were not normal repairs because the house was in substandard condition. The Court of Appeals reversed. ``Nothing in MCL 211.27(2) provides that the repairs .~.~. are not normal repairs in the event that they are performed on a substandard property. Thus, by reading a requirement into the statute that was not stated by the legislature, the trial court erred .~.~.'' \pincite{Patru}{5}. The Court of Appeals remanded for a rehearing to determine whether the repairs were normal repairs because ``[t]he referee did not fully evaluate that evidence---which included testimony---because it misapprehended how to properly apply MCL 211.27(2).'' \pincite{Patru}{5}.
 
-\subsection{The second hearing before the Tax Tribunal}
+\subsection{The second hearing before the Tax Tribunal and Petitioner/Appellants motion for reconsideration}
 
 The rehearing was held in December 2018. Tax Tribunal Judge Marcus L. Abood ruled that the repairs were normal repairs and that the repairs were worth approximately \$10,000. \foj[4]. However, he went on to rule that \mathieuGast\ did not apply in this case because the ``property assessment did not change by virtue of the repairs Petitioner made to the subject property.'' \foj[5].
 
-\begin{draft}
-  Appellant responded to the FOJ with a motion for reconsideration. The motion raised the following points (relevant to this appeal):
-  \begin{enumerate}
-  \item The FOJ erred when it found normal repairs but yet did not apply \mathieuGast. The Court of Appeals, in this very case, said that a true cash value based on the repaired value is contrary to \mathieuGast\ because it ``considered the increase in value attributed to the repairs.'' \motionForReconsideration[1]. When the Court of Appeals was considering the case, there was a question of whether the repairs were normal. But after finding that the repairs were normal, the Tax Tribunal has no more excuse not to apply \mathieuGast. \textit{Id.}
-  \item The FOJ erred when it did not determine the value the house before repairs as required by \mathieuGast. 
-  \item The FOJ's reasons for its conclusions of law were wrong, irrelevant, and defective.
-  \item Petitioner/Appellant was not disingenuous for insisting on before-repair and after-repair appraisals.
-  \end{enumerate}
-\end{draft}
-Tax Tribunal Judge David B. Marmon denied the motion. Two paragraphs and a footnote contain the essence of Tax Tribunal's reasoning. They are reproduced below:
+Appellant responded to the FOJ with a motion for reconsideration. The motion raised the following points (relevant to this appeal):
+\begin{enumerate}
+\item The FOJ erred when it found normal repairs but yet did not apply \mathieuGast. The Court of Appeals, in this very case, said that a true cash value based on the repaired value is contrary to \mathieuGast\ because it ``considered the increase in value attributed to the repairs.'' \motionForReconsideration[1]. When the Court of Appeals was considering the case, there was a question of whether the repairs were normal. But after finding that the repairs were normal, the Tax Tribunal has no more excuse not to apply \mathieuGast. Id.
+\item The FOJ erred when it did not determine the value of the house before repairs as required by \mathieuGast. 
+\item The FOJ's reasons for its conclusions of law were wrong, irrelevant, and defective.
+\item Petitioner/Appellant was not disingenuous for insisting on before-repair and after-repair appraisals.
+\end{enumerate}
 
+\subsection{Denial of reconsideration}
+
+Tax Tribunal Judge David B. Marmon denied the motion. Two paragraphs and a footnote contain the essence of Tax Tribunal's reasoning. They are reproduced below:
 
 \begin{quotation}
 To begin, there is nothing in MCL 211.27(2) requiring ``before repair'' and ``after repair'' appraisals when determining whether an assessment includes the true cash value of the normal repairs. [See footnote 7 below] Rather, in a proceeding before the Tribunal, Petitioner bears the burden of proof. [footnote 8 omitted] Further, the Tribunal cannot conclude that the FOJ erred when it concluded that Petitioner's contentions concerning the purchase price, i.e. the true cash value before repairs, was entitled to no weight or credibility. The selling price of a property is not is presumptive true cash value. [footnote 9 omitted] Despite Petitioner's assertions that the marketing efforts for the subject show that the sale was a ``market sale,'' the home was being sold by the U.S. Department of Housing and Urban Development (``HUD''). Because the subject was being sold by a government entity, that entity's motivation may not have been to receive market value for the property.
@@ -390,7 +401,7 @@ Once a taxpayer has presented evidence, the Tax Tribunal must make an independen
 
 In this case the Tax Tribunal has made the same error as the Tax Tribunal in \cite[s]{Jones & Laughlin}: it declined to determine the true cash value of the property at issue (by determining the before-repair value) because the Appellant bore the burden of proof and the Tribunal disagreed with Appellant's proof. \reconsiderationDenied[2]. The exact analysis of \cite[s]{Jones & Laughlin}\ quoted above applies. ``Even if the tribunal had correctly concluded that petitioner's proofs had failed, the tribunal still would be required to make an independent determination .~.~.'' For this reason, this Court should reverse.
 
-\subsection{The Tax Tribunal misinterpreted \mathieuGast\ when it ruled that normal repairs may be ignored if there is some evidence that the assessor did not need to consider repairs to justify the assessed value}
+\subsection{The Tax Tribunal misinterpreted \protect\mathieuGast\ when it ruled that normal repairs may be ignored if there is some evidence that the assessor did not need to consider repairs to justify the assessed value}
 
 When reviewing Tax Tribunal cases, this Court looks for misapplication of the law or adoption of a wrong principle. Statutory interpretation is reviewed de novo. \pincite{Briggs}{75; 757-758}. 
 
