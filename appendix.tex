@@ -46,12 +46,13 @@
    \label{#1.\thecurrentpagecounter}}%
 
  % Note that the page label, the toc label, the linkname, and the filename all match. 
-\newcommand{\myincludepdf}[2]{% 1:  label, 2: toc
+\newcommand{\myincludepdf}[2]{% 1:  reference label, 2: toc fields
   \setcounter{currentpagecounter}{0}%
   \includepdf[pages=-,pagecommand=\addLabelsToAllIncludedPages{#1},link=true,linkname=#1,addtotoc={#2,#1}]%
   {appendix/#1.pdf}}%
   
-  
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}} % must put the first subsection
+\myincludepdf{mttdocket}{1,section, 1, Tax Tribunal Docket}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{/Explanatory Letter}} % must put the first subsection
 \myincludepdf{explanatoryLetter}{1,section,1,Submitted Evidence,evidence,1,subsection,2,Explanatory Letter}
 \myincludepdf{mlsHistory}{1,subsection,2,MLS History}
