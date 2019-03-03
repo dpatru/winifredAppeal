@@ -231,16 +231,19 @@
 
 \newcommand{\caseReference}[3][Appendix]{% 1: Optional Appendix name
   % override 2: short name, 3: reference
+  %\ProtectedXDef{#2@Reference}{\ (#1 at \pageref{#3})}%
   \expandafter\newcommand\expandafter{\csname#2@Reference\endcsname}{%
-    \ (#1 at \pageref{#3})}%
+  \ (#1 at \pageref{#3})}%
   \expandafter\newcommand\expandafter{\csname#2@ReferenceP\endcsname}[1][]{%
     \ (#1 at %
-    \if\relax##1\relax\pageref{#3}\else%
-    \IfSubStr{##1}{-}{% Check for multiple pages, eg 3-10
+    \if\relax##1\relax% No page
+    \pageref{#3}%
+    \else% Some pages
+    \IfSubStr{##1}{-}{% Multiple pages, eg 3-10
       \def\pageRefRange####1-####2XXX{%
         \pageref{#3.####1}-\pageref{#3.####2}}%
       \pageRefRange##1XXX}%
-    {\pageref{#3.##1}}%
+    {\pageref{#3.##1}}% One page
     \fi%
     )}%
 }%
