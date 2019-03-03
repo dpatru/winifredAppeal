@@ -23,17 +23,19 @@
 \renewcommand{\headrulewidth}{0pt}
 \begin{document}
 
-\newpage 
+%\newpage 
+%\singlespacing%
 
 \begin{centering}
-  \bf\scshape Appendix \\~\\
-  \rm 
+  \bf\scshape Appellant's Appendix\par%\\~\\
+  \rm Patru v City of Wayne\par%\\~\\
+  Docket No. 346894\par%\\~\\
 \end{centering}
 
 \tableofcontents
 \newpage
 \renewcommand{\footrulewidth}{0.4pt}
-\fancyfoot[C]{Appendix page \thepage: \leftmark\rightmark}
+\fancyfoot[C]{Appellant's Appendix page \thepage: \leftmark\rightmark}
 \renewcommand{\subsectionmark}[1]{\markright{/#1}} % Pick up non-first subsections
 
 % Place a label on each page so that we can reference the page numbers.
@@ -54,16 +56,17 @@
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}} % must put the first subsection
 \myincludepdf{mttdocket}{1,section, 1, Tax Tribunal Docket}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{/Explanatory Letter}} % must put the first subsection
-\myincludepdf{explanatoryLetter}{1,section,1,Submitted Evidence,evidence,1,subsection,2,Explanatory Letter}
-\myincludepdf{mlsHistory}{1,subsection,2,MLS History}
-\myincludepdf{mlsListing}{1,subsection,2,MLS Listing Sheet}
-\myincludepdf{repairs}{1,subsection,2,List of Repairs}
-\myincludepdf{form865}{1,subsection,2,Form 865 Mathieu Gast Nonconsideration}
+\myincludepdf{explanatoryLetter}{1,section,1,Submitted Evidence,evidence,1,subsection,2,Explanatory Letter}% docket line 38
+\myincludepdf{mlsHistory}{1,subsection,2,MLS History}% docket line 33
+\myincludepdf{mlsListing}{1,subsection,2,MLS Listing Sheet}% docket line 32
+\myincludepdf{repairs}{1,subsection,2,List of Repairs}% docket line 36
+\myincludepdf{form865}{1,subsection,2,Form 865 Mathieu Gast Nonconsideration}% docket line 35
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}} % must put the first subsection
-\myincludepdf{foj}{1,section,1,Final Opinion and Judgement}
-\myincludepdf{motionForReconsideration}{1,section,1,Motion For Reconsideration}
-\myincludepdf{reconsiderationDenied}{1,section,1,Reconsideration Denied}
+\myincludepdf{foj}{1,section,1,Final Opinion and Judgement}% docket line 48
+\myincludepdf{motionForReconsideration}{1,section,1,Motion For Reconsideration}% docket line 52
+\myincludepdf{reconsiderationDenied}{1,section,1,Reconsideration Denied} % docket line 51
 \myincludepdf{patruvwayne}{1,section,1,Patru v Wayne}
+\myincludepdf{bulletin7}{1,section,1,STC Bulletin 7 of 2014 (Mathieu Gast Act)}% docket line 34
 
 \newpage\empty% we need a new page so that the index entries on the last
         % page get written out to the right file.
