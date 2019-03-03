@@ -286,8 +286,7 @@
   % \par setting first use\par%
   \setboolean{#2@FirstUse}{true}%
   % \par setting last note\par%
-  %\traceon%
-  \ProtectedXDef{#2@CaseIndexCitations}{\bbCaseLongCitations{#2}{}}%
+  %\ProtectedXDef{#2@CaseIndexCitations}{\bbCaseLongCitations{#2}{}}%
   \XDef{#2@LastNote}{0}%
   \bgroup%
   \def\helper##1; ##2; ##3; ##4;;##5; ##6; ##7; ##8;;{%%
@@ -383,10 +382,10 @@
   \ReporterA{#1} \Call{#1@Parenthetical}%
   \ifempty{#2}{\empty}{, p #2}%
   \fi%
-  \ifcsname #1@Reference\endcsname%
-  \if\relax#2\relax\protect\Call{#1@Reference}%
-  \else\Call{#1@ReferenceP}[#2]\fi%
-  \else\relax\fi%
+  % \ifcsname #1@Reference\endcsname%
+  % \if\relax#2\relax\protect\Call{#1@Reference}%
+  % \else\Call{#1@ReferenceP}[#2]\fi%
+  % \else\relax\fi%
 }%
 
 \def\bbCaseShortCitationsHelper #1; #2; #3; #4XXX#5XXX#6slip#7XXX{%
@@ -981,7 +980,12 @@
 \newcommand{\@bbLink}[1]{#1}
 
 \newcommand{\@bbCaseIndexCite}[2]{%
-  #1@{\CF\FullName{#1}},\idxbreak\ \Call{#1@CaseIndexCitations}%
+  #1@{\CF\FullName{#1}},\idxbreak%
+  \ \bbCaseLongCitations{#1}{}%
+  %\ \Call{#1@CaseIndexCitations}%
+  \ifcsname#1@Reference\endcsname%
+  \csname #1@Reference\endcsname
+  \fi
   % #1@{\CF\FullName{#1}},\idxbreak\ \bbCaseLongCitations{#1}{}%
   %#1@{\CF\FullName{#1}},\idxbreak\   facts (\pageref{patruvwayne}) bbCaseLongCitations{#1}{}%
 }%
@@ -996,7 +1000,11 @@
 \def\@bbMiscIndexCite#1#2{\FullName{#1}}
 
 \newcommand{\@bbCaseLongCite}[2]{%
-  {\CF\FullName{#1}},  \bbCaseLongCitations{#1}{#2}%
+  {\CF\FullName{#1}},  %
+  \bbCaseLongCitations{#1}{#2}%
+  \ifcsname #1@Reference\endcsname%
+  \Call{#1@ReferenceP}[#2]%
+  \fi%
 }
 \newcommand{\@bbStatuteLongCite}[2]{\ShortName{#1} #2\FillIn{ }{\Parenthetical{#1}}{}}
 \newcommand{\@bbBookLongCite}[2]{\FillIn{}{\@vol}{ }{\BAF\Authors{#1}}, {\BTF\Title{#1}}\FillIn{ }{#2}{}\ \Parenthetical{#1}}
