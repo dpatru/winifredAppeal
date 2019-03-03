@@ -229,9 +229,7 @@
 
 %% \noindent The _\caseReference_ command links a case to an appendix. Call it after you've defined a case. Whenever you cite to the case, a reference will be made to the right page in the Appendix. In Michigan, unpublished cases must be provided. This command makes it easy for people to look up the case in the appendix.
 
-\newcommand{\caseReference}[3][Appendix]{% 1: Optional Appendix name
-  % override 2: short name, 3: reference
-  %\ProtectedXDef{#2@Reference}{\ (#1 at \pageref{#3})}%
+\newcommand{\addReference}[3][Appendix]{% 1: Optional Appendix name
   \expandafter\newcommand\expandafter{\csname#2@Reference\endcsname}{%
   \ (#1 at \pageref{#3})}%
   \expandafter\newcommand\expandafter{\csname#2@ReferenceP\endcsname}[1][]{%
@@ -247,7 +245,6 @@
     \fi%
     )}%
 }%
-    
 
 %% 
 %%\cmd{newcase}{Short Name}{Full Name}{Reporter}{Starting Page}{Parenthetical}[Defines a new case citation.]
@@ -997,7 +994,12 @@
 \newcommand{\@bbInSingleAuthorCollectionIndexCite}[2]{\Authors{#1}, \Title{#1}}
 %\newcommand{\@bbMiscIndexCite}[2]{{\def\pin##1##2{}\FullName{#1}}}
 
-\def\@bbMiscIndexCite#1#2{\FullName{#1}}
+\def\@bbMiscIndexCite#1#2{%
+  \FullName{#1}%
+  \ifcsname #1@Reference\endcsname%
+  \Call{#1@Reference}%
+  \fi%
+}
 
 \newcommand{\@bbCaseLongCite}[2]{%
   {\CF\FullName{#1}},  %
@@ -1012,8 +1014,17 @@
 %\newcommand{\@bbInCollectionLongCite}[2]{\Authors{#1}, {\ATF\Title{#1}} \emph{in} \@vol{\BTF\CollectionTitle{#1}} \StartPage{#1}\FillIn{, }{#2}{} \Parenthetical{#1}}
 \newcommand{\@bbInCollectionLongCite}[2]{\Authors{#1}, {\ATF\Title{#1}}, \emph{in} \@bbsource{\CollectionTitle{#1}}{\StartPage{#1}, #2}{}}
 \newcommand{\@bbInSingleAuthorCollectionLongCite}[2]{\FillIn{}{\@vol}{ }{\BAF\Authors{#1}}, {\ATF\Title{#1}}, \emph{in} \@bbsource{\CollectionTitle{#1}}{\StartPage{#1}, #2}{}}
-\newcommand{\@bbCollectionLongCite}[2]{\FillIn{}{\@vol}{ }{\BTF\Title{#1}}\FillIn{, }{#2}{} \Parenthetical{#1}}
-\def\@bbMiscLongCite#1#2{{\def\pin##1##2{\FillIn{##1}{#2}{##2}}\FullName{#1}\ifpin{ #2}}}
+\newcommand{\@bbCollectionLongCite}[2]{\FillIn{}{\@vol}{ }{\BTF\Title{#1}}\FillIn{, }{#2}{} \Parenthetical{#1}}%
+
+\def\@bbMiscLongCite#1#2{%
+  {% create block
+    \def\pin##1##2{\FillIn{##1}{#2}{##2}}%
+    \FullName{#1}\ifpin{ #2}
+  }%
+  \ifcsname #1@Reference\endcsname%
+  \Call{#1@ReferenceP}[#2]%
+  \fi%
+}
 
 % Short-form citation, with and without a pin cite
 \newcommand{\@bbCaseShortCite}[2]{%
@@ -1028,7 +1039,15 @@
 \newcommand{\@bbInSingleAuthorCollectionShortCite}[2]{\FillIn{}{\@vol}{ }{\BTF\ShortName{#1}}, {\em supra}\IfFootnote{ note \SupraNote{#1}}\ifpin{, at #2}}
 \newcommand{\@bbCollectionShortCite}[2]{\FillIn{}{\@vol}{ }{\BTF\Title{#1}}, \emph{supra}\IfFootnote{ note \SupraNote{#1}},\ifpin{ at #2}}
 % \newcommand{\@bbMiscShortCite}[2]{bbMiscShortCite (#1)(#2)[\ShortName{#1}|\ifpin{ #2}]}
-\newcommand{\@bbMiscShortCite}[2]{\ShortName{#1}\if\relax#1\relax\empty\else#2\fi}
+\newcommand{\@bbMiscShortCite}[2]{%
+  \ShortName{#1}%
+  \if\relax#2\relax\empty%
+  \else, p5#2%
+  \ifcsname #1@Reference\endcsname%
+  \Call{#1@ReferenceP}[#2]%
+  \fi%
+  \fi%
+}
 
 %Reporter-number-only citation, with and without a pin cite
 \newcommand{\@bbReporterOnlyCite}[1]{\Call{#1@ShortCitations}{}}
