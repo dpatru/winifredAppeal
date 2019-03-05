@@ -1,0 +1,154 @@
+* caselaw for Mathieu-Gast, MCL 211.27(2)
+
+** Fisher v. Sunfield Twp.
+415 NW 2d 297, 163 Mich. App. 735 - Mich: Court of Appeals, 1987
+https://scholar.google.com/scholar_case?case=11035660338115051302&q=%22mcl+211.27(2)
+*** Statute emphasized expenditures rather than value added. The statute was changed.
+*** quotes
+While we find that the Tax Tribunal made an error of law in construing the first two sentences of MCL 211.27(2); MSA 7.27(2), we find that the Tax Tribunal's interpretation of what constitutes "normal repairs, replacement, and maintenance" as listed in the statute to be supported by competent, material and substantial evidence.
+We do not agree with petitioners' position that, because they submitted proof of expenditures for work done on the farmhouse, this work constituted normal repairs, replacement, and maintenance, even though their bill listed the very same items as found in subsections (2)(a) to (o) of MCL 211.27; MSA 7.27.
+We think that some of petitioners' repairs were far in excess of normal repairs. Based on the photographs submitted, petitioners took an old dilapidated farmhouse, which may have been of average quality and design in its day, and completely changed its external and internal appearance into a higher quality modern residence. For example, as observed by the Tax Tribunal, the old porch was extremely narrow, of wood construction, and without stairs. The porch following its improvement has been widened and restyled and brick stairs of a highly attractive design of superior quality have been installed.
+The board of review and the referee refused to allow petitioners credit for the repairs to their home other than the value of repair or replacement of the roof, siding and windows. The Tax Tribunal refused to give credit for anything. The reasonable value of all of the repairs, replacement or maintenance conducted by petitioners should have been utilized for nonconsideration in determining true cash value.
+Further, we are not convinced from the record presented that petitioners submitted sufficient proofs showing that these expenditures were reasonable and normal, rather than constituting a betterment. We remand to the Tax Tribunal for a rehearing. Petitioners shall be afforded further opportunity to submit proofs.
+*** At the time, the statute read:
+MCL 211.27(2); MSA 7.27(2) provides:
+(2) The assessor, beginning December 31, 1976, shall not consider *expenditures* for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. Value attributable to the items included in subdivisions (a) to (o) which is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. This subsection shall apply only to residential property. The following repairs shall be considered normal maintenance if they are not part of a structural addition or completion:
+(a) Outside painting.
+(b) Repairing or replacing siding, roof, porches, steps, sidewalks, and drives.
+(c) Repainting, repairing, or replacing existing masonry.
+(d) Replacement of awnings.
+(e) Adding or replacing gutters and downspouts.
+(f) Replacing storm windows or doors.
+(g) Insulation or weatherstripping.
+(h) Complete rewiring.
+(i) Replacing plumbing and light fixtures.
+(j) New furnace replacing a furnace of the same type or replacing oil or gas burner.
+(k) Plaster repairs, inside painting, or other redecorating.
+(l) New ceiling, wall, or floor surfacing.
+(m) Removing partitions to enlarge rooms.
+(n) Replacing automatic hot water heater.
+(o) Replacing dated interior woodwork. [Emphasis added.]
+
+*** what is this case good for?
+**** It shows that when there are not enough proofs, evidence can be opened to get more. This case was used in Patru v City of Wayne to force the Tax Tribunal to rehear the case. 
+
+**** The fact that the expenditures on normal repairs were counted rather than before-repair values based on the statute's language implies that before-repair values should be used once the statute was change to emphasize value added.
+
+** Plymouth Twp. v. WAYNE CTY. BD. OF COMMRS
+359 NW 2d 547, 137 Mich. App. 738 - Mich: Court of Appeals, 1984
+https://scholar.google.com/scholar_case?case=17620780840717097918&q=%22mcl+211.27(2)
+
+Plymouth Twp sues Wayne County Board of Commissioners because the property of their residents was overassessed in the equalization phase.
+
+*** quotes
+*** remarks
+
+** Coyne v. Highland Twp.
+425 NW 2d 567, 169 Mich. App. 401 - Mich: Court of Appeals, 1988
+https://scholar.google.com/scholar_case?case=16103698645031353002&q=%22mcl+211.27(2)
+
+*** quotes
+This case involves a cottage purchased by petitioner in 1964 on Upper Pettibone Lake. Respondent assessed the property at $17,100 for tax year 1982. Petitioner claims the assessment should be approximately $11,000. The differences in value arrived at by the parties arise mainly from petitioner's view that certain repairs or improvements to the cottage made by petitioner over a number of years should not be included in the assessment under the above-mentioned act, while respondent *404 maintains that those repairs or improvements were properly included.
+
+The repairs or improvements at issue were made at various times from 1968 to 1978. However, apparently none of these were considered by respondent until 1979, when the township underwent a general reappraisal which was conducted by the employees of the Oakland County Equalization Department. At issue are the following items: (1) the removal of screens on the porch and the filling of the openings thus created with concrete blocks, (2) the removal of a wall between the porch and the interior living space, (3) the replacement of eight windows with vinyl-clad windows and the replacement of a wooden door with a steel insulated door, (4) the recovering of a floor and the replacement of a ceiling, and (5) repairs to the roof. We shall consider each of these items separately in light of the applicable statute.
+
+MCL 211.27(2); MSA 7.27(2) provides as follows:
+The assessor, beginning December 31, 1976, shall not consider expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. Value attributable to the items included in subdivisions (a) to (o) which is known to the assessor and excluded from the true cash value shall be indicated on the assessment roll. This subsection shall apply only to residential property. The following repairs shall be considered normal maintenance if they are not part of a structural addition or completion:
+(a) Outside painting.
+(b) Repairing or replacing siding, roof, porches, steps, sidewalks, and drives.
+(c) Repainting, repairing, or replacing existing masonry.
+(d) Replacement of awnings.
+(e) Adding or replacing gutters and downspouts.
+(f) Replacing storm windows or doors.
+(g) Insulation or weatherstripping.
+(h) Complete rewiring.
+(i) Replacing plumbing and light fixtures.
+(j) New furnace replacing a furnace of the same type or replacing oil or gas burner.
+(k) Plaster repairs, inside painting, or other redecorating.
+(l) New ceiling, wall, or floor surfacing.
+(m) Removing partitions to enlarge rooms.
+(n) Replacing automatic hot water heater.
+(o) Replacing dated interior woodwork.
+
+Court review of decisions of the Tax Tribunal, in the absence of fraud, is limited to determining whether the tribunal made an error of law or adopted a wrong principle, and the factual findings of the tribunal are final, provided that they are supported by competent and substantial evidence. Antisdale v Galesburg, 420 Mich 265, 277; 362 NW2d 632 (1984).
+
+. . . 
+
+We must next consider whether those repairs which were conducted prior to the effective date of the act nevertheless come within the purview of the act. The tribunal concluded that work done *408 prior to December 31, 1976, does not qualify for exclusion under the act. We disagree. As quoted above, the act states that "the assessor, beginning December 31, 1976, shall not consider expenditures for...." Accordingly, the act clearly directs our attention to when the assessor makes his assessment, not to when the work is done. Had the Legislature intended to make the date of the work the triggering event, it could have clearly provided so by stating that the assessor should not consider expenditures made or work performed before December 31, 1976. However, the Legislature did not so state. Since the statute refers to the date after which the assessor may no longer consider these items, we can only conclude that the relevant date is that of the assessment, not of the repair. Although it may be true that a number of these items could have been properly considered by the assessor had petitioner's property been reassessed prior to December 31, 1976, the fact that the assessor failed to reassess petitioner's property by that date simply works to petitioner's advantage and respondent's detriment. Simply put, had respondent wished to include any of these items for which the work had been done prior to December 31, 1976, in the assessment of petitioner's property, it should have reassessed the property prior to that date. It failed to do so and is now foreclosed from including those items in the assessment.
+
+
+** PATRU v. CITY OF WAYNE - unpublished
+Mich: Court of Appeals, 2018 
+https://scholar.google.com/scholar_case?case=2162534927057393161&q=%22mcl+211.27(2)%22&hl=en&as_sdt=6,43
+
+*** What is Patru v Wayne good for?
+It shows that the City cannot impose additional requirements to the statute than that imposed by the legislature.
+
+** Fisher v. River - unpublished
+Mich: Court of Appeals, 2012 
+https://scholar.google.com/scholar_case?case=10554703662259796619&q=%22mcl+211.27(2)%22&hl=en&as_sdt=6,43
+
+Petitioner rebuild a ranch into a two-story. The Court of Appeals held that this as properly an addition.
+
+** Sullivan v. City of Grosse Pointe Farms - unpublished
+Mich: Court of Appeals, 2014 
+https://scholar.google.com/scholar_case?case=14086139212856041173&q=%22mcl+211.27(2)
+
+Sullivan purchased the property for 528,900 and the city taxed it at 600,000 TCV.
+
+The Court of Appeals affirmed because Sullivan had not shown that the sale was showed the value of the property on tax day. (The sale was 9 months before tax day.)
+
+Petitioner attempted to use MCL 211.27(2) to prove that future repairs should lower his present value. A better approach would have been to document the repairs actually done, then to value the house and seek Mathieu-Gast nonconsideration for the repairs. He would have ended up with a fine house and a reduced tax bill.
+
+** Fisher v. City of Ann Arbor - unpublished
+Mich: Court of Appeals, 2014 
+https://scholar.google.com/scholar_case?case=15271591245004487898&q=%22mcl+211.27(2)
+
+Petitioners appealed the $400,000 valuation of their rental property which they bought from a family member for $157,251 at a foreclosure auction!!! 
+Here the court used MCL 211.27(5) (purchase price is not the presumptive value). 
+
+Petitioners filed an appraisal late which was not accepted. The Court ruled that the Tribunal property refused it because admission would prejudice Respondent.
+
+Petitioners attempted to use Mathieu-Gast MCL 211.27(2) nonconsideration for repairs that hadn't been done. 
+
+The petitioners also missed the March board of review.
+
+
+
+** BERENJIAN v. City of Ann Arbor - Unpublished
+Mich: Court of Appeals, 2011 
+https://scholar.google.com/scholar_case?case=11802621455160521191&q=%22mcl+211.27(2)%22&hl=en&as_sdt=6,43
+
+Petitioners argue that because respondent relied on inaccurate information in making the original assessment, the tax tribunal should have lowered the subject property's TCV upon review. Specifically, petitioners contend that the subject property's value should have been assessed based on its 1922 build date and not the 1957 remodel. Additionally, petitioners contend that had respondent correctly noted the presence of a septic system, the property's assessed value would have necessarily been much lower.
+
+
+** Turner v. Lansing Township, 310 NW 2d 287 - Mich: Court of Appeals 1981
+108 Mich. App. 103 (1981)
+310 N.W.2d 287
+https://scholar.google.com/scholar_case?case=10470817296493106864&q=%22mcl+211.27(2)
+
+
+*** quotes
+The third ground upon which petitioner relies for exclusion from the doctrine of exhaustion of administrative remedies is the doctrine of constructive fraud as set forth and described in Helin v Grosse Pointe Twp, 329 Mich 396, 406-407; 45 NW2d 338 (1951):
+
+111
+*111 "`A valuation is necessarily fraudulent where it is so unreasonable that the assessor must have known that it was wrong. If the valuation is purposely made too high through prejudice or a reckless disregard of duty in opposition to what must necessarily be the judgment of all competent persons, or through the adoption of a rule which is designed to operate unequally upon a class and to violate the constitutional rule of uniformity, the case is a plain one for the equitable remedy by injunction.' 4 Cooley on Taxation (4th ed), § 1645.
+
+"Intentional overassessment is fraud. Sloman-Polk Co v City of Detroit, 261 Mich 689 [247 NW 95] 87 ALR 1294 [1933]. In the eyes of the law an assessment at variance with undisputed facts is a fraud upon the rights of the taxpayer. S S Kresge Co v City of Detroit, 276 Mich 565, 571 [268 NW 740] 107 ALR 1258 [1936].
+
+"The use of a method of valuation which does not determine true cash values is fraud in law. Newport Mining Co v City of Ironwood, 185 Mich 668 [152 NW 1088 (1915)]."
+
+Petitioner seeks in Count III of his amended bill of complaint to set forth facts bringing him under the protective umbrella of constructive fraud. In Count III petitioner avers that after the flood the respondent township knew that there was substantial damage to the property, knew that the premises no longer were occupied and would not permit rehabilitation without requiring substantial structural changes, and knew that the value of the property had diminished substantially but nevertheless proceeded to increase the assessment by some 86%, used a method of valuation not reflecting the decreased value, and that the assessment "was so unreasonable that the respondent should have or must have known that it was wrong".
+
+Since constructive fraud is an equitable doctrine, calling for the use of a court's equitable powers, Spoon-Shacket Co, Inc v County of Oakland, 356 Mich 151, 160; 97 NW2d 25 (1959), we must first
+112
+*112 decide whether the Tax Tribunal possesses general equitable powers. On that question this Court has come to disparate conclusions. Holding that the Tax Tribunal lacks equitable powers is Romulus City Treasurer v Wayne County Drain Comm'r, 86 Mich App 663; 273 NW2d 514 (1978). Holding that the Tax Tribunal is vested with equitable powers is Edros Corp v Port Huron, 78 Mich App 273; 259 NW2d 456 (1977), and Eyde v Lansing Twp, 105 Mich App 370; 306 NW2d 797 (1981). This panel finds the better reasoning to be found in the Edros-Eyde opinions[3] and consequently concludes that in the case before us the doctrine of constructive fraud could be employed if timely raised or not otherwise inapplicable.
+
+However, the Michigan Tax Tribunal hearing officer denied petitioner's motion to amend his original petition. MCL 205.735(4); MSA 7.650(35)(4) provides that a "petition * * * may be amended at any time by leave of the tribunal and in compliance with its rules". Tax Tribunal Rule 225(2); R 205.1225(2) states: "A party may amend or supplement his pleading only by leave of the tribunal * * *." The grant or denial of a motion to amend is discretionary. Central Advertising Co v City of Novi, 91 Mich App 303, 317; 283 NW2d 730 (1979), Matson v Soronen, 57 Mich App 190, 193; 226 NW2d 52 (1974). Although amendment should be allowed liberally, this Court will not overturn a denial of a motion to amend absent a clear abuse of discretion. Ben P Fyke & Sons v Gunter Co, 390 Mich 649; 213 NW2d 134 (1973), Cobb v Mid-Continent Telephone Service Corp, 90 Mich App 349,
+113
+*113 353; 282 NW2d 317 (1979), Grove v Story Oldsmobile, Inc, 31 Mich App 613, 617; 187 NW2d 923 (1971). Among the permissible reasons for denial of a motion to amend are undue delay, bad faith, or dilatory motive on the part of the movant. Fyke, supra, 659.
+
+*** what is Turner v Lansing Twp good for?
+Fraud = intentional overassessment
+Notice = notice to one partner is ok.
+Equitable powers = MTT has equitable 
