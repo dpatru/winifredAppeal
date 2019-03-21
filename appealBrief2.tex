@@ -106,13 +106,49 @@
   % \newstatute[3@]{TTR}{}
   % \newstatute[4@]{Dearborn Ordinance}{}% place this fourth
   % \newstatute[5@]{Wayne Ordinance}{}
-  \newstatute{MCL 211.27(2)}{}
+  \newstatute{MCL 211.27(2)}{}% MathieuGast
+%   (2) The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction. The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. This subsection applies only to residential property. The following repairs are considered normal maintenance if they are not part of a structural addition or completion:
 
+% (a) Outside painting.
+
+% (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
+
+% (c) Repainting, repairing, or replacing existing masonry.
+
+% (d) Replacing awnings.
+
+% (e) Adding or replacing gutters and downspouts.
+
+% (f) Replacing storm windows or doors.
+
+% (g) Insulating or weatherstripping.
+
+% (h) Complete rewiring.
+
+% (i) Replacing plumbing and light fixtures.
+
+% (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner.
+
+% (k) Repairing plaster, inside painting, or other redecorating.
+
+% (l) New ceiling, wall, or floor surfacing.
+
+% (m) Removing partitions to enlarge rooms.
+
+% (n) Replacing an automatic hot water heater.
+
+% (o) Replacing dated interior woodwork.
+  
+  \newstatute{MCL 211.10d(7)}{}%
+%  (7) Every lawful assessment roll shall have a certificate attached signed by the certified assessor who prepared or supervised the preparation of the roll. The certificate shall be in the form prescribed by the state tax commission. If after completing the assessment roll the certified assessor for the local assessing district dies or otherwise becomes incapable of certifying the assessment roll, the county equalization director or the state tax commission shall certify the completed assessment roll at no cost to the local assessing district.
+
+
+  
   \newstatute{MCL 205.753(2)}{}% allows appeals from a final order of the Tax Tribunal
 
   \newstatute{MCR 7.204(A)(1)(b)}{}% allows appeals within 21 days of an order on a motion for reconsideration
   
-} % end makeatletter block
+}% end makeatletter block
 % \def\mathieuGast{\pincite[l]{MCL}{211.27(2)}}
 \def\mathieuGast{\cite[s]{MCL 211.27(2)}}%
 %\def\ttr287{\pincite[s]{TTR}{287}}
@@ -153,7 +189,7 @@
     \else, p ##1 (Appendix at %
     % Check for page range
     \IfSubStr{##1}{-}{%
-      \def\pageRefRange####1-####2XXX{\pageref{#1.####1}-\pageref{#1.####2}}%
+      \def\pageRefRange####1-####2XXX{\pageref{#1.####1}--\pageref{#1.####2}}%
       \pageRefRange##1XXX}%
     {\pageref{#1.##1}}%
     )\fi%
@@ -340,8 +376,6 @@ The rehearing was held in December 2018 before Tax Tribunal Judge Marcus L. Aboo
 
 Judge Abood did not attempt to value the property's before-repair value. Instead, he ruled that the property must be valued in its repaired condition because it was repaired before tax day. He accepted the City's comparative sales analysis, writing: ``Respondent's sales adjustment grid does not included a line-item entry for repairs. This comparative analysis is devoid of any relationship to Petitioner's ``normal'' repairs to subject property which occurred before the issuance of a certificate of occupancy and the December 31, 2015 tax day.'' \foj[6].
 
-Judge Abood also noted in footnote 12 that ``Petitioner's insistence that Respondent should have performed before and after valuations around Petitioner's repairs is disingenuous given Petitioner's faint reference to its own raw, unadjusted, unapplied sales data.'' \foj[5].
-
 \subsection{Appellant files Motion for Reconsideration}
 
 Appellant responded to the FOJ with a motion for reconsideration. The motion points out that the Court of Appeals reversed the previous judgment of the Tax Tribunal because  ``contrary to MCL 211.27(2), the referee considered the increase in value attributed to the repairs when determining the property's TCV. Stated differently, the referee's finding that the property's TCV was \$50,400 was based on its assessment of the property's value after it had been repaired.'' \motionForReconsideration[1]. Now the Tax Tribunal was repeating the mistake, except this time after explicitly admitting that the repairs were normal repairs. Id., p 2. 
@@ -360,23 +394,9 @@ The Motion for Reconsideration also pointed out flaws in the four reasons given 
 \item The FOJ claimed that the property's sale was not an arm's length sale transaction because the Petitioner has not claimed it so and because the seller was HUD. Appellant pointed out that he had included MLS data to show that the property's sale was a market sale and that merely mentioning that the seller was HUD is not evidence that the sale was not a market sale. Id. at 5.
 \end{enumerate}
 
-With reference to footnote 12 of the FOJ, the Motion for Reconsideration also pointed out that the Appellant was not disingenuous for insisting on before-repair and after-repair appraisals. Appellant pointed out that synonyms of disingenuous as: insincere, dishonest, untruthful, false, deceitful, duplicitous, lying, mendacious, hypocritical; that before-repair and after-repair appraisals were required by case law and the State Tax Commission; and that it was not disingenuous of him to ask the court to follow the law. Id. at 6.
-
 \subsection{The Tax Tribunal denies the Motion for Reconsideration}
 
-Tax Tribunal Judge Abood did not rule on the Motion for Reconsideration. Tax Tribunal Judge David B. Marmon denied the motion. He did not specifically rebut Appellant's points made in the motion. Instead he clarified why the Tribunal was not applying \mathieuGast. Two paragraphs and a footnote contain the essence of Tax Tribunal's reasoning. They are reproduced below:
-
-\begin{quotation}
-To begin, there is nothing in MCL 211.27(2) requiring ``before repair'' and ``after repair'' appraisals when determining whether an assessment includes the true cash value of the normal repairs. [See footnote 7 below] Rather, in a proceeding before the Tribunal, Petitioner bears the burden of proof. [footnote 8 omitted] Further, the Tribunal cannot conclude that the FOJ erred when it concluded that Petitioner's contentions concerning the purchase price, i.e. the true cash value before repairs, was entitled to no weight or credibility. The selling price of a property is not is presumptive true cash value. [footnote 9 omitted] Despite Petitioner's assertions that the marketing efforts for the subject show that the sale was a ``market sale,'' the home was being sold by the U.S. Department of Housing and Urban Development (``HUD''). Because the subject was being sold by a government entity, that entity's motivation may not have been to receive market value for the property.
-
-The Tribunal also concludes that it was not a palpable error to conclude that the assessment did not consider the ``normal repairs.'' This is supported by the fact that the property record card indicates that Respondent believed the true cash value of the subject to be \$48,000 \textit{before Petitioner purchased the property} [footnote 10 omitted] and \$50,400 as of December 31, 2015, after the repairs were complete. An increase of \$2,400 in true cash value (5\%) is easily attributable to inflation and increases in the market. In addition, as stated by the FOJ, the interior photographs depict a property in average condition before Petitioner acquired it. Although not necessarily evidence of true cash value, this evidence supports the property's assessment as a property in average condition both at the time Petitioner acquired it and after he completed the normal repairs. In other words, the record evidence supports the conclusion that the assessment did not consider the increase in true cash value that was the result of normal repairs.
-
-\textit{footnote 7} MCL 211.27(2) allows an assessor to increase ``construction quality classification or reduce the effective age for depreciation purposes'' if the ``appraisal of the property was erroneous before non-consideration of the normal repair.'' It also prevents an assessor from assigning an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction. Neither situation is at issue here. Although State Tax Commission Bulletin No. 7 of 2014 requires ``before'' and ``after'' appraisals, such appraisals are only required ``[i]f the true cash value of non-consideration items is shown on the assessment roll. .~.~.'' As described herein, the true cash value of the non-consideration items is not shown on the assessment roll and the STC requirement does not apply. In addition, STC guidance lacks the force of law. \pincite{Rovas}{103; 267}.
-
-\reconsiderationDenied[2].
-\end{quotation}
-
-Appellant summarizes the Tribunal's decision as:
+Tax Tribunal Judge David B. Markon, instead of Judge Abood, denied Motion for Reconsideration. He did not specifically rebut Appellant's points made in the motion. Instead he clarified why the Tribunal was not applying \mathieuGast. Two paragraphs and a footnote on page 2 contain the Tax Tribunal's reasoning. In summary:
 
 \begin{enumerate}
   
@@ -397,21 +417,6 @@ Appellant summarizes the Tribunal's decision as:
 
 Points 1, 2, and 4 are addressed in order in the Arguments. Point 3 is addressed in the discussion of point 2.  
 
-% The Appellant believes that these arguments were not put forth by the Appellee. The \foj[4], records Appellee's argument this way:
-
-% \begin{quotation}
-% 	Respondent argues that the change in the property assessment was not based on Petitioner's repairs but based on the purchase of the property in 2015 which uncapped the assessment for 2016. Respondent assessed the property as ``average'' condition as of December 31, 2015. The changes were not substantial and were based on the rate of inflation.
-	
-% 	On rebuttal, Respondent argues mass appraisal does not account for properties on-by-on. In other words, properties are assessed uniformly and Respondent assumes properties are in average condition.
-% \end{quotation}
-
-% Appellant believes that the Tax Tribunal's characterization of Appellee's argument in the first paragraph quoted above is a little nonsensical. It appears to confuse the assessed value (which is determined every year independent of sales) with the taxable value (which uncaps based on sales or transfers). What was probably meant in the first paragraph was something like: 
-
-% \begin{quote}
-% 	Respondent argues that the increase in property taxes was caused by an uncapping because of the transfer of the property in 2015. The actual assessed value (or true cash value which is twice the assessed value) changed minimally from 2015 to 2016 based on the rate of inflation. The assessed value did not changed because of repairs done to the property. 
-% \end{quote}
-
-% In any case, Appellant believes that however Appellee's arguments are characterized, because the repairs had not yet been ruled to be normal repairs, Appellee's arguments were not as wrong as the arguments put forth by the Tax Tribunal in the \fojAbbr\ and \reconsiderationDeniedAbbr. The Tax Tribunal appears to argue that the assessor may simply ignore normal repairs under certain circumstances. Appellee has not asserted this so far in this case.
 
 \section{Argument}
  
@@ -442,25 +447,31 @@ When reviewing Tax Tribunal cases, this Court looks for misapplication of the la
 The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs .~.~. in determining the true cash value of property for assessment purposes until the property is sold.~.~.~. The increase in value attributable to [normal repairs] that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. .~.~.
 \end{quote}
 
-The \STC\ also says that ``Assessors are required to give non-consideration treatment to known qualifying changes to real property, regardless of whether the taxpayer has filed a form L-4293.'' \pincite{STC Bulletin}{2}.
+The \STC\ says that ``Assessors are required to give non-consideration treatment to known qualifying changes to real property, regardless of whether the taxpayer has filed a form L-4293.'' \pincite{STC Bulletin}{2}.
 
-In this case, the Tax Tribunal found that the repairs were normal under the statute. \foj[4]. Despite this, the Tax Tribunal goes on to decide the case as if there had been no normal repairs, essentially ignoring them. The Tax Tribunal appears to believe that the assessor is free to ignore normal repairs without violating \mathieuGast\ as long as she has some evidence to believe that repairs are not necessary to justify the true cash value of the property. In this case, that evidence was a) the assessed value change of 5\% from 12/31/2014 to 12/31/2015 which was due to inflation and b) the MLS marketing pictures taken before the house was sold which show that the house was in average condition. The Tax Tribunal says that simply because this evidence existed, the assessor did not violate \mathieuGast: 
+In this case, the Tax Tribunal found that the repairs were normal under the statute. \foj[4]. Despite this, the Tax Tribunal goes on to decide the case as if there had been no normal repairs, essentially ignoring them. ``Respondent's sale adjustment grid does not include a line-item entry for repairs. This comparative analysis is devoid of any relationship to Petition's 'normal' repairs to subject property .~.~.'' \foj[6].
+
+The Tax Tribunal appears to believe that the assessor is free to ignore normal repairs without violating \mathieuGast\ as long as she has some evidence to believe that repairs are not necessary to justify the true cash value of the property. In this case, that evidence was a) the assessed value change of 5\% from 12/31/2014 to 12/31/2015 which was due to inflation and b) the MLS marketing pictures taken before the house was sold which show that the house was in average condition. \reconsiderationDenied[2]. The Tax Tribunal says that simply because this evidence existed, the assessor did not violate \mathieuGast: 
 
 \begin{quote}
 	Although not necessarily evidence of true cash value, this evidence supports the property's assessment as a property in average condition both at the time Petitioner acquired it and after he completed the normal repairs. In other words, the record evidence supports the conclusion that the assessment did not consider the increase in true cash value that was the result of normal repairs. \reconsiderationDenied[2]. 
 \end{quote}
  
-In pointing to some evidence that the property was in average condition, the Tax Tribunal carefully avoids actually determining whether the property really was in average condition. Under the Tax Tribunal's interpretation of \mathieuGast\ the objective facts do not matter. The assessor and the Tax Tribunal may ignore normal repairs as long as they have \textit{some evidence} supporting the true cash value without having to consider (or appeal to) repairs.
+In pointing to some evidence that the property was in average condition, the Tax Tribunal carefully avoids actually determining whether the property really was in average condition. Under the Tax Tribunal's interpretation of \mathieuGast\ the objective facts do not matter; the assessor and the Tax Tribunal may ignore normal repairs as long as they have {\em some evidence} supporting the true cash value without having to subjectively consider (or appeal to) repairs.
 
 Contrary to the Tax Tribunal's view, the plain language of the statute makes clear that normal repairs must be given non-consideration treatment. The statute uses the word ``shall'' to indicate that the assessor must determine the true cash value of the repairs and indicate it in the assessment roll.
 
-Non-consideration treatment requires before-repair and after-repair appraisals. \pincite{STC Bulletin}{2}. Had the assessor attempted a before-repair appraisal, she would have found ample evidence that the property that she had valued at \$48,000, using a computerized, mass appraisal which \textit{assumed} that the property was in average condition, \foj[4], was in fact not correct. The MLS pictures which appear to show the property in average condition come from an MLS listing which shows that the property was on the market for \$29,000 and then for \$32,000 and that it sold for \$32,000. \mlsHistory[]. The City's inspectors had inspected the property and imposed repair requirements before they would issue a Certificate of Occupancy; the repairs were valued at approximately \$10,000. \repairs. The first time the Tax Tribunal looked at this case, it ruled that the condition of the house was so substandard that any repairs to it could not be normal. (This Court corrected the legal reasoning but did not question the fact that the house needed repairs. ``It is undisputed that, when he purchased the property, it was in substandard condition and required numerous repairs to make it livable.'' \pincite{Patru}{1}.)
- 
-Perhaps the root of the Tax Tribunal's error regarding \mathieuGast\ stems from its misunderstanding of what the statute means by ``not consider''. In everyday usage, ``to consider'' implies activity and to ``to not consider'' implies passivity. But in \mathieuGast, non-consideration is active. The statute says that ``the increase in value attributable to [normal repairs] ... shall be indicated on the assessment roll.'' The \cite[s]{STC Bulletin}\ uses the term ``non-consideration treatment''. Passively ignoring normal repairs is a violation of the statute as this Court noted the first time it heard this case:
+\mathieuGast\ is violated whenever the value of normal repairs is included in the true cash value for assessment purposes. Whether the assessor subjectively thought about, or ``considered'', the repairs is irrelevant. The first time this Court heard this case, the Tax Tribunal referee had determined the true cash value to be the after-repaired value. This Court reversed because the after-repaired value included the value of the repairs:
 
 \begin{quote}
 ... contrary to MCL 211.27(2), the referee \textit{considered} the increase in value attributed to the repairs when determining the property's TCV. Stated differently, the referee's finding that the property's TCV was \$50,400 was based on its assessment of the property's value after it had been repaired. This was improper because MCL 211.27(2) expressly provides that certain repairs constitute normal repairs so long as they are not part of a structural addition or completion. \pincite{Patru}{5}.
 \end{quote}
+
+The way to ensure that the value of the repairs is not included in the true cash value is to first find the value of the repairs and then subtract the value of the repairs from the value of the after-repaired value. This is what the STC terms ``non-consideration treatment'' and it requires before-repair and after-repair appraisals. \pincite{STC Bulletin}{2}. 
+
+The Tax Tribunal avoids determining the before-repair value by misinterpreting the statute to allow normal repairs to be ignored as long as some evidence exists which would allow the assessor to make an assessment without having to subjectively consider the repairs. In this case, the ``evidence'' was the prior year's assessed value and the MLS pictures.
+ 
+Had the Tax Tribunal attempted a before-repair appraisal, it have found ample evidence that the prior year's true cash value assessment of \$48,000, when the property was in need of repairs, was not correct. First, that assessment was based on a computerized mass appraisal which {\em assumed} that the property was in average condition. \foj[4]. The previous-year's assessment is based on assumption, not an inspection. Second, the MLS pictures which appear to show the property in average condition come from an MLS listing which shows that the property was on the market for \$29,000 and then for \$32,000 and that it sold for \$32,000. \mlsHistory[]. The MLS evidence as a whole does not support a market value of \$48,000. Third, the City's inspectors had inspected the property and imposed repair requirements before they would issue a Certificate of Occupancy; the repairs were valued at approximately \$10,000. \repairs. This evidence also does not support the notion that the property did not need repairs. Fourth, the first time the Tax Tribunal looked at this case, it ruled that the condition of the house was so substandard that any repairs to it could not be normal. (This Court corrected the legal reasoning but did not question the fact that the house needed repairs. ``It is undisputed that, when he purchased the property, it was in substandard condition and required numerous repairs to make it livable.'' \pincite{Patru}{1}.)
 
 In the \reconsiderationDenied[3], footnote 7, the Tax Tribunal attempts to justify its refusal to perform before-repair and after-repair appraisals:
 
@@ -478,26 +489,20 @@ The Tax Tribunal has misinterpreted the \cite[s]{STC Bulletin}. Below is a fulle
 
 Paragraphs 3 and 4 of the Bulletin distinguish between two cases: if the repairs are accounted for in the first year or in years after the first year. The paragraphs detail \textit{how} the repairs are to be valued not \textit{if} they are to be valued. The statute itself and paragraph 2 of the bulletin quoted above makes it clear that once a normal repair is known, its value must be noted on the assessment roll. The fact that the repairs were not on the assessment roll does not excuse before-repair and after-repair appraisals, it is evidence that the statute was violated.
 
-\begin{draft}
- 
-  \listoftodos
-  After misinterpreting the State Tax Commission's guidance, the Tax Tribunal brushes it aside by saying that STC guidance lacks the force of law, citing \cite[s]{Rovas}. \foj[2]. The problem with this is that Appellant was complaining that the assessor has not followed the STC guidance. In this situation, when the MTT says that the STC does not have the force of law, it is excusing the \textit{assessor's} lack of compliance with STC guidance. But the legislature has commanded assessors to follow the STC.
+After misinterpreting the State Tax Commission's guidance, the Tax Tribunal brushes it aside by saying that STC guidance lacks the force of law, citing \cite[s]{Rovas}. \foj[2]. In \cite[s]{Rovas}\ the Michigan Supreme Court distinguished between administrative agencies (such as the Public Service Commission in that case, or the State Tax Commission and the Michigan Tax Tribunal in this case) and the judicial branch courts (the Court of Appeals). The Supreme Court affirmed that even though administrative agengies are entitled to the most respectful consideration, judicial courts must apply a de novo standard of review when reviewing statutory construction:
 
-  In \cite[s]{Rovas}, this Court was dealing with a situation where the taxpayer was challenging the STC. Here the taxpayer is relying on STC guidance and the assessor, with the Tax Tribunal's endorsement, is ignoring STC guidance. The assessor in this case and in future cases need not concern herself with obeying the law and following STC guidance regarding \mathieuGast\ knowing that if the taxpayer appeals, the Tax Tribunal will back her up. In this situation, the MTT is not following the teaching of \cite[s]{Rovas}\ but fashioning its own teaching that undermines the legislature's command that assessors should follow STC guidance. This is error.
+\begin{quote}
+The construction given to a statute by those charged with the duty of executing it is always entitled to the most respectful consideration and ought not to be overruled without cogent reasons. However, these are not binding on the courts, and while not controlling, the practical construction given to doubtful or obscure laws in their administration by public officers and departments with a duty to perform under them is taken note of by the courts as an aiding element to be given weight in construing such laws and is sometimes deferred to when not in conflict with the indicated spirit and purpose of the legislature. \pincite{Rovas}{103}\ (cleaned up).
+\end{quote}
 
-  It may be that in cases where the STC has been challenged by the taxpayer and been ruled wrong, the assessor may follow the Tax Tribunal's ruling, but \cite[s]{Rovas}\ surely does not stand for the proposition that the assessor may challenge STC guidance herself.
+\cite[s]{Rovas}\ does not support the proposition that the Michigan Tax Tribunal can brush aside the statuory interpretation of another administrative agency, the State Tax Commission, and allow a city assessor to ignore \mathieuGast. The Tax Tribunal is an administrative agency, like the State Tax Commission. \cite[s]{Rovas}\ emphasized the power of judicial-branch courts, not agencies, to interpret the law de novo.
 
-  Also, \cite[s]{Rovas}\ clearly teaches that STC guidance is entitled to respect. But here, the Tax Tribunal does not say that the assessor even mentioned STC guidance, much less sought to argue that the guidance was wrong. Nor does the Tax Tribunal's own argument show that it afforded the STC respect. partial footnote on the subject that cherry-picks a quote out of context does not meet \cite[s]{Rovas}'s standard.
+Furthermore, the purpose of \cite[s]{Rovas}\ was to allow courts to clarify the law. Here the Tax Tribunal is muddling it. In this case, the Tax Tribunal found that repairs were normal repairs under \mathieuGast, yet contrary to the statute, it did not require the assessor to indicate the value of the normal repairs in the assessment roll. ``The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll.'' \pincite[s]{MCL 211.27(2)}{ Third sentence}.  \cite{MCL 211.10d(7)}\ requires that assessors certify the assessment roll ``in the form prescribed by the state tax commission.'' The assessor cannot obey this statute if she cannot certify that the assessment roll conforms to STC guidelines.
 
-  The implication \todo{show don't tell} is that even if the STC supports Appellant's position, the Tax Tribunal is free to ignore it. This is troubling because here Appellant has submitted to the Assessor a list of normal repairs and the City has ignored them -- \mathieuGast\ has not affected in the least how the City has assessed Appellant's property. The Appellant appeals to the Michigan Tax Tribunal and the Tribunal rules that the City has done no wrong to ignore the repairs, and that the City does not have to obey the guidance of the STC in this matter. Under this reasoning, the STC is never binding on assessors if the Tax Tribunal agrees with the assessors. Even without reading \textit{Rovas}, it is clear that the case could not stand for this proposition. The STC guidelines are written for the assessors, but also for the taxpayers. And when a taxpayer seeks the protection of the tax law, it is unseemly to allow the taxing authority to speak with a divided voice.
+Furthermore, \cite[s]{Rovas}\ teaches that the interpretation of administrative agencies ``is always entitled to the most respectful consideration and ought not to be overruled without cogent reasons,'' \pincite{Rovas}{103}, yet the Tax Tribunal here has not given respectful consideration nor cogent (clear, logical, and convincing) reasons for overruling the guidance of the State Tax Commission. The Tax Tribunal's reasoning for overruling the State Tax Commission is contained in footnote 7 of page two of the Denial of the Motion for Reconsideration. There are three parts: 1) The Tax Tribunal quotes two irrelevant portions of the statute only to point out that they are irrelevant. It does not address the third sentence of the statute. (The third sentence requires that the value of the repairs be indicated on the assessment roll.) 2) The Tax Tribunal then quotes the \cite{STC Bulletin}\ in a misleading way to imply that a before-repair appraisal is not required (this was discussed above). 3) Finally, the Tax Tribunal cites \cite[s]{Rovas}\ to say that STC guidance lacks the force of law. Here the Tax Tribunal has not followed the teaching of \cite[s]{Rovas}\ to give the administrative agency's interpretation ``the most respectful consideration'' and overrule it only with ``cogent reasons.''
 
-What do I want to say here? What is the problem?
+This Court reversed the previous ruling of the Tax Tribunal in part because it had added its own conditions to the statute. The Tax Tribunal had ruled that the statute did not apply when the property was in substandard condition. Now the Tax Tribunal has ruled that the statute does not apply when there is some evidence that the assessor did not need to consider repairs. This condition is not in the words of the statute. This Court should reverse this ruling for the same reason.
 
-The problem is that the MTT's position here would deprive taxpayers of certainty of how the state's tax law will be interpreted. MTT is saying that it will not implement the STC's guidelines when the assessor refuses to do so. Thus the taxpayers of Michigan cannot trust the STC's interpretation of tax law, because their local assessor may not follow it, and the MTT may not enforce the STC's interpretation.
-
-The Tax Tribunal misunderstood \mathieuGast\ and ruled that normal repairs may be ignored as long as the assessor could justify the true cash value on other grounds. The statute
-
-\end{draft}
 
 \subsection{The Tax Tribunal erred when it gave the selling price of the property ``no weight or credibility'' as to the market value of the property based solely on the fact that the seller was a government entity and speculation that the seller may not have been motivated to receive market value}
 

@@ -1019,8 +1019,11 @@
 \def\@bbMiscLongCite#1#2{%
   {% create block
     \def\pin##1##2{\FillIn{##1}{#2}{##2}}%
-    \FullName{#1}\ifpin{ #2}
+    \FullName{#1}%\ifpin{ #2}
+    \if\relax#2\relax\empty%
+    \else\ at #2%
   }%
+  % add reference to appendix
   \ifcsname #1@Reference\endcsname%
   \Call{#1@ReferenceP}[#2]%
   \fi%
@@ -1042,7 +1045,7 @@
 \newcommand{\@bbMiscShortCite}[2]{%
   \ShortName{#1}%
   \if\relax#2\relax\empty%
-  \else, p5#2%
+  \else\ at #2%
   \ifcsname #1@Reference\endcsname%
   \Call{#1@ReferenceP}[#2]%
   \fi%
