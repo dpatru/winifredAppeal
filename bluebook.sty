@@ -791,8 +791,10 @@
 %% will not be added automatically.
 %%
 
-\newcommand{\Id}[1][]{doing Id\@ifnextchar.{\@bbId{#1}{I.}\@absorbperiod}{\@bbId{#1}{I}}}
-\newcommand{\id}[1][]{doing id\@ifnextchar.{\@bbId{#1}{i.}\@absorbperiod}{\@bbId{#1}{i}}}
+\newcommand{\Id}[1][]{%doing Id
+  \@ifnextchar.{\@bbId{#1}{I.}\@absorbperiod}{\@bbId{#1}{I}}}
+\newcommand{\id}[1][]{%doing id
+  \@ifnextchar.{\@bbId{#1}{i.}\@absorbperiod}{\@bbId{#1}{i}}}
 \def\@bbId#1#2{\@bbsource{\@bbLastSource}{\ifempty{#1}{\@bbLastPinPage}{#1}}{#2}}
 
 %%\cmd{citetext}{Arbitrary text}[Automatically place law review citations in footnotes.]
