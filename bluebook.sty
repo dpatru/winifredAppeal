@@ -1010,7 +1010,7 @@
   \Call{#1@ReferenceP}[#2]%
   \fi%
 }
-\newcommand{\@bbStatuteLongCite}[2]{\ShortName{#1} #2\FillIn{ }{\Parenthetical{#1}}{}}
+\newcommand{\@bbStatuteLongCite}[2]{\ShortName{#1}\if\relax#2\relax\relax\else #2\fi\FillIn{ }{\Parenthetical{#1}}{}}
 \newcommand{\@bbBookLongCite}[2]{\FillIn{}{\@vol}{ }{\BAF\Authors{#1}}, {\BTF\Title{#1}}\FillIn{ }{#2}{}\ \Parenthetical{#1}}
 \newcommand{\@bbArticleLongCite}[2]{\Authors{#1}, {\ATF\Title{#1}}, {\JTF\Reporter{#1}} \StartPage{#1}\FillIn{, }{#2}{} \Parenthetical{#1}\unskip}
 %\newcommand{\@bbInCollectionLongCite}[2]{\Authors{#1}, {\ATF\Title{#1}} \emph{in} \@vol{\BTF\CollectionTitle{#1}} \StartPage{#1}\FillIn{, }{#2}{} \Parenthetical{#1}}
@@ -1023,7 +1023,7 @@
     \def\pin##1##2{\FillIn{##1}{#2}{##2}}%
     \FullName{#1}%\ifpin{ #2}
     \if\relax#2\relax\empty%
-    \else\ at #2%
+    \else\ at #2\fi%
   }%
   % add reference to appendix
   \ifcsname #1@Reference\endcsname%
