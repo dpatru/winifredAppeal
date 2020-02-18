@@ -1,0 +1,149 @@
+* Issues to figure out before appealing to the Michigan Supreme Court
+
+** Is there a split? Is this decision consistent with other Court of Appeals decisions?
+Look up all cases ruling on MCL 211.27(2) and determine.
+
+** Did the Tribunal get the facts right?
+
+*** did the MTT decide the case on this basis?
+
+``On remand, the tribunal agreed that petitioner's
+repairs qualified as ``normal repairs,'' but determined that respondent’s assessment of the
+property's TCV was proper because of the 2015 change in ownership. The tribunal further found,
+however, that petitioner's repairs, which were intended primarily to ready the property as rental
+property, did not affect the assessed TCV value of the property in any event.''
+p 1
+
+*** Does uncapping create an exception to Matieu Gast?
+
+Initially, we agree with the Tax Tribunal that because there was a transfer of ownership of the
+subject property in 2015, MCL 211.27(2) did not prohibit the assessor from considering the impact
+of any ``normal repairs'' on the property’s TCV for purposes of the 2016 tax year. 
+p 3
+
+As indicated, however, when property is sold, it becomes “uncapped” and the property’s value for
+the following tax year is determined by its value as of December 31 of the preceding year. In other
+words, the property’s TCV for the tax year following a transfer of ownership is determined by its
+value as of December 31 of the calendar year in which the transfer of ownership occurred.
+Accordingly, the restriction on consideration of “normal repairs” for purposes of calculating
+increases in TCV is intended to apply only while property is owned by the same party, and thus
+would not apply to repairs performed during a year in which ownership of the property is
+transferred. Rather, the taxable value of property for the tax year following a transfer of ownership
+would be 50% of the property’s TCV as of December 31 of the immediately preceding year (i.e.,
+the year there was a transfer of ownership). MCL 211.2(2); MCL 211.27a(1) and (3). 
+p 4
+
+
+Because petitioner purchased the subject property in August 2015, the taxable value of the
+property became uncapped between August 2015 and December 31, 2015, and, for the 2016 tax
+year, the assessor was required to determine the property’s TCV as of December 31, 2015.
+Petitioner argues that under MCL 211.27(2), respondent can consider the value added by “normal
+repairs” only when petitioner sells the property, because the statute states that “[t]he assessor shall
+not consider the increase in true cash value that is a result of expenditures for normal repairs,
+replacement, and maintenance in determining the true cash value of property for assessment
+purposes until the property is sold.” While this interpretation may be correct with respect to repairs
+made during a tax year in which there is no transfer of ownership, it cannot apply to repairs made
+during a year in which there was a transfer of ownership because “the property’s taxable value for
+the calendar year following the year of the transfer is the property’s state equalized valuation for
+the calendar year following the transfer,” MCL 211.27a(3), which in turn is “determined as of each
+December 31 of the immediately preceding year,” MCL 211.2(2). Thus, the tribunal correctly
+held that it was required to determine the TCV of the subject property on the basis of its fair market 
+-5-
+value as of December 31, 2015, regardless of any “normal repairs” made by petitioner in 2015
+after he purchased the property. 
+
+**** comments
+Uncapping brings the Taxable value in line with the assessed value. It does not affect how the assessment is done.
+Matieu Gast affects how assessment is calculated. The assessment is not to consider normal repairs until the property is sold. The word until implies that the non-consideration is to last until the repairer sells the property. The Court of Appeal's interpretation would read the statute as: repairs shall not be considered unless the property is sold in the year of the repairs. 
+
+The Court does not cite any caselaw supporting its position that a buyer cannot benefit from Matieu Gast if he makes the repairs in the year he purchases the property. This position was not advocated by the Respondent/Appellee, or anyone else in this case, with the possible exception of the MTT judges in the 2nd go-around. 
+** Law of the case
+
+. . . The doctrine is applicable “only to issues actually decided, either
+implicitly or explicitly, in the prior appeal.” Grievance Administrator v Lopatin,
+462 Mich 235, 260; 612 NW2d 120 (2000). “The primary purpose of the doctrine
+is to maintain consistency and avoid reconsideration of matters once decided during
+the course of a single continuing lawsuit.” Ashker v Ford Motor Co, 245 Mich App
+9, 13; 627 NW2d 1 (2001). 
+
+In Patru I, this Court did not resolve whether petitioner’s 2015 repairs to the property could or
+could not be considered in determining the property’s TCV for the 2016 tax year, but instead
+determined that “further proceedings are necessary to determine whether the repairs were normal
+repairs within the meaning of MCL 211.27(2).” Id., unpub op at 5. More significantly, this Court
+did not address the effect of the property’s transfer of ownership in 2015 on the tribunal’s
+consideration of “normal repairs” under MCL 211.27(2) for purposes of the 2016 tax year.
+Because this issue was not actually addressed and decided in the prior appeal, the law-of-the-case
+doctrine does not apply. 
+p 5
+
+*** comments
+The Court of Appeal's novel reading of Matieu Gast was not at issue in Patru 1. This issue was not argued then. This is a 2nd bite at the apple. 
+
+Under Patru 2, Matieu Gast does not apply at all if the property was sold in the year the repairs were made. There would be no reason to consider whether repairs were normal, or whether the sale was a market sale, or anything else related to Matieu Gast. The only issue under the Appeals Court's second ruling would be the repaired value on Dec 31, tax day. And this is in fact what the MTT's first ruling did, and what the court in Patru 1 overturned. 
+
+
+** Two Situations:
+Seller repairs then sells: Assessed value is based on after-repair value. 
+Seller is incentivized to repair because the repairs are not taxed.
+Seller is paid for her repairs when she sells. 
+Buyer is taxed on the value of the property he bought.
+
+Seller sells then Buyer repairs: Assessed value is based on before-repair value.
+Seller is taxed on the lower value (assuming assessed value is correct).
+Buyer's purchase price is based on the before-repair value.
+Buyer is incentivized to repair by Matieu Gast.
+
+** Do past assessment mistakes nullify Matieu Gast?
+Petitioner further argues that the tribunal erred by also finding that, regardless of the proper
+construction of MCL 211.27(2), petitioner’s repairs did not have any bearing on the property’s
+TCV, which was determined to be $50,400 as of December 31, 2015. We again disagree. The
+tribunal did not credit petitioner’s argument that the property was in substandard condition when
+he purchased it. The tribunal reviewed petitioner’s Multiple Listing Service (MLS) printouts and
+photographs for both the subject property and comparable properties. The tribunal found that
+petitioner’s MLS listing for the subject property showed a property in “average” condition, and
+that petitioner’s photographs of the property, before any repairs, showed “a property that is livable
+and habitable with reasonable marketability and appeal.” The tribunal noted that the purpose of
+petitioner’s repairs was “to ready the property as a tenant rental.” It is undisputed that the assessed
+TCV of the property for the 2015 tax year was $48,000. Given this evidence, it was appropriate
+for the tribunal to draw conclusions about the value of the property before and after petitioner’s
+purchase, specifically, that the prior year’s assessment of $48,000 was reflective of the property’s
+TCV before petitioner purchased it, that an increase of $2,400 could be attributed to inflation and 
+-6-
+increases in the market, and that petitioner’s “normal repairs” were not attributable to the
+property’s substandard condition, but rather were intended primarily to prepare the property as
+rental property. The tribunal concluded that the “evidence supports the property’s assessment as
+a property in average condition both at the time Petitioner acquired it and after he completed the
+normal repairs,” and that “the assessment did not consider the increase in true cash value that was
+the result of normal repairs.”
+We reject petitioner’s argument that the tribunal was required to calculate the property’s
+TCV using a “before repairs” appraisal and an “after repairs” appraisal. Petitioner’s reliance on
+the State Tax Commission’s 2014 Bulletin No. 7 in support of this argument is misplaced. Indeed,
+page 3 of the Bulletin states:
+The exemption for normal repairs, replacements and maintenance ends in
+the year after the owner who made the repairs, replacements and maintenance sells
+the property. In the year following a sale, the assessed value shall be based on the
+true cash value of the entire property. The amount of assessment increase
+attributable to the value of formerly exempt property returning to the assessment
+roll is new for equalization purposes. [Emphasis added.] 
+
+*** comment
+Ignoring the STC while quoting it. The Court emphasized sentence saying:
+In the year following a sale, the assessed value shall be based on the true cash value of the entire property. 
+
+But ignores the previous sentence which indicates that the sale at issue is when the repairer sells.
+The exemption for normal repairs, replacements and maintenance ends in
+the year after the owner who made the repairs, replacements and maintenance sells
+the property.
+
+The MTT did not rely on the STC to support its position, but, instead, claimed that the STC Bulletin was not binding.
+
+
+** HUD seller
+ The tribunal found
+that the seller was not necessarily motivated to receive market value for the property and that the
+property’s purchase price was not presumptive of its TCV. 
+p 7
+
+*** comment:
+The seller assumed, based only on the identity of the seller, that the sale was not a market sale. This was not a fact-based finding by the trier of fact which this Court is bound to respect.
+
