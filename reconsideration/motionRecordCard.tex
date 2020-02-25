@@ -1,0 +1,631 @@
+%
+% This is one of the samples from the lawtex package:
+% http://lawtex.sourceforge.net/
+% LawTeX is licensed under the GNU General Public License 
+%
+\providecommand{\documentclassflag}{}
+\documentclass[12pt,\documentclassflag]{michiganCourtOfAppealsBrief}
+%\documentclass{article}
+
+
+% for striking a row in a table, see https://tex.stackexchange.com/a/265728/135718
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
+\makeandletter% use \makeandtab to turn off
+
+% Use this to show a line grid-
+% \usepackage[fontsize=12pt,baseline=24pt,lines=27]{grid}
+% \usepackage{atbegshi,picture,xcolor} % https://tex.stackexchange.com/a/191004/135718
+% \AtBeginShipout{%
+%   \AtBeginShipoutUpperLeft{%
+%     {\color{red}%
+%     \put(\dimexpr -1in-\oddsidemargin,%
+%          -\dimexpr 1in+\topmargin+\headheight+\headsep+\topskip)%
+%       {%
+%        \vtop to\dimexpr\vsize+\baselineskip{%
+%          \hrule%
+%          \leaders\vbox to\baselineskip{\hrule width\hsize\vfill}\vfill%
+%        }%
+%       }%
+%   }}%
+% }
+%   \linespread{1}
+
+\usepackage[modulo]{lineno}% use \linenumbers to show line numbers, see https://texblog.org/2012/02/08/adding-line-numbers-to-documents/
+
+% allow underscores in words
+\chardef\_=`_% https://tex.stackexchange.com/a/301984/135718 
+
+%%Citations
+ 
+%The command \makeandletter turns the ampersand into a printable character, rather than a special alignment tab \makeandletter
+
+\begin{document}
+\singlespacing%
+
+\citecase[Helin]{Helin v Grosse Pointe Township, 329 Mich. 396; 45 N.W.2d 338 (1951)}
+\citecase[Mich Ed]{Mich Ed Ass'n v Secretary of State
+  (On Rehearing), 489 Mich 194, 218; 801 NW2d 35 (2011)}
+% (stating that nothing will be read into a clear statute that is not within the manifest intention of the Legislature as derived from the language of the statute itself).
+
+\citecase[Patru]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}%
+\addReference{Patru}{patruvwayne}% Associate appendix with case
+
+\citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
+\citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 780 NW2d 753 (2010)}
+\citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v. City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
+
+\citecase[Pontiac Country Club]{Pontiac Country Club v Waterford Twp, 299 Mich App 427; 830 NW2d 785 (2013)}
+\citecase[Kar]{Kar v. Hogan, 399 Mich. 529; 251 N.W.2d 77  (1976)}
+\citecase[CAF]{CAF Investment Company v. State Tax Commission, 392 Mich. 442; 221 N.W.2d 588 (1974)}
+\citecase[Clark]{Clark Equipment Company v. Township Of Leoni, 113 Mich. App. 778; 318 N.W.2d 586 (1982)}
+\citecase[Menard]{Menard, Inc. v Escanaba, 315 Mich. App. 512; 891 N.W.2d 1 (2016)}
+\citecase[Walters]{People v Walters, 266 Mich App 341; 700 NW2d 424 (2005)}
+\citecase[Luckow]{Luckow Estate v Luckow, 291 Mich App 417; 805 NW2d 453 (2011)}
+\citecase[Stamp]{Stamp v Mill Street Inn, 152 Mich App 290; 393 NW2d 614 (1986)}
+\citecase[Macomb County Department of Human Services]{Macomb County Department of Human Services v Anderson, 304 Mich App 750; 849 NW2d 408 (2014)}
+\citecase[Berger]{Berger v. Berger, 747 N.W.2d 336; 277 Mich. App. 700 (2008)}
+
+\citecase[Signature Villas]{Signature Villas, LLC v. City of Ann Arbor, 714 NW 2d 392 (Mich: Court of Appeals 2006)}
+% the MTT rules of practice and procedure provide that "[i]f an applicable entire tribunal rule does not exist, the 1995 Michigan Rules of Court, as amended, . . . shall govern." 1999 AC, R 205.1111(4). Therefore, provisions of the Michigan Court Rules apply, where applicable, to MTT dispositions.
+
+\citecase[FMB]{FMB -- First Mich. Bank v. Bailey, 232 Mich App 711; 591 NW 2d 676 (1998)}
+
+
+% Rather, the apparent objective of MCR 2.114(E) and (F) is to deter parties and attorneys from filing documents or asserting claims and defenses that have not been sufficiently investigated and researched or that are intended to serve an improper purpose.
+
+%The purpose of imposing sanctions under MCR 2.114, however, is to "deter parties and attorneys from filing documents or asserting claims and defenses that have not been sufficiently investigated and researched or that are intended to serve an improper purpose." FMB-First Michigan Bank v Bailey, 232 Mich App 711, 723; 591 NW2d 676, 682 (1998). 
+
+\citecase[Lanzo]{Lanzo Construction v. City of Southfield, unpublished per curiam opinion of the Court of Appeals, issued June 28, 2007 (Docket No. 268567)}
+\addReference{Lanzo}{Lanzo}% Associate appendix with c
+
+%Petitioner argues that MCR 2.114 does not apply to proceedings before the Tax Tribunal because the Tribunal has its own provision, TTR 205.1145, regarding the awarding of costs to a prevailing party. The Tax Tribunal Rules "govern the practice and procedure in all cases and proceedings before the tribunal." TTR 205.1111(1). However, "[i]f an applicable entire tribunal rule does not exist, the 1995 Michigan Rules of Court, as amended, . . . shall govern." TTR 205.1111(4); Signature Villas, LLC v Ann Arbor, 269 Mich App 694, 705; 714 NW2d 392 (2006). TTR 205.1145, like MCR 2.625, addresses the awarding of costs to a prevailing party. The purpose of awarding costs is to reimburse the prevailing party the costs it paid during the course of the litigation. Wells v Dep't of Corrections, 447 Mich 415, 419; 523 NW2d 217 (1994). The purpose of imposing sanctions under MCR 2.114, however, is to "deter parties and attorneys from filing documents or asserting claims and defenses that have not been sufficiently investigated and researched or that are intended to serve an improper purpose." FMB-First Michigan Bank v Bailey, 232 Mich App 711, 723; 591 NW2d 676 (1998). Nothing in TTR 205.1145 or any other Tax Tribunal Rule addresses sanctions. Therefore, because no applicable Tax Tribunal Rule exists regarding sanctions, MCR 2.114 applies to proceedings before the Tax Tribunal. TTR 205.1111(4). Accordingly, because the Tax Tribunal found that petitioner's petition and motion for reconsideration were filed in violation of MCR 2.114(D), the Tax Tribunal erred when it failed to sanction petitioner, its counsel, or both. In re Forfeiture of Cash & Gambling Paraphernalia, supra at 73. We reverse the Tax Tribunal's September 10, 2004 order and all subsequent orders denying respondent's request for costs and attorney fees and remand for a hearing to determine an appropriate sanction.
+
+{\makeatletter % needed for optional argument to newstatute.
+  % \newstatute[1@]{MCL}{}% place MCL first
+  % \newstatute[2@]{MCR}{}
+  % \newstatute[3@]{TTR}{}
+  % \newstatute[4@]{Dearborn Ordinance}{}% place this fourth
+  % \newstatute[5@]{Wayne Ordinance}{}
+
+  \newstatute{MCL 205.731}{}
+  %Tax tribunal; jurisdiction.
+%  The tribunal has exclusive and original jurisdiction over all of the following:
+  % (a) A proceeding for direct review of a final decision, finding, ruling, determination, or order of an agency relating to assessment, valuation, rates, special assessments, allocation, or equalization, under the property tax laws of this state.
+
+  \newstatute{MCL 205.732(c)}{} % Powers of the tribunal.
+
+  \newstatute]{MCL 211.27(1)}{}
+  % 211.27 "True cash value" defined; considerations in determining value; indicating exclusions from true cash value on assessment roll; subsection (2) applicable only to residential property; repairs considered normal repairs, replacement, and maintenance; exclusions from real estate sales data; classification as agricultural real property; "present economic income" defined; applicability of subsection (5); "nonprofit cooperative housing corporation" defined; value of transferred property; “purchase price” defined; additional definitions; "standard tool" defined.
+% Sec. 27.
+
+%   (1) As used in this act, "true cash value" means the usual selling price at the place where the property to which the term is applied is at the time of assessment, being the price that could be obtained for the property at private sale, and not at auction sale except as otherwise provided in this section, or at forced sale. The usual selling price may include sales at public auction held by a nongovernmental agency or person if those sales have become a common method of acquisition in the jurisdiction for the class of property being valued. The usual selling price does not include sales at public auction if the sale is part of a liquidation of the seller's assets in a bankruptcy proceeding or if the seller is unable to use common marketing techniques to obtain the usual selling price for the property. A sale or other disposition by this state or an agency or political subdivision of this state of land acquired for delinquent taxes or an appraisal made in connection with the sale or other disposition or the value attributed to the property of regulated public utilities by a governmental regulatory agency for rate-making purposes is not controlling evidence of true cash value for assessment purposes. In determining the true cash value, the assessor shall also consider the advantages and disadvantages of location; quality of soil; zoning; existing use; present economic income of structures, including farm structures; present economic income of land if the land is being farmed or otherwise put to income producing use; quantity and value of standing timber; water power and privileges; minerals, quarries, or other valuable deposits not otherwise exempt under this act known to be available in the land and their value. In determining the true cash value of personal property owned by an electric utility cooperative, the assessor shall consider the number of kilowatt hours of electricity sold per mile of distribution line compared to the average number of kilowatt hours of electricity sold per mile of distribution line for all electric utilities. 
+ 
+  \newstatute{MCL 211.27(2)}{}% MathieuGast
+%   (2) The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction. The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. This subsection applies only to residential property. The following repairs are considered normal maintenance if they are not part of a structural addition or completion:
+% (a) Outside painting.
+% (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
+% (c) Repainting, repairing, or replacing existing masonry.
+% (d) Replacing awnings.
+% (e) Adding or replacing gutters and downspouts.
+% (f) Replacing storm windows or doors.
+% (g) Insulating or weatherstripping.
+% (h) Complete rewiring.
+% (i) Replacing plumbing and light fixtures.
+% (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner.
+% (k) Repairing plaster, inside painting, or other redecorating.
+% (l) New ceiling, wall, or floor surfacing.
+% (m) Removing partitions to enlarge rooms.
+% (n) Replacing an automatic hot water heater.
+% (o) Replacing dated interior woodwork.
+
+  \newstatute{MCL 211.27(6)}{}%
+% (6) Except as otherwise provided in subsection (7), the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred. In determining the true cash value of transferred property, an assessing officer shall assess that property using the same valuation method used to value all other property of that same classification in the assessing jurisdiction. As used in this subsection and subsection (7), "purchase price" means the total consideration agreed to in an arms-length transaction and not at a forced sale paid by the purchaser of the property, stated in dollars, whether or not paid in dollars.
+  
+  \newstatute{MCL 211.10d(7)}{}%
+%  (7) Every lawful assessment roll shall have a certificate attached signed by the certified assessor who prepared or supervised the preparation of the roll. The certificate shall be in the form prescribed by the state tax commission. If after completing the assessment roll the certified assessor for the local assessing district dies or otherwise becomes incapable of certifying the assessment roll, the county equalization director or the state tax commission shall certify the completed assessment roll at no cost to the local assessing district.
+
+  \newstatute{MCL 211.24(1)}{}
+
+    % 211.24 Property tax assessment roll; time; use of computerized database system.
+% Sec. 24.
+
+%   (1) On or before the first Monday in March in each year, the assessor shall make and complete an assessment roll, upon which he or she shall set down all of the following:
+%   (a) The name and address of every person liable to be taxed in the local tax collecting unit with a full description of all the real property liable to be taxed. If the name of the owner or occupant of any tract or parcel of real property is known, the assessor shall enter the name and address of the owner or occupant opposite to the description of the property. If unknown, the real property described upon the roll shall be assessed as "owner unknown". All contiguous subdivisions of any section that are owned by 1 person, firm, corporation, or other legal entity and all unimproved lots in any block that are contiguous and owned by 1 person, firm, corporation, or other legal entity shall be assessed as 1 parcel, unless demand in writing is made by the owner or occupant to have each subdivision of the section or each lot assessed separately. However, failure to assess contiguous parcels as entireties does not invalidate the assessment as made. Each description shall show as near as possible the number of acres contained in it, as determined by the assessor. It is not necessary for the assessment roll to specify the quantity of land comprised in any town, city, or village lot.
+%   (b) The assessor shall estimate, according to his or her best information and judgment, the true cash value and assessed value of every parcel of real property and set the assessed value down opposite the parcel.
+%   (c) The assessor shall calculate the tentative taxable value of every parcel of real property and set that value down opposite the parcel.
+%   (d) The assessor shall determine the percentage of value of every parcel of real property that is exempt from the tax levied by a local school district for school operating purposes to the extent provided under section 1211 of the revised school code, 1976 PA 451, MCL 380.1211, and set that percentage of value down opposite the parcel.
+%   (e) The assessor shall determine the date of the last transfer of ownership of every parcel of real property occurring after December 31, 1994 and set that date down opposite the parcel.
+%   (f) The assessor shall estimate the true cash value of all the personal property of each person, and set the assessed value and tentative taxable value down opposite the name of the person. In determining the property to be assessed and in estimating the value of that property, the assessor is not bound to follow the statements of any person, but shall exercise his or her best judgment. For taxes levied after December 31, 2003, the assessor shall separately state the assessed value and tentative taxable value of any leasehold improvements.
+%   (g) Property assessed to a person other than the owner shall be assessed separately from the owner's property and shall show in what capacity it is assessed to that person, whether as agent, guardian, or otherwise. Two or more persons not being copartners, owning personal property in common, may each be assessed severally for each person's portion. Undivided interests in lands owned by tenants in common, or joint tenants not being copartners, may be assessed to the owners.
+%   (2) Subject to this section, a local tax collecting unit may use a computerized database system as the assessment roll described in subsection (1) if the local tax collecting unit and the assessor certify in a form and manner prescribed by the state tax commission that the proposed system has the capacity to enable a local tax collecting unit to comply and the local tax collecting unit complies with all of the following requirements:
+%   (a) The assessor shall certify the assessment roll and maintain a computer printed format or a disk, external drive, or other electronic data processing format compatible with the computer system used by the local tax collecting unit. The affidavit attached to or included with the assessment roll shall include documentation that the assessment roll has been backed up through a computer backup system and a sworn statement by the assessor that the backup system contains a true and complete record of the assessment roll. The affidavit attached to or included with the assessment roll shall include documentation that authorizes and reports all changes in the assessment roll as certified by the assessor.
+%   (b) The local tax collecting unit shall certify and maintain a retention policy that complies with the requirements of section 11 of the Michigan history center act, 2016 PA 470, MCL 399.11, and section 491 of the Michigan penal code, 1931 PA 328, MCL 750.491.
+%   (c) The local tax collecting unit shall certify that the computerized database system has internal and external security procedures sufficient to assure the integrity of the system.
+%   (d) Not later than May 1 of the third year following the year in which a local tax collecting unit begins using a computerized database system as the assessment roll in accordance with this subsection and every 3 years thereafter, the local tax collecting unit shall certify to the state tax commission that the requirements of this subsection are being met.
+%   (e) An assessor or local tax collecting unit that provides a computer terminal for public viewing of the assessment roll is considered as having the assessment roll available for public inspection.
+%   (f) If at any time the state tax commission believes that a local tax collecting unit is no longer in compliance with this subsection, the state tax commission shall provide written notice to the local tax collecting unit. The notice shall specify the reasons that use of the computerized database system as the original assessment roll is no longer in compliance with this subsection. The local tax collecting unit has 60 days to provide evidence that the local tax collecting unit is in compliance with this subsection or that action to correct noncompliance has been implemented. If, after the expiration of 60 days, the state tax commission believes that the local tax collecting unit is not taking satisfactory steps to correct a condition of noncompliance, the state tax commission upon its own motion may withdraw approval of the use of the computerized database system as the original assessment roll. Proceedings of the state tax commission under this subsection shall be in accordance with rules for other proceedings for the commission promulgated under the administrative procedures act of 1969, 1969 PA 306, MCL 24.201 to 24.328, and shall not be considered a contested case.
+
+  
+  \newstatute{MCL 205.753(2)}{}% allows appeals from a final order of the Tax Tribunal
+
+  \newstatute{MCR 7.204(A)(1)(b)}{}% allows appeals within 21 days of an order on a motion for reconsideration
+
+  \newstatute{MCL 600.2591}{}
+%   600.2591 Frivolous civil action or defense to civil action; awarding costs and fees to prevailing party; definitions.
+% Sec. 2591.
+
+%   (1) Upon motion of any party, if a court finds that a civil action or defense to a civil action was frivolous, the court that conducts the civil action shall award to the prevailing party the costs and fees incurred by that party in connection with the civil action by assessing the costs and fees against the nonprevailing party and their attorney.
+%   (2) The amount of costs and fees awarded under this section shall include all reasonable costs actually incurred by the prevailing party and any costs allowed by law or by court rule, including court costs and reasonable attorney fees.
+%   (3) As used in this section:
+%   (a) “Frivolous” means that at least 1 of the following conditions is met:
+%   (i) The party's primary purpose in initiating the action or asserting the defense was to harass, embarrass, or injure the prevailing party.
+%   (ii) The party had no reasonable basis to believe that the facts underlying that party's legal position were in fact true.
+%   (iii) The party's legal position was devoid of arguable legal merit.
+%   (b) “Prevailing party” means a party who wins on the entire record.
+
+  \newstatute{MCR 2.625}{}
+%   Rule 2.625 Taxation of Costs
+% (A) Right to Costs.
+
+% (1) In General. Costs will be allowed to the prevailing party in an action, unless prohibited by statute or by these rules or unless the court directs otherwise, for reasons stated in writing and filed in the action.
+
+% (2) Frivolous Claims and Defenses. In an action filed on or after October 1, 1986, if the court finds on motion of a party that an action or defense was frivolous, costs shall be awarded as provided by MCL 600.2591.
+
+% (B) Rules for Determining Prevailing Party.
+
+% (1) Actions With Several Judgments. If separate judgments are entered under MCR 2.116 or 2.505(A) and the plaintiff prevails in one judgment in an amount and under circumstances which would entitle the plaintiff to costs, he or she is deemed the prevailing party. Costs common to more than one judgment may be allowed only once.
+
+% (2) Actions With Several Issues or Counts. In an action involving several issues or counts that state different causes of action or different defenses, the party prevailing on each issue or count may be allowed costs for that issue or count. If there is a single cause of action alleged, the party who prevails on the entire record is deemed the prevailing party.
+
+% (3) Actions With Several Defendants. If there are several defendants in one action, and judgment for or dismissal of one or more of them is entered, those defendants are deemed prevailing parties, even though the plaintiff ultimately prevails over the remaining defendants.
+
+% (4) Costs on Review in Circuit Court. An appellant in the circuit court who improves his or her position on appeal is deemed the prevailing party.
+
+% (C) Costs in Certain Trivial Actions. In an action brought for damages in contract or tort in which the plaintiff recovers less than $100 (unless the recovery is reduced below $100 by a counterclaim), the plaintiff may recover costs no greater than the amount of damages.
+
+% (D) Costs When Default or Default Judgment Set Aside. The following provisions apply to an order setting aside a default or a default judgment:
+
+% (1) If personal jurisdiction was acquired over the defendant, the order must be conditioned on the defendant's paying or securing payment to the party seeking affirmative relief the taxable costs incurred in procuring the default or the default judgment and acting in reliance on it;
+
+% (2) If jurisdiction was acquired by publication, the order may be conditioned on the defendant's paying or securing payment to the party seeking affirmative relief all or a part of the costs as the court may direct;
+
+% (3) If jurisdiction was in fact not acquired, costs may not be imposed.
+
+% (E) Costs in Garnishment Proceedings Brought Pursuant to 3.101(M). Costs in garnishment proceedings to resolve the dispute between a plaintiff and a garnishee regarding the garnishee's liability are allowed as in civil actions. Costs may be awarded to the garnishee defendant as follows:
+
+% (1) The court may award the garnishee defendant as costs against the plaintiff reasonable attorney fees and other necessary expenses the garnishee defendant incurred in filing the disclosure, if the issue of the garnishee defendant's liability to the principal defendant is not brought to trial.
+
+% (2) The court may award the garnishee defendant, against the plaintiff, the total costs of the garnishee defendant's defense, including all necessary expenses and reasonable attorney fees, if the issue of the garnishee defendant's liability to the principal defendant is tried and
+
+% (a) the garnishee defendant is held liable in a sum no greater than that admitted in disclosure, or
+
+% (b) the plaintiff fails to recover judgment against the principal defendant.
+
+% In either (a) or (b), the garnishee defendant may withhold from the amount due the principal defendant the sum awarded for costs, and is chargeable only for the balance.
+
+% (F) Procedure for Taxing Costs at the Time of Judgment.
+
+% (1) Costs may be taxed by the court on signing the judgment, or may be taxed by the clerk as provided in this subrule.
+
+% (2)When costs are to be taxed by the clerk, the party entitled to costs must present to the clerk, within 28 days after the judgment is signed, or within 28 days after entry of an order denying a motion for new trial, a motion to set aside the judgment, a motion for rehearing or reconsideration, or a motion for other postjudgment relief except a motion under MCR 2.612(C),
+
+% (a) a bill of costs conforming to subrule (G),
+
+% (b) a copy of the bill of costs for each other party, and
+
+% (c) a list of the names and addresses of the attorneys for each party or of parties not represented by attorneys.
+
+% In addition, the party presenting the bill of costs shall immediately serve a copy of the bill and any accompanying affidavits on the other parties. Failure to present a bill of costs within the time prescribed constitutes a waiver of the right to costs.
+
+% (3) Within 14 days after service of the bill of costs, another party may file objections to it, accompanied by affidavits if appropriate. After the time for filing objections, the clerk must promptly examine the bill and any objections or affidavits submitted and allow only those items that appear to be correct, striking all charges for services that in the clerk's judgment were not necessary. The clerk shall notify the parties in the manner provided in MCR 2.107.
+
+% (4) The action of the clerk is reviewable by the court on motion of any affected party filed within 7 days from the date that notice of the taxing of costs was sent, but on review only those affidavits or objections that were presented to the clerk may be considered by the court.
+
+% (G) Bill of Costs; Supporting Affidavits.
+
+% (1) Each item claimed in the bill of costs, except fees of officers for services rendered, must be specified particularly.
+
+% (2) The bill of costs must be verified and must contain a statement that
+
+% (a) each item of cost or disbursement claimed is correct and has been necessarily incurred in the action, and
+
+% (b) the services for which fees have been charged were actually performed.
+
+% (3) If witness fees are claimed, an affidavit in support of the bill of costs must state the distance traveled and the days actually attended. If fees are claimed for a party as a witness, the affidavit must state that the party actually testified as a witness on the days listed.
+
+% (H) Taxation of Fees on Settlement. Unless otherwise specified a settlement is deemed to include the payment of any costs that might have been taxable.
+
+% (I) Special Costs or Damages.
+
+% (1) In an action in which the plaintiff's claim is reduced by a counterclaim, or another fact appears that would entitle either party to costs, to multiple costs, or to special damages for delay or otherwise, the court shall, on the application of either party, have that fact entered in the records of the court. A taxing officer may receive no evidence of the matter other than a certified copy of the court records or the certificate of the judge who entered the judgment.
+
+% (2) Whenever multiple costs are awarded to a party, they belong to the party. Officers, witnesses, jurors, or other persons claiming fees for services rendered in the action are entitled only to the amount prescribed by law.
+
+% (3) A judgment for multiple damages under a statute entitles the prevailing party to single costs only, except as otherwise specially provided by statute or by these rules.
+
+% (J)    Costs in Headlee Amendment Suits. A plaintiff who prevails in an action brought pursuant to Const 1963, art 9, § 32 shall receive from the defendant the costs incurred by the plaintiff in maintaining the action as authorized by MCL 600.308a(1) and (6). Costs include a reasonable attorney fee.
+
+% (K) Procedure for Taxing Costs and Fees After Judgment.
+
+% (1) A judgment creditor considered a prevailing party to the action under subrule (B) may recover from the judgment debtor(s) the taxable costs and fees expended after a judgment is entered, including all taxable filing fees, service fees, certification fees, and any other costs, fees, and disbursements associated with postjudgment actions as allowed by MCL 600.2405.
+
+% (2) Until the judgment is satisfied, the judgment debtor may serve on the judgment creditor a request to review postjudgment taxable costs and fees.
+
+% (a) Within 28 days of receipt from a judgment debtor of a request to review postjudgment taxable costs and fees, the judgment creditor shall file with the court a memorandum of postjudgment taxable costs and fees and serve the same upon the judgment debtor. A memorandum of postjudgment taxable costs and fees shall include an itemized list of postjudgment taxable costs and fees. The memorandum must be verified by oath under MCR 1.109(D)(3).
+
+% (b) Within 28 days after receiving the memorandum of postjudgment taxable costs and fees from the judgment creditor, the judgment debtor may file a motion to review postjudgment taxable costs and fees. Upon receipt of a timely motion, the court shall review the memorandum filed by the judgment creditor and issue an order allowing or disallowing the postjudgment costs and fees. The review may be conducted at a hearing at the court's discretion. If the court disallows the postjudgment costs and fees or otherwise amends them in favor of the judgment debtor, the court may order the judgment creditor to deduct from the judgment balance the amount of the motion fee paid by the judgment debtor under this rule.
+
+% (c) The judgment creditor shall deduct any costs or fees disallowed by the court within 28 days after receipt of an order from the court disallowing the same.
+
+% (d) Any error in adding costs or fees to the judgment balance by the judgment creditor or its attorney is not actionable unless there is an affirmative finding by the court that the costs and fees were added in bad faith.
+
+
+  \newstatute{MCL 205.732}{}%
+% 205.732 Tax tribunal; powers.
+% Sec. 32.
+%   The tribunal's powers include, but are not limited to, all of the following:
+%   (a) Affirming, reversing, modifying, or remanding a final decision, finding, ruling, determination, or order of an agency.
+%   (b) Ordering the payment or refund of taxes in a matter over which it may acquire jurisdiction.
+%   (c) Granting other relief or issuing writs, orders, or directives that it deems necessary or appropriate in the process of disposition of a matter over which it may acquire jurisdiction.
+%   (d) Promulgating rules for the implementation of this act, including rules for practice and procedure before the tribunal and for mediation as provided in section 47, under the administrative procedures act of 1969, 1969 PA 306, MCL 24.201 to 24.328.
+%   (e) Mediating a proceeding before the tribunal.
+%   (f) Certifying mediators to facilitate claims in the court of claims and in the tribunal.
+
+ \newstatute{MCL 211.29(2)}{}%
+%http://www.legislature.mi.gov/(S(mksbxq2iizpprava5c52qmqd))/mileg.aspx?page=getObject&objectName=mcl-206-1893-BOARD-OF-REVIEW. %  211.29 Board of review of township; meeting; submission, examination, and review of assessment roll; additions to roll; correction of errors; compliance with act; review of roll on tax day; prohibitions; entering valuations in separate columns; approval and adoption of roll; conducting business at public meeting; notice of meeting; notice of change in roll.
+% Sec. 29.
+
+%   (1) On the Tuesday immediately following the first Monday in March, the board of review of each township shall meet at the office of the supervisor, at which time the supervisor shall submit to the board the assessment roll for the current year, as prepared by the supervisor, and the board shall proceed to examine and review the assessment roll.
+%   (2) During that day, and the day following, if necessary, the board, of its own motion, or on sufficient cause being shown by a person, shall add to the roll the names of persons, the value of personal property, and the description and value of real property liable to assessment in the township, omitted from the assessment roll. The board shall correct errors in the names of persons, in the descriptions of property upon the roll, and in the assessment and valuation of property. The board shall do whatever else is necessary to make the roll comply with this act.
+%   (3) The roll shall be reviewed according to the facts existing on the tax day. The board shall not add to the roll property not subject to taxation on the tax day, and the board shall not remove from the roll property subject to taxation on that day regardless of a change in the taxable status of the property since that day.
+%   (4) The board shall pass upon each valuation and each interest, and shall enter the valuation of each, as fixed by the board, in a separate column.
+%   (5) The roll as prepared by the supervisor shall stand as approved and adopted as the act of the board of review, except as changed by a vote of the board. If for any cause a quorum does not assemble during the days above mentioned, the roll as prepared by the supervisor shall stand as if approved by the board of review.
+%   (6) The business which the board may perform shall be conducted at a public meeting of the board held in compliance with Act No. 267 of the Public Acts of 1976, being sections 15.261 to 15.275 of the Michigan Compiled Laws. Public notice of the time, date, and place of the meeting shall be given in the manner required by Act No. 267 of the Public Acts of 1976. Notice of the date, time, and place of the meeting of the board of review shall be given at least 1 week before the meeting by publication in a generally circulated newspaper serving the area. The notice shall appear in 3 successive issues of the newspaper where available; otherwise, by the posting of the notice in 5 conspicuous places in the township.
+%   (7) When the board of review makes a change in the assessment of property or adds property to the assessment roll, the person chargeable with the assessment shall be promptly notified in such a manner as will assure the person opportunity to attend the second meeting of the board of review provided in section 30.
+
+}% end makeatletter block
+% \def\mathieuGast{\pincite[l]{MCL}{211.27(2)}}
+\def\mathieuGast{\cite[s]{MCL 211.27(2)}}%
+%\def\ttr287{\pincite[s]{TTR}{287}}
+%\def\inspectionOrdinance{\pincite{Wayne Ordinance}{\S1484.04}}
+% \long\def\inspectionOrdinanceText{\begin{quote}
+% 1484.04  CERTIFICATE REQUIRED PRIOR TO SALE. 
+%    It shall be unlawful to sell, convey or transfer an ownership interest, or act as a broker or agent for the sale, conveyance or transfer of an ownership interest, in any residential dwelling unless and until a valid Certificate of Compliance is first issued. 
+% (Ord. 1991-10.  Passed 7-16-91.) 
+% \end{quote}}
+
+
+%\newmisc{STC Bulletin 6 of 2007}{Michigan State Tax Commission (STC) Bulletin No. 6 of 2007 (Foreclosure Guidelines)}
+\newmisc{STC Bulletin}{Michigan State Tax Commission (STC) Bulletin No. 7 of 2014 (Mathieu Gast Act)}
+\addReference{STC Bulletin}{bulletin7}% Associate appendix with case
+
+\newbook{The Appraisal of Real Estate}{Appraisal Institute}{The Appraisal of Real Estate}{(14th ed, Chicago: Appraisal Institute, 2013)}
+\newbook{Appraising the Tough Ones}{Harrison}{Appraising the Tough Ones : Creative Ways to Value Residential Properties}{(Chicago: Appraisal Institute, 1996)}
+\newbook{McCormick}{McCormick}{Evidence}{(2d ed)}
+\newbook{Assessor's Manual}{Michigan State Tax Commission}{\href{https://www.michigan.gov/documents/treasury/1.__2014_Michigan_Assessors_Manual_Volume_I_Introduction_575738_7.pdf}{Assessor's Manual}}{(Vol 1 Residential, 2014)} 
+
+
+
+
+\newbook{Wex}{Legal Information Institute}{\href{https://www.law.cornell.edu/wex}{Wex}}{<https://www.law.cornell.edu/wex> (accessed October 7, 2019)}
+
+\newmisc{Respondent's Evidence}{Respondent's Evidence (entry line 16)}
+\SetIndexType{Respondent's Evidence}{}
+\newmisc{Chart of Median Price}{Chart of Ann Arbor Township Median Price Per Square Foot, Petitioner's Evidence (entry line 15)}
+\SetIndexType{Chart of Median Price}{}
+\newmisc{June 24 letter}{Petitioner's June 24 letter (entry line 11)}
+\SetIndexType{June 24 letter}{}
+\newmisc{July 10 letter}{Petitioner's July 10 letter (entry line 21)}
+\SetIndexType{July 10 letter}{}
+\newmisc{Form 865}{STC Form 865 (Mathieu-Gast Nonconsideration)}
+\newmisc{Affidavit}{Affidavit of Carolyn Lepard (entry line 10)}
+\SetIndexType{Affidavit}{}
+
+\newmisc{POJ}{Proposed Opinion and Judgment (POJ)}
+\SetIndexType{POJ}{}
+\newmisc{Exceptions}{Exceptions (entry line 25)}
+\SetIndexType{Exceptions}{}
+\newmisc{FOJ1}{Final Opinion and Judgment (FOJ1)}
+\newmisc{FOJ2}{Corrected Final Opinion and Judgment (FOJ2)}
+\SetIndexType{FOJ}{}
+\newcommand{\makeAbbreviation}[3]{% ensure that the frsit time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
+  \IfBeginWith{#3}{#2}{%
+    \newcommand{#1}[0]{#3\renewcommand{#1}[0]{#2}}}{%
+    \newcommand{#1}[0]{#3 (#2)\renewcommand{#1}[0]{#2}}}}
+
+\makeAbbreviation{\MLS}{MLS}{Multiple Listing Service}
+\makeAbbreviation{\MTT}{MTT}{Michigan Tax Tribunal}
+\makeAbbreviation{\STC}{STC}{State Tax Commission}
+
+% Note that the command/handle must match the appendix
+% labels. Minimize the variations of names.  \makeAbbreviationToRecord
+% creates a simple abbreviation that ends in Abbr if you don't want to
+% refer to the record.
+\newcommand{\makeAbbreviationToRecord}[3]{% 1: command/handle, 2: shortname, 3: longname
+  % makeAbbreviationToRecord: #1, #2, #3\par%
+  \expandafter\makeAbbreviation\csname #1Abbr\endcsname{#2}{#3}%
+  \expandafter\newcommand\csname #1\endcsname[1][]{%
+    \Call{#1Abbr}%
+    \if\relax##1\relax\empty\ (Appendix at \pageref{#1})%
+    \else, p ##1 (Appendix at %
+    % Check for page range
+    \IfSubStr{##1}{-}{%
+     \def\pageRefRange####1-####2XXX{\pageref{#1.####1}--\pageref{#1.####2}}%
+      \pageRefRange##1XXX}%
+    {\pageref{#1.##1}}%
+    )\fi%
+  }%
+}%
+
+% \makeAbbreviationToRecord{explanatoryLetter}{Explanatory Letter}{Explanatory Letter (MTT Docket Line 38)}
+% % explanatory Letter: (abbr) \explanatoryLetterAbbr\ (to record) \explanatoryLetter[2] \par
+
+% \makeAbbreviationToRecord{foj}{FOJ}{Second Final Opinion and Judgment (MTT Docket Line 48)}
+% % FOJ: (abbr) \fojAbbr (to record) \foj[]\par
+
+% \makeAbbreviationToRecord{reconsiderationDenied}{Order Denying Reconsideration}{Order Denying Reconsideration (MTT Docket Line 51)}
+% % reconsiderationDenied: (abbr) \reconsiderationDeniedAbbr[] (to record) \reconsiderationDenied[] \par
+
+% \makeAbbreviationToRecord{repairs}{List of Repairs}{List of Repairs (MTT Docket Line 36)}
+% % \par repairs: (abbr) \repairsAbbr\ (to record) \repairs[] (to appendix) \pageref{repairs}\par
+
+% \makeAbbreviationToRecord{stcform}{STC Form 865}{STC Form 865 Request for Nonconsideration (MTT Docket Line 35)}
+
+% \makeAbbreviationToRecord{mlsListing}{MLS Listing}{MLS Listing (MTT Docket Line 9)}
+% % mlsListing: (abbr) \mlsListingAbbr\ (to record) \mlsListing[]\par
+
+% \makeAbbreviationToRecord{boardOfReviewDecision}{Board of Review Decision}{Board of Review Decision (MTT Docket Line 2)}
+
+% \makeAbbreviationToRecord{cityEvidence}{City's Evidence}{City's Evidence (MTT Docket Line 11)}
+
+% \makeAbbreviationToRecord{motionForReconsideration}{Motion for Reconsideration}{Motion for Reconsideration (MTT Docket Line 52)}
+
+
+\begin{centering}
+\bf\scshape State of Michigan\\Tax Tribunal Small Claims\\~\\ 
+\rm 
+
+\makeandtab
+\setlength{\tabcolsep}{10pt}%
+\begin{tabular}{p{.4\textwidth} p{.4\textwidth}}
+\cline{1-2}
+  {~
+
+  \raggedright Andre Haerian,\par
+  % \hfill
+  \hspace{.1\textwidth}\textit{Petitioner/Appellant,}
+  \vspace{.4\baselineskip}\par
+  vs\par
+  \vspace{.4\baselineskip}
+  \raggedright Ann Arbor Charter Township,\par
+  % \hfill
+  \hspace{.1\textwidth}\textit{Respondent/Appellee.}
+  
+  ~} &  {~
+       \par\par%
+       %\hfill%
+       \noindent Tax Tribunal No. 19-000445  \vspace{.5\baselineskip}\par
+       % \hfill%
+       %\raggedleft
+       \textbf{Motion to Correct Record Card}\vspace{.5\baselineskip}\par
+       % \hfill%
+       % \raggedleft
+       \textbf{Brief }\vspace{.5\baselineskip}\par
+       % \hfill
+       \textbf{Proof of Service}\newline      
+  ~}
+  \\ \cline{1-2}\vspace{2mm}
+  {~ \par
+  Andre Haerian, Petitioner\newline
+  390 Meadow Creek,\newline
+  Ann Arbor Twp, MI 48105\newline \newline
+  
+  Daniel Patru, P74387, \newline%
+  Attorney for Petitioner\newline%
+  3309 Solway\newline%
+  Knoxville, TN 37931\newline%
+  (734) 274-9624\newline%
+  dpatru@gmail.com\newline\newline%
+  ~} & {~ \par~\par
+       
+       Ann Arbor Charter Twp, Appellee\newline%
+       3792 Pontiac Trail,\newline%
+       Ann Arbor, MI 48105-9656\newline%
+       (734) 663-3418\newline\newline%
+
+       Emily Pizzo\newline%
+       Ann Arbor Twp Deputy Assessor\newline%
+       3792 Pontiac Trail,\newline%
+       Ann Arbor, MI 48105-9656\newline%
+  (734) 663-8540\newline
+  assessor@aatwp.org
+       
+  ~}
+\end{tabular}
+\makeandletter
+\par\vspace{\baselineskip}\vspace{\baselineskip}\vspace{\baselineskip}
+%\textbf{ORAL ARGUMENT NOT REQUESTED}
+
+\end{centering}
+
+\pagestyle{romanparen}
+\pagenumbering{roman}
+%\newpage 
+
+\section*{Table of Contents}
+
+\tableofcontents
+
+
+\newpage
+\tableofauthorities
+
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+%Sets the formatting for the entire document after the front matter
+\parindent=2.5em
+% \setlength{\parskip}{1.25ex plus 2ex minus .5ex} 
+% \setstretch{1.45}
+\doublespacing
+% \linenumbers
+
+
+% \section{Mathieu-Gast Statute -- MCL 211.27(2)}
+% \begin{quotation}
+% The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold.
+
+% For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction.
+
+% The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll.
+
+% This subsection applies only to residential property.
+
+% The following repairs are considered normal maintenance if they are not part of a structural addition or completion: [repairs (a)-(o) omitted]
+
+% % (a) Outside painting.
+% % (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
+% % (c) Repainting, repairing, or replacing existing masonry.
+% % (d) Replacing awnings.
+% % (e) Adding or replacing gutters and downspouts.
+% % (f) Replacing storm windows or doors.
+% % (g) Insulating or weatherstripping.
+% % (h) Complete rewiring.
+% % (i) Replacing plumbing and light fixtures.
+% % (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner.
+% % (k) Repairing plaster, inside painting, or other redecorating.
+% % (l) New ceiling, wall, or floor surfacing.
+% % (m) Removing partitions to enlarge rooms.
+% % (n) Replacing an automatic hot water heater.
+% % (o) Replacing dated interior woodwork.
+% \end{quotation}
+
+
+\section{Motion}
+
+Respondent's Deputy Assessor has told Petitioner's representative that she intends to update the subject's property record card next year to reflect missing features that she discovered this year, with the purpose of raising Petitioner's taxes.
+
+Petitioner seeks protection from this Tribunal and asks that the Tribunal require the assessor to correct the property record card now.
+
+
+\section{Issue}
+
+When the assessor knows of features of the subject which are not in its record card, but refuses to update the record card during this year's appeal process so that she can raise the subject's taxes next year, should the Tribunal order the assessor to update the subject's record card as part of this year's tax appeal?
+
+  
+\section{Facts}
+
+% the sale
+Petitioner bought the subject property on 2/28/2018 for \$1,050,000.
+The subject had been on the market for five years prior to being bought by the Petitioner. The listing broker was The Charles Reinhart Company, the leading real estate broker in the Ann Arbor area. 
+
+Respondent assessed the property at \$1,423,900 true cash value (TCV).
+
+Believing that the TCV should be the subject's sale price, Petitioner appealed to the board of review, which affirmed Respondent's TCV. Petitioner then appealed to this Tax Tribunal.
+
+ALJ Wesley Margeson issued a \cite{POJ}\ proposing a TCV of \$1,100,000, relying in part on Respondent's sale comparison analysis.
+Petitioner filed exceptions, but Tribunal Judge Steven Bieda issued a \cite{FOJ1}\ which adopted the FOJ's TCV.
+Petitioner filed a motion for reconsideration.
+
+Tribunal Judge Preeti Gadola issued a \cite{FOJ2}\ on Thursday, October 17, 2019, which gave no weight to Respondent's evidence and set the TCV to the subject's sale price of \$1,050,000.
+
+Among several reasons for giving no weight to Respondent's evidence, Judge Gadola cited the fact that ``the subject property has a central vacuum, in floor heating, and an elevator that are not accounted for in Respondent's analysis, which begs the question what other features of the subject and/or comparables are not accounted for.'' \pincite[s]{FOJ2}{2}.
+
+The features called out by Judge Gadola (central vacuum, in floor heating, and elevator) were shown in the subject's MLS listing, submitted as evidence on 5/14/2019, line 9. Respondent was aware of these features because Respondent's representative cited them at the hearing. ``It also has a central vacuum, in floor heating and an elevator.'' \pincite{POJ}{5}. Petitioner also presented the MLS listing at the board of review in March.
+
+On Friday, October 18, 2019, the day after the corrected FOJ was issued, I, Petitioner's representative, called Emily Pizzo, Respondent's Deputy Assessor, to ask about how she had calculated the market's depreciation.
+
+Ms. Pizzo was very upset. She said that I should tell my client that his taxes will increase next year because she (Ms. Pizzo) was planning to add the central vacuum, in floor heating, and elevator to the property record card as additions next year. This would add to the property's taxable value and result in higher taxes. And because this would be for the 2020 tax year, the subject's sale in 2018 could not be used as a comparable in an appeal. 
+
+On Thursday, November 7, 2019, I used the BS&A website\footnote{https://bsaonline.com/?uid=284, accessible from   Respondent's website (http://aatwp.org/township-government/assessment-department/}
+to see how the property record card for the subject has changed since this case began.\footnote{I also printed copies of the current record cards for the comparable properties as checks. All four record cards are attached. The old record cards are in Respondent's evidence filed 6/25/2019, line 16.} I found:
+
+\begin{itemize}
+\item Central vacuum had been included in the old record card and the current one. (Ms. Pizzo was therefore mistaken in thinking that central vaccuum was not indicated in the record card.)
+\item In contrast, there was no record of in floor heating or an elevator in the record cards. Respondent had not updated the record card to include these items.
+\item Moreover, the ``Terms of Sale'' had been changed from ``CONVENTIONAL SALE'' to ``NO CONSIDERATION.''
+  The terms of sale for the three comparable properties %(100 Underdown, 1303 Towsley, and 310 Corrie)
+  had not been changed. Thus it appears that Respondent had already manipulated the subject's record card to indicate going forward that the subject's sale was not a market sale. This directly contradicts the Tribunal's finding of fact ``4. The subject sold on February 28, 2018 for \$1,050,000 in an arm's-length transaction.'' \pincite[s]{POJ}{6}.
+\item The property record online is in a different form and apparently less complete than record card submitted by Respondent. Therefore there may be additional changes to the subject's record in Respondent's database which are not visible online.
+\end{itemize}
+
+
+\section{Relevant Law}
+
+\cite{MCL 211.24(1)} requires that ``each year, the assessor shall make and complete an assessment roll, upon which he or she shall set down all of the following: . . . a full description of all the real property liable to be taxed.''
+
+\cite{MCL 211.29(2)} requires that the board of review ``shall correct errors . . . in the descriptions of property upon the roll . . . . The board shall do whatever else is necessary to make the roll comply with this act.''
+
+\cite{MCL 205.731} gives the tax tribunal jurisdiction ``over . . . [a] proceeding for direct review of a final decision, finding, ruling, determination, or order of an agency relating to assessment, valuation, . . .
+% rates, special assessments, allocation, or equalization,
+under the property tax laws of this state.'' This includes the board of review.
+
+\cite{MCL 205.732(c)} gives the tax tribunal powers including: ``Granting other relief or issuing writs, orders, or directives that it deems necessary or appropriate in the process of disposition of a matter over which it may acquire jurisdiction.''
+
+
+\section{Argument}
+
+\subsection{An accurate record card is required by statute}
+
+\cite{MCL 211.24(1)}\ requires the assessor to include a ``full description'' of the real property on the assessment roll. \cite{MCL 211.29(2)}\ requires the board of review to ``correct errors . . . in the descriptions of property upon the roll . . .'' Both the assessor and the board of review failed to ensure that the assessment roll contains a full and accurate description of the subject property.
+
+It now falls on this Tribunal, as the reviewing court, to correct the record card using the powers granted to it in \cite{MCL 205.732(c)}.
+
+\subsection{An accurate record card now promotes efficiency}
+
+The TCV determined by this Tribunal is based on the subject's actual sale price which includes everything in the subject including the in floor heating and elevator. Adding the value of any existing feature to next year's assessment would be double counting.
+
+The assessor's scheme, if carried out, would be intentional over-taxation. The Michigan Supreme Court has characterized intentional over-taxation as fraudulent.
+
+\begin{quotation}
+  "A valuation is necessarily fraudulent where it is so unreasonable that the assessor must have known that it was wrong. If the valuation is purposely made too high through prejudice or a reckless disregard of duty in opposition to what must necessarily be the judgment of all competent persons, or through the adoption of a rule which is designed to operate unequally upon a class and to violate the constitutional rule of uniformity, the case is a plain one for the equitable remedy by injunction." 4 Cooley on Taxation (4th ed), %§
+  \S 1645.
+\end{quotation}
+\pincite{Helin}{406-407}. 
+
+Petitioner and this Tribunal need not wait in suspense to see if the assessor will actually carry out her threat. The Tribunal can order the assessor to correct the record card now. This would help to prevent the assessor from fraudulently adding to the record card in the future and save both Petitioner and this Tribunal the trouble of addressing this issue in another appeal.
+
+\section{Relief}
+
+Therefore because:
+
+  \begin{itemize}
+\item Respondent has not corrected the property record card to fully describe the subject,
+
+\item Respondent has changed the property record card to indicate that a market sale was not a market sale,
+
+\item Respondent has said that it intends to add assessments next year for the in floor heating and elevator which have already been valued this year, and
+  
+\item this Tribunal has the power to correct the property record card now to bring it in conformity with law and promote judicial efficiency
+\end{itemize}
+Petitioner asks that this Tribunal order Respondent to promptly correct and update the subject's record card and submit a copy as proof.
+
+
+\needspace{6\baselineskip}
+\section{Proof of Service}
+
+I certify that I served a copy of these Exceptions on Respondent's representative, Emily Pizzo, by email on the same day I mailed them to the Tribunal.
+
+\vspace{1\baselineskip}
+
+{ \setlength{\leftskip}{3.5in}
+
+  Respectfully Submitted,
+
+  /s/ Daniel Patru, P74387
+
+\today
+
+  \setlength{\leftskip}{0pt}}
+
+\newpage\empty% we need a new page so that the index entries on the last
+        % page get written out to the right file.
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

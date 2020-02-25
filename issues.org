@@ -1,4 +1,6 @@
 * Issues to figure out before appealing to the Michigan Supreme Court
+** unpublished decision would allow the Court to apply wrong interpretation for me while keeping its options open for future litigants
+** What were the issues presented?
 
 ** Is there a split? Is this decision consistent with other Court of Appeals decisions?
 Look up all cases ruling on MCL 211.27(2) and determine.
@@ -147,3 +149,6 @@ p 7
 *** comment:
 The seller assumed, based only on the identity of the seller, that the sale was not a market sale. This was not a fact-based finding by the trier of fact which this Court is bound to respect.
 
+** Past interpretations
+Sullivan v. City of Grosse Pointe Farms, Mich: Court of Appeals 2014
+https://scholar.google.com/scholar_case?case=14086139212856041173&q=%22mcl+211.27(2)%22&hl=en&as_sdt=4,23
