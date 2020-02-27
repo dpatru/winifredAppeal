@@ -242,7 +242,7 @@
     \else% Some pages
     \IfSubStr{##1}{-}{% Multiple pages, eg 3-10
       \def\pageRefRange####1-####2XXX{%
-        \pageref{#3.####1}-\pageref{#3.####2}}%
+        \pageref{#3.####1}--\pageref{#3.####2}}%
       \pageRefRange##1XXX}%
     {\pageref{#3.##1}}% One page
     \fi%
