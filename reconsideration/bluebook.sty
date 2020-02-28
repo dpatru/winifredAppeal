@@ -790,7 +790,8 @@
 %\renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}\xspace}}%
 %\newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}\xspace}}%
 
-\renewcommand{\cite}[2][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}}}%
+\renewcommand{\cite}[2][]{%
+  \@startcitation\@ifnextchar.{\@bbsource{#2}{}{#1.}\@absorbperiod}{\@bbsource{#2}{}{#1}}}%
 \newcommand{\pincite}[3][]{\@startcitation\@ifnextchar.{\@bbsource{#2}{#3}{#1.}\@absorbperiod}{\@bbsource{#2}{#3}{#1}}}%
 
 \def\nobreakseq{\nobreak \hskip 0pt \hbox}
@@ -1028,7 +1029,8 @@
   \Call{#1@ReferenceP}[#2]%
   \fi%
 }
-\newcommand{\@bbStatuteLongCite}[2]{\ShortName{#1} #2\FillIn{ }{\Parenthetical{#1}}{}}
+%\newcommand{\@bbStatuteLongCite}[2]{\ShortName{#1} #2\FillIn{ }{\Parenthetical{#1}}{}}
+\newcommand{\@bbStatuteLongCite}[2]{\ShortName{#1}\if\relax#2\relax\relax\else #2\fi\FillIn{ }{\Parenthetical{#1}}{}}% no space if no page
 \newcommand{\@bbBookLongCite}[2]{\FillIn{}{\@vol}{ }{\BAF\Authors{#1}}, {\BTF\Title{#1}}\ \Parenthetical{#1}\FillIn{, at~}{#2}{}}
 \newcommand{\@bbArticleLongCite}[2]{\Authors{#1}, {\ATF\Title{#1}}, {\JTF\Reporter{#1}} \StartPage{#1}\FillIn{, }{#2}{} \Parenthetical{#1}\unskip}
 %\newcommand{\@bbInCollectionLongCite}[2]{\Authors{#1}, {\ATF\Title{#1}} \emph{in} \@vol{\BTF\CollectionTitle{#1}} \StartPage{#1}\FillIn{, }{#2}{} \Parenthetical{#1}}
@@ -1169,11 +1171,11 @@
                   \@autofootnote{\@bbSignal\@bbLongCite{#1}{#2}\@Period}%
 			\setcounter{@bbSequentialIds}{0}%
 			\ifthenelse{\boolean{#1@FirstUse}}{\XDef{#1@SupraNote}{\thefootnote}}{}%
-		}{%
+                      }{%
 			%If this is the second occurance of this authority in a row, use Id
 			\ifthenelse{\equal{\@bbLastSource}{#1} \and \not \boolean{@forceShort}%
 				\and \value{@bbSequentialIds} < \maxsequentialids}%
-			{%
+                              {%
 				%We only display the volume if it exists, and is DIFFERENT from the last; otw clear out
 				\ifthenelse{\equal{\@vol}{\@bbLastVol}}{\edef\@vol{}}{}%
 %
