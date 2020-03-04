@@ -55,16 +55,19 @@
 \singlespacing%
 
 \citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
+\citecase[Bennett]{Bennett v Bennett, 197 Mich. App. 497; 496 N.W.2d 353 (1992)}
 \citecase[Berger]{Berger v Berger, 747 N.W.2d 336; 277 Mich. App. 700 (2008)}
 \citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 780 NW2d 753 (2010)}
-\citecase[CAF]{CAF Investment Company v State Tax Commission, 392 Mich. 442; 221 N.W.2d 588 (1974)}
+\citecase[CAF v STC]{CAF Investment Company v State Tax Commission, 392 Mich. 442; 221 N.W.2d 588 (1974)}
+\citecase[CAF v Saginaw]{CAF Investment Co. v. Saginaw Twp., 410 Mich. 428, 454, 302 N.W.2d 164 (1981)}
 \citecase[Clark]{Clark Equipment Company v Township Of Leoni, 113 Mich. App. 778; 318 N.W.2d 586 (1982)}
 \citecase[Kar]{Kar v Hogan, 399 Mich. 529; 251 N.W.2d 77  (1976)}
+\citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
 \citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
 \citecase{Lenawee Co v Wagley, 301 Mich App 134; 836 NW2d 193 (2013)} %
 \citecase[Menard]{Menard, Inc. v Escanaba, 315 Mich. App. 512; 891 N.W.2d 1 (2016)}
-\citecase[Mich Ed]{Mich Ed Ass'n v Secretary of State
-  (On Rehearing), 489 Mich 194, 218; 801 NW2d 35 (2011)}
+%\citecase[Mich Ed]{Mich Ed Ass'n v Secretary of State (On Rehearing), 489 Mich 194; 801 NW2d 35 (2011)}
+\newcase{Mich Ed}{Mich Ed Ass'n v Secretary of State (On Rehearing)}{489 Mich; 801 NW2d}{194; 35}{(2011)}
 % (stating that nothing will be read into a clear statute that is not within the manifest intention of the Legislature as derived from the language of the statute itself).
 
 \citecase[Patru 1]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547)}%
@@ -75,6 +78,7 @@
 \citecase[Luckow]{Luckow Estate v Luckow, 291 Mich App 417; 805 NW2d 453 (2011)}
 \citecase[Stamp]{Stamp v Mill Street Inn, 152 Mich App 290; 393 NW2d 614 (1986)}
 \citecase[Macomb County Department of Human Services]{Macomb County Department of Human Services v Anderson, 304 Mich App 750; 849 NW2d 408 (2014)}
+\citecase{Toll Northville LTD v Twp of Northville, 480 Mich 6; 743 NW2d 902 (2008)}
 \citecase[Walters]{People v Walters, 266 Mich App 341; 700 NW2d 424 (2005)}
 
 {\makeatletter % needed for optional argument to newstatute.
@@ -134,6 +138,7 @@
 
 \def\mathieuGast{\cite[s]{MCL 211.27(2)}}%
 
+
 %\newmisc{STC Bulletin 6 of 2007}{Michigan State Tax Commission (STC) Bulletin No. 6 of 2007 (Foreclosure Guidelines)}
 \newmisc{STC Bulletin}{Michigan State Tax Commission (STC) Bulletin No. 7 of 2014 (Mathieu Gast Act)}
 \addReference{STC Bulletin}{bulletin7}% Associate appendix with case
@@ -182,7 +187,7 @@
   \expandafter\newcommand\csname #1\endcsname[1][]{%
     \Call{#1Abbr}%
     \if\relax##1\relax\empty\ (Appendix at \pageref{#1})%
-    \else, p ##1 (Appendix at%
+    \else, p ##1 (Appendix at %
     % Check for page range
     \IfSubStr{##1}{-}{%
       \def\pageRefRange####1-####2XXX{\pageref{#1.####1} -- \pageref{#1.####2}}%
@@ -380,47 +385,47 @@
 \pagestyle{romanparen}
 \pagenumbering{roman}
 
-\section{Checklist}
-\begin{itemize}
-  \item Prep
-  \begin{todolist}
-  \item[\done] Copy files in new directory
-  \item[\done] Clean up files
-  \item Read the rules, copying them and applying them
-  \item[\done] Reconsideration in Court of Appeals.
-  \item What are the required sections? In what order?
-  \item Where is SEV value defined?
-  \item What questions were presented in the original appeal?
+% \section{Checklist}
+% \begin{itemize}
+%   \item Prep
+%   \begin{todolist}
+%   \item[\done] Copy files in new directory
+%   \item[\done] Clean up files
+%   \item Read the rules, copying them and applying them
+%   \item[\done] Reconsideration in Court of Appeals.
+%   \item What are the required sections? In what order?
+%   \item Where is SEV value defined?
+%   \item What questions were presented in the original appeal?
       
-  \end{todolist}
+%   \end{todolist}
 
-  \item Write
-    \begin{todolist}
-    \item mistake
-    \item Write solution
-  \end{todolist}
+%   \item Write
+%     \begin{todolist}
+%     \item mistake
+%     \item Write solution
+%   \end{todolist}
 
-  \item Proof
-  \begin{todolist}
-  \item A motion for reconsideration may be filed within 21 days after the date of the order or the date stamped on an opinion.
-  \item %The motion shall include all facts, arguments, and citations to authorities in a single document and
-    shall not exceed 10 double-spaced pages.
-  \item A copy of the order or opinion of which reconsideration is sought must be included with the motion.
-  \item Motions for reconsideration are subject to the restrictions contained in MCR 2.119(F)(3).
+%   \item Proof
+%   \begin{todolist}
+%   \item A motion for reconsideration may be filed within 21 days after the date of the order or the date stamped on an opinion.
+%   \item %The motion shall include all facts, arguments, and citations to authorities in a single document and
+%     shall not exceed 10 double-spaced pages.
+%   \item A copy of the order or opinion of which reconsideration is sought must be included with the motion.
+%   \item Motions for reconsideration are subject to the restrictions contained in MCR 2.119(F)(3).
 
-  \end{todolist}
+%   \end{todolist}
 
   
-\item example
-  \begin{todolist}
-  \item[\done] Frame the problem
-  \item Write solution
-  \item[\wontfix] profit
-  \end{todolist}
-\end{itemize}
+% \item example
+%   \begin{todolist}
+%   \item[\done] Frame the problem
+%   \item Write solution
+%   \item[\wontfix] profit
+%   \end{todolist}
+% \end{itemize}
 
 
-\newpage 
+%\newpage 
 
 \section*{Table of Contents}
 
@@ -485,753 +490,78 @@
 % (4) The clerk will not accept for filing a late motion for reconsideration.
 % \end{quotation}
 
-Petioner moves for reconsideration of the \cite{FOJ}\ under MCR 7.215(I).
-
-
-\section{opinion}
-This Court's decision is reasoned as follows:
-
-\subsection{Mathieu Gast does not apply for repairs done in the year of a transfer}
-
-MCL 211.27(2) did not prohibit the assessor from considering the impact
-of any ``normal repairs'' on the property's TCV for purposes of the 2016 tax year because there was a transfer of ownership of the
-subject property in 2015. \pincite{Patru 2}{3}.
-
-\begin{quotation}
-  Initially, we agree with the Tax Tribunal that because there was a transfer of ownership of the
-subject property in 2015, MCL 211.27(2) did not prohibit the assessor from considering the impact
-of any ``normal repairs'' on the property's TCV for purposes of the 2016 tax year.
-
-The taxable status of real property for a given tax year is ``determined as of each December
-31 of the immediately preceding year.'' MCL 211.2(2). Generally, property is assessed at 50% of
-its true cash value[.]'' MCL 211.27a(1). However, the ``taxable value'' of property is subject to
-``capping,'' meaning it is limited to the property's taxable value in the immediately preceding year,
-subject to certain allowable adjustments. MCL 211.27a(2)(a); Const 1963, art 9, \S 3. (footnote 2:
-``[B]efore ownership of property is transferred, its taxable value may increase no more than the
-lesser of the rate of inflation or five percent.'' Lyle Schmidt Farms, LLC v Mendon Twp, 315 Mich
-App 824, 831; 891 NW2d 43 (2016). Once ownership of the property is transferred, its taxable
-value is ``uncapped,'' see id., and its taxable value for the year following the transfer is determined
-by the property's actual value, MCL 211.27a(3).)
-
- However,
-upon a transfer of ownership of property, the taxable value is ``uncapped,'' meaning ``the property's
-taxable value for the calendar year following the year of the transfer is the property's state
-equalized valuation for the calendar year following the transfer.'' MCL 211.27a(3). The taxable
-value does not become capped again until the end of the calendar year following the transfer of
-ownership. MCL 211.27a(4); Michigan Props, LLC v Meridian Twp, 491 Mich 518, 530; 817
-NW2d 548 (2012). Thus, because petitioner purchased the property in 2015 (i.e., there was a
-transfer of ownership), the property's taxable value for the 2016 tax year was to be determined by
-its actual assessed value as of December 31, 2015, without regard to any capping limitations.
-
-While MCL 211.27(2) does not expressly provide that it does not apply to ``normal repairs''
-performed during a year when ownership of property is transferred (i.e., the taxable value becomes
-uncapped), the statute must be read in conjunction with other provisions of the General Property
--4-
-Tax Act, MCL 211.1 et seq., and Const 1963, art 9, \S 3. See Bloomfield Twp v Kane, 302 Mich
-App 170, 176; 839 NW2d 505 (2013) (statutes that relate to the same matter are considered to be
-in pari materia and must be read together as a whole). It is apparent that MCL 211.27(2) was
-adopted to distinguish ``normal repairs'' or property maintenance from other improvements (e.g.,
-``additions'') that increase the value of property as long as the property is owned by the same party.
-In Toll Northville LTD v Twp of Northville, 480 Mich 6, 12; 743 NW2d 902 (2008), our Supreme
-Court, quoting WPW Acquisition Co v City of Troy, 466 Mich 117, 121-122; 643 NW2d 692
-(2001), observed that the purpose of Const 1963, art 9, \S 3, as amended in 1994 by Proposal A, is
-
-\begin{quote}
-to generally limit increases in property taxes on a parcel of property, as long as it
-remains owned by the same party, by capping the amount that the ``taxable value''
-of the property may increase each year , even if the ``true cash value,'' that is, the
-actual market value, of the property rises at a greater rate. However, a qualification
-is made to allow adjustments for ``additions.''
-\end{quote}
-
-As indicated, however, when property is sold, it becomes ``uncapped'' and the property's value for
-the following tax year is determined by its value as of December 31 of the preceding year. In other
-words, the property's TCV for the tax year following a transfer of ownership is determined by its
-value as of December 31 of the calendar year in which the transfer of ownership occurred.
-Accordingly, the restriction on consideration of ``normal repairs'' for purposes of calculating
-increases in TCV is intended to apply only while property is owned by the same party, and thus
-would not apply to repairs performed during a year in which ownership of the property is
-transferred. Rather, the taxable value of property for the tax year following a transfer of ownership
-would be 50% of the property's TCV as of December 31 of the immediately preceding year (i.e.,
-the year there was a transfer of ownership). MCL 211.2(2); MCL 211.27a(1) and (3).
-
-TCV ``means the usual selling price at the place where the property to which the term is
-applied is at the time of assessment, being the price that could be obtained for the property at a
-private sale, and not at auction sale except as otherwise provided in this section, or at forced sale.''
-MCL 211.27(1). TCV is synonymous with fair market value. Pontiac Country Club v Waterford
-Twp, 299 Mich App 427, 434-435; 830 NW2d 785 (2013).
-
-Because petitioner purchased the subject property in August 2015, the taxable value of the
-property became uncapped between August 2015 and December 31, 2015, and, for the 2016 tax
-year, the assessor was required to determine the property's TCV as of December 31, 2015.
-Petitioner argues that under MCL 211.27(2), respondent can consider the value added by ``normal
-repairs'' only when petitioner sells the property, because the statute states that ``[t]he assessor shall
-not consider the increase in true cash value that is a result of expenditures for normal repairs,
-replacement, and maintenance in determining the true cash value of property for assessment
-purposes until the property is sold.''While this interpretation may be correct with respect to repairs
-made during a tax year in which there is no transfer of ownership, it cannot apply to repairs made
-during a year in which there was a transfer of ownership because ``the property's taxable value for
-the calendar year following the year of the transfer is the property's state equalized valuation for
-the calendar year following the transfer,'' MCL 211.27a(3), which in turn is ``determined as of each
-December 31 of the immediately preceding year,'' MCL 211.2(2). Thus, the tribunal correctly
-held that it was required to determine the TCV of the subject property on the basis of its fair market 
--5-
-value as of December 31, 2015, regardless of any ``normal repairs'' made by petitioner in 2015
-after he purchased the property.
-\end{quotation}
-
-\subsection{The law of the case does not apply here}
-
-This case is not governed by \cite[s]{Patru 1}\ because ``this Court did not resolve whether petitioner's 2015 repairs to the property could or could not be considered in determining the property's TCV for the 2016 tax year, but instead
-determined that ``further proceedings are necessary to determine whether the repairs were normal
-repairs within the meaning of MCL 211.27(2).'' . . . More significantly, this Court
-did not address the effect of the property's transfer of ownership in 2015 on the tribunal's
-consideration of ``normal repairs'' under MCL 211.27(2) for purposes of the 2016 tax year.
-Because this issue was not actually addressed and decided in the prior appeal, the law-of-the-case
-doctrine does not apply.'' \pincite{Patru 2}{5}.
-
-\subsection{The Tribunal did not err in finding that the repairs did not have bearing on the property's condition}
-
-Petitioner further argues that the tribunal erred by also finding that, regardless of the proper
-construction of MCL 211.27(2), petitioner's repairs did not have any bearing on the property's
-TCV, which was determined to be \$50,400 as of December 31, 2015. We again disagree. The
-tribunal did not credit petitioner's argument that the property was in substandard condition when
-he purchased it. The tribunal reviewed petitioner's Multiple Listing Service (MLS) printouts and
-photographs for both the subject property and comparable properties. The tribunal found that
-petitioner's MLS listing for the subject property showed a property in ``average'' condition, and
-that petitioner's photographs of the property, before any repairs, showed ``a property that is livable
-and habitable with reasonable marketability and appeal.'' The tribunal noted that the purpose of
-petitioner's repairs was ``to ready the property as a tenant rental.'' It is undisputed that the assessed
-TCV of the property for the 2015 tax year was \$48,000. Given this evidence, it was appropriate
-for the tribunal to draw conclusions about the value of the property before and after petitioner's
-purchase, specifically, that the prior year's assessment of \$48,000 was reflective of the property's
-TCV before petitioner purchased it, that an increase of \$2,400 could be attributed to inflation and 
-increases in the market, and that petitioner's ``normal repairs'' were not attributable to the
-property's substandard condition, but rather were intended primarily to prepare the property as
-rental property. The tribunal concluded that the ``evidence supports the property's assessment as
-a property in average condition both at the time Petitioner acquired it and after he completed the
-normal repairs,''and that ``the assessment did not consider the increase in true cash value that was
-the result of normal repairs.''
-
-\subsection{The Law of the Case does not apply here}
-\begin {quotation}
-  Petitioner seems to rely on the law-of-the-case doctrine to argue that under Patru I, the
-tribunal was required to determine whether petitioner's repairs qualified as ``normal repairs'' and
-was further prohibited from considering the impact of any ``normal repairs'' in determining the
-property's TCV for purposes of the 2016 tax year. In \pincite{Lenawee Co}{149-150}, 
-%Lenawee Co v Wagley, 301 Mich App 134, 149-150; 836 NW2d 193 (2013),
-this Court explained:
-
-\begin{quote}
-  ``The law of the case doctrine holds that a ruling by an appellate court on a
-particular issue binds the appellate court and all lower tribunals with respect to that
-issue.'' New Props, Inc v George D Newpower, Jr, Inc, 282 Mich App 120, 132;
-762 NW2d 178 (2009) (quotation marks and citation omitted). ``[I]f an appellate
-court has passed on a legal question and remanded the case for further proceedings,
-the legal questions thus determined by the appellate court will not be differently
-determined on a subsequent appeal in the same case where the facts remain
-materially the same.'' Id. (quotation marks and citation omitted; alteration in
-original). The doctrine is applicable ``only to issues actually decided, either
-implicitly or explicitly, in the prior appeal.'' Grievance Administrator v Lopatin,
-462 Mich 235, 260; 612 NW2d 120 (2000). ``The primary purpose of the doctrine
-is to maintain consistency and avoid reconsideration of matters once decided during
-the course of a single continuing lawsuit.'' Ashker v Ford Motor Co, 245 Mich App
-9, 13; 627 NW2d 1 (2001).
-\end{quote}
-
-In Patru I, this Court did not resolve whether petitioner's 2015 repairs to the property could or
-could not be considered in determining the property's TCV for the 2016 tax year, but instead
-determined that ``further proceedings are necessary to determine whether the repairs were normal
-repairs within the meaning of MCL 211.27(2).'' Id., unpub op at 5. More significantly, this Court
-did not address the effect of the property's transfer of ownership in 2015 on the tribunal's
-consideration of ``normal repairs'' under MCL 211.27(2) for purposes of the 2016 tax year.
-Because this issue was not actually addressed and decided in the prior appeal, the law-of-the-case
-doctrine does not apply.
-
-Petitioner further argues that the tribunal erred by also finding that, regardless of the proper
-construction of MCL 211.27(2), petitioner's repairs did not have any bearing on the property's
-TCV, which was determined to be \$50,400 as of December 31, 2015. We again disagree. The
-tribunal did not credit petitioner's argument that the property was in substandard condition when
-he purchased it. The tribunal reviewed petitioner's Multiple Listing Service (MLS) printouts and
-photographs for both the subject property and comparable properties. The tribunal found that
-petitioner's MLS listing for the subject property showed a property in ``average'' condition, and
-that petitioner's photographs of the property, before any repairs, showed ``a property that is livable
-and habitable with reasonable marketability and appeal.'' The tribunal noted that the purpose of
-petitioner's repairs was ``to ready the property as a tenant rental.'' It is undisputed that the assessed
-TCV of the property for the 2015 tax year was \$48,000. Given this evidence, it was appropriate
-for the tribunal to draw conclusions about the value of the property before and after petitioner's
-purchase, specifically, that the prior year's assessment of \$48,000 was reflective of the property's
-TCV before petitioner purchased it, that an increase of \$2,400 could be attributed to inflation and 
--6-
-increases in the market, and that petitioner's ``normal repairs'' were not attributable to the
-property's substandard condition, but rather were intended primarily to prepare the property as
-rental property. The tribunal concluded that the ``evidence supports the property's assessment as
-a property in average condition both at the time Petitioner acquired it and after he completed the
-normal repairs,'' and that ``the assessment did not consider the increase in true cash value that was
-the result of normal repairs.''
-We reject petitioner's argument that the tribunal was required to calculate the property's
-TCV using a ``before repairs'' appraisal and an ``after repairs'' appraisal. Petitioner's reliance on
-the State Tax Commission's 2014 Bulletin No. 7 in support of this argument is misplaced. Indeed,
-page 3 of the Bulletin states:
-
-\begin{quote}
-The exemption for normal repairs, replacements and maintenance ends in
-the year after the owner who made the repairs, replacements and maintenance sells
-the property. In the year following a sale, the assessed value shall be based on the
-true cash value of the entire property. The amount of assessment increase
-attributable to the value of formerly exempt property returning to the assessment
-roll is new for equalization purposes. [Emphasis added.] 
-\end{quote}
-
-As already explained, because the taxable value of the subject property was uncapped due to the
-transfer of ownership in 2015, and respondent was permitted to assess the property on the basis of
-its actual TCV as of December 31, 2015, there was no need to determine the property's values
-before and after petitioner's ``normal repairs'' in 2015.
-\end{quotation}
-
-\subsection{The tribunal made its own independent determination}
-
-Petitioner also argues that the tribunal erred by failing to make its own independent
-determination of the property's TCV. See Jones \& Laughlin Steel Corp v City of Warren, 193
-Mich App 348, 354-356; 483 NW2d 416 (1992). The record does not support this argument. The
-tribunal evaluated the evidence and proposed valuation methods offered by both parties. The
-tribunal found that ``[r]espondent's sales comparison approach is the most reliable and credible
-valuation evidence which also supports the assessment and 2016 uncapping of the subject
-property.'' The tribunal did not just automatically accept respondent's valuation. Rather, it
-analyzed respondent's sales-comparison data and found that ``a reasoned and reconciled
-determination of market value is obtainable from Respondent's sales,'' which it concluded
-``supports the assessment and 2016 uncapping of the subject property.''
-
-
-\subsection{The Tribunal properly rejected the sale}
-
-Petitioner further argues that the tribunal erred by rejecting his 2015 purchase price of the
-property as determinative of its TCV. MCL 211.27(6) provides:
-Except as otherwise provided in subsection (7), the purchase price paid in a
-transfer of property is not the presumptive true cash value of the property
-transferred. In determining the true cash value of transferred property, an assessing
-officer shall assess that property using the same valuation method used to value all
-other property of that same classification in the assessing jurisdiction. As used in
-this subsection and subsection (7), ``purchase price'' means the total consideration
-agreed to in an arms-length transaction and not at a forced sale paid by the purchaser
-of the property, stated in dollars, whether or not paid in dollars.
--7-
-In this case, the tribunal considered petitioner's evidence of the 2015 purchase price for the
-property, but it also considered the nature of the sale, which involved a bank sale in which the
-grantor was the United States Department of Housing and Urban Development. The tribunal found
-that the seller was not necessarily motivated to receive market value for the property and that the
-property's purchase price was not presumptive of its TCV. The tribunal instead gave greater
-weight to the evidence submitted by respondent in support of its sales-comparison approach to
-valuation, which was based on sales of five properties similar in age and with comparable square
-footage, style, siding, and condition. The tribunal found that respondent's evidence provided ``the
-most reliable and credible valuation evidence'' and supported respondent's assessment of the
-subject property. 
+Petioner moves for reconsideration of this Court's opinion under MCR 7.215(I).
 
 \section{Issues}
 
 \begin{enumerate}
-\item Does the subject's sale comform to the sales comparision approach, one of the three recognized methods of valuation?
   
-\item Does \cite[s]{MCL 211.27(6)}\ bar the Tribnual from using the subject's sale to set its true cash value?
-  
-\item Where the Tribunal based its valuation on the subject's sale along with two other comparable sales, did the Tribunal err when did not discount the subject's sale price because of market decline even though it discounted the comparables?
+\item Did this Court make a palpable error when it ruled that normal repairs under \cite[s]{MCL 211.27(2)}\ should be considered if they were done in the year of a transfer, even if the repairs were done by the new owner and there was no sale after the repairs?
+ 
+\item Is it palpable error for this Court to affirm the tribunal's ruling because the repairs did not affect the property's value?
 
-\item Did the Tribunal err in relying on admittedly flawed analysis to reach its valuation?
-% \item
-%   Must the Tribunal show how it arrived at its valuation beyond stating that it is between the parties' contentions?
-\end{enumerate}  
+\item Does this Court's decision palpably violate the law of the case?
+  
+\item Did this Court make a palpable error when it affirmed the tribunal's rejection of the purchase price?
+\end{enumerate}
 
 \section{Facts}
 \label{facts}
-\subsection{Appellant buys the house, repairs it, and appeals its assessment}
 
-Appellant purchased the subject house in August 2015 for \$32,000. The house was sold by the Department of Housing and Urban Development (HUD) through a real estate broker who had listed the house on the MLS. \mlsListing[]. At the time of purchase, the house needed numerous repairs, most of which were required by the City to obtain a Certificate of Occupancy. \repairs[]. By tax day, 12/31/2015, Appellant had repaired the house and rented it. \foj[4-5].
+Before it was bought by Appellant, the subject house was owned by HUD.
+% (U.S. Dept. of Housing and Urban Development).
+\mlsListing[]. 
+The house had been listed on the MLS on and off since April 2013;
+it's initial asking price was \$29,900,
+but by the time Appellant bought the house, the asking price was \$32,000,
+which was the price Appellant paid. \mlsHistory[].
 
-The City of Wayne assessed the house on tax day at \$50,400 true cash value, rather than the \$32,000 purchase price. \boardOfReviewDecision.
+Before the City of Wayne (Appellee/Respondent) granted Appellant a certificate of occupancy, it required numerous repairs. \repairs. ``It is undisputed that, when he purchased the property, it was in substandard condition and required numerous repairs to make it livable. Patru completed the required repairs on the property as of December 31, 2015.'' \pincite{Patru 1}{1}.
 
-Appellant appealed to the Board of Review and then to the Tax Tribunal. Appellant does not dispute that the house was worth \$50,400 on tax day in its repaired condition. But he contends that under \mathieuGast\ the repairs were normal repairs and that the true cash value for assessment purposes cannot include the value of the repairs. He contends that the correct true cash value is therefore the before-repair value. \explanatoryLetter[2].
+\subsection{First Appeal}
 
-Appellant contends that the best evidence of the house's before-repair value is its sale price of \$32,000 when it was unrepaired. Id. The house was marketed in the normal way and for a sufficient time. Licensed real estate brokers listed the house on the MLS, initially for \$29,900 on 4/3/2013 and later for \$32,000 on 6/17/2015. Before Appellant bought the property there had been at least two accepted offers on the property that failed to close. \mlsHistory[]. 
+Appellee assessed the subject property for 2016 at a true cash value of \$50,400. Appellant appealed this assessment, arguing that the assessment was the after-repair value as of December 31, 2015.
+Appellant contended that the repairs were normal repairs under \mathieuGast\ and that the house must be valued at its before-repair value. 
+``Petitioner claims that under \mathieuGast\ we should not increase the subject's true cash value for normal repairs and maintenance until the subject is sold.'' \pincite{Patru 1}{2}\ (quoting the tribunal's POJ in the first appeal).
 
-The City contends that the true cash value should be the after-repair value. \cityEvidence.
-
-\subsection{The Tribunal refuses to apply nonconsideration but this Court reverses}
-
-The Referee who first heard the case at the Tribunal refused to apply nonconsideration. She held that the repairs were not normal repairs because the house was in substandard condition. ``Thus, the referee determined that if a property is purchased in substandard condition, any repairs done on the property to bring it into good repair do not constitute normal repairs, maintenance, or replacement within the meaning of MCL 211.27(2), so the increase in TCV resulting from those repairs can be immediately considered in determining the TCV for assessment purposes.'' \pincite{Patru 1}{2}.
-
-This Court reversed. ``Nothing in MCL 211.27(2) provides that the repairs .~.~. are not normal repairs in the event that they are performed on a substandard property. Thus, by reading a requirement into the statute that was not stated by the legislature, the trial court erred .~.~.'' \pincite{Patru 1}{5}.
-
-This Court remanded for a rehearing to determine if the repairs were normal repairs because ``[t]he referee did not fully evaluate that evidence---which included testimony---because [she] misapprehended how to properly apply MCL 211.27(2).'' \pincite{Patru 1}{5}.
-
-\subsection{On rehearing, the Tribunal again refuses to apply nonconsideration}
-
-The rehearing was held on 10/18/2018 before Tribunal Judge Marcus L. Abood. He ruled that the repairs were normal repairs, worth approximately \$10,000. \foj[4]. However, he went on to rule on pages 5 and 6 of the FOJ that ``Petitioner's contentions related to his purchase price and `normal' repairs are given no weight or credibility in the determination of market value'' because:
-\begin{enumerate}
-\item The property's assessment for 2016 changed based on the sale transaction in August 2015 and not based on Petitioner's repairs. 
-\item The assessment considered the property in average condition as it was on 12/31/2015, tax day.
-\item The MLS photographs submitted by Petitioner show the property in average condition, not neglected or vandalized.
-\item The property's sale was not ``an arm's length sale transaction'' because the Petitioner has not claimed it so and because the seller was HUD.
-\end{enumerate}
-
-Judge Abood did not determine the property's before-repair value. Instead, he ruled that the property must be valued in its repaired condition because it was repaired before tax day. \foj[5]. He accepted the City's comparative sales analysis, writing: ``Respondent's sales adjustment grid does not included a line-item entry for repairs. This comparative analysis is devoid of any relationship to Petitioner's ``normal'' repairs to subject property which occurred before the issuance of a certificate of occupancy and the December 31, 2015 tax day.'' \foj[6].
-
-\subsection{Appellant files a Motion for Reconsideration}
-
-Appellant responded to the FOJ with a motion for reconsideration. The motion points out that this Court reversed the previous judgment of the Tribunal because  ``the referee's finding that the property's TCV was \$50,400 was based on its assessment of the property's value after it had been repaired.'' \motionForReconsideration[1]. The Tribunal was repeating the mistake, except this time after admitting that the repairs were normal repairs. Id.\ p 2. 
-
-The Motion for Reconsideration also pointed out that the Tribunal had not done before-repair and after-repair appraisals as required by \mathieuGast. Id.\ p 4.
-
-The Motion for Reconsideration also pointed out flaws in the four reasons given in the FOJ for giving no weight or credibility to Appellant's contentions related to his purchase price and normal repairs. Specifically:
-
-\begin{enumerate}
-\item The FOJ claimed the property's assessment changed based on the sale transaction. Appellant pointed out that assessments are not based on sales but rather are done yearly. The property \emph{uncapped} as a result of the sale, but Appellant had no issue with uncapping. Id.\ p 4.
-
-\item The FOJ claimed the assessment considered the property in average condition as it was on 12/31/2015, tax day. Appellant pointed out that this does not invalidate \mathieuGast\ which requires the removal of the contribution of normal repairs to the assessed value. Id.\ p 5. 
-
-\item The FOJ claimed that the MLS photographs submitted by Petitioner show the property in average condition, not neglected or vandalized. Appellant pointed out that photos do not excuse performance of \mathieuGast; nor do they contradict the fact that the City itself inspected the house and required repairs; nor do the photos, put in the MLS by the real estate brokers who listed and sold the house, show that the house was listed and sold at a non-market price. Id. p 5.
-  
-\item The FOJ claimed that the property's sale was not an arm's length sale transaction because the Petitioner has not claimed it so and because the seller was HUD. Appellant pointed out that he had included MLS data to show that the property's sale was a market sale and that merely mentioning that the seller was HUD is not evidence that the sale was not a market sale. Id.\ p 6.
-\end{enumerate}
-
-\subsection{The Tribunal denies the Motion for Reconsideration}
-
-Tribunal Judge David B. Marmon, instead of Judge Abood, denied Motion for Reconsideration. He did not specifically rebut Appellant's points made in the motion. Instead he clarified why the Tribunal was not applying \mathieuGast. The \reconsiderationDenied[2] contains the Tribunal's reasoning. In summary:
-
-\begin{enumerate}
-  
-\item The Tribunal did not determine the before-repair value because:
-  \begin{enumerate}
-  \item the text of the statute does not plainly require a before-repair appraisal;
-  \item the situations in the second sentence of MCL 211.27(2) are not at issue;
-  \item the STC guidance requires appraisal if the value of the repairs are on the assessment roll, and here they are not;
-  \item STC guidance lacks the force of law; and
-  \item Petitioner has the burden of proof and the Tribunal disagrees with Petitioner's evidence (the sale price is given no weight or credibility).
-  \end{enumerate}
-  
-\item The Tribunal gave the property's sale price ``no weight or credibility'' because the seller was a government entity (HUD) who may not have been motivated to receive market value.
-  
-\item The Tribunal did not give nonconsideration treatment to the normal repairs because the assessment did not consider the repairs. The property's true cash value assessment was \$48,000 in the year before the repairs and \$50,400 after the repairs. The 5\% change was due to inflation not repairs. Also, the pictures on the MLS showed the property in average condition.
-
-\end{enumerate}
-
-% Points 1, 2, and 4 are addressed in order in the Arguments. Point 3 is addressed in the discussion of point 2.  
-
-\section{Mathieu Gast Statute -- MCL 211.27(2)}
-\begin{quotation}
-The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold.
-
-For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction.
-
-The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll.
-
-This subsection applies only to residential property.
-
-The following repairs are considered normal maintenance if they are not part of a structural addition or completion: [repairs (a)-(o) omitted]
-
-% (a) Outside painting.
-% (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
-% (c) Repainting, repairing, or replacing existing masonry.
-% (d) Replacing awnings.
-% (e) Adding or replacing gutters and downspouts.
-% (f) Replacing storm windows or doors.
-% (g) Insulating or weatherstripping.
-% (h) Complete rewiring.
-% (i) Replacing plumbing and light fixtures.
-% (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner.
-% (k) Repairing plaster, inside painting, or other redecorating.
-% (l) New ceiling, wall, or floor surfacing.
-% (m) Removing partitions to enlarge rooms.
-% (n) Replacing an automatic hot water heater.
-% (o) Replacing dated interior woodwork.
-\end{quotation}
-
-
-
-\section{Argument}
-
-\subsection{This Court creates an unsupported exception to Mathieu Gast}
-
-This Court holds that Mathieu Gast does not apply if a home purchaser makes normal repairs in the year of the purchase.
+The Tax Tribunal referee ruled that \mathieuGast\ nonconsideration did not apply because the property was in substandard condition.
+This Court reversed:
 
 \begin{quote}
-Initially, we agree with the Tax Tribunal that because there was a transfer of ownership of the
-subject property in 2015, MCL 211.27(2) did not prohibit the assessor from considering the impact
-of any ``normal repairs'' on the property's TCV for purposes of the 2016 tax year.
+  The hearing referee incorrectly interpreted \mathieuGast\ by concluding that because repairs were done to a property in substandard condition, they did not constitute normal repairs. . . . This was improper . . . Nothing in \mathieuGast\ provides that the repairs . . . are not normal repairs in the event that they are performed on a substandard property. Thus by reading a requirement into the statute that was not stated by the legislature, the trial erred . . . See \pincite{Mich Ed}{218}\ (stating that nothing will be read into a clear statute that is not within the manifest intention of the Legislature as derived from the language of the statute itself).
 \end{quote}
-Opinion at 3. This interpretation of the law is contrary to the text of the statute, the intent of the law, the STC's interpretation, and the tax act as a whole.
+\pincite{Patru 1}{5}.
 
-\subsubsection{This Court's interpretation of Mathieu Gast violates its plain meaning}
-
-This Court would disregard the meaning of the words of the statute, specifically the word ``until.'' 
-The Mathieu Gast statute, MCL 211.27(2), begins like this:
-
-\begin{quote}
-  The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs . . . in determining the true cash value of property for assessment purposes \emph{until} the property is sold. [Emphasis added.]
-\end{quote}
-
-The word ``until'' makes clear that the sale which allows the consideration of the normal repairs must happen after the repairs are made. This Court's interpretation of the statute allows consideration of normal repairs because of a sale completed before the repairs. This violates the plain meaning of the statute.
-
-
-% The word ``until'' makes clear that
-% the consideration of normal repairs is tied to ownership. A repair is performed at a certain point in time. It is not to be considered by the assessor \emph{until} the property is sold. Before the property is sold, the repair cannot be considered. After the property is sold, the repair may, in fact must, be considered.
-
-
-%This Court reads the word ``until'' as ``unless.'' See the opinion at 3:
-
-
-%In contrast to this Court's alternative formulation, the actual statute makes clear that the consideration of normal repairs is tied to ownership. A repair is performed at a certain point in time. It is not to be considered by the assessor \emph{until} the property is sold. Before the property is sold, the repair cannot be considered. After the property is sold, the repair may, in fact must, be considered.
-
-In a situation like the one in this case, where a purchaser makes repairs after the purchase but in the same year, application of Mathieu Gast is straightforward: the true cash value on December 31 of the year of purchase needs to:
-
-\begin{enumerate}
-  
-\item include (consider) all the normal repairs that were done by the previous owner before the property sold, and 
-
-\item  not include (not consider) all the normal repairs that were done after the property was sold, because those repairs were done by an owner who had not sold the property yet.
-\end{enumerate}
-
-% Thus at the end of the year in which a property sells, on tax day December 31, when the assessor is tasked with determining the true cash value of the property, the assessor must consider all the normal repairs that were done by the previous owner before the property sold. And the assessor must not consider all the normal repairs that were done after the property was sold, because those repairs were done by an owner who had not sold the property yet.
-
-\subsubsection{This Court's interpretation of Mathieu Gast violates the statute's intent}
-
-Mathieu Gast clearly gives a tax benefit to owners who perform normal repairs. The benefit lasts until the property is sold. This Court's interpretation reads this statute that encourages normal repairs as silently excluding from its benefits only those diligent homeowners who made repairs in the year they purchased their properties.
-
-\subsubsection{This Court's interpretation of Mathieu Gast is not supported by the STC}
-
-This Court's interpretation of Mathieu Gast is also not supported by the State Tax Commission, contrary to this Court's assertion. On page 6 of its opinion, this Court cites \pincite{STC Bulletin}{3}:
-
-\begin{quote}
-The exemption for normal repairs, replacements and maintenance ends in the year after the
-owner who made the repairs, replacements and maintenance sells the property. \emph{In the year
-following a sale, the assessed value shall be based on the true cash value of the entire property.}
-The amount of assessment increase attributable to the value of formerly exempt property
-returning to the assessment roll is new for equalization purposes. [Emphasis added by this Court.]
-\end{quote}
-
-This Court reads the emphasized sentence out of its context. The whole paragraph discusses when the exemption for normal repairs ends. The answer is given in the first sentence: the exemption ends ``in the year after \emph{the owner who made the repairs} . . . sells the property.'' The second sentence of this paragraph merely explains that after the repairer sells the property, the value of the previously exempt repairs is included in the assessed value. The second sentence does not create a major exception to the statute in the middle of an unrelated paragraph. There is no elephant in a mouse hole here.
-
-\subsubsection{This Court's interpretation of Mathieu Gast is unsupported by the rest of the tax act}
-
-This Court relies heavily on \cite{MCL 211.27a}, which discusses uncapping, and \cite{MCL 211.2(2)}, which defines tax day as December 31 of the previous year, to support its position that:
-
-\begin{quote}
-  [Mathieu Gast nonconsideration] cannot apply to repairs made
-during a year in which there was a transfer of ownership because the property's taxable value for
-the calendar year following the year of the transfer is the property's state equalized valuation for
-the calendar year following the transfer, MCL 211.27a(3), which in turn is determined as of each
-December 31 of the immediately preceding year, MCL 211.2(2). 
-Thus, the tribunal correctly
-held that it was required to determine the TCV of the subject property on the basis of its fair market 
-%-5-
-value as of December 31, 2015, \emph{regardless of any ``normal repairs'' made by petitioner in 2015
-after he purchased the property.} [Cleaned up. Emphasis added.]
-\end{quote}
-
-Opinion at 4-5. It is true that a property's taxable value in the year after a transfer is based on its true cash value as of tax day, December 31 of the year of the transfer. The question is, what is the true cash value?
-
-True cash value is defined in MCL 211.27. 
-% \cite{MCL 211.27(1)} says that ```true cash value' is the usual selling price at the place where the property to which the term is applied is at the time of assessment . . .''
-% \cite{MCL 211.27(2)}, Mathieu Gast, says: ``The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs . . .''
-% \cite{MCL 211.27(3)}\ says that amounts paid for obtaining financing, personal property, and surveying must be excluded from sales data used to determine assessments.
-There are eight subsections in \cite{MCL 211.27}. All of them relate to the determination of ``true cash value'' and none of them, including the second, Mathieu Gast, are in any way annulled by \cite{MCL 211.27a(2)}\ which simply says that in the year following a transfer the taxable value is the state equalized value.
-
-This Court's interpretation of Mathieu Gast essentially creates a bespoke definition of ``true cash value'' only for MCL 211.27a(3). This is inconsistent with the idea of reading the tax act as a whole. 
-
-%   \begin{quote}
-%   Because petitioner purchased the subject property in August 2015, the taxable value of the
-% property became uncapped between August 2015 and December 31, 2015, and, for the 2016 tax
-% year, the assessor was required to determine the property's TCV as of December 31, 2015.
-% Petitioner argues that under MCL 211.27(2), respondent can consider the value added by ``normal
-% repairs'' only when petitioner sells the property, because the statute states that ``[t]he assessor shall
-% not consider the increase in true cash value that is a result of expenditures for normal repairs,
-% replacement, and maintenance in determining the true cash value of property for assessment
-% purposes until the property is sold.''While this interpretation may be correct with respect to repairs
-% made during a tax year in which there is no transfer of ownership, it cannot apply to repairs made
-% during a year in which there was a transfer of ownership because ``the property's taxable value for
-% the calendar year following the year of the transfer is the property's state equalized valuation for
-% the calendar year following the transfer,'' MCL 211.27a(3), which in turn is ``determined as of each
-% December 31 of the immediately preceding year,'' MCL 211.2(2). Thus, the tribunal correctly
-% held that it was required to determine the TCV of the subject property on the basis of its fair market 
-% %-5-
-% value as of December 31, 2015, \emph{regardless of any ``normal repairs'' made by petitioner in 2015
-% after he purchased the property.} [Emphasis added.]
-% \end{quote}
-
-% Opinion at 4-5. 
-
-% This section defines:
-
-% \begin{itemize}
-% \item The \emph{assessed value} in MCL 211.27(a)(1) as 50\% of the true cash value. The true cash value is defined in the in the previous section, MCL 211.27, as the ``usual selling price,'' \cite{MCL 211.27(1)}, exclusive of normal repairs, \cite{MCL 211.27(2)}.
-
-% \item The \emph{taxable value} as a capped version of the equalized assessed value (state equalized value). MCL 211.27a(2)-(4). A property's taxable value is initially (in 1994) set to its state equalized value. Thereafter, as long as a property is not sold, its taxable value is the lesser of the current state equalized value or the previous year's taxable value adjusted by a capped inflation rate. This protects property owners from runaway tax bills in a rising market. When a property is transferred, the process resets: in the year following the transfer, the taxable value is set to the state equalized value, and thereafter capped until another transfer. This resetting of the taxable value to the state equalized value is called uncapping.
-% \end{itemize}
-
-% Where this Court goes wrong is that it reads into \cite{MCL 211.27a(3)}, the part of the statute discussing uncapping (although this term is not used in the statute), the idea that the uncapping creates an exception to the definition of true cash value in the previous section, MCL 211.27.
+Even though this court had determined that the tribunal had erred, it could not fully resolve the case because the tax tribunal had not ruled that the repairs met the specific criteria of \mathieuGast. Petitioner had submitted a spreadsheet listing the repairs and their specific \mathieuGast\ criteria, but the tribunal had refused to consider it because it was submitted after the hearing.
+Moreover, the referee had not established based on the hearing testimony that the repairs fell under the statute. So this Court remanded the case back to the tribunal.
+\pincite{Patru 1}{5-6}.
 
 % \begin{quote}
-%   Because petitioner purchased the subject property in August 2015, the taxable value of the
-% property became uncapped between August 2015 and December 31, 2015, and, for the 2016 tax
-% year, the assessor was required to determine the property's TCV as of December 31, 2015.
-% Petitioner argues that under MCL 211.27(2), respondent can consider the value added by ``normal
-% repairs'' only when petitioner sells the property, because the statute states that ``[t]he assessor shall
-% not consider the increase in true cash value that is a result of expenditures for normal repairs,
-% replacement, and maintenance in determining the true cash value of property for assessment
-% purposes until the property is sold.''While this interpretation may be correct with respect to repairs
-% made during a tax year in which there is no transfer of ownership, it cannot apply to repairs made
-% during a year in which there was a transfer of ownership because ``the property's taxable value for
-% the calendar year following the year of the transfer is the property's state equalized valuation for
-% the calendar year following the transfer,'' MCL 211.27a(3), which in turn is ``determined as of each
-% December 31 of the immediately preceding year,'' MCL 211.2(2). Thus, the tribunal correctly
-% held that it was required to determine the TCV of the subject property on the basis of its fair market 
-% -5-
-% value as of December 31, 2015, regardless of any ``normal repairs'' made by petitioner in 2015
-% after he purchased the property.
+%   \label{firstHolding}
+% If the testimony provided was an oral recitation of the
+% information included on the spreadsheet, then Patru presented testimony sufficient to establish
+% that at least some of the repairs constituted normal repairs under MCL 211.27(2), and so the
+% increase in TCV attributed to those repairs should not be considered in the property's TCV for
+% assessment purposes until such time as Patru sells the property. However, if Patru merely
+% testified that he did some carpentry, electrical, and masonry repairs and no further explanation of
+% the work that was provided, then he would have arguably failed to support his claim. Either way,
+% on the record before this Court, we cannot evaluate the sufficiency of the evidence presented at
+% the hearing. Thus, we conclude that further proceedings are necessary in order to determine
+% whether the repairs were normal repairs within the meaning of MCL 211.27(2). Accordingly, we
+% remand to the Tax Tribunal for a rehearing. Further, because the existing record is insufficient to
+% resolve whether the repairs are normal repairs within the meaning of the statute, the parties shall
+% be afforded further opportunity to submit additional proofs. See \pincite{Fisher}{743}
+% (requiring rehearing when it was not clear whether the
+% proofs submitted were sufficient to establish that repair expenditures were normal repairs).
 % \end{quote}
+%\pincite{Patru 1}{5-6}.
 
-% Opinion at 4-5. It does not. MCL 211.27a refers to the ``state equalized value'' as both a ceiling for the capped taxable value in paragraph (2) and as the only value for the uncapped taxable value in paragraph (3). The state equalized value is the assessed value, defined in MCL 211.27a(1) as 50\% of the true cash value, that has been equalized.\footnote{See \pincite{Guide to Basic Assessing}{29-32}\ for information on how equalization works.}
+\subsection{Second Appeal}
 
-%   When a property is transferred, the new owner's taxable value is uncapped so that starting in the year after the sale, the new owner's taxable value equals the state equalized value. After it is 
+On remand, the tribunal ruled that the repairs were normal, but it again found a reason not to apply \mathieuGast\ nonconsideration. The tribunal ruled that  \mathieuGast\ did not apply for repairs done in a year of a transfer, even if the repairs were done by the new owner.
+This Court has now affirmed this interpretation.
 
-%   In the year following a transfer, the taxable value is uncapped, that is, set to the equalized assessed value for that year. \cite{MCL 211.27a(3)}. This, as this Court recognizes, is one half of its true cash value on the last day, Dec 31, tax day, of the year of the transfer.
-
-%     \begin{quote}
-%       [W]hen property is sold, it becomes “uncapped” and the property’s value for
-% the following tax year is determined by its value as of December 31 of the preceding year. In other
-% words, the property’s TCV for the tax year following a transfer of ownership is determined by its
-% value as of December 31 of the calendar year in which the transfer of ownership occurred.
-% \end{quote}
-% Opinion at 4.
-
-% This is the ``uncapping.'' Thereafter, the TV's growth is capped so that
-% property owners do not experience runaway tax bills in a rising market.
-% \cite{MCL 211.27a}\ relies on the definition of ``true cash value'' 
-
-% if their AV rises dramatically.  a purchaseso that property owners follows \cite{MCL 211.27} See the opinion at  does not support
-
-% \makeandtab
-% \ctable[
-%   caption = {Relationship of Capped value and nonconsideration},
-%   label = {tab:cappedVsNonconsideration},
-%   pos = !htbp,
-%   %maxwidth = \textwidth, 
-%   width = \textwidth, 
-%   doinside = {\setstretch{1}}
-%   ]{lp{6.5cm}p{6.5cm}}{
-%     % \tnote[a]{TCV is as of tax day, 12/31/2018. Per Respondent, the market dropped 8\% from the subject's sale to Tax Day.}
-%     % \tnote[b]{Condition assumes repairs are complete. Deductions for repairs are explicitly considered under repairs.}
-%     % \tnote[c]{Mathieu Gast requires that repairs not be considered. Comparables already repaired must be adjusted to down to reflect the fact that the TCV is the before-repair value.}
-%   }{ \FL
-%     & \textbf{Capped Value} & \textbf{Nonconsidered Value} \ML
-%     Law & MCL 211.27a & MCL 211.27(2)\NN
-%     Affects & Taxable Value & Assessed Value \NN
-%     Based On & Minimum AV since property was purchased & Change in market value due to owner's normal repairs \NN
-%     Normalizes & The year after a sale the TV is set to the AV. & The year after a sale the seller's nonconsideration value is considered.\NN
-%     Purpose & Shields existing owners' property taxes from rising market values. & Encourages home repairs and maintenance. \LL
-% }
-% \makeandletter
-
-% Previous Year's Assessed True Cash Value and
-% HUD's motivation to sell.
-
-
-% This Court's main error was that it incorporated into the Mathieu Gast statute, MCL 211.27(2), the exception that the statute does not apply in the year that the property is purchased. This exception is not in the statute itself, has no support in the rest of the Tax Act, is contrary to the State Tax Commission guidance and is irrational. Namely, this Court's interpretation of Mathieu Gast would reward all owners for normal repairs except the industrious purchaser of a rundown house who immediately repairs the property rather than waits to repair the property in the next calendar year.
-
-% \subsubsection{Unsupported by statute}
-% Nonconsideration and Capping are separate concepts in the Tax Act.
-% They are addressed in different parts of the Act, have different purposes, and involve different procedures.
-
-% Nonconsideration is designed to encourage homeowners to update and maintain their properties. Nonconsideration requires that the normal, market-based assessed value be reduced by the value added by normal repairs. The value added by normal repairs is tracked in the assessment roll and added back into the assessed value when the property is transferred to a new owner.
-
-% Thus for example, if Sally Seller installs a new roof (this is a normal repair under Mathieu Gast) and thereby adds \$10,000 to the value of her home, this added value is subtracted or nonconsidered from the actual, after-repaired value of her home. Nonconsideration makes Sally's AV the same after normal repairs as before.
-
-% When Sally sells to Bobby Buyer, the previously nonconsidered value of Sally's normal repairs are now considered. Bobby's AV is based on the full, non-adjusted market value of the home with the new roof. Mathieu Gast does not give Bobby the benefit of Sally's normal repairs. But, if Bobby makes his own normal repairs, then Mathieu Gast would protect him.
-
-% Notice that nonconsideration is only concerned with how assessed values are calculated. Assessed values are determined every year and set at one half of the market value. Nonconsideration reduces the assessed value by the value contributed by normal repairs.
-
-% On the other hand, capping is designed to shield homeowners from rapidly rising property taxes due to rapidly appreciating property values. Tax bills are calculated from the taxable value, TV, rather than the assessed value, AV, which follows the market value. The TV is capped because is guaranteed to grow no faster than the rate of inflation or 5\%, whichever is lower, even when the market value of the property (and the corresponding AV) is growing much faster. The TV is uncapped when the property is transferred. The uncapping means that the TV is set equal to the AV.
-
-% Thus while new owners are protected from rapidly rising property taxes via capping, their starting point is the assessed value on December 31 of the year they, the new owners, bought the property, not the year that the sellers acquired the property. Each owner starts off paying their ``correct'' market-based property tax, and is thereafter protected from rapidly rising values.
-
-% Notice that capping and uncapping do not affect assessed value. The assessed value is determined each year and should be one half of the true market value of the property. Capping and uncapping simply relate the taxable value to the assessed value.
-
-% How do capping and nonconsideration interact? It is clear that capping is downstream of nonconsideration. That is, capping, which affects only the taxable value, does not affect nonconsideration, which is concerned with assessed value. 
-
-% Suppose Sally Seller bought her house on tax day, December 31, 2000, for its then market value of \$50,000. Sally's AV and TV for 2001 are \$50,000. Sally's TV is capped, starting from 2001.
-
-% Suppose further that by 2018 Sally's home has grown in value to \$100,000. (Her AV is half of that or \$50,000.) Sally adds a new roof in 2018 which adds \$10,000 to the value of her home. decides to sell her home
-
-
-% \subsubsection{Contrary to STC guidelines}
-% This Court's quote from the STC guidelines does not support its point. In fact, it proves the opposite.
-
-% It was undisputed by the Tribunal it was going against the STC guidelines on the matter.
-
-% \subsubsection{Irrational}
- \subsection{This Court misapplies the law of the case doctrine}
-
-Besides misinterpreting Mathieu Gast, this Court has also misapplied the law of the case doctrine in two ways. First, it misapplied the doctrine in finding that this Court had left open the question in \cite{Patru 1}\ as to whether Mathieu Gast applies for repairs done by a purchaser in the year of purchase. This Court had not left open this question. Instead, this Court, and the Tribunal before it, had assumed that there was no such exception to Mathieu Gast. This point was not brought up in the first go-around.
-Instead, this Court had remanded solely on the question of whether normal repairs had been performed. 
-It was assumed by all, the Petitioner/Appellant, the Respondend/Appellee, the Tribunal, and this Court, that once normal repairs were found, that the assessed value would be set at the pre-repair value.
-
-\begin{quotation}
-  In its final opinion and judgment, the Tribunal recognized that the referee erred in its
-interpretation of MCL 211.27(2); however, it nevertheless upheld the determination of TCV.
-The Tribunal reasoned that because the spreadsheet detailing the repairs completed on the
-property had not been submitted before the hearing, it had no obligation to consider that
-evidence, so it concluded that Patru failed to establish that the repairs constituted normal repairs.
-However, as stated above, Patru did present evidence at the hearing in support of his claim that
-MCL 211.27(2) applied. The referee did not fully evaluate that evidence---which included
-testimony---because it misapprehended how to properly apply MCL 211.27(2).
-Further, because the hearing was not transcribed, we cannot determine whether the
-evidence Patru provided at the hearing was reflective of the information on the spreadsheet
-submitted with his exceptions. If the testimony provided was an oral recitation of the
-information included on the spreadsheet, then Patru presented testimony sufficient to establish
-that at least some of the repairs constituted normal repairs under MCL 211.27(2), and so the
-increase in TCV attributed to those repairs should not be considered in the property's TCV for
-assessment purposes until such time as Patru sells the property. However, if Patru merely
-testified that he did some carpentry, electrical, and masonry repairs and no further explanation of
-the work that was provided, then he would have arguably failed to support his claim. Either way,
-on the record before this Court, we cannot evaluate the sufficiency of the evidence presented at
-the hearing. Thus, we conclude that further proceedings are necessary in order to determine
-whether the repairs were normal repairs within the meaning of MCL 211.27(2). Accordingly, we
-remand to the Tax Tribunal for a rehearing. Further, because the existing record is insufficient to
-resolve whether the repairs are normal repairs within the meaning of the statute, the parties shall
-be afforded further opportunity to submit additional proofs. See Fisher v Sunfield Township, 163
-
-walk and broken treads on front steps, which is a normal repair under MCL 211.27(2)(b), and
-repainted the interior, which is a normal repair under MCL 211.27(2)(k).
--6-
-Mich App 735, 743; 415 n 297 (1987) (requiring rehearing when it was not clear whether the
-proofs submitted were sufficient to establish that repair expenditures were normal repairs).
-(footnote 3: We note that, on reconsideration, the Tribunal faulted Patru for failing to establish a pre-repair
-TCV. However, as the Tribunal must make its own, independent determination of TCV, Great
-Lakes Div of Nat'l Steel Corp v City of Ecorse, 227 Mich App 379, 389; 576 NW2d 667 (1998),
-we conclude that Patru's failure to persuade the Tribunal that the property's purchase price
-reflected the pre-repair TCV is irrelevant. The Tribunal independently had to evaluate all the
-evidence presented and, properly applying MCL 211.27(2), arrive at the property's TCV.)
-\end{quotation}
-
-Secondly, this Court failed to apply the law of the case doctrine in upholding the Tribunal's second ruling which was based on the second Tribunal's opinion that the subject property was is average condition at the time of purchase. The first Tribunal found the opposite, and indeed based its decision in part on the fact that the repairs were not normal because the  property's condition was too poor.
-
-\begin{quote}
-Thus, the referee determined that if a property is purchased in substandard condition, any repairs
-done on the property to bring it into good repair do not constitute normal repairs, maintenance, or
-replacement within the meaning of MCL 211.27(2), so the increase in TCV resulting from those
-repairs can be immediately considered in determining the TCV for assessment purposes. The
-referee then determined that the TCV for the property was \$50,400.
-\end{quote}
-
-In this case both the law and the facts were changed by the Tribunal in the 2nd go-around, contrary to the law of the case.
-
-\hrule 
-
-
-This case is not governed by \cite[s]{Patru 1}\ because ``this Court did not resolve whether petitioner's 2015 repairs to the property could or could not be considered in determining the property's TCV for the 2016 tax year, but instead
-determined that ``further proceedings are necessary to determine whether the repairs were normal
-repairs within the meaning of MCL 211.27(2).'' . . . More significantly, this Court
-did not address the effect of the property's transfer of ownership in 2015 on the tribunal's
-consideration of ``normal repairs'' under MCL 211.27(2) for purposes of the 2016 tax year.
-Because this issue was not actually addressed and decided in the prior appeal, the law-of-the-case
-doctrine does not apply.'' \pincite{Patru 2}{5}.
-
-\begin{quotation}
-  Further, because the hearing was not transcribed, we cannot determine whether the
-evidence Patru provided at the hearing was reflective of the information on the spreadsheet
-submitted with his exceptions. If the testimony provided was an oral recitation of the
-information included on the spreadsheet, then \emph{Patru presented testimony sufficient to establish
-that at least some of the repairs constituted normal repairs under MCL 211.27(2), and so the
-increase in TCV attributed to those repairs should not be considered in the property's TCV for
-assessment purposes until such time as Patru sells the property.} However, if Patru merely
-testified that he did some carpentry, electrical, and masonry repairs and no further explanation of
-the work that was provided, then he would have arguably failed to support his claim. Either way,
-on the record before this Court, we cannot evaluate the sufficiency of the evidence presented at
-the hearing. Thus, we conclude that further proceedings are necessary in order to determine
-whether the repairs were normal repairs within the meaning of MCL 211.27(2). Accordingly, we
-remand to the Tax Tribunal for a rehearing. Further, because the existing record is insufficient to
-resolve whether the repairs are normal repairs within the meaning of the statute, the parties shall
-be afforded further opportunity to submit additional proofs. See \emph{Fisher v Sunfield Township}, 163
--6-
-Mich App 735, 743; 415 n 297 (1987) (requiring rehearing when it was not clear whether the
-proofs submitted were sufficient to establish that repair expenditures were normal repairs).
-(footnote 3 We note that, on reconsideration, the Tribunal faulted Patru for failing to establish a pre-repair
-TCV. However, as the Tribunal must make its own, independent determination of TCV, \emph{Great
-Lakes Div of Nat'l Steel Corp v City of Ecorse}, 227 Mich App 379, 389; 576 NW2d 667 (1998),
-we conclude that Patru's failure to persuade the Tribunal that the property's purchase price
-reflected the pre-repair TCV is irrelevant. The Tribunal independently had to evaluate all the
-evidence presented and, properly applying MCL 211.27(2), arrive at the property's TCV.)
-\end{quotation}
-
-\pincite{Patru 1}{5-6}. Penultimate paragraph of the opinion. Emphasis added.
-
-\subsection{This Court allows the Tribunal to improperly assume facts}
-
-This Court also erred when it endorsed the idea that Tribunal could use the previous year's uncontested assessed TCV to override the actual evidence presented in the case as to the subject property's pre-repair TCV.
-
-\begin{quote}
-  It is undisputed that the assessed
-TCV of the property for the 2015 tax year was \$48,000. Given this evidence, it was appropriate
-for the tribunal to draw conclusions about the value of the property before and after petitioner's
-purchase, specifically, that the prior year's assessment of \$48,000 was reflective of the property's
-TCV before petitioner purchased it, that an increase of \$2,400 could be attributed to inflation and 
--6-
-increases in the market, and that petitioner's ``normal repairs'' were not attributable to the
-property's substandard condition, but rather were intended primarily to prepare the property as
-rental property.
-\end{quote}
-
-\pincite{Patru 2}{5-6}.
-
-The previous year's assessed value was not at issue, the time for its appeal having passed before Petitioner/Appellant had purchased the property.\footnote{If the previous year's assessed TCV is presumed to be the actual TCV of the property on the previous tax day, tax appeals could be settled simply by looking at property appreciation. But \cite{Jones & Laughlin}\ teaches that the Tax Tribunal must independently determine the TCV at issue using primary evidence, sales studies and replacement cost estimates.} At issue was the pre-repair value of the property which under \cite{Jones & Laughlin}\ requires the Tribunal to make an independent  determination. The Tribunal cannot assume that City's previous-year's assessed TCV was correct.
-
-
-\begin{quotation}
-   It is undisputed that the assessed
-TCV of the property for the 2015 tax year was \$48,000. Given this evidence, it was appropriate
-for the tribunal to draw conclusions about the value of the property before and after petitioner's
-purchase, specifically, that the prior year's assessment of \$48,000 was reflective of the property's
-TCV before petitioner purchased it, that an increase of \$2,400 could be attributed to inflation and 
--6-
-increases in the market, and that petitioner's ``normal repairs'' were not attributable to the
-property's substandard condition, but rather were intended primarily to prepare the property as
-rental property. The tribunal concluded that the ``evidence supports the property's assessment as
-a property in average condition both at the time Petitioner acquired it and after he completed the
-normal repairs,'' and that ``the assessment did not consider the increase in true cash value that was
-the result of normal repairs.''
-\end{quotation}
-
-The same error is present when this Court endorses the Tribunal's substitution of opinion for fact regarding the seller's motivation.
-
-
-normal repairs must be considered when when an owner performs the repair in the same year as when the owner purchases the property.
-
-they are performed in the same year as  nonconsidered only when performed in
-
-\subsection{This opinion meets the standards for publications, so it should be correct}
-
-\begin{quotation}
-  Rule 7.215 Opinions, Orders, Judgments, and Final Process for Court of Appeals
-
-(A) Opinions of Court. An opinion must be written and bear the writer's name or the label ``per curiam'' or ``memorandum'' opinion. An opinion of the court that bears the writer's name shall be published by the Supreme Court reporter of decisions. A memorandum opinion shall not be published. A per curiam opinion shall not be published unless one of the judges deciding the case directs the reporter to do so at the time it is filed with the clerk. A copy of an opinion to be published must be delivered to the reporter no later than when it is filed with the clerk. The reporter is responsible for having those opinions published as are opinions of the Supreme Court, but in separate volumes containing opinions of the Court of Appeals only, in a form and under a contract approved by the Supreme Court. An opinion not designated for publication shall be deemed ``unpublished.''
-
-(B) Standards for Publication. A court opinion must be published if it:
-n
-(1) establishes a new rule of law;
-
-(2) construes as a matter of first impression a provision of a constitution, statute, regulation, ordinance, or court rule;
-
-(3) alters, modifies, or reverses an existing rule of law;
-
-(4) reaffirms a principle of law or construction of a constitution, statute, regulation, ordinance, or court rule not applied in a reported decision since November 1, 1990;
-
-(5) involves a legal issue of significant public interest;
-
-(6) criticizes existing law; or
-
-(7) resolves a conflict among unpublished Court of Appeals opinions brought to the Court's attention; or
-
-(8) decides an appeal from a lower court order ruling that a provision of the Michigan Constitution, a Michigan Statute, a rule or regulation included in the Michigan Administrative Code, or any other action of the legislative or executive branch of state government is invalid.
-\end{quotation}
+Also, contrary to previously undisputed finding, the tribunal ruled that the property's before-repair condition was not substandard, but rather that the repairs ``did not affect the assessed [true cash value] of the property . . ..'' Opinion at 1. This Court has now affirmed this finding also.
 
 
 \section{Standard of Review}
@@ -1245,28 +575,151 @@ MCL 2.119(F)(3) says:
  A palpable error is a clear error ``easily perceptible, plain, obvious, readily
  visible, noticeable, patent, distinct, manifest.'' \pincite{Luckow}{426; 453}\ (cleaned up).
  
-``The palpable error provision in MCL 2.119(F)(3)  is not mandatory and only provides guidance to
-a court about when it may be appropriate to consider a motion for rehearing or reconsideration.''
-\pincite{Walters}{350; 430}.
+% ``The palpable error provision in MCL 2.119(F)(3)  is not mandatory and only provides guidance to a court about when it may be appropriate to consider a motion for rehearing or reconsideration.'' \pincite{Walters}{350; 430}.
 
 ``The rule [MCL 2.119(F)(3)] does not categorically prevent a trial court from revisiting an issue even when the motion for reconsideration presents the same issue already ruled upon; in fact, it allows considerable discretion to correct mistakes.'' \pincite{Macomb County Department of Human Services}{754}. 
 
+\section{Argument}
 
 
 
+% Appellant asks that this Court reconsider this opinion, because this Court's answer to the first question contradicts the law of the case and also contradicts both the plain language of the statute and the tax act's overall scheme.
+
+\subsection{This Court creates an unsupported exception to Mathieu Gast}
+
+This court reviews the Tax Tribunal's statutory interpretation de novo. \pincite{Briggs}{75}.
+
+In its previous decision in this case, this Court faulted the Tax Tribunal for violating the rule that ``nothing will be read into a clear statute that is not within the manifest intention of the Legislature as derived from the language of the statute itself.'' \pincite{Patru 1}{5}, quoting \pincite{Mich Ed}{218}. By reading into \mathieuGast\ an exception for repairs done in the year of a transfer but after the sale, this Court now makes the same error.
+
+The statute specifies that repairs should not considered ``\emph{until} the property is sold.'' This clearly indicates that nonconsideration ends only if there is a sale after the repairs. Here there was no sale after Appellant's repairs. Instead this Court would use a sale before the repairs to end the nonconsideration period. This violates the plain words of the statute.
+
+Besides violating the plain words of the statute, this Court's interpretation of Mathieu Gast violates the intent of the statute.
+By reading into the statute an unwritten exclusion for repairs in the year of purchase, this Court transforms Mathieu Gast from a pure incentive for homeowners to repair their properties into a trap which punishes diligent purchasers who, relying on the plain words of the statute, repair right away rather than waiting until the year after purchase.
+
+This Court relies on \cite[s]{MCL 211.27a(3)}, which discusses uncapping, and \cite[s]{MCL 211.2(2)}, which defines tax day as December 31 of the previous year, to support its position that when uncapped, the true cash value of the property in the year after the transfer should be its fair market value as of December 31 in the year of the transfer, ``regardless of any ``normal repairs'' made by petitioner in [the year of purchase].'' 
+Opinion at 5.
+
+The Court errs in assuming that true cash value is simply the fair market value. Although there are many cases that make this assertion (this Court cites \pincite{Pontiac Country Club}{434-435}), this is actually just a useful approximation. True cash value is defined in \cite{MCL 211.27}, which has eight subsections, which would span several pages if reproduced here. All of these subsections refine the meaning of true cash value. Subsection 1 uses the term ``usual selling price'' which means fair market value. This is good enough for most cases. But a three-word term cannot replace every aspect of a multiple page statute. For example, in this case, this Court should consider subsection 2 which specifies that the value due to normal repairs is not part of true cash value until the property is sold.
+
+Furthermore, \mathieuGast, as part of the definition, or specification, of true cash value, is not dependent on the capped or uncapped status of the taxable value defined in the next section, \cite{MCL 211.27a}. \emph{Anytime} the true cash value is determined, \mathieuGast\ operates to exclude from the true cash value the value of normal repairs unless the normal repairs have been followed by a sale of the property. This means that normal repairs which have not been followed by a sale cannot be considered when determining the assessed value and taxable (capped or uncapped) values defined in \cite{MCL 211.27a}.
+
+Contrary to this Court's assertion, its interpretation of Mathieu Gast is not supported by the State Tax Commission. On page 6 of its opinion, this Court cites, with its own emphasis, \pincite{STC Bulletin}{3}:
+
+\begin{quote}
+The exemption for normal repairs, replacements and maintenance ends in the year after the
+owner who made the repairs, replacements and maintenance sells the property. \emph{In the year
+following a sale, the assessed value shall be based on the true cash value of the entire property.}
+The amount of assessment increase attributable to the value of formerly exempt property
+returning to the assessment roll is new for equalization purposes.
+\end{quote}
+
+This Court reads the just the second, emphasized, sentence out of its context. The first sentence of paragraph gives the topic: ``The exemption for normal repairs . . . ends in the year after \emph{the owner who made the repairs} . . . sells the property.'' The second sentence of this paragraph merely explains that after the repairer sells the property, the value of the previously exempt repairs is included in the assessed value. The second sentence does not create a major exception to the statute in the middle of an unrelated paragraph. There is no elephant in a mouse hole here.
 
 
+\subsection{This Court should not sustain the tribunal on the grounds that the repairs did not affect the true cash value}
 
+This Court accepts the Tax Tribunal's factual findings if they are supported by competent, material, and substantial evidence on the whole record. \pincite{Briggs}{75}.
+
+Besides ruling that \mathieuGast\ was not applicable because of uncapping, the tribunal also ruled that the repairs did not affect the property's true cash value. This Court should not affirm the tribunal on this alternative ground.
+
+This Court in this opinion starts off the discussion of this issue by saying: ``The
+tribunal did not credit petitioner's argument that the property was in substandard condition when
+he purchased it.'' Opinion at 5. But the property's substandard condition is not merely Appellant's argument. Throughout the first trip to this Court until the tribunal's last Final Opinion, all the actors in this case, the Appellant/Petitioner, the Appellee/Respondent, the tribunal, and this Court assumed and were relying on the fact that the subject property was in substandard condition before the repairs. Indeed, the reason this case was first appealed to this Court was because ``The hearing referee incorrectly interpreted \mathieuGast\ by concluding that because the repairs were done to a property in substandard condition, they did not constitute normal repairs.'' \pincite{Patru 1}{5}. 
+``It is undisputed that, when he purchased the property, it was in substandard condition and required numerous repairs to make it livable.'' \pincite{Patru 1}{1}. At the second hearing before the tribunal, neither Appellant/Petitioner nor Appellee/Respondent presented evidence or took the position that the house was not in substandard condition before repairs. The tribunal's reversal of a fact which was foundational to its first ruling was not based on new evidence. Therefore this Court should take a careful look at the tribunal's reasoning that prompted it to so drastically reinterpret the evidence.
+
+The tribunal changed its mind based on pictures and the prior year's assessed value:
+
+\begin{quote}
+The tribunal found that
+petitioner's MLS listing for the subject property showed a property in ``average'' condition, and
+that petitioner's photographs of the property, before any repairs, showed ``a property that is livable
+and habitable with reasonable marketability and appeal.'' . . .
+%The tribunal noted that the purpose of petitioner's repairs was ``to ready the property as a tenant rental.''
+It is undisputed that the assessed
+TCV of the property for the 2015 tax year was \$48,000.
+\end{quote}
+Opinion at 5.
+Regarding the photographs, the fact that they showed the house as livable and habitable must be considered in light of the City's different opinion. The City/Appellee/Respondent had inspected the house before it sold and refused to issue a certificate of occupancy until repairs were made; ``the city required that the repairs be made.'' \pincite{Patru 1}{2}, quoting the tribunal's first Proposed Opinion. The spreadsheet listing the repairs also clearly shows that most of the repairs were required by the city. See \repairs[]. The fact that the realtor who put the pictures in the MLS had listed the property at \$29,900 and then at \$32,000, well below the market value of a repaired house, and that it took more than two years to sell, also raises doubts that the repairs did not add value.
+
+Regarding the prior year's assessed value, Appellee/Respondent representative testified at the hearing that ``mass appraisal does not account for properties one-by-one. In other words, properties are assessed uniformly and \emph{Respondent assumes properties are in ``average'' condition.}'' \foj[4], emphasis added. So the assessed value cannot be evidence of a property's before-repair value, because the assessed value is just the output of a mass appraisal computer program that assumes that all the properties are in average condition.
+
+Therefore, on the whole record, the tribunal's finding that the repairs did not add value is not supported by competent, material, and substantial evidence.
+
+\subsection{This Court should reverse the tribunal because of the law of the case}
+
+This Court in this opinion says that this case is not governed by \cite[s]{Patru 1}\ because
+
+\begin{quote}
+  this Court did not resolve whether petitioner's 2015 repairs to the property could or could not be considered in determining the property's TCV for the 2016 tax year, but instead
+determined that ``further proceedings are necessary to determine whether the repairs were normal
+repairs within the meaning of MCL 211.27(2).'' . . . More significantly, this Court
+did not address the effect of the property's transfer of ownership in 2015 on the tribunal's
+consideration of ``normal repairs'' under MCL 211.27(2) for purposes of the 2016 tax year.
+Because this issue was not actually addressed and decided in the prior appeal, the law-of-the-case
+doctrine does not apply.
+\end{quote}
+Opinion at 5.
+% This Court does not fairly characterize its previous ruling.
+A more complete quote from this Court's prior opinion
+% (shown above at page \pageref{firstHolding})
+makes it clear that this Court had decided that \mathieuGast\ applied to this case, but, based on the incomplete record, could not decide if Appellant's repairs conformed to the specific categories of repairs listed in the statute.
+
+\begin{quote}
+  If the testimony provided was an oral recitation of the
+information included on the spreadsheet, then Patru presented testimony sufficient to establish
+that at least some of the repairs constituted normal repairs under MCL 211.27(2), and so the
+increase in TCV attributed to those repairs should not be considered in the property's TCV for
+assessment purposes until such time as Patru sells the property.
+\end{quote}
+\pincite{Patru 1}{5}. On remand, this Court expected the tribunal to make a determination about the whether the repairs fit the criteria of \mathieuGast, and then apply nonconsideration to those repairs, using before-repair and after-repair appraisals.
+
+\begin{quote}
+ We note that, on reconsideration, the Tribunal faulted Patru for failing to establish a pre-repair
+TCV. However, as the Tribunal must make its own, independent determination of TCV, Great
+Lakes Div of Nat'l Steel Corp v City of Ecorse, 227 Mich App 379, 389; 576 NW2d 667 (1998),
+we conclude that Patru's failure to persuade the Tribunal that the property's purchase price
+reflected the pre-repair TCV is irrelevant. The Tribunal independently had to evaluate all the
+evidence presented and, properly applying MCL 211.27(2), arrive at the property's TCV.)
+\end{quote}
+\pincite{Patru 1}{6}, footnote 3.
+
+This Court explained the law of the case in \pincite{Bennett}{499-500}:
+
+\begin{quote}
+  Under the doctrine of the law of the case, if an appellate court has passed on a legal question and remanded the case for further proceedings, the legal question will not be differently determined in a subsequent appeal in the same case were the facts remain materially the same. The primary purpose of the law-of-the-case doctrine is to maintain consistency and avoid reconsideration of matters once decided during the course of a single  % 500*500
+  continuing lawsuit. . . .  the doctrine is discretionary, rather than mandatory.
+\end{quote}
+
+In \cite[s]{Bennett}, the lower court had denied defendant's motion to terminate his child support early.
+While the case was on appeal, a law was enacted which supported the lower court's decision. The law took effect before the appeals court called the case. The appeals court reversed the lower court, but did not mention the new law. On remand, plaintiff asked the lower court to deny defendant a second time, based on the new law which the appeals court had not addressed. The lower court refused because of the law of the case. Plaintiff appealed.
+
+The appeals court affirmed, reasoning that even though it thought that its first decision was wrong, by substituting its judgment for the prior appeals court panel, it would be doing ``the very activity the law-of-the-case doctrine is designed to discourage.'' \pincite{Bennett}{501}. If the prior panel was not aware of the new law, the parties were at fault because ``ultimately it is the responsibility of the parties to bring to this Court's attention that case law and those statutes that the parties wish the Court to consider in deciding the matter.'' \pincite{Bennett}{501}.
+
+Even if this Court agrees with the tribunal's latest decision that \mathieuGast\ does not cover this case, it should still reverse and affirm its earlier ruling. As in Bennett, Appellee could have made its arguments (that \mathieuGast\ does not apply if the repairs are made in the year of a transfer and that the property was in average condition before the repairs) before this Court on the first appeal.
+
+\subsection{This Court's affirmance of the tribunal's rejection of the purchase price is palpably wrong}
+
+When reviewing Tax Tribunal cases, this Court looks for misapplication of the law or adoption of a wrong principle. Factual findings must be supported by competent, material, and substantial evidence on the whole record. Statutory interpretation is reviewed de novo. \pincite{Briggs}{75; 757-758}
+%The Tribunal's factual findings are accepted as final by this Court ``provided they are supported by competent, material, and substantial evidence. Substantial evidence must be more than a scintilla of evidence, although it may be substantially less than a preponderance of the evidence.'' \pincite[s]{Jones & Laughlin}{352-53}\ (cleaned up).
+
+This Court mischaracterizes Appellant's complaint regarding the tribunal's treatment of the subject's sale price. Appellant is not complaining that ``the tribunal erred by rejecting his 2015 purchase price of the
+property as determinative of its TCV.'' Opinion at 6. Rather, Appellant's brief at 18-19 complains that the tribunal gave the sale price ``no weight or credibility,'' \reconsiderationDenied[2], contrary to the clear teaching of \pincite{Jones & Laughlin}{353-354}: ``the price at which an item of
+property actually sold is most certainly relevant evidence'' and ``the tribunal's opinion that the evidence ``has little or no
+bearing'' on the property's earlier value suggests that the evidence was rejected out of hand. Such cursory rejection would be erroneous.''
+Appellant just wants the tribunal to consider the sale price and not reject it out of hand.
+
+The Tribunal's rejection of the sale price, giving it ``no weight or credibility,'' because the seller was HUD, without reference to any fact particular to this case amounts to a rule of law which excludes from consideration the sale price of all HUD-owned homes. This is the kind of cursory rejection that \cite[s]{Jones & Laughlin}\ forbids. This is especially troubling because the tribunal cites no authority for this rule beyond its bare speculation that: ``Because the subject was being sold by a government entity, that entity's motivation may
+not have been to receive market value for the property.'' \reconsiderationDenied[2].
 
 \section{Relief}
 
-Therefore because
+Therefore because this Court's opinion contains palpable errors, Appellant respectfully asks this Court to reconsider or rehear this case.
 
 
 \needspace{6\baselineskip}
 \section{Proof of Service}
 
-I certify that I served a copy of these Exceptions on Respondent's representative, Emily Pizzo, by email on the same day I emailed them to the Tribunal.
+I certify that I served a copy of these Exceptions on Respondent's representative, Emily Pizzo, by email on the same day I emailed them to the tribunal.
 
 \vspace{1\baselineskip}
 
@@ -1279,6 +732,7 @@ I certify that I served a copy of these Exceptions on Respondent's representativ
 \today
 
   \setlength{\leftskip}{0pt}}
+
 
 \newpage\empty% we need a new page so that the index entries on the last
         % page get written out to the right file.
