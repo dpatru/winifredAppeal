@@ -603,13 +603,15 @@
 \setlist[itemize]{nosep}
 \setlist[description]{nosep}
 \renewenvironment{quote}%
-{\begin{singlespacing}\smaller\list{}{\rightmargin=\leftmargin\topsep=0pt\itemsep=0pt\parsep=0.5em}\item\relax}%
+{\begin{singlespacing}%\smaller
+    \list{}{\rightmargin=\leftmargin\topsep=0pt\itemsep=0pt\parsep=0.5em}\item\relax}%
 {\endlist\end{singlespacing}}
 %\AtBeginEnvironment{quote}{\singlespacing}%\small}
 
 \renewenvironment{quotation}%
 %{\begin{singlespacing}\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}%
-{\begin{singlespacing}\smaller\list{}{}\item\relax}%
+{\begin{singlespacing}%\smaller
+    \list{}{}\item\relax}%
 {\endlist\end{singlespacing}}
 
 
