@@ -213,12 +213,13 @@
 \newcommand{\pagenumber}[1]{%
 	\addtocounter{@passimcount}{1}%
 	\ifnum\value{@passimcount}=1%
-		\edef\@pagenums{#1}%
+        \edef\@pagenums{#1}%
+        \edef\@firstpage{#1}%
 	\else% 
 		\ifnum\value{@passimcount}<\passimlimit%
 			\edef\@pagenums{\@pagenums, #1}%
 		\else
-			\def\@pagenums{\emph{passim}}%
+			\def\@pagenums{\@firstpage, \emph{passim}}%
 		\fi%
 	\fi%
 	\IfSubStr{#1}{passim}{\setcounter{@passimcount}{\passimlimit}\def\@pagenums{\emph{passim}}}{}%
@@ -604,7 +605,7 @@
 \setlist[description]{nosep}
 \renewenvironment{quote}%
 {\begin{singlespacing}%\smaller
-    \list{}{\rightmargin=\leftmargin\topsep=0pt\itemsep=0pt\parsep=0.5em}\item\relax}%
+    \list{}{\rightmargin=\leftmargin\topsep=0pt\itemsep=0pt\parsep=0em}\item\relax}%
 {\endlist\end{singlespacing}}
 %\AtBeginEnvironment{quote}{\singlespacing}%\small}
 
