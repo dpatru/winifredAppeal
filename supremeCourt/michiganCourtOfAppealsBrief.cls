@@ -48,7 +48,7 @@
 \RequirePackage{trace}
 \RequirePackage[T1]{fontenc}
 
-\RequirePackage[group-separator={,}]{siunitx}
+% \RequirePackage[group-separator={,}]{siunitx} % comment out, probably not needed.
 
 \RequirePackage{lipsum}
 
