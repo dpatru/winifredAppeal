@@ -83,6 +83,7 @@
 \RequirePackage{ctable}
 \RequirePackage{footmisc}% footnote references
 \RequirePackage{needspace}
+\RequirePackage[footnotes=multiple]{scrextend} % for footnotes in quotations https://tex.stackexchange.com/a/23612/135718
 
 %%% -------------------------------------
 
@@ -603,8 +604,13 @@
 \setlist[enumerate]{nosep}
 \setlist[itemize]{nosep}
 \setlist[description]{nosep}
+\deffootnote[1.8em]{0em}{1em}{\textsuperscript{\thefootnotemark}}%%\parindent 1em\noindent \hb@xt@ 1.8em{\hss \textsuperscript{\thefootnotemark}}}%\parindent 1em\noindent \hb@xt@ 1.8em{\hss \@makefnmark }
+\providecommand\qfootnote[1]{{\deffootnotemark{\textsuperscript{\thefootnotemark}}\footnote{#1}}}%
 \renewenvironment{quote}%
 {\begin{singlespacing}%\smaller
+    % \renewcommand{\thefootnote}{[\arabic{footnote}]}
+    % See https://tex.stackexchange.com/a/23612/135718
+    \deffootnotemark{\textsuperscript{[\thefootnotemark]}}%
     \list{}{\rightmargin=\leftmargin\topsep=0pt\itemsep=0pt\parsep=0em}\item\relax}%
 {\endlist\end{singlespacing}}
 %\AtBeginEnvironment{quote}{\singlespacing}%\small}
@@ -612,6 +618,7 @@
 \renewenvironment{quotation}%
 %{\begin{singlespacing}\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}%
 {\begin{singlespacing}%\smaller
+    \deffootnotemark{\textsuperscript{[\thefootnotemark]}}%
     \list{}{}\item\relax}%
 {\endlist\end{singlespacing}}
 
