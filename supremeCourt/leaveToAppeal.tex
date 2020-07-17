@@ -13,6 +13,10 @@
 
 \makeandletter% use \makeandtab to turn off
 
+% allow footnote refs, see https://tex.stackexchange.com/a/35044/135718
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
 
 % Use this to show a line grid-
 % \usepackage[fontsize=12pt,baseline=24pt,lines=27]{grid}
@@ -70,6 +74,7 @@
 \citecase[Clark]{Clark Equipment Company v Township Of Leoni, 113 Mich. App. 778; 318 N.W.2d 586 (1982)}
 \citecase[Kar]{Kar v Hogan, 399 Mich. 529; 251 N.W.2d 77  (1976)}
 \citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
+\citecase[Fifth Third]{Fifth Third Mortg Co v Chicago Title Ins Co, 692 F3d 507 (6th Cir 2012)}
 \citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
 \citecase{Lenawee Co v Wagley, 301 Mich App 134; 836 NW2d 193 (2013)} %
 \citecase[Menard]{Menard, Inc. v Escanaba, 315 Mich. App. 512; 891 N.W.2d 1 (2016)}
@@ -87,6 +92,8 @@
 \citecase[Macomb County Department of Human Services]{Macomb County Department of Human Services v Anderson, 304 Mich App 750; 849 NW2d 408 (2014)}
 \citecase{Toll Northville LTD v Twp of Northville, 480 Mich 6; 743 NW2d 902 (2008)}
 \citecase[Walters]{People v Walters, 266 Mich App 341; 700 NW2d 424 (2005)}
+\newcase{Marbury}{Marbury v. Madison}{5 U.S. (1 Cranch)}{137}{(1803)}
+\newcase[unpublished]{Kohn}{Kohn v. Twp of Columbus}{Final Opinion and Judgment}{}{(MTT No. 315243, 2009)}
 
 {\makeatletter % needed for optional argument to newstatute.
   % \newstatute[1@]{MCL}{}% place MCL first
@@ -193,6 +200,7 @@
 \makeAbbreviation{\MLS}{MLS}{Multiple Listing Service}
 \makeAbbreviation{\MTT}{MTT}{Michigan Tax Tribunal}
 \makeAbbreviation{\STC}{STC}{State Tax Commission}
+\makeAbbreviation{\HUD}{HUD}{the U.S. Dept. of Housing and Urban Development}
   
 \newcommand{\makeAbbreviationToRecord}[3]{% 1: command/handle, 2: shortname, 3: longname
   % makeAbbreviationToRecord: #1, #2, #3\par%
@@ -740,13 +748,64 @@ This filing is timely because it is filed within 42 days an order denying a time
 % \item the tribunal properly found that the repairs did not affect the property's value,
 % \item the tribunal's rejection of the purchase price was proper?
 % \end{enumerate}
-
+\newpage
 \pagestyle{plain}
 \pagenumbering{arabic}
 
-% \section{Introduction}
+\section{Introduction}
 
-% In 2015, Appellant bought a house, owned by the U.S. Dept. of Housing and Urban Development (HUD), fixed it up, and rented it, all before the year was up. That was the easy part. In the five years since then, Appellant has been battling with the City of Wayne to assess the house at its before-repaired value per the Mathieu-Gast Statute, MCL 211.27(2), which requires the assessor to ``not consider the value of normal repairs until the property is sold.''
+This appeal comes as a result of the Appellant trying to take advantage of Mathieu-Gast%
+\footnote{The Mathieu-Gast Act, \mathieuGast, was meant ``to encourage both owners of homes in which they reside and owners of homes which they rent to others to maintain and imporve their properties with no resulting property tax increase.'' \pincite{Kohn}{12}.
+Former Tribunal Judge Susan Grimes Width reached this conclusion after examining the bill's legislative history:
+  \begin{quotation}
+    The Analysis of House Bill 628131 [House Legislative Analysis Section, Second Analysis, House Bill 6281 (as enrolled) 12-23-76] lists as one of the ``Arguments For'' the bill a section titled
+``Urban blight,'' which states:
+\begin{quote}
+  . . . the spreading deterioration of residential and business property -- contributes
+heavily to the decay of contemporary cities. People are reluctant to remain in
+neighborhoods full of ugly, run-down houses, and they dislike doing business in
+areas where commercial property is not kept attractive. If the bill becomes law,
+homeowners and landlords would know exactly what they could do to their
+properties without running the risk of higher taxes, and they would be encouraged
+to maintain and beautify them. Eventually, people would not feel it is necessary to
+move out of the cities to find attractive places to live.
+\end{quote}
+
+In defining the problem the same analysis states ``[m]any contend that if the law contained
+specific instructions concerning what assessors should not consider when setting cash value,
+property owners would be encouraged to beautify their homes and perform regular
+maintenance.'' [\pincite{Kohn}{12}.]
+\end{quotation}
+}
+for repairs that he made to a house that he bought in 2015. A Tribunal referee first refused in a Proposed Opinion and Judgment to apply the statute because the house had been in substandard condition before the repairs. When Appellant pointed out in Exceptions that the statute did not depend on the house's condition, a Tribunal Judge upheld the referee's decision and refused to consider additional documentary evidence in the form of a spreadsheet submitted with the Exceptions.
+
+Appellant appealed to the Court of Appeals, which reversed. The Court found that the referee did not fully evaluate the evidence at the hearing because she misapprehended how to properly apply the statute. Furthermore, the Court found that the spreadsheet had listed repairs that qualified for nonconsideration under that statute. The Court remanded to the Tax Tribunal for a rehearing where the parties could submit additional proofs.
+
+On remand, the Tribunal ruled that the repairs were normal repairs but still refused to apply nonconsideration for several reasons:
+
+\begin{enumerate}
+\item The Tribunal ruled that the statute did not cover repair which were done by a buyer in the year of purchase. 
+\item The Tribunal ruled that because the assessor's true cash valuation of the property in the prior year (2015) in average condition, the assessor did not consider the repairs when determining the true cash value in the year at issue (2016). In other wonds, the 2016 true cash value was simply the 2015 valuation adjusted for inflation. The assessor did not have to consider the repairs to arrive at the 2016 valuation. 
+\item The Tribunal ruled that alternatively, even if the repairs were considered, their value was zero because the 2015 true cash value (before the repairs) was essentially the same, adjusting for inflation, as the 2016 true cash value. The Tribunal also relied on the MLS pictures, which showed the property was in good condition, to find that the value of the repairs were zero.
+\item The Tribunal ruled that the sale price of the property was not good evidence of its value because the property was sold by \HUD, an entity whose ``motivation may not have been to receive market value for the property.'' \reconsiderationDenied[2].
+\item The Tribunal ruled that it was not violating 
+\end{enumerate}
+
+Appellant appealed to the Court of Appeals the second time. This time the Court 
+
+
+
+The amount in controversy in this case is around \$1,000 per year -- small in relation to the amounts in play normally seen by this Court.
+
+But the issues here potentially involve a lot of taxpayers.
+Appellant himself has five cases being held in abeyance at the Tax Tribunal pending resolution of this case.
+Appellant has identified more than 3000 properties in michigan that sold in 2019 for significantly less than their assessed (true cash) value. Many of these properties may be in the same situation as Apellant, so this decision will likely have larger application than the instant case.
+
+
+
+% Appellant appologizes for the number of issues presented here, but they are made necessary by the arguments made in the opinions of the Tax Tribunal and the Court of Appeals. The issues As the Sixth Circuit has said, ``When a party comes to us with nine grounds for reversing the district court, that usually means there are none.'' \pincite{Fifth Third}{509}
+
+% In 2015, Appellant bought a house, owned by the \HUD, fixed it up, and rented it, all before the year was up. That was the easy part. In the five years since then, Appellant has been battling with the City of Wayne to assess the house at its before-repaired value per the Mathieu-Gast Statute, MCL 211.27(2), which requires the assessor to ``not consider the value of normal repairs until the property is sold.''
 
 % The Tax Tribunal first ruled, in 20xx, that the statute did not apply because the house was in substandard condition when it sold. The Court of Appeals reversed, ruling that the Tribunal erred by reading into the statute a condition that was contrary to its plain words.
 
@@ -876,7 +935,23 @@ Appellant now asks this Court to review the case.
 
 \subsection{Introduction}
 
-The Tax Tribunal and Court of Appeals in this case attack the tax exemption of \mathieuGast\ in two ways. First, they exclude from the statute repairs done by a purchaser in the same year of the purchase. The statute requires nonconsideration treatment\footnote{The term ``nonconsideration treatment'' is not in the statute itself, but is used in \cite{STC Bulletin}. The term is a shorthand for the statute's requirement that the value added by normal repairs be ``indicated on the assessment roll'' but not considered ``in determining the true cash value of the property for assessment purposes until the property is sold.''} for normal repairs ``until the property is sold.'' Instead, the provides that ``the assessor shall not consider Second, they exclude from the statute properties that were over-assessed in the preceding year, either by saying that the assessor did not need to consider the repairs because the property's TCV was derived from the previous year's TCV, or by setting the before-repair value to the previous-year's TCV and thus determining that the repairs did not add to the TCV.
+\mathieuGast\ exempts from the true cash value the value added by normal repairs until the property is sold. The Tax Tribunal and the Court of Appeals in this case attack this tax exemption
+% of \mathieuGast\
+in two ways. First, they exclude from the statute repairs done by a purchaser in the same year of the purchase. The statute requires nonconsideration treatment%
+\footnote{\label{nonconsiderationTreatmentFn}The term ``nonconsideration treatment'' is not in the statute itself, but is used to explain the statute in \cite{STC Bulletin}. The term is a shorthand for the statute's requirement that the value added by normal repairs be ``indicated on the assessment roll'' but not considered ``in determining the true cash value of the property for assessment purposes until the property is sold.''}
+for normal repairs ``until the property is sold.'' The word ``until'' means that there must be a sale \emph{after} the repairs to cause nonconsideration treatment to end. But the Tribunal and the Court of Appeals ignore the word ``until'' and refuse to require nonconsideration treatment because of a sale that occurs \emph{before} the repairs but in the same year. This is violates the plain language of the statute and makes it inconsistent and illogical. 
+
+The second way that the Tax Tribunal and the Court of Appeals attack the tax exemption is by using the assessor's true cash value for the prior year. The prior year's assessment was based on the assumption%
+\footnote{The assessor testified at the hearing that mass appraisal does not account for properties one-by-one. In other words, properties are assessed uniformly and \emph{Respondent assumes properties are in ``average'' condition.} \foj[4].}
+that the property was in average condition and did not need extensive repairs.%
+In other words, the prior year's assessment was based on the assumption that the repairs were not needed or had already been made. Of course this was not actually true because after the sale the Appellee itself required the repairs before it would grant a certificate of occupancy.
+
+Despite the fact that the prior year's true cash value was based on untrue assumption, the Tribunal and the Court of Appeals used it to deny the exemption on two alternative grounds. First, the courts argued that the assessor had not considered the repairs in determining the true cash value: the assessor had simply adjusted on the prior year's assessment for inflation. Alternatively, the courts argued that the value added by the repairs was zero, because, adjusting for inflation, the property's true cash value was the same in the years before and after the repairs. The first ground misinterprets the statute's ``not consider'' as ``to ignore'' rather than indicating nonconsideration treatment.\footnoteref{nonconsiderationTreatmentFn} The second ground is an error of fact and also violates the requirement that the Tribunal must make an independent determination of true cash value.
+
+
+esthis fact in two ways to deny the exemption. First, they said that 
+
+provides that ``the assessor shall not consider Second, they exclude from the statute properties that were over-assessed in the preceding year, either by saying that the assessor did not need to consider the repairs because the property's TCV was derived from the previous year's TCV, or by setting the before-repair value to the previous-year's TCV and thus determining that the repairs did not add to the TCV.
 
 %   (2) The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction. The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. This subsection applies only to residential property. The following repairs are considered normal maintenance if they are not part of a structural addition or completion:
 
@@ -1554,3 +1629,4 @@ Therefore because this Court's opinion contains palpable errors which completely
 %%% mode: latex
 %%% TeX-master: t
 %%% End:
+\end{document}
