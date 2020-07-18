@@ -45,6 +45,8 @@
 \usepackage{fancyhdr}
 \usepackage{extramarks}
 \usepackage{hyperref}
+\RequirePackage{xr}
+\externaldocument{appendix}
 
 \newlist{todolist}{itemize}{2}
 \setlist[todolist]{label=$\square$}
@@ -54,6 +56,7 @@
 \newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
 \hspace{-2.5pt}}
 \newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
 
 % allow underscores in words
 \chardef\_=`_% https://tex.stackexchange.com/a/301984/135718 
@@ -76,6 +79,7 @@
 \citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
 \citecase[Fifth Third]{Fifth Third Mortg Co v Chicago Title Ins Co, 692 F3d 507 (6th Cir 2012)}
 \citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
+\citecase[Klooster]{Nathan Klooster v City of Charlevoix, 488 Mich. 289; 795 N.W.2d 578 (2011)}
 \citecase{Lenawee Co v Wagley, 301 Mich App 134; 836 NW2d 193 (2013)} %
 \citecase[Menard]{Menard, Inc. v Escanaba, 315 Mich. App. 512; 891 N.W.2d 1 (2016)}
 %\citecase[Mich Ed]{Mich Ed Ass'n v Secretary of State (On Rehearing), 489 Mich 194; 801 NW2d 35 (2011)}
@@ -192,6 +196,10 @@
 \SetIndexType{Exceptions}{}
 \newmisc{FOJ}{Final Opinion and Judgment (FOJ)}
 \SetIndexType{FOJ}{}
+\newmisc{Order Denying Reconsideration}{Order Denying Reconsideration (MTT Docket Line 51)}
+\SetIndexType{Order Denying Reconsideration}{}
+
+
 \newcommand{\makeAbbreviation}[3]{% ensure that the frsit time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
   \IfBeginWith{#3}{#2}{%
     \newcommand{#1}[0]{#3\renewcommand{#1}[0]{#2}}}{%
@@ -416,6 +424,16 @@ sjh@gmhlaw.com\newline
 
 \section{Checklist}
 \begin{todolist}
+\item Drafts
+  \begin{todolist}
+  \item structure
+  \item language flow
+  \item word choice
+  \item references
+  \item technical form
+  \item proof
+  \end{todolist}
+
 \item Continue from the Motion for reconsideration filed with COA. Address the arguments made in the answer.
 
   Re the \mathieuGast\ exception for repairs done in the year of sale, contrast uncapping under MCL 211.27a with nonconsideration under \mathieuGast. MCL 211.27a uncapping involves the AV and TV. But \mathieuGast\ nonconsideration involves determining before-repair and after-repair appraisals, tracking the value of normal repairs in the assessment roll, and adding the value back in the TCV after the owner who made the repairs sells the property.
@@ -682,7 +700,7 @@ sjh@gmhlaw.com\newline
 
 \section{Order Appealed From and Basis of Jurisdiction}
 
-Appellant seeks leave to appeal the Michigan Court of Appeals' order of March 31, 2020
+Appellant seeks leave to appeal the order by the Michigan Court of Appeals, issued March 31, 2020,
 denying a timely filed motion for reconsideration.
 Per \cite{MCR 7.305(A)(2)}, a copy of the order denying reconsideration as well as opinion are attached.
 
@@ -692,13 +710,16 @@ This filing is timely because it is filed within 42 days an order denying a time
 \newpage
 \section{Questions Presented for Review}
 
-\subsection{Absent new evidence or new law, may the trial court and the Court of Appeals change findings of fact and application of law which were settled in a previous appeal?}
+\subsection{On remand, did the Tax Tribunal violate the law of the case
+  when it found that a property was in average condition and
+  that \mathieuGast\ did not cover repairs done by a buyer in the year of sale,
+  when  it  a   a property  Absent new evidence or new law, may the trial court and the Court of Appeals change findings of fact and application of law which were settled in a previous appeal?}
 
 \noindent Appellant answers ``No.'' Appellee answers ``Yes.'' The Court of Appeals answered ``Yes.''
 
-\subsection{In addition to distiguishing repairs based on whether they were performed before or after a sale, does \mathieuGast\ distinguish repairs based on if they were performed in the year of sale?}
+\subsection{Does \mathieuGast\ cover normal repairs performed by a buyer in the year of sale?}
 
-\noindent Appellant answers ``No.'' Appellee answers ``Yes.'' The Court of Appeals answered ``Yes.''
+\noindent Appellant answers ``Yes.'' Appellee answers ``No.'' The Court of Appeals answered ``No.''
 
 \subsection{May the Tax Tribunal reject a sale of the subject property as evidence of its value based only on speculation that the seller, as government entity, may not have been motivated to receive market value for the property?}
 
@@ -777,21 +798,98 @@ property owners would be encouraged to beautify their homes and perform regular
 maintenance.'' [\pincite{Kohn}{12}.]
 \end{quotation}
 }
-for repairs that he made to a house that he bought in 2015. A Tribunal referee first refused in a Proposed Opinion and Judgment to apply the statute because the house had been in substandard condition before the repairs. When Appellant pointed out in Exceptions that the statute did not depend on the house's condition, a Tribunal Judge upheld the referee's decision and refused to consider additional documentary evidence in the form of a spreadsheet submitted with the Exceptions.
+for repairs that he made to a house that he bought in 2015. A Tribunal referee first refused in a Proposed Opinion and Judgment to apply the statute because the house had been in substandard condition before the repairs. Appellant filed Exceptions, pointing out that the statute did not depend on the house's condition. Along with the Exceptions, Appellant submitted a spreadsheet showing that statutory category of each repair. In his Final Opinion, the Tribunal Judge recognized that the referee had erred, but upheld the referee's conclusion because the written evidence submitted before the case and the referee's Proposed Opinion did not show that Appellant had proved that he had performed normal repairs. The Tribunal Judge refused to consider Appellant's spreadsheet.
 
-Appellant appealed to the Court of Appeals, which reversed. The Court found that the referee did not fully evaluate the evidence at the hearing because she misapprehended how to properly apply the statute. Furthermore, the Court found that the spreadsheet had listed repairs that qualified for nonconsideration under that statute. The Court remanded to the Tax Tribunal for a rehearing where the parties could submit additional proofs.
+Appellant appealed to the Court of Appeals, which reversed. The Court agreed with the Tribunal that the referee had erred.
+But the Court disagreed with the Tribunal that Appellant had not proved his case. 
+The Court found that the spreadsheet had listed repairs that qualified for nonconsideration.
+If Appellant's testimony at the hearing had reflected the information in the spreadsheet, then Appellant had proved his case at the hearing.
+The Court reasoned that because the referee had misapprehended how to properly apply the statute, she did not fully evaluate the evidence at the hearing.
+So the Court remanded for a new hearing to determine whether the repairs were normal under that statute.
 
-On remand, the Tribunal ruled that the repairs were normal repairs but still refused to apply nonconsideration for several reasons:
+On remand, the Tribunal ruled that the repairs were normal repairs but found other reasons, not based on the normality of the repairs, to refuse to apply the statute.
+  ``Respondent's 2016 assessment was not based on Petitioner's `normal' repairs to the subject property.'' \pincite{Order Denying Reconsideration}{1}.
+nonconsideration treatment. still refused to apply nonconsideration for several reasons:
 
 \begin{enumerate}
-\item The Tribunal ruled that the statute did not cover repair which were done by a buyer in the year of purchase. 
-\item The Tribunal ruled that because the assessor's true cash valuation of the property in the prior year (2015) in average condition, the assessor did not consider the repairs when determining the true cash value in the year at issue (2016). In other wonds, the 2016 true cash value was simply the 2015 valuation adjusted for inflation. The assessor did not have to consider the repairs to arrive at the 2016 valuation. 
+\item The Tribunal ruled that it was not violating the Court of Appeals remanding decision because, although the repairs were normal repairs,
+
+\item The Tribunal ruled that the statute did not cover repair which were done by a buyer in the year of purchase because of the property's uncapping. \pincite{Order Denying Reconsideration}{1-2}.
+\item The Tribunal ruled that because the assessor's true cash valuation of the property in the prior year (2015) reflected in average condition, the assessor did not consider the repairs when determining the true cash value in the year at issue (2016). In other wonds, the 2016 true cash value was simply the 2015 valuation adjusted for inflation. The assessor did not have to consider the repairs to arrive at the 2016 valuation. 
 \item The Tribunal ruled that alternatively, even if the repairs were considered, their value was zero because the 2015 true cash value (before the repairs) was essentially the same, adjusting for inflation, as the 2016 true cash value. The Tribunal also relied on the MLS pictures, which showed the property was in good condition, to find that the value of the repairs were zero.
-\item The Tribunal ruled that the sale price of the property was not good evidence of its value because the property was sold by \HUD, an entity whose ``motivation may not have been to receive market value for the property.'' \reconsiderationDenied[2].
-\item The Tribunal ruled that it was not violating 
+\item The Tribunal ruled that the sale price of the property was not good evidence of its value because the property was sold by \HUD, an entity whose ``motivation may not have been to receive market value for the property.'' \pincite{Order Denying Reconsideration}{2}.
 \end{enumerate}
 
-Appellant appealed to the Court of Appeals the second time. This time the Court 
+Appellant appealed to the Court of Appeals the second time. This time the Court affirmed.
+
+
+
+
+
+
+drop the "law of the case" issue. It's not clear if you're right. A trial judge should be able to revisit facts. 
+
+How to formulate the remaining issues?
+
+Uncapping exception to Mathieu-Gast? No. Because:
+
+1. The plain language of the statute does not allow repairs to be considered until a subsequent sale. 
+
+2. The Mathieu Gast Act of 1976, MCL 211.27(2), and Proposal A, MCL 211.27a, are distinct.
+
+- implemented at different times, see MTT decision for MG and
+\href{https://scholar.google.com/scholar_case?case=72557110551027365&q=%22mcl+211.27a%22+%22proposal+a%22&hl=en&as_sdt=4,55,199}{\cite{Klooster}}
+
+  \href{https://scholar.google.com/scholar_case?case=72557110551027365\&q=\%22mcl+211.27a\%22+\%22proposal+a\%22&hl=en&as_sdt=4,55,199}{\protect\cite{Klooster}}
+
+  \cite{Klooster}
+
+  - implemented by different sections in the tax code
+
+  - different purposes: MG encourages property upkeep, while Proposal A shields homeowners from rising property values. 
+
+  - different statutory terminology and operation: 
+
+  Proposal A: taxable value vs assessed value, uncapping
+
+  MG: Value added by normal repairs is indicated on the tax roll but not considered in the true cash value. 
+
+  - different chain of causation:
+
+  Proposal A does not affect MG. The TCV is an input for taxable value, not an output. Uncapping never affects TCV. TCV affects TV on uncapping.
+
+  MG determines TCV. The value added by a repair is not included in the TCV. Since AV is based on TCV, MC affects AV, and to that extent affects TV. 
+
+  3. COA's error lay in failing to note the distinction between MC and PA. Specifically, an uncapping event, per that MCL 211.27a(3)(?), when TV is set to the TCV or AV, does not nullify MG. The TCV still may not include the value added by normal repairs.
+
+Note that the fact that both MG and AV are operate on Tax Day does mean that they are doing the same thing. 
+
+On the tax day after a sale, the value added by the normal repairs of the seller, which has not been counted in the TCV but simply separately indicated on the assessment roll, is "considered" or added back to the TCV. The buyer, going forward, will now have to pay tax on the repairs made by the seller.
+
+With respect to Proposal A, on the tax day after a transfer, the TV is set equal to the AV (ignore equalization). If the property during the seller's ownership had appreciated rapidly, the seller had been shielded from this by the capped TV. On the tax day after the sale, this shielding ends, and the TV is reset or uncapped to the TCV and then capped again until the next transfer. The amount the TV changes because of uncapping represents the appreciation experienced by property from the first tax day after its purchase by the seller to the first tax day after its sale by the seller.
+
+Does MG require a factual determination of the before-repair and after-repair value by the tribunal? Yes. The plain language of the statute says that the amount attributable to the repairs must be indicated on the assessment roll. 
+Since the amount attributable to the repairs directly affects the TCV, it must be independently determined by the Tribunal. Cite Jones & Laughlin, and others. 
+This independent determination is a factual determination. Cite MCL 211.27(6). Cite decision saying that the Tribunal may choose one or the other. 
+
+In contrast, the Tribunal essentially made a ruling of law. Under the Tribunal's interpretation, the fact that the assessor could have determined the TCV at issue simply by adjusting for inflation the previous year's TCV, meant that she did not have to consider the value added by repairs. The years-long the first appeal to the Court of Appeals was unnecessary. Furthermore, the Tribunal's interpretation of the word "consider" makes the role of pr
+
+May the Tribunal use the prior year's TCV to determine if the assessor "considered" the value added by the repairs? No. Using the prior year's TCV to determine if the assessor "considered" the value added by repairs is a misunderstanding of the way the word "considered' is used in the statute. 
+
+As noted by the COA in Patru 1, the assessor considers the value added by the repairs when it does not account for the value added by the repairs. The only way to not consider the value added by the repairs is to determine the value of the property before the repairs. 
+
+If the prior year's TCV can be used by the Tribunal to prove the value of a property on the preceding tax year, then every case where the TCV is in dispute, not just MG cases, could be decided this way. The judge may merely start with the prior year's TCV and adjust it for inflation to arrive at the disputed TCV. 
+
+While the prior year's TCV cannot be used directly, if an assessor personally inspected the property to determine the prior year's TCV she may testify to this. 
+
+Is the TCV always factual determination? 
+May the Tribunal use the prior year's TCV to determine, as a matter of law, the TCV at issue? No. 
+In this case, the prior year's TCV reflected the value of the property in good or average condition. This was not a result of the assessor's personal inspection. On the contrary, the assessor testified that mass appraisal assumes the property was in normal condition. Nevertheless, the Tribunal used the prior year's TCV in two ways: First, the Tribunal found that the assessor did not consider the value added by the repairs because she simply adjusted the previous year's TCV for inflation without regard to repairs. Second and alternatively, the Tribunal determined that the value of the repairs was zero because the prior TCV, when the property was unrepaired, is, adjusted for inflation, the same as the current TCV, when the property is repaired.
+
+
+
+
+
 
 
 
@@ -1362,7 +1460,7 @@ When reviewing Tax Tribunal cases, this Court looks for misapplication of the la
 %The Tribunal's factual findings are accepted as final by this Court ``provided they are supported by competent, material, and substantial evidence. Substantial evidence must be more than a scintilla of evidence, although it may be substantially less than a preponderance of the evidence.'' \pincite[s]{Jones & Laughlin}{352-53}\ (cleaned up).
 
 % Regarding the tribunal's rejection of the sale price, Appellant is not complaining that ``the tribunal erred by rejecting his 2015 purchase price of the
-% property as determinative of its TCV.'' Opinion at 6. Rather, Appellant's brief at 18-19 complains that the tribunal gave the sale price ``no weight or credibility,'' \reconsiderationDenied[2], contrary to the clear teaching of \pincite[s]{Jones & Laughlin}{353-354}: ``the price at which an item of
+% property as determinative of its TCV.'' Opinion at 6. Rather, Appellant's brief at 18-19 complains that the tribunal gave the sale price ``no weight or credibility,'' \pincite{Order Denying Reconsideration}{2}, contrary to the clear teaching of \pincite[s]{Jones & Laughlin}{353-354}: ``the price at which an item of
 % property actually sold is most certainly relevant evidence'' and ``the tribunal's opinion that the evidence ``has little or no
 % bearing'' on the property's earlier value suggests that the evidence was rejected out of hand. Such cursory rejection would be erroneous.''
 % Appellant just wants the tribunal to consider the sale price and not reject it out of hand.
@@ -1370,7 +1468,7 @@ When reviewing Tax Tribunal cases, this Court looks for misapplication of the la
 Contrary to this Court characterization,
 % mischaracterizes Appellant's complaint about the tribunal's treatment of the subject's sale price.
 Appellant is not complaining that ``the tribunal erred by rejecting his 2015 purchase price of the
-property as determinative of its TCV.'' Opinion at 6. Rather, Appellant's brief at 18-19 complains that the tribunal gave the sale price ``no weight or credibility,'' \reconsiderationDenied[2], contrary to the teaching of \pincite[s]{Jones & Laughlin}{353-354}:
+property as determinative of its TCV.'' Opinion at 6. Rather, Appellant's brief at 18-19 complains that the tribunal gave the sale price ``no weight or credibility,'' \pincite{Order Denying Reconsideration}{2}, contrary to the teaching of \pincite[s]{Jones & Laughlin}{353-354}:
 
 \begin{quotation}
   [T]he price at which an item of
@@ -1384,7 +1482,7 @@ The opinion at 7 asserts that the tribunal ``considered petitioner's evidence of
 The Tribunal gave the sale price ``no weight or credibility'' because the seller was HUD.%
 \footnote{In support of its rejection of the sale price, the tribunal also cites \cite[s]{MCL 211.27(6)}, prohibiting assessors from presuming that the selling price is the true cash value. But \pincite[s]{Jones & Laughlin}{354}, specifically considered and rejected this as justifying a cursory rejection.}
 This amounts to a per se rule which excludes from consideration the sale price of all HUD-owned homes. This is the kind of cursory rejection that \cite[s]{Jones & Laughlin}\ forbids. Especially troubling is that the tribunal justifies this per se rule with bare speculation: ``Because the subject was being sold by a government entity, that entity's motivation may
-not have been to receive market value for the property.'' \reconsiderationDenied[2].
+not have been to receive market value for the property.'' \pincite{Order Denying Reconsideration}{2}.
 
 \subsection{Granting question four (necessity of determinating the before-repair value) is proper under MCR 7.305(B)(2, 3, 5a, and 5b)}
 
