@@ -1,0 +1,1419 @@
+%
+% This is one of the samples from the lawtex package:
+% http://lawtex.sourceforge.net/
+% LawTeX is licensed under the GNU General Public License 
+%
+\providecommand{\documentclassflag}{}
+\documentclass[12pt,\documentclassflag]{michiganCourtOfAppealsBrief}
+%\documentclass{article}
+
+% for striking a row in a table, see https://tex.stackexchange.com/a/265728/135718
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
+\makeandletter% use \makeandtab to turn off
+
+% allow footnote refs, see https://tex.stackexchange.com/a/35044/135718
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+% Use this to show a line grid-
+% \usepackage[fontsize=12pt,baseline=24pt,lines=27]{grid}
+% \usepackage{atbegshi,picture,xcolor} % https://tex.stackexchange.com/a/191004/135718
+% \AtBeginShipout{%
+%   \AtBeginShipoutUpperLeft{%
+%     {\color{red}%
+%     \put(\dimexpr -1in-\oddsidemargin,%
+%          -\dimexpr 1in+\topmargin+\headheight+\headsep+\topskip)%
+%       {%
+%        \vtop to\dimexpr\vsize+\baselineskip{%
+%          \hrule%
+%          \leaders\vbox to\baselineskip{\hrule width\hsize\vfill}\vfill%
+%        }%
+%       }%
+%   }}%
+% }
+%   \linespread{1}
+
+\usepackage[modulo]{lineno}% use \linenumbers to show line numbers, see https://texblog.org/2012/02/08/adding-line-numbers-to-documents/
+
+% from https://tex.stackexchange.com/a/313337/135718
+\usepackage{enumitem,amssymb}
+\usepackage{pdfpages}
+\usepackage{extramarks}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{hyperref}
+\RequirePackage{xr}
+\externaldocument{appendix}
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+
+% allow underscores in words
+\chardef\_=`_% https://tex.stackexchange.com/a/301984/135718 
+
+%%Citations
+ 
+%The command \makeandletter turns the ampersand into a printable character, rather than a special alignment tab \makeandletter
+
+\begin{document}
+\singlespacing%
+
+\citecase[Antisdale]{Antisdale v City of Galesburg, 420 Mich 265, 362 NW2d 632 (1984)}
+\citecase[Bennett]{Bennett v Bennett, 197 Mich. App. 497; 496 N.W.2d 353 (1992)}
+\citecase[Berger]{Berger v Berger, 747 N.W.2d 336; 277 Mich. App. 700 (2008)}
+\citecase[Briggs]{Briggs Tax Service, LLC v Detroit Pub. Schools, 485 Mich 69; 780 NW2d 753 (2010)}
+\citecase[CAF v STC]{CAF Investment Company v State Tax Commission, 392 Mich. 442; 221 N.W.2d 588 (1974)}
+\citecase[CAF v Saginaw]{CAF Investment Co. v. Saginaw Twp., 410 Mich. 428, 454, 302 N.W.2d 164 (1981)}
+\citecase[Clark]{Clark Equipment Company v Township Of Leoni, 113 Mich. App. 778; 318 N.W.2d 586 (1982)}
+\citecase[Kar]{Kar v Hogan, 399 Mich. 529; 251 N.W.2d 77  (1976)}
+\citecase[Fisher]{Fisher v. Sunfield Township, 163 Mich App 735; 415 NW2nd 297 (1987)}
+\citecase[Fifth Third]{Fifth Third Mortg Co v Chicago Title Ins Co, 692 F3d 507 (6th Cir 2012)}
+\citecase[Jones & Laughlin]{Jones & Laughlin Steel Corporation v City of Warren, 193 Mich App 348; 483 NW2nd 416 (1992)}
+\citecase[Klooster]{Nathan Klooster v City of Charlevoix, 488 Mich. 289; 795 N.W.2d 578 (2011)}
+\citecase{Lenawee Co v Wagley, 301 Mich App 134; 836 NW2d 193 (2013)} %
+\citecase[Menard]{Menard, Inc. v Escanaba, 315 Mich. App. 512; 891 N.W.2d 1 (2016)}
+%\citecase[Mich Ed]{Mich Ed Ass'n v Secretary of State (On Rehearing), 489 Mich 194; 801 NW2d 35 (2011)}
+\newcase{Mich Ed}{Mich Ed Ass'n v Secretary of State (On Rehearing)}{489 Mich; 801 NW2d}{194; 35}{(2011)}
+% (stating that nothing will be read into a clear statute that is not within the manifest intention of the Legislature as derived from the language of the statute itself).
+
+\citecase[Patru I]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued May 8, 2018 (Docket No. 337547) (Patru I)}%
+\addReference{Patru I}{patruvwayne}% Associate appendix with case
+\citecase[Patru II]{Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued February 18, 2020 (Docket No. 346894) (Patru II)}%
+
+\citecase[Pontiac Country Club]{Pontiac Country Club v Waterford Twp, 299 Mich App 427; 830 NW2d 785 (2013)}
+\citecase[Luckow]{Luckow Estate v Luckow, 291 Mich App 417; 805 NW2d 453 (2011)}
+\citecase[Stamp]{Stamp v Mill Street Inn, 152 Mich App 290; 393 NW2d 614 (1986)}
+\citecase[Macomb County Department of Human Services]{Macomb County Department of Human Services v Anderson, 304 Mich App 750; 849 NW2d 408 (2014)}
+\citecase{Toll Northville LTD v Twp of Northville, 480 Mich 6; 743 NW2d 902 (2008)}
+\citecase[Walters]{People v Walters, 266 Mich App 341; 700 NW2d 424 (2005)}
+\newcase{Marbury}{Marbury v. Madison}{5 U.S. (1 Cranch)}{137}{(1803)}
+\newcase[unpublished]{Kohn}{Kohn v. Twp of Columbus}{Final Opinion and Judgment}{}{(MTT No. 315243, 2009)}
+
+{\makeatletter % needed for optional argument to newstatute.
+  % \newstatute[1@]{MCL}{}% place MCL first
+  % \newstatute[2@]{MCR}{}
+  % \newstatute[3@]{TTR}{}
+  % \newstatute[4@]{Dearborn Ordinance}{}% place this fourth
+  % \newstatute[5@]{Wayne Ordinance}{}
+  \newstatute{MCL 211.2}{}
+  \newstatute{MCL 211.2(2)}{}
+  %   (1) For the purpose of taxation, real property includes all of the following:
+  % (a) All land within this state, all buildings and fixtures on the land, and all appurtenances to the land, except as expressly exempted by law.
+  % (b) All real property owned by this state or purchased or condemned for public highway purposes by any board, officer, commission, or department of this state and sold on land contract, notwithstanding the fact that the deed has not been executed transferring title.
+  % (c) For taxes levied after December 31, 2002, buildings and improvements located upon leased real property, except buildings and improvements exempt under section 9f or improvements assessable under section 8(h), if the value of the buildings or improvements is not otherwise included in the assessment of the real property. However, buildings and improvements located on leased real property shall not be treated as real property unless they would be treated as real property if they were located on real property owned by the taxpayer.
+  % (2) The taxable status of persons and real and personal property for a tax year shall be determined as of each December 31 of the immediately preceding year, which is considered the tax day, any provisions in the charter of any city or village to the contrary notwithstanding. An assessing officer is not restricted to any particular period in the preparation of the assessment roll but may survey, examine, or review property at any time before or after the tax day.
+
+  \newstatute{MCL 211.27}{}% True Cash Value
+  \newstatute{MCL 211.27(1)}{}% True Cash Value
+  \newstatute{MCL 211.27(2)}{}% MathieuGast
+%   (2) The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold. For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction. The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. This subsection applies only to residential property. The following repairs are considered normal maintenance if they are not part of a structural addition or completion:
+% (a) Outside painting.
+% (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
+% (c) Repainting, repairing, or replacing existing masonry.
+% (d) Replacing awnings.
+% (e) Adding or replacing gutters and downspouts.
+% (f) Replacing storm windows or doors.
+% (g) Insulating or weatherstripping.
+% (h) Complete rewiring.
+% (i) Replacing plumbing and light fixtures.
+% (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner.
+% (k) Repairing plaster, inside painting, or other redecorating.
+% (l) New ceiling, wall, or floor surfacing.
+% (m) Removing partitions to enlarge rooms.
+% (n) Replacing an automatic hot water heater.
+% (o) Replacing dated interior woodwork.
+
+  \newstatute{MCL 211.27(3)}{}%
+
+  \newstatute{MCL 211.27(6)}{}%
+% (6) Except as otherwise provided in subsection (7), the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred. In determining the true cash value of transferred property, an assessing officer shall assess that property using the same valuation method used to value all other property of that same classification in the assessing jurisdiction. As used in this subsection and subsection (7), "purchase price" means the total consideration agreed to in an arms-length transaction and not at a forced sale paid by the purchaser of the property, stated in dollars, whether or not paid in dollars.
+  
+  \newstatute{MCL 211.27a}{}%
+% 211.27a Property tax assessment; determining taxable value; adjustment; exception; "transfer of ownership" defined; qualified agricultural property; notice of transfer of property; notification of recorded transaction; definitions.
+% Sec. 27a.
+
+  \newstatute{MCL 211.27a(1)}{}%
+%  (1) Except as otherwise provided in this section, property shall be assessed at 50\% of its true cash value under section 3 of article IX of the state constitution of 1963.
+
+  \newstatute{MCL 211.27a(2)}{}%
+  % (2) Except as otherwise provided in subsection (3), for taxes levied in 1995 and for each year after 1995, the taxable value of each parcel of property is the lesser of the following:
+  % (a) The property's taxable value in the immediately preceding year minus any losses, multiplied by the lesser of 1.05 or the inflation rate, plus all additions. For taxes levied in 1995, the property's taxable value in the immediately preceding year is the property's state equalized valuation in 1994.
+  % (b) The property's current state equalized valuation.
+  \newstatute{MCL 211.27a(2)(b)}{}%
+
+  \newstatute{MCL 211.27a(3)}{}%
+%  (3) Upon a transfer of ownership of property after 1994, the property's taxable value for the calendar year following the year of the transfer is the property's state equalized valuation for the calendar year following the transfer.
+
+
+
+%   (4) If the taxable value of property is adjusted under subsection (3), a subsequent increase in the property's taxable value is subject to the limitation set forth in subsection (2) until a subsequent transfer of ownership occurs. If the taxable value of property is adjusted under subsection (3) and the assessor determines that there had not been a transfer of ownership, the taxable value of the property shall be adjusted at the July or December board of review. Notwithstanding the limitation provided in section 53b(1) on the number of years for which a correction may be made, the July or December board of review may adjust the taxable value of property under this subsection for the current year and for the 3 immediately preceding calendar years. A corrected tax bill shall be issued for each tax year for which the taxable value is adjusted by the local tax collecting unit if the local tax collecting unit has possession of the tax roll or by the county treasurer if the county has possession of the tax roll. For purposes of section 53b, an adjustment under this subsection shall be considered the correction of a clerical error.
+%   (5) Assessment of property, as required in this section and section 27, is inapplicable to the assessment of property subject to the levy of ad valorem taxes within voted tax limitation increases to pay principal and interest on limited tax bonds issued by any governmental unit, including a county, township, community college district, or school district, before January 1, 1964, if the assessment required to be made under this act would be less than the assessment as state equalized prevailing on the property at the time of the issuance of the bonds. This inapplicability continues until levy of taxes to pay principal and interest on the bonds is no longer required. The assessment of property required by this act applies for all other purposes.
+%   (6) As used in this act, "transfer of ownership" means the conveyance of title to or a present interest in property, including the beneficial use of the property, the value of which is substantially equal to the value of the fee interest. Transfer of ownership of property includes, but is not limited to, the following:
+%   (a) A conveyance by deed.
+%   (b) A conveyance by land contract. The taxable value of property conveyed by a land contract executed after December 31, 1994 shall be adjusted under subsection (3) for the calendar year following the year in which the contract is entered into and shall not be subsequently adjusted under subsection (3) when the deed conveying title to the property is recorded in the office of the register of deeds in the county in which the property is located.
+%   (c) A conveyance to a trust after December 31, 1994, except under any of the following conditions:
+%   (i) If the settlor or the settlor's spouse, or both, conveys the property to the trust and the sole present beneficiary or beneficiaries are the settlor or the settlor's spouse, or both.
+%   (ii) Beginning December 31, 2014, for residential real property, if the settlor or the settlor's spouse, or both, conveys the residential real property to the trust and the sole present beneficiary or beneficiaries are the settlor's or the settlor's spouse's mother, father, brother, sister, son, daughter, adopted son, adopted daughter, grandson, or granddaughter and the residential real property is not used for any commercial purpose following the conveyance. Upon request by the department of treasury or the assessor, the sole present beneficiary or beneficiaries shall furnish proof within 30 days that the sole present beneficiary or beneficiaries meet the requirements of this subparagraph. If a present beneficiary fails to comply with a request by the department of treasury or assessor under this subparagraph, that present beneficiary is subject to a fine of \$200.00.
+%   (d) A conveyance by distribution from a trust, except under any of the following conditions:
+%   (i) If the distributee is the sole present beneficiary or the spouse of the sole present beneficiary, or both.
+%   (ii) Beginning December 31, 2014, a distribution of residential real property if the distributee is the settlor's or the settlor's spouse's mother, father, brother, sister, son, daughter, adopted son, adopted daughter, grandson, or granddaughter and the residential real property is not used for any commercial purpose following the conveyance. Upon request by the department of treasury or the assessor, the sole present beneficiary or beneficiaries shall furnish proof within 30 days that the sole present beneficiary or beneficiaries meet the requirements of this subparagraph. If a present beneficiary fails to comply with a request by the department of treasury or assessor under this subparagraph, that present beneficiary is subject to a fine of \$200.00.
+%   (e) A change in the sole present beneficiary or beneficiaries of a trust, except under any of the following conditions:
+%   (i) A change that adds or substitutes the spouse of the sole present beneficiary.
+%   (ii) Beginning December 31, 2014, for residential real property, a change that adds or substitutes the settlor's or the settlor's spouse's mother, father, brother, sister, son, daughter, adopted son, adopted daughter, grandson, or granddaughter and the residential real property is not used for any commercial purpose following the conveyance. Upon request by the department of treasury or the assessor, the sole present beneficiary or beneficiaries shall furnish proof within 30 days that the sole present beneficiary or beneficiaries meet the requirements of this subparagraph. If a present beneficiary fails to comply with a request by the department of treasury or assessor under this subparagraph, that present beneficiary is subject to a fine of \$200.00.
+%   (f) A conveyance by distribution under a will or by intestate succession, except under any of the following conditions:
+%   (i) If the distributee is the decedent's spouse.
+%   (ii) Beginning December 31, 2014, for residential real property, if the distributee is the decedent's or the decedent's spouse's mother, father, brother, sister, son, daughter, adopted son, adopted daughter, grandson, or granddaughter and the residential real property is not used for any commercial purpose following the conveyance. Upon request by the department of treasury or the assessor, the sole present beneficiary or beneficiaries shall furnish proof within 30 days that the sole present beneficiary or beneficiaries meet the requirements of this subparagraph. If a present beneficiary fails to comply with a request by the department of treasury or assessor under this subparagraph, that present beneficiary is subject to a fine of \$200.00.
+%   (g) A conveyance by lease if the total duration of the lease, including the initial term and all options for renewal, is more than 35 years or the lease grants the lessee a bargain purchase option. As used in this subdivision, "bargain purchase option" means the right to purchase the property at the termination of the lease for not more than 80% of the property's projected true cash value at the termination of the lease. After December 31, 1994, the taxable value of property conveyed by a lease with a total duration of more than 35 years or with a bargain purchase option shall be adjusted under subsection (3) for the calendar year following the year in which the lease is entered into. This subdivision does not apply to personal property except buildings described in section 14(6) and personal property described in section 8(h), (i), and (j). This subdivision does not apply to that portion of the property not subject to the leasehold interest conveyed.
+%   (h) Except as otherwise provided in this subdivision, a conveyance of an ownership interest in a corporation, partnership, sole proprietorship, limited liability company, limited liability partnership, or other legal entity if the ownership interest conveyed is more than 50% of the corporation, partnership, sole proprietorship, limited liability company, limited liability partnership, or other legal entity. Unless notification is provided under subsection (10), the corporation, partnership, sole proprietorship, limited liability company, limited liability partnership, or other legal entity shall notify the assessing officer on a form provided by the state tax commission not more than 45 days after a conveyance of an ownership interest that constitutes a transfer of ownership under this subdivision. Both of the following apply to a corporation subject to 1897 PA 230, MCL 455.1 to 455.24:
+%   (i) A transfer of stock of the corporation is a transfer of ownership only with respect to the real property that is assessed to the transferor lessee stockholder.
+%   (ii) A cumulative conveyance of more than 50% of the corporation's stock does not constitute a transfer of ownership of the corporation's real property.
+%   (i) A transfer of property held as a tenancy in common, except that portion of the property not subject to the ownership interest conveyed.
+%   (j) A conveyance of an ownership interest in a cooperative housing corporation, except that portion of the property not subject to the ownership interest conveyed.
+%   (k) Notwithstanding the provisions of section 7ee(5), at the request of a property owner, an assessor's establishment of a separate tax parcel for a portion of a parcel that ceases to be qualified agricultural property but is not subject to a land division under the land division act, 1967 PA 288, MCL 560.101 to 560.293, or any local ordinance. For purposes of this subdivision, a transfer of ownership occurs only as to that portion of the parcel established as a separate tax parcel and only that portion shall have its taxable value adjusted under subsection (3) and shall be subject to the recapture tax provided for under the agricultural property recapture act, 2000 PA 261, MCL 211.1001 to 211.1007. The adjustment under subsection (3) shall be made as of the December 31 in the year that the portion of the parcel established as a separate tax parcel ceases to be qualified agricultural property. A portion of a parcel subject to this subdivision is considered a separate tax parcel only for those purposes described in this subdivision.
+%   (7) Transfer of ownership does not include the following:
+%   (a) The transfer of property from 1 spouse to the other spouse or from a decedent to a surviving spouse.
+%   (b) A transfer from a husband, a wife, or a married couple creating or disjoining a tenancy by the entireties in the grantors or the grantor and his or her spouse.
+%   (c) Subject to subdivision (d), a transfer of that portion of property subject to a life estate or life lease retained by the transferor, until expiration or termination of the life estate or life lease. That portion of property transferred that is not subject to a life lease shall be adjusted under subsection (3).
+%   (d) Beginning December 31, 2014, a transfer of that portion of residential real property that had been subject to a life estate or life lease retained by the transferor resulting from expiration or termination of that life estate or life lease, if the transferee is the transferor's or transferor's spouse's mother, father, brother, sister, son, daughter, adopted son, adopted daughter, grandson, or granddaughter and the residential real property is not used for any commercial purpose following the transfer. Upon request by the department of treasury or the assessor, the transferee shall furnish proof within 30 days that the transferee meets the requirements of this subdivision. If a transferee fails to comply with a request by the department of treasury or assessor under this subdivision, that transferee is subject to a fine of \$200.00.
+%   (e) A transfer through foreclosure or forfeiture of a recorded instrument under chapter 31, 32, or 57 of the revised judicature act of 1961, 1961 PA 236, MCL 600.3101 to 600.3285 and MCL 600.5701 to 600.5759, or through deed or conveyance in lieu of a foreclosure or forfeiture, until the mortgagee or land contract vendor subsequently transfers the property. If a mortgagee does not transfer the property within 1 year of the expiration of any applicable redemption period, the property shall be adjusted under subsection (3).
+%   (f) A transfer by redemption by the person to whom taxes are assessed of property previously sold for delinquent taxes.
+%   (g) A conveyance to a trust if the settlor or the settlor's spouse, or both, conveys the property to the trust and any of the following conditions are satisfied:
+%   (i) If the sole present beneficiary of the trust is the settlor or the settlor's spouse, or both.
+%   (ii) Beginning December 31, 2014, for residential real property, if the sole present beneficiary of the trust is the settlor's or the settlor's spouse's mother, father, brother, sister, son, daughter, adopted son, adopted daughter, grandson, or granddaughter and the residential real property is not used for any commercial purpose following the conveyance. Upon request by the department of treasury or the assessor, the sole present beneficiary or beneficiaries shall furnish proof within 30 days that the sole present beneficiary or beneficiaries meet the requirements of this subparagraph. If a present beneficiary fails to comply with a request by the department of treasury or assessor under this subparagraph, that present beneficiary is subject to a fine of \$200.00.
+%   (h) A transfer pursuant to a judgment or order of a court of record making or ordering a transfer, unless a specific monetary consideration is specified or ordered by the court for the transfer.
+%   (i) A transfer creating or terminating a joint tenancy between 2 or more persons if at least 1 of the persons was an original owner of the property before the joint tenancy was initially created and, if the property is held as a joint tenancy at the time of conveyance, at least 1 of the persons was a joint tenant when the joint tenancy was initially created and that person has remained a joint tenant since the joint tenancy was initially created. A joint owner at the time of the last transfer of ownership of the property is an original owner of the property. For purposes of this subdivision, a person is an original owner of property owned by that person's spouse.
+%   (j) A transfer for security or an assignment or discharge of a security interest.
+%   (k) A transfer of real property or other ownership interests among members of an affiliated group. As used in this subsection, "affiliated group" means 1 or more corporations connected by stock ownership to a common parent corporation. Upon request by the state tax commission, a corporation shall furnish proof within 45 days that a transfer meets the requirements of this subdivision. A corporation that fails to comply with a request by the state tax commission under this subdivision is subject to a fine of \$200.00.
+%   (l) Normal public trading of shares of stock or other ownership interests that, over any period of time, cumulatively represent more than 50% of the total ownership interest in a corporation or other legal entity and are traded in multiple transactions involving unrelated individuals, institutions, or other legal entities.
+%   (m) A transfer of real property or other ownership interests among corporations, partnerships, limited liability companies, limited liability partnerships, or other legal entities if the entities involved are commonly controlled. Upon request by the state tax commission, a corporation, partnership, limited liability company, limited liability partnership, or other legal entity shall furnish proof within 45 days that a transfer meets the requirements of this subdivision. A corporation, partnership, limited liability company, limited liability partnership, or other legal entity that fails to comply with a request by the state tax commission under this subdivision is subject to a fine of \$200.00.
+%   (n) A direct or indirect transfer of real property or other ownership interests resulting from a transaction that qualifies as a tax-free reorganization under section 368 of the internal revenue code, 26 USC 368. Upon request by the state tax commission, a property owner shall furnish proof within 45 days that a transfer meets the requirements of this subdivision. A property owner who fails to comply with a request by the state tax commission under this subdivision is subject to a fine of \$200.00.
+%   (o) Except as provided in subsection (6)(k), a transfer of qualified agricultural property, if the person to whom the qualified agricultural property is transferred files an affidavit with the assessor of the local tax collecting unit in which the qualified agricultural property is located and with the register of deeds for the county in which the qualified agricultural property is located attesting that the qualified agricultural property will remain qualified agricultural property. The affidavit under this subdivision shall be in a form prescribed by the department of treasury. An owner of qualified agricultural property shall inform a prospective buyer of that qualified agricultural property that the qualified agricultural property is subject to the recapture tax provided in the agricultural property recapture act, 2000 PA 261, MCL 211.1001 to 211.1007, if the qualified agricultural property is converted by a change in use, as that term is defined in section 2 of the agricultural property recapture act, 2000 PA 261, MCL 211.1002. If property ceases to be qualified agricultural property at any time after a transfer subject to this subdivision, all of the following shall occur:
+%   (i) The taxable value of that property, or, if subsection (6)(k) applies, a portion of it established as a separate tax parcel, shall be adjusted under subsection (3) as of the December 31 in the year that the property, or, if subsection (6)(k) applies, a portion of it established as a separate tax parcel, ceases to be qualified agricultural property.
+%   (ii) The property, or, if subsection (6)(k) applies, a portion of it established as a separate tax parcel, is subject to the recapture tax provided for under the agricultural property recapture act, 2000 PA 261, MCL 211.1001 to 211.1007.
+%   (p) A transfer of qualified forest property, if the person to whom the qualified forest property is transferred files a qualified forest taxable value affidavit with the assessor of the local tax collecting unit in which the qualified forest property is located and with the register of deeds for the county in which the qualified forest property is located attesting that the qualified forest property will remain qualified forest property. The qualified forest taxable value affidavit under this subdivision shall be in a form prescribed by the department of agriculture and rural development. The qualified forest taxable value affidavit shall include a legal description of the qualified forest property, the name of the new property owner, the year the transfer of the property occurred, a statement indicating that the property owner is attesting that the property for which the exemption is claimed is qualified forest property and will be managed according to the approved forest management plan, and any other information pertinent to the parcel and the property owner. The property owner shall provide a copy of the qualified forest taxable value affidavit to the department. The department shall provide 1 copy of the qualified forest taxable value affidavit to the local tax collecting unit, 1 copy to the conservation district, and 1 copy to the department of treasury. These copies may be sent electronically. The exception to the recognition of a transfer of ownership, as herein stated, extends to the land only of the qualified forest property. If qualified forest property is improved by buildings, structures, or land improvements, then those improvements shall be recognized as a transfer of ownership, in accordance with the provisions of section 7jj[1]. An owner of qualified forest property shall inform a prospective buyer of that qualified forest property that the qualified forest property is subject to the recapture tax provided in the qualified forest property recapture tax act, 2006 PA 379, MCL 211.1031 to 211.1036, if the qualified forest property is converted by a change in use, as that term is defined in section 2 of the qualified forest property recapture tax act, 2006 PA 379, MCL 211.1032. If property ceases to be qualified forest property at any time after being transferred, all of the following shall occur:
+%   (i) The taxable value of that property shall be adjusted under subsection (3) as of the December 31 in the year that the property ceases to be qualified forest property, except to the extent that the transfer of the qualified forest property would not have been considered a transfer of ownership under this subsection.
+%   (ii) Except as otherwise provided in subparagraph (iii), the property is subject to the recapture tax provided for under the qualified forest property recapture tax act, 2006 PA 379, MCL 211.1031 to 211.1036.
+%   (iii) Beginning June 1, 2013 and ending November 30, 2013, owners of property enrolled as qualified forest property before January 1, 2013 may execute a new qualified forest taxable value affidavit with the department of agriculture and rural development. If a landowner elects to execute a qualified forest taxable value affidavit, that owner is not required to pay the \$50.00 fee required under section 7jj[1](2). If a landowner elects not to execute a qualified forest taxable value affidavit, the existing affidavit shall be rescinded, without subjecting the property to the recapture tax provided for under the qualified forest property recapture tax act, 2006 PA 379, MCL 211.1031 to 211.1036, and the taxable value of that property shall be adjusted under subsection (3).
+%   (q) Beginning on December 8, 2006, a transfer of land, but not buildings or structures located on the land, which meets 1 or more of the following requirements:
+%   (i) The land is subject to a conservation easement under subpart 11 of part 21 of the natural resources and environmental protection act, 1994 PA 451, MCL 324.2140 to 324.2144. As used in this subparagraph, "conservation easement" means that term as defined in section 2140 of the natural resources and environmental protection act, 1994 PA 451, MCL 324.2140.
+%   (ii) A transfer of ownership of the land or a transfer of an interest in the land is eligible for a deduction as a qualified conservation contribution under section 170(h) of the internal revenue code, 26 USC 170.
+%   (r) A transfer of real property or other ownership interests resulting from a consolidation or merger of a domestic nonprofit corporation that is a boy or girl scout or camp fire girls organization, a 4-H club or foundation, a young men's Christian association, or a young women's Christian association and at least 50% of the members of that organization or association are residents of this state.
+%   (s) A change to the assessment roll or tax roll resulting from the application of section 16a of 1897 PA 230, MCL 455.16a.
+%   (t) Beginning December 31, 2013 through December 30, 2014, a transfer of residential real property if the transferee is related to the transferor by blood or affinity to the first degree and the use of the residential real property does not change following the transfer.
+%   (u) Beginning December 31, 2014, a transfer of residential real property if the transferee is the transferor's or the transferor's spouse's mother, father, brother, sister, son, daughter, adopted son, adopted daughter, grandson, or granddaughter and the residential real property is not used for any commercial purpose following the conveyance. Upon request by the department of treasury or the assessor, the transferee shall furnish proof within 30 days that the transferee meets the requirements of this subdivision. If a transferee fails to comply with a request by the department of treasury or assessor under this subdivision, that transferee is subject to a fine of \$200.00.
+%   (v) Beginning December 31, 2014, for residential real property, a conveyance from a trust if the person to whom the residential real property is conveyed is the settlor's or the settlor's spouse's mother, father, brother, sister, son, daughter, adopted son, adopted daughter, grandson, or granddaughter and the residential real property is not used for any commercial purpose following the conveyance. Upon request by the department of treasury or the assessor, the sole present beneficiary or beneficiaries shall furnish proof within 30 days that the sole present beneficiary or beneficiaries meet the requirements of this subdivision. If a present beneficiary fails to comply with a request by the department of treasury or assessor under this subdivision, that present beneficiary is subject to a fine of \$200.00.
+%   (w) Beginning on March 31, 2015, a conveyance of land by distribution under a will or trust or by intestate succession, but not buildings or structures located on the land, which meets 1 or more of the following requirements:
+%   (i) The land is made subject to a conservation easement under subpart 11 of part 21 of the natural resources and environmental protection act, 1994 PA 451, MCL 324.2140 to 324.2144, prior to the conveyance by distribution under a will or trust or by intestate succession. As used in this subparagraph, "conservation easement" means that term as defined in section 2140 of the natural resources and environmental protection act, 1994 PA 451, MCL 324.2140.
+%   (ii) The land or an interest in the land is made eligible for a deduction as a qualified conservation contribution under section 170(h) of the internal revenue code, 26 USC 170, prior to the conveyance by distribution under a will or trust or by intestate succession.
+%   (x) A conveyance of property under section 2120a(6) of the natural resources and environmental protection act, 1994 PA 451, MCL 324.2120a.
+%   (8) If all of the following conditions are satisfied, the local tax collecting unit shall revise the taxable value of qualified agricultural property taxable on the tax roll in the possession of that local tax collecting unit to the taxable value that qualified agricultural property would have had if there had been no transfer of ownership of that qualified agricultural property since December 31, 1999 and there had been no adjustment of that qualified agricultural property's taxable value under subsection (3) since December 31, 1999:
+%   (a) The qualified agricultural property was qualified agricultural property for taxes levied in 1999 and each year after 1999.
+%   (b) The owner of the qualified agricultural property files an affidavit with the assessor of the local tax collecting unit under subsection (7)(o).
+%   (9) If the taxable value of qualified agricultural property is adjusted under subsection (8), the owner of that qualified agricultural property is not entitled to a refund for any property taxes collected under this act on that qualified agricultural property before the adjustment under subsection (8).
+%   (10) The register of deeds of the county where deeds or other title documents are recorded shall notify the assessing officer of the appropriate local taxing unit not less than once each month of any recorded transaction involving the ownership of property and shall make any recorded deeds or other title documents available to that county's tax or equalization department. Unless notification is provided under subsection (6), the buyer, grantee, or other transferee of the property shall notify the appropriate assessing office in the local unit of government in which the property is located of the transfer of ownership of the property within 45 days of the transfer of ownership, on a form prescribed by the state tax commission that states the parties to the transfer, the date of the transfer, the actual consideration for the transfer, and the property's parcel identification number or legal description. Forms filed in the assessing office of a local unit of government under this subsection shall be made available to the county tax or equalization department for the county in which that local unit of government is located. This subsection does not apply to personal property except buildings described in section 14(6) and personal property described in section 8(h), (i), and (j).
+%   (11) As used in this section:
+%   (a) "Additions" means that term as defined in section 34d.
+%   (b) "Beneficial use" means the right to possession, use, and enjoyment of property, limited only by encumbrances, easements, and restrictions of record.
+%   (c) "Commercial purpose" means used in connection with any business or other undertaking intended for profit, but does not include the rental of residential real property for a period of less than 15 days in a calendar year.
+%   (d) "Inflation rate" means that term as defined in section 34d.
+%   (e) "Losses" means that term as defined in section 34d.
+%   (f) "Qualified agricultural property" means that term as defined in section 7dd.
+%   (g) "Qualified forest property" means that term as defined in section 7jj[1].
+%   (h) "Residential real property" means real property classified as residential real property under section 34c.
+
+% History: Add. 1982, Act 539, Eff. Mar. 30, 1983 ;-- Am. 1993, Act 145, Imd. Eff. Aug. 19, 1993 ;-- Am. 1993, Act 313, Eff. Mar. 15, 1994 ;-- Am. 1994, Act 415, Imd. Eff. Dec. 29, 1994 ;-- Am. 1996, Act 476, Imd. Eff. Dec. 26, 1996 ;-- Am. 2000, Act 260, Eff. Mar. 28, 2001 ;-- Am. 2005, Act 23, Imd. Eff. May 23, 2005 ;-- Am. 2006, Act 378, Imd. Eff. Sept. 27, 2006 ;-- Am. 2006, Act 446, Imd. Eff. Dec. 8, 2006 ;-- Am. 2008, Act 506, Imd. Eff. Jan. 13, 2009 ;-- Am. 2012, Act 47, Imd. Eff. Mar. 13, 2012 ;-- Am. 2012, Act 497, Imd. Eff. Dec. 28, 2012 ;-- Am. 2013, Act 50, Imd. Eff. June 6, 2013 ;-- Am. 2014, Act 310, Imd. Eff. Oct. 10, 2014 ;-- Am. 2014, Act 535, Eff. Mar. 31, 2015 ;-- Am. 2015, Act 19, Imd. Eff. Apr. 29, 2015 ;-- Am. 2015, Act 243, Imd. Eff. Dec. 22, 2015 ;-- Am. 2016, Act 375, Imd. Eff. Dec. 22, 2016
+% Popular Name: Act 206
+% Compiler's Notes: Enacting section 1 of Act 243 of 2015 provides:"Enacting section 1. Section 27a(7)(d) of the general property tax act, 1893 PA 206, MCL 211.27a, as added by this amendatory act, is retroactive and is effective for taxes levied after December 31, 2014."
+
+  \newstatute{MCL 211.10d(7)}{}%
+%  (7) Every lawful assessment roll shall have a certificate attached signed by the certified assessor who prepared or supervised the preparation of the roll. The certificate shall be in the form prescribed by the state tax commission. If after completing the assessment roll the certified assessor for the local assessing district dies or otherwise becomes incapable of certifying the assessment roll, the county equalization director or the state tax commission shall certify the completed assessment roll at no cost to the local assessing district.
+
+
+  
+  \newstatute{MCL 205.753(2)}{}% allows appeals from a final order of the Tax Tribunal
+\newstatute{MCL 2.119(F)(3)}{}% motion for reconsideration must show a palpable error
+  \newstatute{MCR 7.204(A)(1)(b)}{}% allows appeals within 21 days of an order on a motion for reconsideration
+  \newstatute{MCR 7.305(A)(2)}{}% Requires that orders appealed from be attached.
+  \newstatute{MCR 7.305(B)}{}
+  \newstatute{MCR 7.305(B)(2)}{}
+  \newstatute{MCR 7.305(B)(3)}{}
+  \newstatute{MCR 7.305(B)(5a)}{}
+  \newstatute{MCR 7.305(B)(5b)}{}
+} % end makeatletter block
+
+\def\mathieuGast{\cite[s]{MCL 211.27(2)}}%
+
+
+%\newmisc{STC Bulletin 6 of 2007}{Michigan State Tax Commission (STC) Bulletin No. 6 of 2007 (Foreclosure Guidelines)}
+\newmisc{STC Bulletin}{Michigan State Tax Commission (STC) Bulletin No. 7 of 2014 (Mathieu Gast Act)}
+\addReference{STC Bulletin}{bulletin7}% Associate appendix with case
+
+\newmisc{POJ}{Proposed Opinion and Judgment (POJ) (Tribunal entry 18, issued 12/01/2016)}
+\SetIndexType{POJ}{}
+
+\newmisc{Exceptions}{Exceptions (Tribunal entry 19, filed 12/21/2016)}
+\SetIndexType{Exceptions}{}
+
+\newmisc{FOJ 1}{First Final Opinion and Judgment (FOJ 1, Tribunal entry 20, issued 1/26/2017)}
+\SetIndexType{FOJ 1}{}
+
+\newmisc{Tribunal Motion Reconsider 1}{Petitioner's Motion for the Tribunal to Reconsider its 1st FOJ (Tribunal Motion Reconsider 1, Tribunal entry 21, filed 2/16/2017)}
+\SetIndexType{Tribunal Motion Reconsider 1}{}
+
+\newmisc{Tribunal's Denial of Reconsideration 1}{Tribunal's Order Denying Reconsideration of its 1st FOJ (Tribunal's Denial of Reconsideration 1,  MTT Docket Line 22, issued 3/06/2017)}
+\SetIndexType{Tribunal's Denial of Reconsideration 1}{}
+
+\newmisc{FOJ 2}{Second Final Opinion and Judgment (FOJ 2, Tribunal entry 48, issued 12/04/2018)}
+\SetIndexType{FOJ 2}{}
+
+\newmisc{Tribunal Motion Reconsider 2}{Petitioner's Motion for the Tribunal to Reconsider its 2nd FOJ (Tribunal Motion Reconsider 2, Tribunal entry 50, filed 12/05/2018)}
+\SetIndexType{Tribunal Motion Reconsider 2}{}
+
+\newmisc{Tribunal's Denial of Reconsideration 2}{Tribunal's Order Denying Reconsideration of its 2nd FOJ (Tribunal's Denial of Reconsideration 2,  MTT Docket Line 51, issued 12/14/2018)}
+\SetIndexType{Tribunal's Denial of Reconsideration 2}{}
+
+
+\newcommand{\makeAbbreviation}[3]{% ensure that the frsit time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
+  \IfBeginWith{#3}{#2}{%
+    \newcommand{#1}[0]{#3\renewcommand{#1}[0]{#2}}}{%
+    \newcommand{#1}[0]{#3 (#2)\renewcommand{#1}[0]{#2}}}}
+
+\makeAbbreviation{\MLS}{MLS}{Multiple Listing Service}
+\makeAbbreviation{\MTT}{MTT}{Michigan Tax Tribunal}
+\makeAbbreviation{\STC}{STC}{State Tax Commission}
+\makeAbbreviation{\HUD}{HUD}{the U.S. Dept. of Housing and Urban Development}
+  
+\newcommand{\makeAbbreviationToRecord}[3]{% 1: command/handle, 2: shortname, 3: longname
+  % makeAbbreviationToRecord: #1, #2, #3\par%
+  \expandafter\makeAbbreviation\csname #1Abbr\endcsname{#2}{#3}%
+  \expandafter\newcommand\csname #1\endcsname[1][]{%
+    \Call{#1Abbr}%
+    \if\relax##1\relax\empty\ (Appendix at \pageref{#1})%
+    \else, p ##1 (Appendix at %
+    % Check for page range
+    \IfSubStr{##1}{-}{%
+      \def\pageRefRange####1-####2XXX{\pageref{#1.####1} -- \pageref{#1.####2}}%
+      \pageRefRange##1XXX}%
+    {\pageref{#1.##1}}%
+    )\fi%
+  }%
+}%
+
+
+\makeAbbreviationToRecord{explanatoryLetter}{Explanatory Letter}{Explanatory Letter (MTT Docket Line 38)}
+% explanatory Letter: (abbr) \explanatoryLetterAbbr\ (to record) \explanatoryLetter[2] \par
+
+\makeAbbreviationToRecord{foj}{FOJ}{Second Final Opinion and Judgment (MTT Docket Line 48)}
+% FOJ: (abbr) \fojAbbr (to record) \foj[]\par
+
+%\makeAbbreviationToRecord{reconsiderationDenied}{Order Denying Reconsideration}{Order Denying Reconsideration (MTT Docket Line 51)}
+% reconsiderationDenied: (abbr) \reconsiderationDeniedAbbr[] (to record) \reconsiderationDenied[] \par
+
+\makeAbbreviationToRecord{repairs}{List of Repairs}{List of Repairs (MTT Docket Line 36)}
+% \par repairs: (abbr) \repairsAbbr\ (to record) \repairs[] (to appendix) \pageref{repairs}\par
+
+\makeAbbreviationToRecord{stcform}{STC Form 865}{STC Form 865 Request for Nonconsideration (MTT Docket Line 35)}
+
+\makeAbbreviationToRecord{mlsListing}{MLS Listing}{MLS Listing (MTT Docket Line 32)}
+% mlsListing: (abbr) \mlsListingAbbr\ (to record) \mlsListing[]\par
+
+\makeAbbreviationToRecord{mlsHistory}{MLS History}{MLS History (MTT Docket Line 33)}
+% mlsHistory: (abbr) \mlsHistoryAbbr\ (to record) \mlsHistory[]\par
+
+\makeAbbreviationToRecord{boardOfReviewDecision}{Board of Review Decision}{Board of Review Decision (MTT Docket Line 2)}
+
+\makeAbbreviationToRecord{cityEvidence}{City's Evidence}{City's Evidence (MTT Docket Line 11)}
+
+\makeAbbreviationToRecord{motionForReconsideration}{Motion for Reconsideration}{Motion for Reconsideration (MTT Docket Line 52)}
+%  \newstatute{MCL 211.10d(7)}{}%
+%  (7) Every lawful assessment roll shall have a certificate attached signed by the certified assessor who prepared or supervised the preparation of the roll. The certificate shall be in the form prescribed by the state tax commission. If after completing the assessment roll the certified assessor for the local assessing district dies or otherwise becomes incapable of certifying the assessment roll, the county equalization director or the state tax commission shall certify the completed assessment roll at no cost to the local assessing district.
+
+
+  
+  % \newstatute{MCL 205.753(2)}{}% allows appeals from a final order of the Tax Tribunal
+
+  % \newstatute{MCR 7.204(A)(1)(b)}{}% allows appeals within 21 days of an order on a motion for reconsideration
+  
+
+
+
+%\newmisc{STC Bulletin 6 of 2007}{Michigan State Tax Commission (STC) Bulletin No. 6 of 2007 (Foreclosure Guidelines)}
+% \newmisc{STC Bulletin}{Michigan State Tax Commission (STC) Bulletin No. 7 of 2014 (Mathieu Gast Act)}
+% \addReference{STC Bulletin}{bulletin7}% Associate appendix with case
+
+% \newcommand{\makeAbbreviation}[3]{% ensure that the frsit time an abbreviated word is used, it is presented in long form, and after that in short form. 1: command name, 2: short name, 3: long name
+%   \IfBeginWith{#3}{#2}{%
+%     \newcommand{#1}[0]{#3\renewcommand{#1}[0]{#2}}}{%
+%     \newcommand{#1}[0]{#3 (#2)\renewcommand{#1}[0]{#2}}}}
+
+% \makeAbbreviation{\MLS}{MLS}{Multiple Listing Service}
+% \makeAbbreviation{\MTT}{MTT}{Michigan Tax Tribunal}
+% \makeAbbreviation{\STC}{STC}{State Tax Commission}
+%\makeAbbreviation{\FOJ}{FOJ}{First Final Opinion and Judgment (2017)}
+% \makeAbbreviation{\explanatoryLetterAbbr}{Explanatory Letter}{Explanatory Letter submitted by Appellant to the Tax Tribunal on 9/6/2018}
+% \newcommand{\explanatoryLetter}[1][]{\explanatoryLetterAbbr\if\relax#1\relax\empty, Appendix at \pageref{explanatoryLetter}\else, page #1, Appendix at \pageref{explanatoryLetter.#1}\fi}
+
+% Note that the command/handle must match the appendix
+% labels. Minimize the variations of names.  \makeAbbreviationToRecord
+% creates a simple abbreviation that ends in Abbr if you don't want to
+% refer to the record.
+% \newcommand{\makeAbbreviationToRecord}[3]{% 1: command/handle, 2: shortname, 3: longname
+%   % makeAbbreviationToRecord: #1, #2, #3\par%
+%   \expandafter\makeAbbreviation\csname #1Abbr\endcsname{#2}{#3}%
+%   \expandafter\newcommand\csname #1\endcsname[1][]{%
+%     \Call{#1Abbr}%
+%     \if\relax##1\relax\empty\ (Appendix at \pageref{#1})%
+%     \else, p ##1 (Appendix at %
+%     % Check for page range
+%     \IfSubStr{##1}{-}{%
+%       \def\pageRefRange####1-####2XXX{\pageref{#1.####1}--\pageref{#1.####2}}%
+%       \pageRefRange##1XXX}%
+%     {\pageref{#1.##1}}%
+%     )\fi%
+%   }%
+% }%
+
+% \makeAbbreviationToRecord{explanatoryLetter}{Explanatory Letter}{Explanatory Letter (MTT Docket Line 38)}
+% % explanatory Letter: (abbr) \explanatoryLetterAbbr\ (to record) \explanatoryLetter[2] \par
+
+% \makeAbbreviationToRecord{foj}{FOJ}{Second Final Opinion and Judgment (MTT Docket Line 48)}
+% % FOJ: (abbr) \fojAbbr (to record) \foj[]\par
+
+% \makeAbbreviationToRecord{reconsiderationDenied}{Order Denying Reconsideration}{Order Denying Reconsideration (MTT Docket Line 51)}
+% % reconsiderationDenied: (abbr) \reconsiderationDeniedAbbr[] (to record) \reconsiderationDenied[] \par
+
+% \makeAbbreviationToRecord{repairs}{List of Repairs}{List of Repairs (MTT Docket Line 36)}
+% % \par repairs: (abbr) \repairsAbbr\ (to record) \repairs[] (to appendix) \pageref{repairs}\par
+
+% \makeAbbreviationToRecord{stcform}{STC Form 865}{STC Form 865 Request for Nonconsideration (MTT Docket Line 35)}
+
+% \makeAbbreviationToRecord{mlsListing}{MLS Listing}{MLS Listing (MTT Docket Line 32)}
+% % mlsListing: (abbr) \mlsListingAbbr\ (to record) \mlsListing[]\par
+
+% \makeAbbreviationToRecord{mlsHistory}{MLS History}{MLS History (MTT Docket Line 33)}
+% % mlsHistory: (abbr) \mlsHistoryAbbr\ (to record) \mlsHistory[]\par
+
+% \makeAbbreviationToRecord{boardOfReviewDecision}{Board of Review Decision}{Board of Review Decision (MTT Docket Line 2)}
+
+% \makeAbbreviationToRecord{cityEvidence}{City's Evidence}{City's Evidence (MTT Docket Line 11)}
+
+% \makeAbbreviationToRecord{motionForReconsideration}{Motion for Reconsideration}{Motion for Reconsideration (MTT Docket Line 52)}
+
+% \makeAbbreviationToRecord{explanatoryLetter}{Explanatory Letter}{Explanatory Letter (MTT Docket Line 38)}
+% % explanatory Letter: (abbr) \explanatoryLetterAbbr\ (to record) \explanatoryLetter[2] \par
+
+% \makeAbbreviationToRecord{foj}{FOJ}{Second Final Opinion and Judgment (MTT Docket Line 48)}
+% % FOJ: (abbr) \fojAbbr (to record) \foj[]\par
+
+% \makeAbbreviationToRecord{reconsiderationDenied}{Order Denying Reconsideration}{Order Denying Reconsideration (MTT Docket Line 51)}
+% % reconsiderationDenied: (abbr) \reconsiderationDeniedAbbr[] (to record) \reconsiderationDenied[] \par
+
+% \makeAbbreviationToRecord{repairs}{List of Repairs}{List of Repairs (MTT Docket Line 36)}
+% % \par repairs: (abbr) \repairsAbbr\ (to record) \repairs[] (to appendix) \pageref{repairs}\par
+
+% \makeAbbreviationToRecord{stcform}{STC Form 865}{STC Form 865 Request for Nonconsideration (MTT Docket Line 35)}
+
+% \makeAbbreviationToRecord{mlsListing}{MLS Listing}{MLS Listing (MTT Docket Line 32)}
+% % mlsListing: (abbr) \mlsListingAbbr\ (to record) \mlsListing[]\par
+
+% \makeAbbreviationToRecord{mlsHistory}{MLS History}{MLS History (MTT Docket Line 33)}
+% % mlsHistory: (abbr) \mlsHistoryAbbr\ (to record) \mlsHistory[]\par
+
+% \makeAbbreviationToRecord{boardOfReviewDecision}{Board of Review Decision}{Board of Review Decision (MTT Docket Line 2)}
+
+% \makeAbbreviationToRecord{cityEvidence}{City's Evidence}{City's Evidence (MTT Docket Line 11)}
+
+% \makeAbbreviationToRecord{motionForReconsideration}{Motion for Reconsideration}{Motion for Reconsideration (MTT Docket Line 52)}
+
+
+\begin{centering}
+\bf\scshape State of Michigan\\In the Michigan Supreme Court
+
+\rm 
+
+\makeandtab
+\setlength{\tabcolsep}{20pt}%
+\begin{tabular}{p{.4\textwidth} p{.4\textwidth}}
+%\cline{1-2}
+  {~
+
+  \raggedright Daniel Patru,\par
+  \hfill\textit{Petitioner/Appellant,}
+  \vspace{.5\baselineskip}\par
+  vs\par
+  \vspace{.5\baselineskip}
+  \raggedright City of Wayne,\par
+  \hfill\textit{Respondent/Appellee.}
+  
+  ~} &  {~
+       \par\par
+       % \hfill
+       Supreme Court No. \underline{\hspace{5em}}\par
+       % \hfill
+       Court of Appeals No. 346894\par
+       %\hfill
+       Lower Court No. 16-001828-TT\par\vspace{\baselineskip}
+
+       % \hfill \raggedleft\textbf{Motion and Brief for Reconsideration}\vspace{.5\baselineskip}\par
+%       \hfill \textbf{Proof of Service}\newline      
+  ~}
+  \\ \cline{1-2}\vspace{2mm}\\
+
+  \vspace{3em}\\
+  
+  \multicolumn{2}{c}{\textbf{Reply to Answer to Leave to Appeal}}\\
+  {~ 
+  \vspace{3em}
+  
+  Daniel Patru (P74387) \newline%
+  3309 Solway\newline%
+  Knoxville, TN 37931\newline%
+  (734) 274-9624\newline%
+  dpatru@gmail.com\newline\newline%
+  ~} & {~ %\par~\par
+       \vspace{3em}
+       
+  Stephen J. Hitchcock (P15005)\newline
+  John C. Clark (P51356) \newline
+  Geoffrey S. Wagner (P70839)\newline
+  \emph{Attorneys for Respondent-Appellee}\newline
+Giarmarco, Mullins \& Horton, P.C.\newline
+101 W. Big Beaver Road, 10 th floor\newline
+Troy, MI 48084\newline
+(248) 457-7024\newline
+sjh@gmhlaw.com\newline
+~}
+\end{tabular}
+\makeandletter
+\par\vspace{\baselineskip}\vspace{\baselineskip}\vspace{\baselineskip}
+
+%\textbf{ORAL ARGUMENT REQUESTED}
+
+
+\end{centering}
+
+\pagestyle{romanparen}
+\pagenumbering{roman}
+
+
+\newpage 
+
+\section*{Table of Contents}
+
+\tableofcontents
+
+
+\newpage
+\tableofauthorities
+
+%\pagestyle{plain}
+%\pagenumbering{arabic}
+
+%Sets the formatting for the entire document after the front matter
+\parindent=2.5em
+% \setlength{\parskip}{1.25ex plus 2ex minus .5ex} 
+% \setstretch{1.45}
+\doublespacing
+% \linenumbers
+
+
+% \section{Mathieu Gast Statute -- MCL 211.27(2)}
+% \begin{quotation}
+% The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold.
+
+% For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction.
+
+% The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll.
+
+% This subsection applies only to residential property.
+
+% The following repairs are considered normal maintenance if they are not part of a structural addition or completion: [repairs (a)-(o) omitted]
+
+% % (a) Outside painting.
+% % (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
+% % (c) Repainting, repairing, or replacing existing masonry.
+% % (d) Replacing awnings.
+% % (e) Adding or replacing gutters and downspouts.
+% % (f) Replacing storm windows or doors.
+% % (g) Insulating or weatherstripping.
+% % (h) Complete rewiring.
+% % (i) Replacing plumbing and light fixtures.
+% % (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner.
+% % (k) Repairing plaster, inside painting, or other redecorating.
+% % (l) New ceiling, wall, or floor surfacing.
+% % (m) Removing partitions to enlarge rooms.
+% % (n) Replacing an automatic hot water heater.
+% % (o) Replacing dated interior woodwork.
+% \end{quotation}
+
+\section{Order Appealed From and Basis of Jurisdiction}
+
+Appellant seeks leave to appeal the order by the Michigan Court of Appeals, issued March 31, 2020,
+denying a timely filed motion for reconsideration.
+Per \cite{MCR 7.305(A)(2)}, a copy of the order denying reconsideration as well as opinion are attached.
+
+This filing is timely because it is filed within 42 days an order denying a timely filed motion for reconsideration per MCL 7.305(C)(2)(c). Under this Court's Administrative Orders 2020-4 and 2020-8, the time period for filing did not begin to run until June 8, 2020.
+
+\newpage
+\section{Question Presented for Review}
+
+\subsection{Does \mathieuGast\ require the Tribunal to make
+  an independent, fact-based determination of the before-repair and after-repair values 
+  if it finds that the current owner made normal repairs?}
+
+  Appellant answers, ``Yes.'' Appellee answers, ``No.'' The Court of Appeals answers, ``No.'' The Tribunal answers, ``No.'' 
+
+  % \subsection{Did the Tribunal correctly the standard when it found that the repairs had no value because the previous year's TCV and MLS pictures?}
+
+  % Appellant answers, ``No.'' Appellee answers, ``Yes.'' The Court of Appeals answers ``Yes.'' The Tribunal answers, ``Yes.''
+
+
+
+% \subsection{On remand, did the Tax Tribunal violate the law of the case
+%   when it found that a property was in average condition and
+%   that \mathieuGast\ did not cover repairs done by a buyer in the year of sale,
+%   when  it  a   a property  Absent new evidence or new law, may the trial court and the Court of Appeals change findings of fact and application of law which were settled in a previous appeal?}
+
+% \noindent Appellant answers ``No.'' Appellee answers ``Yes.'' The Court of Appeals answered ``Yes.''
+
+% \subsection{Does \mathieuGast\ cover normal repairs performed by a buyer in the year of sale?}
+
+% \noindent Appellant answers ``Yes.'' Appellee answers ``No.'' The Court of Appeals answered ``No.''
+
+% \subsection{May the Tax Tribunal reject a sale of the subject property as evidence of its value based only on speculation that the seller, as government entity, may not have been motivated to receive market value for the property?}
+
+% \noindent Appellant answers ``No.'' Appellee answers ``Yes.'' The Court of Appeals answered ``Yes.''
+
+% \subsection{If it finds that normal repairs were done under \mathieuGast, may the Tax Tribunal refuse to independently determine the before-repair value?}
+
+% \noindent Appellant answers ``No.'' Appellee answers ``Yes.'' The Court of Appeals answered ``Yes.''
+
+% \subsection{Was the Tax Tribunal's finding that \$10,000 in normal repairs had no effect on the subject's value supported by competent, material, and substantial evidence on the whole record when the tribunal relied solely on MLS pictures and the prior year's assessed value (which assumed the property was in average condition) and ignored the MLS pricing information and the fact that the city required the repairs before it would issue a certificate of occupancy?}
+
+
+% \noindent Appellant answers ``No.'' Appellee answers ``Yes.'' The Court of Appeals answered ``Yes.''
+
+% \subsection{Does the doctrine of the law of the case require that the trial court and the Court of Appeals abide by facts and law settled in the first appeal absent new evidence or new law?}
+
+% \noindent Appellant answers ``Yes.''
+
+% \noindent Appellee answers ``No.''
+
+% \noindent The Court of Appeals answered ``No.''
+
+% \subsection{In its second hearing of the case, did the Court of Appeals violate the doctrine of the law of the case when it affirmed the Tax Tribunal's departure from facts and law settled in the first appeal, when the departure was not based on new evidence or newly created law?}
+
+% \noindent Appellant answers ``Yes.''
+
+% \noindent Appellee answers ``No.''
+
+% \noindent The Court of Appeals answered ``No.''
+
+% \subsection{Does nonconsideration under \mathieuGast\ not apply for repairs done by the buyer in the year of a sale?}
+
+% \noindent Appellant answers ``No.''
+
+% \noindent Appellee answers ``Yes.''
+
+% \noindent The Court of Appeals answered ``Yes.''
+
+
+
+
+% \begin{enumerate}
+% \item Did the Court of Appeals err when it affirmed Does the Law of the Case doctrine preclude of the 
+
+%   \mathieuGast\ does not cover repairs by a new owner in the year of a sale,
+% \item the tribunal did not violate the law of the case, and 
+% \item the tribunal properly found that the repairs did not affect the property's value,
+% \item the tribunal's rejection of the purchase price was proper?
+% \end{enumerate}
+\newpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+Since 2016 Appellant has been trying to get the property tax protection of the Mathieu-Gast act, \mathieuGast, for repairs he made to a house that he bought and repaired in 2015. It has been difficult. So far, the Tax Tribunal has refused to apply nonconsideration treatment because it found, at various times in this litigation, that:
+
+\begin{itemize}
+\item Appellant bought the house in too poor of a condition,\footnote{``It is undisputed that, when he purchased the property, [the house] was in substandard condition and required numerous repairs to make it livable. Patru completed the required repairs on the property as of December 31, 2015.''
+\pincite{Patru I}{1}.
+}
+\item Appellant bought the house from the wrong seller, a government agency,\footnote{``Because the subject was being sold by a government entity, that entity's motivation may
+not have been to receive market value for the property.'' \pincite{Tribunal's Denial of Reconsideration 2}{2}.}
+\item Appellant repaired the house right away instead of waiting until after the new year,\footnote{``While this interpretation may be correct with respect to repairs
+made during a tax year in which there is no transfer of ownership, it cannot apply to repairs made
+during a year in which there was a transfer of ownership . . . Thus, the tribunal correctly
+held that it was required to determine the TCV of the subject property on the basis of its fair market
+value as of December 31, 2015, regardless of any ``normal repairs'' made by petitioner in 2015
+after he purchased the property.'' \pincite{Patru II}{3-4}}
+\item the assessor valued the house too high in the year before Appellant bought the house,\footnote{``the
+assessment did not consider the ``normal repairs.'' This is supported by the fact that the
+property record card indicates that Respondent believed the true cash value of the
+subject to be \$48,000 before Petitioner purchased the property . . .'' \pincite{Tribunal's Denial of Reconsideration 2}{2}.}
+\item the State Tax Commission did not require the nonconsideration treatment, or if it did, the Tribunal was not bound to follow its guidelines,\footnote{``Although State Tax
+Commission Bulletin No. 7 of 2014 requires ``before'' and ``after'' appraisals, such appraisals are only
+required . . . In addition, STC guidance lacks the force of law.'' \pincite{Tribunal's Denial of Reconsideration 2}{2 n 7}.} and 
+\item the house was in average condition when Appellant bought it and did not need the repairs.\footnote{``The tribunal reviewed petitioner's Multiple Listing Service (MLS) printouts and
+photographs for both the subject property and comparable properties. The tribunal found that
+petitioner's MLS listing for the subject property showed a property in `average' condition, and
+that petitioner's photographs of the property, before any repairs, showed `a property that is livable
+and habitable with reasonable marketability and appeal.' '' \pincite{Patru II}{5}.}
+\end{itemize}
+
+Appellant is now asking the Supreme Court to clarify what the standards are for resolving a Mathieu-Gast case. There are no  appellate cases to help in applying the Mathieu-Gast Act in particular, or at least the Courts and the parties have not cited any. And because the case appealed from is seriously deficient, the Supreme Court should not let this case be the guiding case.
+
+\section{Facts}
+
+\subsection{First Appeal before the Tax Tribunal}
+
+This appeal comes as a result of the Appellant trying to take advantage of the Mathieu-Gast Act, \mathieuGast,
+for repairs that he made to a house that he bought in 2015. A Tribunal referee first refused in a Proposed Opinion and Judgment to apply the statute because the house had been in substandard condition before the repairs. \pincite{POJ}{6}.
+
+Appellant filed Exceptions, pointing out that the statute did not depend on the house's condition. \pincite{Exceptions}{4}. Attached with the Exceptions, Appellant submitted a spreadsheet showing that statutory category of each repair. \pincite{Exceptions}{8}.
+
+In his Final Opinion, the Tribunal Judge recognized that the referee had erred, but upheld the referee's conclusion because the written evidence submitted before the case and the referee's Proposed Opinion did not show that Appellant had proved that he had performed normal repairs. \pincite{FOJ 1}{1}. The Tribunal Judge refused to consider Appellant's spreadsheet. \pincite{FOJ 1}{2}.
+
+\subsection{First Appeal Before the Court of Appeals}
+
+Appellant appealed to the Court of Appeals, which reversed. \cite{Patru I}. The Court ruled that the referee had erred.
+
+\begin{quote}
+  The hearing referee incorrectly interpreted \mathieuGast\ by concluding that because repairs were done to a property in substandard condition, they did not constitute normal repairs. .~.~. This was improper .~.~. Nothing in \mathieuGast\ provides that the repairs .~.~. are not normal repairs in the event that they are performed on a substandard property. Thus by reading a requirement into the statute that was not stated by the legislature, the trial erred .~.~. See \pincite{Mich Ed}{218}\ (stating that nothing will be read into a clear statute that is not within the manifest intention of the Legislature as derived from the language of the statute itself).
+\end{quote}
+\pincite{Patru I}{5}.
+
+The Court disagreed with the Tribunal that Appellant had not proved his case. 
+The Court found that the spreadsheet had listed repairs that qualified for nonconsideration.
+If Appellant's testimony at the hearing had reflected the information in the spreadsheet, then Appellant had proved his case at the hearing. \pincite{Patru I}{5-6}.
+% \begin{quotation}
+%   \label{firstHolding}
+% If the testimony provided was an oral recitation of the
+% information included on the spreadsheet, then Patru presented testimony sufficient to establish
+% that at least some of the repairs constituted normal repairs under MCL 211.27(2), and so the
+% increase in TCV attributed to those repairs should not be considered in the property's TCV for
+% assessment purposes until such time as Patru sells the property.
+
+% However, if Patru merely
+% testified that he did some carpentry, electrical, and masonry repairs and no further explanation of
+% the work that was provided, then he would have arguably failed to support his claim.
+
+% Either way,
+% on the record before this Court, we cannot evaluate the sufficiency of the evidence presented at
+% the hearing. Thus, we conclude that further proceedings are necessary in order to determine
+% whether the repairs were normal repairs within the meaning of MCL 211.27(2).
+
+% Accordingly, we
+% remand to the Tax Tribunal for a rehearing. Further, because the existing record is insufficient to
+% resolve whether the repairs are normal repairs within the meaning of the statute, the parties shall
+% be afforded further opportunity to submit additional proofs. See \pincite{Fisher}{743}
+% (requiring rehearing when it was not clear whether the
+% proofs submitted were sufficient to establish that repair expenditures were normal repairs).
+% \end{quotation}
+% \pincite{Patru I}{5-6} (linebreaks added for readability).
+The Court reasoned that because the referee had misapprehended how to properly apply the statute, she did not fully evaluate the evidence at the hearing. \pincite{Patru I}{5}.
+So the Court remanded for a new hearing to determine whether the repairs were normal under that statute. \pincite{Patru I}{5}.
+
+\subsection{Second Appeal Before the Tax Tribunal}
+
+On remand, the Tribunal Judge Marcus L. Abood ruled that the repairs were normal repairs but still refused to apply nonconsideration because ``Petitioner's property assessment did not change by virtue of the repairs Petitioner made to the subject property.'' \pincite{FOJ 2}{5}.
+Appellant then filed a motion for reconsideration. Tribunal Judge David B. Marmon denied the motion.
+The following is a recap of the arguments presented by the Tribunal.
+
+\subsubsection{J. Abood's 1st Argument: Uncapping exception}
+
+First, the FOJ appeared to claim that nonconsideration did not apply because the property's taxable value was uncapped because of the transfer of ownership.
+It did this in one sentence:
+``the subject property's assessment for 2016 changed based on the sale transaction in August 2015.''
+\pincite{FOJ 2}{5}.
+From this one sentence, it is not clear what the FOJ meant. The FOJ did not mention \cite{MCL 211.27a(3)}.\footnote{\cite[s]{MCL 211.27a(3)}\ provides: ``Upon a transfer of ownership of property after 1994, the property's taxable value for the calendar year following the year of the transfer is the property's state equalized valuation for the calendar year following the transfer.''}
+
+Appellant in his motion to reconsider replied that assessments are done every year and are not triggered by sales. Appellant further offered that if the FOJ meant uncapping, then this was irrelevant because the case was not about uncapping.
+\pincite{Tribunal Motion Reconsider 2}{4}.
+
+Reviewing Tribunal Judge Marmon dropped the reasoning after admitting that
+``the plain language of MCL 211.27(2) prevents an assessor from increasing the true cash value of a property `that is a result of expenditures for normal repairs,' and does not speak to whether a property has been uncapped.''
+\pincite{Tribunal's Denial of Reconsideration 2}{1-2}.
+
+The reason we know that the FOJ here was discussing uncapping is because the Court of Appeals says so and  makes it the centerpiece of its rationale for affirming. ``Initially, we agree with the Tax Tribunal that because there was a transfer of ownership of the
+subject property in 2015, MCL 211.27(2) did not prohibit the assessor from considering the impact
+of any ``normal repairs'' on the property's TCV for purposes of the 2016 tax year.'' \pincite{Patru II}{3}. ``[T]he restriction on consideration of ``normal repairs'' for purposes of calculating
+increases in TCV is intended to apply only while property is owned by the same party, and thus
+would not apply to repairs performed during a year in which ownership of the property is
+transferred.'' \pincite{Patru II}{4}.
+
+\subsubsection{J. Abood's 2nd Argument: The property's condition on tax day controls}
+
+Second, the FOJ said that the property's average condition tax day, December 31, 2015, ``is integral to the market value as of that date.'' \pincite{FOJ 2}{5}.
+
+Appellant replied that he was not contesting that the property was in average condition on tax day, but, ``[w]hen normal repairs have been done, the assessor must remove their contribution to the assessed value.'' \pincite{Tribunal Motion Reconsider 2}{5}.
+The reviewing Tribunal Judge Marmon did not defend this rationale.
+
+\subsubsection{J. Abood's 3rd Argument: Photographs show the property in average condition}
+
+Third, the FOJ said that the MLS photographs show that the property was in average condition, not neglected or vandalized. \pincite{FOJ 2}{5}.
+
+After Appellant replied that this was irrelevant as to whether \mathieuGast\ applied or even as to the issue of whether the house needed repairs, reviewing Tribunal Judge Marmon did not defend this rationale, but instead incorporated it into a new argument (his second) discussed below.
+
+\subsubsection{J. Abood's 4th Argument: The subject's sale has no credibility}
+
+Finally, the FOJ argued that the subject's sale price was given no weight or credibility:
+
+\begin{quote}
+  Petitioner did not contend that his purchase of the subject property was an arm's length sale transaction under the definition of \emph{market value.} The grantor in this bank sale transaction was the U.S. Department of Housing and Urban Development (HUD). Petitioner's purchase price is not the presumptive determination of market value. Therefore, Petitioner's contentions related to his purchase price and ``normal'' repairs are given no weight or credibility in the determination of market value for the subject property.
+\end{quote}
+\pincite{FOJ 2}{6}.
+
+After Appellant replied that the ``whole point of providing evidence of professional marketing efforts is to show that the property sale was a market sale,'' Tribunal Judge Marmon did not sustain this rationale. However he did say that the FOJ did not err ``when it concluded that Petitioner's contentions concerning the purchase price, i.e. the true cash value before repairs, was entitled to no weight or credibility.'' \pincite{Tribunal's Denial of Reconsideration 2}{2}.
+  For support, the Tribunal cited MCL 211.27(6)\footnote{MCL 211.27(6)\ provides ``. . . the purchase price paid in a transfer of property is not the presumptive true cash value of the property transferred. . . .'' The Tribunal actually cited to MCL 211.27(5)\ but this was a typo because this subsection addresses present economic income.} and referred to the property's seller:
+``Because the subject was being sold by a government entity, that entity's motivation may
+not have been to receive market value for the property.''
+\pincite{Tribunal's Denial of Reconsideration 2}{2}.
+
+Thus of the four arguments presented in the FOJ, only the last one was partially sustained by reviewing Tribunal Judge Marmon in his Denial of Reconsideration. Instead, the reviewing Tribunal Judge Marmon offered two of his own arguments.
+
+\subsubsection{J. Marmon's 1st New Argument: Before-repair and after-repair appraisals are not required}
+
+Tribunal Judge Marmon argued that before-repair and after-repair appraisals were not required because Appellant's proof of the before-repair value, the sale of the property, was entitled to no weight or credibility because the seller was a government entity:
+
+\begin{quote}
+  [T]here is nothing in \mathieuGast\ requiring ``before repair'' and ``after repair'' appraisals when determining whether an assessment includes the true cash value of normal repairs.'' Rather, in a proceeding before the Tribunal, Petitioner bears the burden of proof. Further, the Tribunal cannot conclude that the FOJ erred when it
+concluded that Petitioner's contentions concerning the purchase price, i.e. the true cash
+value before repairs, was entitled to no weight or credibility. The selling price of a
+property is not is presumptive true cash value. Despite Petitioner's assertions that the
+marketing efforts for the subject show that the sale was a ``market sale,'' the home was
+being sold by the U.S. Department of Housing and Urban Development (``HUD'').
+Because the subject was being sold by a government entity, that entity's motivation may
+not have been to receive market value for the property.
+\end{quote}
+\pincite{Tribunal's Denial of Reconsideration 2}{2}\ (footnotes removed).
+
+\subsubsection{J. Marmon's 2nd New Argument: an assessor satisfies \mathieuGast\ if she believes that repairs are not necessary to justify the true cash value}
+
+ Finally, the Tribunal seems to argue that the statute can be satisfied by the assessor's subjective belief that appeals to repairs are not necessary to justify the TCV.
+
+  \begin{quote}
+    The Tribunal also concludes that it was not a palpable error to conclude that the
+assessment did not consider the ``normal repairs.'' This is supported by the fact that the
+property record card indicates that Respondent believed the true cash value of the
+subject to be \$48,000 before Petitioner purchased the property
+\footnote{The Tribunal includes the following as footnote 10 at \pincite[s]{Tribunal's Denial of Reconsideration 2}{2}:
+  \begin{quote}
+    In this regard, the Tribunal notes that the property record card shows an assessed value in 2015 of
+\$24,000, and because assessed value is 50\% of true cash value, see MCL 211.27a(1), this means that
+Respondent believed the true cash value of the subject was \$48,000 as of December 31, 2014. See
+MCL 211.2(2).
+\end{quote}
+}
+and \$50,400 as of
+December 31, 2015, after the repairs were complete. An increase of \$2,400 in true
+cash value (5\%) is easily attributable to inflation and increases in the market. In
+addition, as stated by the FOJ, the interior photographs depict a property in average
+condition before Petitioner acquired it. Although not necessarily evidence of true cash
+value, this evidence supports the property's assessment as a property in average
+condition both at the time Petitioner acquired it and after he completed the normal
+repairs. In other words, the record evidence supports the conclusion that the
+assessment did not consider the increase in true cash value that was the result of
+normal repairs.
+\end{quote}
+\pincite[s]{Tribunal's Denial of Reconsideration 2}{2}.
+
+\subsection{Second Appeal Before the Court of Appeals}
+
+Appellant appealed to the Court of Appeals a second time. The Court of Appeals affirmed. 
+
+% If this opinion indicates that it is ``FOR PUBLICATION,'' it is subject to
+% revision until final publication in the Michigan Appeals Reports.
+% STATE OF MICHIGAN
+% COURT OF APPEALS
+% DANIEL PATRU,
+% UNPUBLISHED
+% February 18, 2020
+% Petitioner-Appellant,
+% v
+% No. 346894
+% Tax Tribunal
+% LC No. 16-001828-TT
+% CITY OF WAYNE,
+% Respondent-Appellee.
+% Before: F ORT H OOD , P.J., and B ECKERING and B OONSTRA , JJ.
+% PER CURIAM.
+% Petitioner challenges respondent's assessment of residential property in the city of Wayne
+% for the 2016 tax year. Petitioner purchased the property in August 2015 for \$32,000 and thereafter
+% made approximately \$10,000 worth of repairs to the property. For the 2016 tax year, respondent
+% assessed the property as having a true cash value (TCV) of \$50,400, and a taxable value of \$25,200.
+% Petitioner appealed these assessments to the Michigan Tax Tribunal, which issued a decision in
+% January 2017 upholding the assessments. In a prior appeal, this Court noted that under MCL
+% 211.27(2), an increase in TCV attributable to normal repairs cannot be considered by an assessor
+% until property is sold, and because the record was insufficient to determine whether the repairs
+% performed by petitioner qualified as normal repairs, this Court reversed and remanded for further
+% proceedings ``to determine whether the repairs were normal repairs within the meaning of MCL
+% 211.27(2).'' Patru v City of Wayne, unpublished per curiam opinion of the Court of Appeals, issued
+% May 8, 2018 (Docket No. 337547) (``Patru I''), p 5. On remand, the tribunal agreed that petitioner's
+% repairs qualified as ``normal repairs,'' but determined that respondent's assessment of the
+% property's TCV was proper because of the 2015 change in ownership. The tribunal further found,
+% however, that petitioner's repairs, which were intended primarily to ready the property as rental
+% property, did not affect the assessed TCV value of the property in any event. Accordingly, the
+% tribunal again established the TCV of petitioner's property at \$50,400, and the taxable value at
+% \$25,200, for the 2016 tax year. Petitioner again appeals as of right, and we now affirm.
+% In Briggs Tax Serv, LLC v Detroit Pub Sch, 485 Mich 69, 75; 780 NW2d 753 (2010), our
+% Supreme Court explained:
+% -1-The standard of review of Tax Tribunal cases is multifaceted. If fraud is
+% not claimed, this Court reviews the Tax Tribunal's decision for misapplication of
+% the law or adoption of a wrong principle. We deem the Tax Tribunal's factual
+% findings conclusive if they are supported by ``competent, material, and substantial
+% evidence on the whole record.'' But when statutory interpretation is involved, this
+% Court reviews the Tax Tribunal's decision de novo. [Footnotes omitted.]
+% A tax exemption statute must generally be narrowly construed in favor of the taxing authority, and
+% this Court generally defers to the Tax Tribunal's interpretation of a statute it is charged with
+% administering and enforcing, but these rules do ``not permit a strained construction adverse to the
+% Legislature's intent.'' Moshier v Whitewater Twp, 277 Mich App 403, 409; 745 NW2d 523 (2007).
+% Petitioner argues that under MCL 211.27(2), the tribunal should have determined the TCV
+% of his property without regard to any ``normal repairs'' he made to the property after he purchased
+% it in August 2015. At the time relevant to this appeal, MCL 211.27(2) provided: 1
+% (2) The assessor shall not consider the increase in true cash value that is a
+% result of expenditures for normal repairs, replacement, and maintenance in
+% determining the true cash value of property for assessment purposes until the
+% property is sold. For the purpose of implementing this subsection, the assessor shall
+% not increase the construction quality classification or reduce the effective age for
+% depreciation purposes, except if the appraisal of the property was erroneous before
+% nonconsideration of the normal repair, replacement, or maintenance, and shall not
+% assign an economic condition factor to the property that differs from the economic
+% condition factor assigned to similar properties as defined by appraisal procedures
+% applied in the jurisdiction. The increase in value attributable to the items included
+% in subdivisions (a) to (o) that is known to the assessor and excluded from true cash
+% value shall be indicated on the assessment roll. This subsection applies only to
+% residential property. The following repairs are considered normal maintenance if
+% they are not part of a structural addition or completion:
+% (a) Outside painting.
+% (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
+% (c) Repainting, repairing, or replacing existing masonry.
+% (d) Replacing awnings.
+% (e) Adding or replacing gutters and downspouts.
+% (f) Replacing storm windows or doors.
+% 1
+% MCL 211.27(2) was amended by 2019 PA 116, effective November 15, 2019, to add subsection
+% (p), which addresses the installation, replacement, or repair of an alternative energy system.
+% -2-(g) Insulating or weatherstripping.
+% (h) Complete rewiring.
+% (i) Replacing plumbing and light fixtures.
+% (j) Replacing a furnace with a new furnace of the same type or replacing an
+% oil or gas burner.
+% (k) Repairing plaster, inside painting, or other redecorating.
+% (l) New ceiling, wall, or floor surfacing.
+% (m) Removing partitions to enlarge rooms.
+% (n) Replacing an automatic hot water heater.
+% (o) Replacing dated interior woodwork. [Emphasis added.]
+
+\subsubsection{COA's 1st argument: Uncapping exception}
+
+The first argument by the Court of Appeals is an expansion of Tribunal Judge Abood's first argument above. The Court's argument is effectively summarized in its conclusion:
+
+\begin{quotation}
+Because petitioner purchased the subject property in August 2015, the taxable value of the
+property became uncapped between August 2015 and December 31, 2015, and, for the 2016 tax
+year, the assessor was required to determine the property's TCV as of December 31, 2015.
+
+Petitioner argues that under MCL 211.27(2), respondent can consider the value added by ``normal
+repairs'' only when petitioner sells the property, because the statute states that ``[t]he assessor shall
+not consider the increase in true cash value that is a result of expenditures for normal repairs,
+replacement, and maintenance in determining the true cash value of property for assessment
+purposes until the property is sold.''
+
+While this interpretation may be correct with respect to repairs
+made during a tax year in which there is no transfer of ownership, it cannot apply to repairs made
+during a year in which there was a transfer of ownership because ``the property's taxable value for
+the calendar year following the year of the transfer is the property's state equalized valuation for
+the calendar year following the transfer,'' MCL 211.27a(3), which in turn is ``determined as of each
+December 31 of the immediately preceding year,'' MCL 211.2(2).
+
+Thus, the tribunal correctly
+held that it was required to determine the TCV of the subject property on the basis of its fair market
+value as of December 31, 2015, regardless of any ``normal repairs'' made by petitioner in 2015
+after he purchased the property.
+\end{quotation}
+\pincite{Patru II}{3-4}\ (linebreaks added to improve readability).
+
+
+
+
+  
+% Initially, we agree with the Tax Tribunal that because there was a transfer of ownership of the
+% subject property in 2015, MCL 211.27(2) did not prohibit the assessor from considering the impact
+% of any ``normal repairs'' on the property's TCV for purposes of the 2016 tax year.
+% The taxable status of real property for a given tax year is ``determined as of each December
+% 31 of the immediately preceding year.'' MCL 211.2(2). Generally, property is assessed at 50\% of
+% its true cash value[.]'' MCL 211.27a(1). However, the ``taxable value'' of property is subject to
+% ``capping,'' meaning it is limited to the property's taxable value in the immediately preceding year,
+% subject to certain allowable adjustments. MCL 211.27a(2)(a); Const 1963, art 9, \S 3. 2 However,
+% upon a transfer of ownership of property, the taxable value is ``uncapped,'' meaning ``the property's
+% taxable value for the calendar year following the year of the transfer is the property's state
+% equalized valuation for the calendar year following the transfer.'' MCL 211.27a(3). The taxable
+% value does not become capped again until the end of the calendar year following the transfer of
+% ownership. MCL 211.27a(4); Michigan Props, LLC v Meridian Twp, 491 Mich 518, 530; 817
+% NW2d 548 (2012). Thus, because petitioner purchased the property in 2015 (i.e., there was a
+% transfer of ownership), the property's taxable value for the 2016 tax year was to be determined by
+% its actual assessed value as of December 31, 2015, without regard to any capping limitations.
+% While MCL 211.27(2) does not expressly provide that it does not apply to ``normal repairs''
+% performed during a year when ownership of property is transferred (i.e., the taxable value becomes
+% uncapped), the statute must be read in conjunction with other provisions of the General Property
+% ``[B]efore ownership of property is transferred, its taxable value may increase no more than the
+% lesser of the rate of inflation or five percent.'' Lyle Schmidt Farms, LLC v Mendon Twp, 315 Mich
+% App 824, 831; 891 NW2d 43 (2016). Once ownership of the property is transferred, its taxable
+% value is ``uncapped,'' see id., and its taxable value for the year following the transfer is determined
+% by the property's actual value, MCL 211.27a(3).
+% 2
+% -3-Tax Act, MCL 211.1 et seq., and Const 1963, art 9, \S 3. See Bloomfield Twp v Kane, 302 Mich
+% App 170, 176; 839 NW2d 505 (2013) (statutes that relate to the same matter are considered to be
+% in pari materia and must be read together as a whole). It is apparent that MCL 211.27(2) was
+% adopted to distinguish ``normal repairs'' or property maintenance from other improvements (e.g.,
+% ``additions'') that increase the value of property as long as the property is owned by the same party.
+% In Toll Northville LTD v Twp of Northville, 480 Mich 6, 12; 743 NW2d 902 (2008), our Supreme
+% Court, quoting WPW Acquisition Co v City of Troy, 466 Mich 117, 121-122; 643 NW2d 692
+% (2001), observed that the purpose of Const 1963, art 9, \S 3, as amended in 1994 by Proposal A, is
+% to generally limit increases in property taxes on a parcel of property, as long as it
+% remains owned by the same party, by capping the amount that the ``taxable value''
+% of the property may increase each year , even if the ``true cash value,'' that is, the
+% actual market value, of the property rises at a greater rate. However, a qualification
+% is made to allow adjustments for ``additions.''
+% As indicated, however, when property is sold, it becomes ``uncapped'' and the property's value for
+% the following tax year is determined by its value as of December 31 of the preceding year. In other
+% words, the property's TCV for the tax year following a transfer of ownership is determined by its
+% value as of December 31 of the calendar year in which the transfer of ownership occurred.
+% Accordingly, the restriction on consideration of ``normal repairs'' for purposes of calculating
+% increases in TCV is intended to apply only while property is owned by the same party, and thus
+% would not apply to repairs performed during a year in which ownership of the property is
+% transferred. Rather, the taxable value of property for the tax year following a transfer of ownership
+% would be 50\% of the property's TCV as of December 31 of the immediately preceding year (i.e.,
+% the year there was a transfer of ownership). MCL 211.2(2); MCL 211.27a(1) and (3).
+% TCV ``means the usual selling price at the place where the property to which the term is
+% applied is at the time of assessment, being the price that could be obtained for the property at a
+% private sale, and not at auction sale except as otherwise provided in this section, or at forced sale.''
+% MCL 211.27(1). TCV is synonymous with fair market value. Pontiac Country Club v Waterford
+% Twp, 299 Mich App 427, 434-435; 830 NW2d 785 (2013).
+
+
+% Because petitioner purchased the subject property in August 2015, the taxable value of the
+% property became uncapped between August 2015 and December 31, 2015, and, for the 2016 tax
+% year, the assessor was required to determine the property's TCV as of December 31, 2015.
+% Petitioner argues that under MCL 211.27(2), respondent can consider the value added by ``normal
+% repairs'' only when petitioner sells the property, because the statute states that ``[t]he assessor shall
+% not consider the increase in true cash value that is a result of expenditures for normal repairs,
+% replacement, and maintenance in determining the true cash value of property for assessment
+% purposes until the property is sold.'' While this interpretation may be correct with respect to repairs
+% made during a tax year in which there is no transfer of ownership, it cannot apply to repairs made
+% during a year in which there was a transfer of ownership because ``the property's taxable value for
+% the calendar year following the year of the transfer is the property's state equalized valuation for
+% the calendar year following the transfer,'' MCL 211.27a(3), which in turn is ``determined as of each
+% December 31 of the immediately preceding year,'' MCL 211.2(2). Thus, the tribunal correctly
+% held that it was required to determine the TCV of the subject property on the basis of its fair market
+% -4-value as of December 31, 2015, regardless of any ``normal repairs'' made by petitioner in 2015
+% after he purchased the property.
+
+% \subsubsection{COA's 2nd argument: The law of the case does not apply because the issue of transfer of ownership}
+
+%   Petitioner seems to rely on the law-of-the-case doctrine to argue that under Patru I, the
+% tribunal was required to determine whether petitioner's repairs qualified as ``normal repairs'' and
+% was further prohibited from considering the impact of any ``normal repairs'' in determining the
+% property's TCV for purposes of the 2016 tax year. In Lenawee Co v Wagley, 301 Mich App 134,
+% 149-150; 836 NW2d 193 (2013), this Court explained:
+% ``The law of the case doctrine holds that a ruling by an appellate court on a
+% particular issue binds the appellate court and all lower tribunals with respect to that
+% issue.'' New Props, Inc v George D Newpower, Jr, Inc, 282 Mich App 120, 132;
+% 762 NW2d 178 (2009) (quotation marks and citation omitted). ``[I]f an appellate
+% court has passed on a legal question and remanded the case for further proceedings,
+% the legal questions thus determined by the appellate court will not be differently
+% determined on a subsequent appeal in the same case where the facts remain
+% materially the same.'' Id. (quotation marks and citation omitted; alteration in
+% original). The doctrine is applicable ``only to issues actually decided, either
+% implicitly or explicitly, in the prior appeal.'' Grievance Administrator v Lopatin,
+% 462 Mich 235, 260; 612 NW2d 120 (2000). ``The primary purpose of the doctrine
+% is to maintain consistency and avoid reconsideration of matters once decided during
+% the course of a single continuing lawsuit.'' Ashker v Ford Motor Co, 245 Mich App
+% 9, 13; 627 NW2d 1 (2001).
+% In Patru I, this Court did not resolve whether petitioner's 2015 repairs to the property could or
+% could not be considered in determining the property's TCV for the 2016 tax year, but instead
+% determined that ``further proceedings are necessary to determine whether the repairs were normal
+% repairs within the meaning of MCL 211.27(2).'' Id., unpub op at 5. More significantly, this Court
+% did not address the effect of the property's transfer of ownership in 2015 on the tribunal's
+% consideration of ``normal repairs'' under MCL 211.27(2) for purposes of the 2016 tax year.
+% Because this issue was not actually addressed and decided in the prior appeal, the law-of-the-case
+% doctrine does not apply.
+
+
+\subsubsection{COA's 2nd argument: repairs did not affect the TCV}
+
+After discussing the law of the case (which Appellant is not appealing here) the Court of Appeals next argued Tribunal Judge Marmon's second argument shown above.
+
+\begin{quotation}
+  Petitioner further argues that the tribunal erred by also finding that, regardless of the proper
+construction of MCL 211.27(2), petitioner's repairs did not have any bearing on the property's
+TCV, which was determined to be \$50,400 as of December 31, 2015.
+
+We again disagree. The
+tribunal did not credit petitioner's argument that the property was in substandard condition when
+he purchased it. The tribunal reviewed petitioner's Multiple Listing Service (MLS) printouts and
+photographs for both the subject property and comparable properties. The tribunal found that
+petitioner's MLS listing for the subject property showed a property in ``average'' condition, and
+that petitioner's photographs of the property, before any repairs, showed ``a property that is livable
+and habitable with reasonable marketability and appeal.'' The tribunal noted that the purpose of
+petitioner's repairs was ``to ready the property as a tenant rental.''
+
+It is undisputed that the assessed
+TCV of the property for the 2015 tax year was \$48,000. Given this evidence, it was appropriate
+for the tribunal to draw conclusions about the value of the property before and after petitioner's
+purchase, specifically, that the prior year's assessment of \$48,000 was reflective of the property's
+TCV before petitioner purchased it, that an increase of \$2,400 could be attributed to inflation and
+-5-increases in the market, and that petitioner's ``normal repairs'' were not attributable to the
+property's substandard condition, but rather were intended primarily to prepare the property as
+rental property.
+
+The tribunal concluded that the ``evidence supports the property's assessment as
+a property in average condition both at the time Petitioner acquired it and after he completed the
+normal repairs,'' and that ``the assessment did not consider the increase in true cash value that was
+the result of normal repairs.''
+\end{quotation}
+\pincite{Patru II}{5-6}\ (linebreaks added for readability).
+
+\subsubsection{COA's 3rd argument: The STC supports an uncapping exception}
+
+Next the Court of Appeals argues that the STC supports an uncapping exception.
+
+\begin{quotation}
+We reject petitioner's argument that the tribunal was required to calculate the property's
+TCV using a ``before repairs'' appraisal and an ``after repairs'' appraisal. Petitioner's reliance on
+the State Tax Commission's 2014 Bulletin No. 7 in support of this argument is misplaced. Indeed,
+page 3 of the Bulletin states:
+
+\begin{quote}
+  The exemption for normal repairs, replacements and maintenance ends in
+the year after the owner who made the repairs, replacements and maintenance sells
+the property. \emph{In the year following a sale, the assessed value shall be based on the
+true cash value of the entire property.} The amount of assessment increase
+attributable to the value of formerly exempt property returning to the assessment
+roll is new for equalization purposes. (Emphasis added by the Court.)
+\end{quote}
+
+As already explained, because the taxable value of the subject property was uncapped due to the
+transfer of ownership in 2015, and respondent was permitted to assess the property on the basis of
+its actual TCV as of December 31, 2015, there was no need to determine the property's values
+before and after petitioner's ``normal repairs'' in 2015.
+\end{quotation}
+\pincite{Patru II}{6}.
+
+
+\subsubsection{COA's 4th argument: The Tribunal made its own independent, determination of the TCV}
+
+In response to Appellant's claim in his appeal brief at 17 that Tribunal Judge Marmon's 1st argument violated the teaching \pincite{Jones & Laughlin}{354-346}, that  ``Even if the tribunal had correctly concluded that petitioner's proofs had failed, the tribunal still would be required to make an independent determination .~.~.'' the Court of Appeals argued that the Tribunal had made its independent determination when it analyzed Respondent's sale-comparision data.
+
+\begin{quotation}
+  Petitioner also argues that the tribunal erred by failing to make its own independent
+determination of the property's TCV. See \pincite[l]{Jones & Laughlin}{354-356}.
+% Steel Corp v City of Warren, 193 Mich App 348, 354-356; 483 NW2d 416 (1992).
+The record does not support this argument. The
+tribunal evaluated the evidence and proposed valuation methods offered by both parties. The
+tribunal found that ``[r]espondent's sales comparison approach is the most reliable and credible
+valuation evidence which also supports the assessment and 2016 uncapping of the subject
+property.'' The tribunal did not just automatically accept respondent's valuation. Rather, it
+analyzed respondent's sales-comparison data and found that ``a reasoned and reconciled
+determination of market value is obtainable from Respondent's sales,'' which it concluded
+``supports the assessment and 2016 uncapping of the subject property.''
+\end{quotation}
+\pincite{Patru II}{6}.
+
+\subsubsection{COA's 5th argument: The Tribunal's rejection of the purchase price was proper}
+
+Finally the Court of Appeals argues that the Tribunal did not err in rejecting the subject's purchase price because it gave greater weight to the Respondent's evidence.
+
+\begin{quotation}
+  Petitioner further argues that the tribunal erred by rejecting his 2015 purchase price of the
+  property as determinative of its TCV. \cite{MCL 211.27(6)} provides:
+
+  \begin{quote}
+Except as otherwise provided in subsection (7), the purchase price paid in a
+transfer of property is not the presumptive true cash value of the property
+transferred. In determining the true cash value of transferred property, an assessing
+officer shall assess that property using the same valuation method used to value all
+other property of that same classification in the assessing jurisdiction. As used in
+this subsection and subsection (7), ``purchase price'' means the total consideration
+agreed to in an arms-length transaction and not at a forced sale paid by the purchaser
+of the property, stated in dollars, whether or not paid in dollars.
+\end{quote}
+
+%-6-
+In this case, the tribunal considered petitioner's evidence of the 2015 purchase price for the
+property, but it also considered the nature of the sale, which involved a bank sale in which the
+grantor was the United States Department of Housing and Urban Development. The tribunal found
+that the seller was not necessarily motivated to receive market value for the property and that the
+property's purchase price was not presumptive of its TCV. The tribunal instead gave greater
+weight to the evidence submitted by respondent in support of its sales-comparison approach to
+valuation, which was based on sales of five properties similar in age and with comparable square
+footage, style, siding, and condition. The tribunal found that respondent's evidence provided ``the
+most reliable and credible valuation evidence'' and supported respondent's assessment of the
+subject property.
+\end{quotation}
+\pincite{Patru II}{5-6}.
+
+\subsubsection{Motion for Reconsideration}
+
+Appellant filed a motion for reconsideration. Appellee answered it. But Court denied it without comment.
+
+% In sum, petitioner has not shown that the Tax Tribunal committed an error of law or that
+% its decision is not supported by competent, material, and substantial evidence on the whole record.
+% Accordingly, we affirm its decision.
+% Affirmed.
+% /s/ Karen M. Fort Hood
+% /s/ Jane M. Beckering
+% /s/ Mark T. Boonstra
+% -7-
+
+\section{Mathieu-Gast Statute -- MCL 211.27(2)}
+\begin{quotation}
+The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold.
+
+For the purpose of implementing this subsection, the assessor shall not increase the construction quality classification or reduce the effective age for depreciation purposes, except if the appraisal of the property was erroneous before nonconsideration of the normal repair, replacement, or maintenance, and shall not assign an economic condition factor to the property that differs from the economic condition factor assigned to similar properties as defined by appraisal procedures applied in the jurisdiction.
+
+The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll.
+
+This subsection applies only to residential property.
+
+The following repairs are considered normal maintenance if they are not part of a structural addition or completion: [repairs (a)-(o) omitted]
+
+% (a) Outside painting.
+% (b) Repairing or replacing siding, roof, porches, steps, sidewalks, or drives.
+% (c) Repainting, repairing, or replacing existing masonry.
+% (d) Replacing awnings.
+% (e) Adding or replacing gutters and downspouts.
+% (f) Replacing storm windows or doors.
+% (g) Insulating or weatherstripping.
+% (h) Complete rewiring.
+% (i) Replacing plumbing and light fixtures.
+% (j) Replacing a furnace with a new furnace of the same type or replacing an oil or gas burner.
+% (k) Repairing plaster, inside painting, or other redecorating.
+% (l) New ceiling, wall, or floor surfacing.
+% (m) Removing partitions to enlarge rooms.
+% (n) Replacing an automatic hot water heater.
+% (o) Replacing dated interior woodwork.
+\end{quotation}
+
+
+\section{Argument: Once it finds that the current owner made normal repairs, the Tribunal must make an independent, fact-based determination of the before-repair and after-repair value of the property}
+
+When reviewing Tribunal cases, a reviewing court looks for misapplication of the law or adoption of a wrong principle. Statutory interpretation is reviewed de novo. \pincite{Briggs}{75; 757-758}. 
+
+\subsection{The plain words of the statute show that the value added by the repairs must be determined}
+
+The argument that \mathieuGast\ requires before-repair and after-repair appraisals starts with the language of the statute, specifically the sentence: ``The increase in value attributable to the items included in subdivisions (a) to (o) that is known to the assessor and excluded from true cash value shall be indicated on the assessment roll.'' The statute says that the increase attributable to the normal repairs ``\emph{shall be indicated} on the assessment roll.''
+
+There is no leeway in the statute that allows an assessor to simply ignore normal repairs. She must indicate their value on the assessment roll. And she cannot do that without valuing them.
+
+How must the repairs be valued?
+
+In 1987, the Court of Appeals addressed this in \cite{Fisher}. At the time, the Mathieu-Gast statute provided:
+
+\begin{quote}
+The assessor, beginning December 31, 1976, \emph{shall not consider expenditures for normal repairs, replacement, and maintenance in determining the true cash value of property for assessment purposes until the property is sold.} Value attributable to the items included in subdivisions (a) to (o) which is known to the assessor and excluded from true cash value shall be indicated on the assessment roll. This subsection shall apply only to residential property. The following repairs shall be considered normal maintenance if they are not part of a structural addition or completion: . . .
+[emphasis added by the Court in \emph{Fisher}]
+\end{quote}
+
+The argument in \cite[s]{Fisher}\ was whether the actual expenditures should be used for nonconsideration or if should be 
+the contribution to the total cash value of the property should be used. The Court said that the actual expenditures should be used. ``We conclude that the use of the phrase "value attributable" simply refers to "expenditures" and does not constitute a separate meaning therefrom.'' \pincite{Fisher}{741}. 
+
+In this case, the statute is different. Instead of ``expenditures for normal repairs'' today's statute reads ``the increase in true cash value that is a result of expenditures for normal repairs.'' It is clear that the nonconsideration amount is the value added, or the difference in value between the property before the repairs and after the repairs.
+
+\subsection{\emph{Jones & Laughlin}\ teaches that the Tribunal must make its own independent findings of fact}
+
+Once a petitioner has presented evidence, the Tribunal must make an independent determination of the true cash value at issue, even if the evidence is unconvincing. In \cite[s]{Jones & Laughlin}, this Court reversed when the Tribunal violated this rule:
+
+\begin{quotation}
+The tribunal further erred in failing to make an independent determination of the true cash value of the property. The tribunal apparently believed that no such determination was necessary after it concluded that petitioner had failed to meet its burden of proof and dismissed petitioner's appeal. The tribunal correctly noted that the burden of proof was on petitioner, This burden encompasses two separate concepts: (1) the burden of persuasion, which does not shift during the course of the hearing; and (2) the burden of going forward with the evidence, which may shift to the opposing party. The tribunal's decision, however, seems analogous to the entry of a directed verdict upon the failure of a plaintiff's proofs. To the extent this analogy may be accurate in this case, the entry of judgment against petitioner for its failure to provide sufficient evidence was erroneous because, while petitioner may not have met its burden of persuasion, it did meet its burden of going forward with evidence.
+	
+Even if the tribunal had correctly concluded that petitioner's proofs had failed, the tribunal still would be required to make an independent determination of the true cash value of the property. The tribunal may not automatically accept a respondent's assessment, but must make its own findings of fact and arrive at a legally supportable true cash value. .~.~. On remand, the tribunal shall make an independent determination of true cash value.
+\end{quotation}
+\pincite[s]{Jones & Laughlin}{354-356}\ (cleaned up).
+
+Although the Court in \cite[s]{Jones & Laughlin}\ was addressing a normal valuation case and not a case involving nonconsideration treatment, there is no reason not to apply the teaching here. A taxpayer should not lose the protection of an independent determination simply because he made normal repairs.
+
+\subsection{\cite{MCL 211.27a(3)}\ does not affect \mathieuGast}
+
+Tribunal Judge Abood and the Court of Appeals have ruled that there is an uncapping exception to \mathieuGast. This confuses the Mathieu-Gast Act with the changes brought about to the tax law because of Proposal A. 
+
+\subsubsection{Mathieu-Gast is different from Proposal A}
+
+The Mathieu-Gast Act, \mathieuGast, was meant ``to encourage both owners of homes in which they reside and owners of homes which they rent to others to maintain and imporve their properties with no resulting property tax increase.'' \pincite{Kohn}{12}.
+Former Tribunal Judge Susan Grimes Width reached this conclusion after examining the bill's legislative history:
+  \begin{quotation}
+    The Analysis of House Bill 628131 [House Legislative Analysis Section, Second Analysis, House Bill 6281 (as enrolled) 12-23-76] lists as one of the ``Arguments For'' the bill a section titled
+``Urban blight,'' which states:
+\begin{quote}
+  . . . the spreading deterioration of residential and business property -- contributes
+heavily to the decay of contemporary cities. People are reluctant to remain in
+neighborhoods full of ugly, run-down houses, and they dislike doing business in
+areas where commercial property is not kept attractive. If the bill becomes law,
+homeowners and landlords would know exactly what they could do to their
+properties without running the risk of higher taxes, and they would be encouraged
+to maintain and beautify them. Eventually, people would not feel it is necessary to
+move out of the cities to find attractive places to live.
+\end{quote}
+
+In defining the problem the same analysis states ``[m]any contend that if the law contained
+specific instructions concerning what assessors should not consider when setting cash value,
+property owners would be encouraged to beautify their homes and perform regular
+maintenance.''
+\end{quotation}
+\pincite{Kohn}{12}.
+
+On the other hand, Proposal A was designed to limit tax increases generally.
+
+\begin{quotation}
+  In 1994, voters passed Proposal A, amending article 9, \S 3 of the Michigan Constitution to limit the annual increase in
+property tax assessments and to authorize enabling legislation. The purpose of Proposal A was to limit tax increases on
+property as long as it remains owned by the same party, even though the actual market value of the property may have
+risen at a greater rate. Toll Northville Ltd. v. Northville Twp., 480 Mich. 6, 12, 743 N.W.2d 902 (2008). The Michigan
+Legislature was charged with determining the specifics needed to give effect to Proposal A's mandate. See Const 1963, art
+9, \S 3 (providing for the reassessment of a parcel's value when ownership has been transferred "as defined by law")
+(emphasis added). The 1995 amendments of the GPTA [2] fixed the cap on assessment increases at the lesser amount of
+either 5 percent of the assessed value of the property for the previous year or the increase in the rate of inflation from theprevious year. MCL 211.27a(2). After certain "transfer[s] of ownership" occur, however, property becomes uncapped and
+thus subject to reassessment based on actual property value. MCL 211.27a(3). [3]
+\end{quotation}
+\pincite{Klooster}{584}.
+
+The two schemes are very different. They were implemented at different times: Mathieu-Gast was enacted in the late 1970s; Proposal A, in the 1990s. They use different statutes. Mathieu-Gast uses \mathieuGast; Proposal A uses \cite{MCL 211.27a(3)}. They use different terms and mechanisms. Mathieu-Gast is written in terms of normal repairs whose value added to the true cash value is not considered but indicated on the assessment roll until the property is sold. Proposal A is written in terms of Taxable Value which is capped and lags behind the Assessed Value until the tax day after the transfer, at which time the Taxable Value is uncapped.
+
+\subsubsection{The plain language of Mathieu-Gast does not allow for an uncapping exception}
+
+The Mathieu-Gast requires nonconsideration treatment%
+\footnote{\label{nonconsiderationTreatmentFn}The term ``nonconsideration treatment'' is not in the statute itself, but is used to explain the statute in \cite{STC Bulletin}. The term is a shorthand for the statute's requirement that the value added by normal repairs be ``indicated on the assessment roll'' but not considered ``in determining the true cash value of the property for assessment purposes until the property is sold.''}
+for normal repairs ``until the property is sold.'' The word ``until'' means that there must be a sale \emph{after} the repairs to cause nonconsideration treatment to end. But the Tribunal and the Court of Appeals ignore the word ``until'' and refuse to require nonconsideration treatment because of a sale that occurs \emph{before} the repairs but in the same year. This is violates the plain language of the statute.
+
+\subsection{The Tribunal may not presume that the prior year's true cash value is the before-repair value}
+
+The Tribunal may not presume that the prior year's true cash value is the before-repair value. This case illustrates the danger of doing so. The assessor in this case testified that her assessments are done using mass appraisal which ``does not account for properties one-by-one'', but rather she ``{\em assumes} that properties are in `average' condition.'' \pincite{FOJ 2}{4}\ (emphasis added). Thus the prior year's true cash value assessment of \$48,000 was based on an assumption, not evidence.
+
+Even if the prior year's TCV were reliable, its use would violate the Tribunal's duty to make an independent determination of value. The Tribunal would be assuming the taxing authority's conclusion rather than using more basic fact about sales to make its own conclusion. Allowing the Tribunal to presume the correctness of the prior year's TCV would short-circuit the value determination process not just in Mathieu-Gast cases, but also in other cases. Instead of using sales studies to derive valuations from scratch, the Tribunal could just start with the prior year's TCV and make adjustments up or down. This would perpetuate assessing errors.
+
+Is the TCV always factual determination? 
+May the Tribunal use the prior year's TCV to determine, as a matter of law, the TCV at issue? No. 
+In this case, the prior year's TCV reflected the value of the property in good or average condition. This was not a result of the assessor's personal inspection. On the contrary, the assessor testified that mass appraisal assumes the property was in normal condition. Nevertheless, the Tribunal used the prior year's TCV in two ways: First, the Tribunal found that the assessor did not consider the value added by the repairs because she simply adjusted the previous year's TCV for inflation without regard to repairs. Second and alternatively, the Tribunal determined that the value of the repairs was zero because the prior TCV, when the property was unrepaired, is, adjusted for inflation, the same as the current TCV, when the property is repaired.
+
+\subsection{The STC teaches that before-repair and after-repair appraisals should be performed}
+
+Contrary to the assertion of the Court of Appeals, its interpretation of Mathieu Gast is unsupported by the State Tax Commission. Its opinion on page 6 cites, with its own emphasis, \pincite{STC Bulletin}{3}:
+
+\begin{quote}
+The exemption for normal repairs, replacements and maintenance ends in the year after the
+owner who made the repairs, replacements and maintenance sells the property. \emph{In the year
+following a sale, the assessed value shall be based on the true cash value of the entire property.}
+The amount of assessment increase attributable to the value of formerly exempt property
+returning to the assessment roll is new for equalization purposes.
+\end{quote}
+
+The Court reads just the second, emphasized, sentence out of its context. The first sentence of the paragraph gives the topic: ``The exemption .~.~. ends in the year after \emph{the owner who made the repairs} .~.~. sells the property.'' In this context, the second sentence's ``entire property'' means the property with the seller's repairs considered.
+The buyer's repairs are not in the paragraph's scope.%
+\footnote{The opinion of the Court of Appeals at 6 uses this out-of-context quote to justify its holding that before-repair and after-repairs appraisals were not required.}
+
+\subsection{The Court of Appeals erred when it equated TCV with fair market value regardless of any normal repairs}
+
+The Court of Appeals erred in its analysis when it equated true cash value with fair market value ``regardless of any ``normal repairs'' made by petitioner in [the year of purchase].'' \pincite{Patru II}{5}. \mathieuGast\ is part of the section (MCL 211.27) which defines true cash value. It explicitly excludes from the true cash value for assessment purposes the value added by normal repairs.
+  
+% \section{Argument: After it found normal repairs, the Tribunal did not make an independent, fact-based determination of the before-repair and after-repair value of the property}
+
+% The Tribunal's per-se dismissal of the purchase price violates \cite{Jones & Laughlin}.
+
+
+\section{Relief}
+
+Therefore, under \cite{MCR 7.305(B)(3)}, \cite{MCR 7.305(B)(5a)}, and \cite{MCR 7.305(B)(5b)}, this Court should take up this case on appeal.
+
+\needspace{6\baselineskip}
+% \section{Proof of Service}
+
+% I certify that I served a copy of these Exceptions on Respondent's representative, Emily Pizzo, by email on the same day I emailed them to the tribunal.
+
+\vspace{1\baselineskip}
+
+{ \setlength{\leftskip}{3.5in}
+%\singlespacing
+  Respectfully Submitted,
+
+  /s/ Daniel Patru, P74387
+
+\today
+
+  \setlength{\leftskip}{0pt}}
+
+
+\newpage\empty% we need a new page so that the index entries on the last
+% page get written out to the right file.
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead{}
+\fancyfoot{}
+% \renewcommand{\footrulewidth}{0.4pt}
+\renewcommand\headrule{}
+% \fancyfoot[C]{Appellant's Appendix page \thepage: \leftmark\firstrightmark}
+%\renewcommand{\subsectionmark}[1]{\markright{/#1}} % Pick up non-first subsections
+
+% Place a label on each page so that we can reference the page numbers.
+% Use code from https://tex.stackexchange.com/a/25113/135718
+\newcounter{includepdfpage}
+\newcounter{currentpagecounter}
+\newcommand{\addLabelsToAllIncludedPages}[1]{%
+   \refstepcounter{includepdfpage}%
+   \stepcounter{currentpagecounter}%
+   \label{#1.\thecurrentpagecounter}}%
+
+% Note that the page label, the toc label, the linkname, and the filename all match. 
+\newcommand{\myincludepdf}[2]{% 1:  reference label, 2: toc fields
+  \setcounter{currentpagecounter}{0}%
+  \includepdf[frame,scale=0.86,pages=-,pagecommand=\addLabelsToAllIncludedPages{#1},link=true,linkname=#1,addtotoc={#2,#1}]%
+  {appendix/#1.pdf}}%
+  
+% \renewcommand{\sectionmark}[1]{\markboth{#1}{}}% must put the first subsection
+% \extramarks{Tax Tribunal Docket}{}
+% \myincludepdf{mttdocket}{1,section, 1, Tax Tribunal Docket}
+
+% \extramarks{Board of Review Decision}{}
+% \renewcommand{\sectionmark}[1]{\markboth{Board of Review Decision}{}}%
+% \myincludepdf{boardOfReviewDecision}{1,section,1,Board of Review Decision (docket line 2)}% docket line 2
+
+\fancyhead[C]{\firstxmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}% must put the first subsection
+
+\extramarks{Copy of Order Appealed From}{}
+\myincludepdf{patru2-reconsiderationDenied}{1,section, 1, Copy of Order Appealed From}
+
+\extramarks{Copy of 2nd Court of Appeals Opinion (2020)}{}
+\myincludepdf{patru2}{1,section, 1, Copy of 2nd Court of Appeals Opinion (2020)}
+
+\extramarks{Copy of 1st Court of Appeals Opinion (2020)}{}
+\myincludepdf{patru1}{1,section, 1, Copy of 1st Court of Appeals Opinion (2018)}
+
+% \section{Copy of Order Appealed From}
+% \includepdf[frame,scale=0.7,pagecommand={},pages=-]{appendix/patru2-reconsiderationDenied.pdf}
+% \section{Copy of Court of Appeals' 2nd Opinion (2020)}
+% \includepdf[pages=-]{appendix/patru2.pdf}
+% \section{Copy of Court of Appeals' 1st Decision (2018)}
+% \includepdf[pages=-]{appendix/patru1.pdf}
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+\end{document}
