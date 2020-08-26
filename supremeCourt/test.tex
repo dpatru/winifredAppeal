@@ -1,0 +1,162 @@
+%
+% This is one of the samples from the lawtex package:
+% http://lawtex.sourceforge.net/
+% LawTeX is licensed under the GNU General Public License 
+%
+\providecommand{\documentclassflag}{}
+\documentclass[12pt,\documentclassflag]{michiganCourtOfAppealsBrief}
+%\documentclass{article}
+
+% for striking a row in a table, see https://tex.stackexchange.com/a/265728/135718
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
+\makeandletter% use \makeandtab to turn off
+
+% allow footnote refs, see https://tex.stackexchange.com/a/35044/135718
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+\usepackage[modulo]{lineno}% use \linenumbers to show line numbers, see https://texblog.org/2012/02/08/adding-line-numbers-to-documents/
+
+% from https://tex.stackexchange.com/a/313337/135718
+\usepackage{enumitem,amssymb}
+\usepackage{pdfpages}
+\usepackage{extramarks}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{hyperref}
+\RequirePackage{xr}
+\externaldocument{appendix}
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+
+% allow underscores in words
+\chardef\_=`_% https://tex.stackexchange.com/a/301984/135718 
+
+%%Citations
+ 
+%The command \makeandletter turns the ampersand into a printable character, rather than a special alignment tab \makeandletter
+
+\begin{document}
+\singlespacing%
+%\newcase{jane}{jane v doe}{123 Mich}{345}{(2000)}%
+
+\citecase[jane]{jane v doe, 123 mich 345 (2000)}%
+\citecase[john]{john v doe, 123 mich 345; 2 other 3; 4 other2 5; 5 other3 6 (2000)}%
+%     \let\reporters\empty\let\startpages\empty%
+% \parseCitations{1 mich 2; 3 2nd 4}
+% Reporters are: \reporters.
+% Startpages are: \startpages.
+\pincite{jane}{2}.
+
+
+\begin{centering}
+\bf\scshape State of Michigan\\In the Michigan Supreme Court
+
+\rm 
+
+\makeandtab
+\setlength{\tabcolsep}{20pt}%
+\begin{tabular}{p{.4\textwidth} p{.4\textwidth}}
+%\cline{1-2}
+  {~
+
+  \raggedright Daniel Patru,\par
+  \hfill\textit{Petitioner/Appellant,}
+  \vspace{.5\baselineskip}\par
+  vs\par
+  \vspace{.5\baselineskip}
+  \raggedright City of Wayne,\par
+  \hfill\textit{Respondent/Appellee.}
+  
+  ~} &  {~
+       \par\par
+       % \hfill
+       Supreme Court No. \underline{\hspace{5em}}\par
+       % \hfill
+       Court of Appeals No. 346894\par
+       %\hfill
+       Lower Court No. 16-001828-TT\par\vspace{\baselineskip}
+
+       % \hfill \raggedleft\textbf{Motion and Brief for Reconsideration}\vspace{.5\baselineskip}\par
+%       \hfill \textbf{Proof of Service}\newline      
+  ~}
+  \\ \cline{1-2}\vspace{2mm}\\
+
+  \vspace{3em}\\
+  
+  \multicolumn{2}{c}{\textbf{Reply to Answer to Leave to Appeal}}\\
+  {~ 
+  \vspace{3em}
+  
+  Daniel Patru (P74387) \newline%
+  3309 Solway\newline%
+  Knoxville, TN 37931\newline%
+  (734) 274-9624\newline%
+  dpatru@gmail.com\newline\newline%
+  ~} & {~ %\par~\par
+       \vspace{3em}
+       
+  Stephen J. Hitchcock (P15005)\newline
+  John C. Clark (P51356) \newline
+  Geoffrey S. Wagner (P70839)\newline
+  \emph{Attorneys for Respondent-Appellee}\newline
+Giarmarco, Mullins \& Horton, P.C.\newline
+101 W. Big Beaver Road, 10 th floor\newline
+Troy, MI 48084\newline
+(248) 457-7024\newline
+sjh@gmhlaw.com\newline
+~}
+\end{tabular}
+\makeandletter
+\par\vspace{\baselineskip}\vspace{\baselineskip}\vspace{\baselineskip}
+
+%\textbf{ORAL ARGUMENT REQUESTED}
+
+
+\end{centering}
+
+\pagestyle{romanparen}
+\pagenumbering{roman}
+
+
+\newpage 
+
+\section*{Table of Contents}
+
+\tableofcontents
+
+
+\newpage
+\tableofauthorities
+
+%\pagestyle{plain}
+%\pagenumbering{arabic}
+
+%Sets the formatting for the entire document after the front matter
+\parindent=2.5em
+% \setlength{\parskip}{1.25ex plus 2ex minus .5ex} 
+% \setstretch{1.45}
+\doublespacing
+% \linenumbers
+
+
+
+\section{Order Appealed From and Basis of Jurisdiction}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+\end{document}
