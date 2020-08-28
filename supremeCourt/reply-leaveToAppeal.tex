@@ -7,6 +7,8 @@
 \documentclass[12pt,\documentclassflag]{michiganCourtOfAppealsBrief}
 %\documentclass{article}
 
+\usepackage{soul}% see https://alexwlchan.net/2017/10/latex-underlines/
+\setuldepth{Berlin} % see https://alexwlchan.net/2017/10/latex-underlines/
 \usepackage[super]{nth}% Format ordinal numbers, first = \nth{1}, second = \nth{2}. See https://tex.stackexchange.com/a/4119/135718.
 
 % for striking a row in a table, see https://tex.stackexchange.com/a/265728/135718
@@ -264,7 +266,15 @@
   \newstatute{MCR 7.305(B)(5)(a)}{}
   \newstatute{MCR 7.305(B)(5)(b)}{}
 % (6)   in an appeal from the Attorney Discipline Board, the decision is clearly erroneous and will cause material injustice.
+
+% MCR 7.305(E) Reply. The appellant may file 1 signed copy of a reply within 21 days after service of the answer, along with proof of its service on all other parties. The reply must:
+% (1) contain only a rebuttal of the arguments in the answer;
+% (2) include a table of contents and an index of authorities; and
+% (3) be no longer than 10 pages, exclusive of tables, indexes, and appendixes.
+  \newstatute{MCR 7.305(E)}{}
+  
 } % end makeatletter block
+
 
 \def\mathieuGast{\cite[s]{MCL 211.27(2)}}%
 
@@ -592,13 +602,13 @@ sjh@gmhlaw.com\newline
 
 \section{Reply}
 
+Appellee filed its Answer to Appellant's Leave to Appeal on August 13, 2020. Appellant files this Reply under \cite{MCR 7.305(E)}, within the 21-day deadline.
+
 \begin{todolist}
 %\item add references to standard for accepting cases
 \item one idea per paragraph
-\item Review for content: incorporate the 750 words and keep notes into body.
 \item Review for accuracy: Read the answer, marking all assertions, and then make sure they are addressed in the reply.
 \item Write an introduction in the Reply section.
-\item Write a relief section.
 \item Review for structure. Can you make the argument clearer?
 \item Review for wording. Are you using the right words?
 \item Review for errors. Did you spell everything correct? 
@@ -606,8 +616,6 @@ sjh@gmhlaw.com\newline
 \item Send a copy for review to Tim and Delia.
 \item Efile it.
 \end{todolist}
-
-Summarize
 
 \subsection{This Court should hear this case because it represents a common situation}
 
@@ -626,32 +634,37 @@ While the house is falling into disrepair, the taxing authority continues to ass
 
 Appellant believes that this situation is common; he is counsel to five tax-tribunal cases (18-002532, 18-002570, 18-002661, 18-002662, and 18-002664) that are waiting for the outcome of this case, because they involve this situation and the same issues.%\footnote{Tax Tribunal cases 18-002532, 18-002570, 18-002661, 18-002662, and 18-002664 involve the same situation as this case and are currently being held in abeyance pending this case's resolution.}
 
-Although the factual situation of this case is common, the approach taken by the tax tribunal is new. The way cases like this were usually handled is detailed in the \cite{STC Bulletin 7 of 2014}.\footnote{STC Bulletin 7 of 2014 was superceded by STC Bulletin 7 of 2020 because the Mathieu-Gast Statute was amended to include alternative energy systems. Other than being updated to reflect the amended statute, the 2020 bulletin is the essentially same as the 2014 bulletin. (The only additional change is that the 2020 bulletin adds underlining to the third paragraph in the section ``Calculating New and Loss for Assessment and Equalization Purposes'' but does not change the wording.)} The bulletin at paragraphs 3 and 4 under the section ``General Information'' requires that assessors  determine the true cash value of repairs by performing before-repair and after-repair appraisals. This allows the assessor to fulfill the statute's requirement to first determine and then ``indicate on the assessment roll'' the value added by the repairs. Appellant's Question Presented asks this Court to endorse this approach. 
+Although the factual situation of this case is common, the approach taken by the tax tribunal is new: it has no support in caselaw and it contradicts the \cite{STC Bulletin 7 of 2014}.\footnote{STC Bulletin 7 of 2014 was superceded by STC Bulletin 7 of 2020 because the Mathieu-Gast Statute was amended to include alternative energy systems. Other than being updated to reflect the amended statute, the 2020 bulletin is the essentially same as the 2014 bulletin. (The only additional change is that the 2020 bulletin adds underlining to the third paragraph in the section ``Calculating New and Loss for Assessment and Equalization Purposes'' but does not change the wording.)} The bulletin at paragraphs 3 and 4 under the section ``General Information'' requires that assessors  determine the true cash value of repairs by performing before-repair and after-repair appraisals. This allows the assessor to fulfill the statute's requirement to ``indicate on the assessment roll'' the value added by the repairs. Appellant's Question Presented asks this Court to endorse this approach. 
 
-In this case, the tax tribunal has departed from the STC's guidance\footnote{Neither the tax tribunal nor explicitly acknowledged that they were departing from the STC's guidance but their opinions make it clear that they do. The tax tribunal addresses this in footnote 7 of its \cite{Tribunal's Denial of Reconsideration 2}\ where it quotes \cite{STC Bulletin 7 of 2014}\ out of context and then asserts that ``STC guidance lacks the force of law.'' The court of appeals claims that it is in accord with the STC but, as pointed out in
+The tax tribunal has come up with several exceptions to the statute which avoid the STC's approach.%
+\footnote{Neither the tax tribunal nor explicitly acknowledged that they were departing from the STC's guidance but their opinions make it clear that they do. The tax tribunal addresses this in footnote 7 of its \cite{Tribunal's Denial of Reconsideration 2}\ where it quotes \cite{STC Bulletin 7 of 2014}\ out of context and then asserts that ``STC guidance lacks the force of law.'' The court of appeals claims that it is in accord with the STC but, as pointed out in
   % \pincite{Motion to COA for Reconsideration}{5}, and
   \pincite{Leave to Appeal}{17}, it also reads the STC's bulletin out of context.}
-and come up with several exceptions to the statute which avoid the STC's approach. The first exception was that the statute does not apply to properties in substandard condition. This was rejected by the court of appeals in \cite{Patru I}. On remand, the tribunal found two more exceptions which were then endorsed by the court of appeals in \cite{Patru II}:
+The first exception was that the statute does not apply to properties in substandard condition. This was rejected by the court of appeals in \cite{Patru I}. On remand, the tribunal found two more exceptions which were then affirmed by the court of appeals in \cite{Patru II}:
 
 \begin{enumerate}
 \item {\bfseries The uncapping exception}: Mathieu-Gast does not apply to repairs done after a sale but before tax day (December 31) because the property's taxable value is uncapped for the tax year following a transfer.
-\item {\bfseries The prior assessment exception}: Mathieu-Gast does not apply if the prior year's assessed value supports the assessed value.
+\item {\bfseries The prior assessment exception}: Mathieu-Gast does not apply if the prior year's assessed value supports the contested assessed value.
 %\item {\bfseries The Government sale exception}: The tribunal may reject 
 \end{enumerate}
 
 Both of these exceptions are new. Neither the tax tribunal nor the court of appeals nor Appellee cite any caselaw in support. Appellant believes that these new approaches are wrong and asks this Court to overrule them and confirm that application of Mathieu-Gast requires before-repair and after-repair appraisals.
-The fact that this situation is a common one and likely to reoccur makes it important for this Court to hear this case now, while the errors are still in their infancy, rather than after the errors have been entrenched in many cases.
+The fact that this factual situation is a common one and likely to reoccur makes it important for this Court to hear this case now, while the errors are still in their infancy, rather than after the errors have been entrenched in many cases.
 
 \subsection{Appellee's defense of the uncapping exception is wrong both as a statement of law and as a summary of the argument of the court of appeals}
 
+\pincite{Answer}{7}, defends the uncapping exception by claiming it is required by the text:
 
-Appellee's defense of the uncapping exception is wrong both as a statement of law and as a summary of the argument of the court of appeals.
-Appellee writes that the court of appeals ``correctly observed'' that the statute's \underline{words} [emphasis added]
-% ``The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs . . . until the property is sold,''
-\emph{requires} [emphasis by Appellee] determination of the TCV ``on the basis of its fair market value as of December 31, if the property was sold earlier that year.'' \pincite{Answer}{7}.
+\begin{quote}
+  As this Court correctly observed in its 2/18/20 Opinion, the text of § 27(2)
+\ul{\emph{\textbf{requires}} municipalities to ``determine the TCV of the subject property on the basis of its fair market
+  value as of December 31,''if the property was sold earlier that year.}
+\end{quote}
 
-To the contrary, the plain language of the statute requires nonconsideration ``until the property is sold,'' that is, there must be a sale \emph{after} the repairs to end nonconsideration. Ending nonconsideration because of a sale \emph{before} the repairs (earlier that year)  violates the plain words of the statute.
-The court of appeals admits as much on pages 3-4 of its opinion, ``While MCL 211.27(2) does not expressly provide that it does not apply to ``normal repairs'' performed during a year when ownership of property is transfered (i.e., the taxable value becomes uncapped), the statute must be read in conjunction with other provisions of the General Property Tax Act . . .''%
+But the plain language of the statute requires nonconsideration ``until the property is sold,'' that is, there must be a sale \emph{after} the repairs to end nonconsideration. Ending nonconsideration because of a sale earlier that year, \emph{before} the repairs, is a violation of the statute.
+The court of appeals admits that the words of the statute do not help it on pages 3-4 of its opinion:
+
+\begin{quote}While MCL 211.27(2) does not expressly provide that it does not apply to ``normal repairs'' performed during a year when ownership of property is transfered (i.e., the taxable value becomes uncapped), the statute must be read in conjunction with other provisions of the General Property Tax Act~.~.~.%
 %Thus the court of appeals admits that the words of the statute do not support its position %Rather than relying on the words of the statute, the court of appeals ignores them
 %and instead grounds its uncapping exception in other parts of the GPTA.
 \footnote{To support the uncapping exception, the court of appeals relies on a provision in the next section of the GPTA, \cite{MCL 211.27a(3)}, which implements Proposal A's uncapping: ``the property’s taxable value for
@@ -659,23 +672,43 @@ the calendar year following the year of the transfer is the property’s state e
 the calendar year following the transfer.'' \pincite{Patru II}{4}.
 
 As pointed out in the \pincite{Leave to Appeal}{18}, and more extensively in the \pincite{Motion to COA for Reconsideration}{4-5}, the court of appeals errs when it equates true cash value with fair market value ``regardless of any `normal repairs' made by petitioner . . .'' \pincite{Patru II}{5}. True cash value is defined in \cite{MCL 211.27}, which includes the Mathieu-Gast Statute, \mathieuGast. Thus, as used in the GPTA, the value due to normal repairs is never included in the true cash value until the property is sold.}
+\end{quote}
 
 It is unclear what the litigation strategy of Appellee's counsel is, given the fact they rely on a legal argument which court of appeals admits does not support its case, while not asserting the court of appeals's own legal argument. Whatever their strategy, this Court is safe to conclude that at this stage (leave for appeal), the legal argument for appellee's position is shaky.
+
+% Appellee's defense of the uncapping exception is wrong both as a statement of law and as a summary of the argument of the court of appeals.
+
+% Not 
+% Appellee writes that the court of appeals ``correctly observed'' that the statute's \underline{words} [emphasis added]
+% % ``The assessor shall not consider the increase in true cash value that is a result of expenditures for normal repairs . . . until the property is sold,''
+% \emph{requires} [emphasis by Appellee] determination of the TCV ``on the basis of its fair market value as of December 31, if the property was sold earlier that year.'' \pincite{Answer}{7}.
+
+% To the contrary, the plain language of the statute requires nonconsideration ``until the property is sold,'' that is, there must be a sale \emph{after} the repairs to end nonconsideration. Ending nonconsideration because of a sale \emph{before} the repairs (earlier that year)  violates the plain words of the statute.
+% The court of appeals admits as much on pages 3-4 of its opinion, ``While MCL 211.27(2) does not expressly provide that it does not apply to ``normal repairs'' performed during a year when ownership of property is transfered (i.e., the taxable value becomes uncapped), the statute must be read in conjunction with other provisions of the General Property Tax Act . . .''%
+% %Thus the court of appeals admits that the words of the statute do not support its position %Rather than relying on the words of the statute, the court of appeals ignores them
+% %and instead grounds its uncapping exception in other parts of the GPTA.
+% \footnote{To support the uncapping exception, the court of appeals relies on a provision in the next section of the GPTA, \cite{MCL 211.27a(3)}, which implements Proposal A's uncapping: ``the property’s taxable value for
+% the calendar year following the year of the transfer is the property’s state equalized valuation for
+% the calendar year following the transfer.'' \pincite{Patru II}{4}.
+
+% As pointed out in the \pincite{Leave to Appeal}{18}, and more extensively in the \pincite{Motion to COA for Reconsideration}{4-5}, the court of appeals errs when it equates true cash value with fair market value ``regardless of any `normal repairs' made by petitioner . . .'' \pincite{Patru II}{5}. True cash value is defined in \cite{MCL 211.27}, which includes the Mathieu-Gast Statute, \mathieuGast. Thus, as used in the GPTA, the value due to normal repairs is never included in the true cash value until the property is sold.}
+
+% It is unclear what the litigation strategy of Appellee's counsel is, given the fact they rely on a legal argument which court of appeals admits does not support its case, while not asserting the court of appeals's own legal argument. Whatever their strategy, this Court is safe to conclude that at this stage (leave for appeal), the legal argument for appellee's position is shaky.
 
 \subsection{The prior assessment exception violates the plain language of Mathieu-Gast and the tribunal's duty to make an independent determination}
 %\subsection{Mathieu-Gast is violated when normal repairs are ignored}
 
 Appellee claims that the fact that the ``repairs had no bearing, whatsoever, on respondent's assessment . . .  renders [Appellant's] arguments moot.'' \pincite{Answer}{8}.
-But fact that the repairs had no bearing on the assessment, that the repairs were ignored, is a flaw in the opinion, not a winning feature. 
+But the fact that the repairs had no bearing on the assessment, that the repairs were ignored, is a \emph{flaw} in the opinion, not a winning feature. 
 % In other words, the fact that there were repairs was essentially completely ignored in the determination of the assessment. This is a problem with the court of appeals's opinion, not a feature.
-Mathieu-Gast's plain language does not permit normal repairs to be ignored. Instead, the value of the repairs must be determined and ``indicated on the assessment roll'' and the pre-repair value must be used for assessment purposes until the property is sold.
+Mathieu-Gast's plain language does not permit normal repairs to be ignored. Instead, the value of the repairs must be ``indicated on the assessment roll'' and the pre-repair value must be used for assessment purposes until the property is sold.
 
 The court of appeals relies on the prior year's assessed value to avoid Mathieu-Gast, what I have named ``the prior assessment exception.'' The exception works by assuming that the prior year's assessment is correct and then ignoring Mathieu-Gast if the true cash value at issue is the same, adjusted for inflation. %
 %\footnote{As pointed out in  the \pincite{Leave to Appeal}{17}, the tribunal used the prior year's TCV in two ways: First, the tribunal found that the assessor did not consider the value added by the repairs because she simply adjusted the previous year's TCV for inflation without regard to repairs. Second and alternatively, the tribunal determined that the value of the repairs was zero because the prior TCV, when the property was unrepaired, is the same, adjusted for inflation, as the current TCV, when the property is repaired.}%
 %\footnote{The prior assessment exception can be viewed either as 1) an exception or 2) an application of the statute which results in no tax benefit. As an exception, the assessor satisfies the statute because she previously believed the property was in good condition, so she does not have to consider repairs to justify the TCV at issue. As an application of the statute, the previous year's TCV is presumed to be the value of the house before the repairs, thus forcing the true cash value repairs to be zero. (The value of the repairs is the difference between the value after the repair and the value before the repairs.) It is unclear to Appellant which interpretation the tax tribunal and court of appeals is making. But neither interpretations can stand in light of the plain language and independent determination arguments made in this section.}
 Contrary to Appellee's assertion in its \pincite[s]{Answer}{8}, this violates rather than meets the requirement that the tribunal make an independent determination.
 
-This requirement was expressed in \pincite{Great Lakes Div of  Nat'l Steel Corp}{389-390; 672-673}\footnote{Appellant's \pincite{Leave to Appeal}{13-14}, cites \cite{Jones & Laughlin}\ which also lists the same three approaches to valuation at page 353 and also makes it clear that the tribunal violated its duty of independent determination when it ``simply accepted respondent's  assessment without discussing why the assessment reflected the true cash value of the property.'' \pincite{Jones & Laughlin}{355-356}.}:
+The independent determination requirement was expressed in \pincite{Great Lakes Div of  Nat'l Steel Corp}{389-390; 672-673}\footnote{Appellant's \pincite{Leave to Appeal}{13-14}, cites \cite{Jones & Laughlin}\ which also lists the same three approaches to valuation at page 353 and also makes it clear that the tribunal violated its duty of independent determination when it ``simply accepted respondent's  assessment without discussing why the assessment reflected the true cash value of the property.'' \pincite{Jones & Laughlin}{355-356}.}:
 
 \begin{quotation}
   The Tax Tribunal is under a duty to apply its expertise to the facts of a case in order to determine the appropriate method of arriving at the true cash value of property, utilizing an approach that provides the most accurate valuation under the circumstances. . . .
@@ -683,36 +716,44 @@ This requirement was expressed in \pincite{Great Lakes Div of  Nat'l Steel Corp}
   The three most common approaches for determining true cash value are the capitalization-of-income approach, the sales-comparison or market approach, and the cost-less-depreciation approach. However, variations of these approaches and entirely new methods may be useful if found to be accurate and reasonably related to fair market value. [cleaned up]
 \end{quotation}
 
-Thus an independent determination refers to using an appraisal approach that is ``accurate and reasonably related to fair market value'' such as capitalization-of-income, sales-comparison, or cost-less-depreciation. The prior assessment exception is not such an appraisal approach.\footnote{The assessment is the \emph{result} from a mass-appraisal computer program. A ``mass-appraisal cost approach'' can be a valid approach, but the record card for the relevant year and all the calculations must be provided. See Stephen Lasher, ``\href{https://youtu.be/kPClBCIlW6U?t=315}{STC - Defending your Assessment in a Tax Tribunal Small Claims Hearing}'', https://youtu.be/kPClBCIlW6U?t=315 (viewed August 25, 2020). Here no such documentation for the prior year's assessment was in evidence.} Thus the tribunal's use of a prior assessment exception violated its duty to make an independent determination of the true cash value.
+Thus an independent determination refers to using an appraisal approach that is ``accurate and reasonably related to fair market value'' such as capitalization-of-income, sales-comparison, or cost-less-depreciation. The prior assessment exception is not such an appraisal approach.\footnote{The assessment is the \emph{result} from a mass-appraisal computer program. A ``mass-appraisal cost approach'' can be a valid approach, but the record card for the relevant year and all the calculations must be provided. See Stephen Lasher, ``\href{https://youtu.be/kPClBCIlW6U?t=315}{STC - Defending your Assessment in a Tax Tribunal Small Claims Hearing}'', https://youtu.be/kPClBCIlW6U?t=315 (viewed August 25, 2020). Here no such documentation for the prior year's assessment was in evidence.} In this case, reliance on the prior year's assessment is particularly unreliable because the assessor did not consider the actual condition of the property but rather she used mass appraisal which ``does not account for properties one-by-one'', but rather ``{\em assumes} that properties are in `average' condition.'' \pincite{FOJ 2}{4}\ (emphasis added).
+ 
+Thus the tribunal's use of a prior assessment exception violated its duty to make an independent determination of the true cash value.
 
-Not only is the prior assessment exception a violation of the duty of independent determination, but, as pointed out in Appellant's \pincite{Leave to Appeal}{15}, it is also problematic in two other ways. First, an uncontested assessment is not particularly reliable for valuing a property that needs repairs because assessors use mass appraisal which, as the assessor testified in this case, ``does not account for properties one-by-one'', but rather ``{\em assumes} that properties are in `average' condition.'' \pincite{FOJ 2}{4}\ (emphasis added). And second, allowing a tribunal to start its analysis with a prior assessment and then simply adjust for inflation would perpetuate error because petitioner cannot contest the prior year's true cash value. By the time an petitioner files an appeal, the time for appealing the prior year's assessment has already passed.
+% Not only is the prior assessment exception a violation of the duty of independent determination, but, as pointed out in Appellant's \pincite{Leave to Appeal}{15}, it is also problematic in two other ways. First, an uncontested assessment is not particularly reliable for valuing a property that needs repairs because assessors use mass appraisal which, as the assessor testified in this case, ``does not account for properties one-by-one'', but rather ``{\em assumes} that properties are in `average' condition.'' \pincite{FOJ 2}{4}\ (emphasis added). And second, allowing a tribunal to start its analysis with a prior assessment and then simply adjust for inflation would perpetuate error because petitioner cannot contest the prior year's true cash value. By the time an petitioner files an appeal, the time for appealing the prior year's assessment has already passed.
 
 \subsection{This case satisfies the grounds requirements of MCR 7.305(B)}
 
-Appellee asserts at \pincite{Answer}{5-6}\ that this case does not satisfy the grounds requirement of \cite{MCR 7.305(B)}. But as shown above, the court of appeals in this case interprets \mathieuGast\ in a way that clearly violates the plain language of the statute. The court of appeals in \cite{Patru I}\ reversed the tribunal for making this mistake citing \pincite{Mich Ed}{218}, ``nothing will be read into a clear statute that is not within the manifest intention of the Legislature as derived from the language of the statute itself.'' \pincite{Patru II}{5}. This is a ``legal principle of major significance to the state's jurisprudence,'' \cite{MCR 7.305(B)(3)}. This Court should uphold this principle in this case. This Court may view this case as conflicting with the  court of appeals cases which uphold this principle, so it may take the case on \cite{MCR 7.305(B)(5)(b)}.
+Appellee asserts at \pincite{Answer}{5-6}\ that this case does not satisfy the grounds requirement of \cite{MCR 7.305(B)}. But as shown above, the court of appeals in this case interprets \mathieuGast\ in a way that clearly violates the plain language of the statute. The court of appeals in \cite{Patru I}\ reversed the tribunal for making this mistake citing \pincite{Mich Ed}{218}, ``nothing will be read into a clear statute that is not within the manifest intention of the Legislature as derived from the language of the statute itself.'' \pincite{Patru II}{5}. This is a ``legal principle of major significance to the state's jurisprudence'' which satisfies \cite{MCR 7.305(B)(3)}. %This Court should uphold this principle in this case.
+This Court may also view this case as conflicting with the  court of appeals cases which uphold this principle, so it may take the case on \cite{MCR 7.305(B)(5)(b)}.
 
-Furthermore as shown above, the prior assessment exception invented by the tribunal and upheld by the court of appeals violates the plain language principle and the rule that the tribunal must make an independent determination. This satisfies
+Furthermore as shown above, the court of appeals violates the principle that the tribunal must make an independent determination of the true cash value as required by \cite{Jones & Laughlin}\ and \cite{Great Lakes Div of Nat'l Steel Corp}.
+This also satisfies
 \cite{MCR 7.305(B)(3)}\ 
 and \cite{MCR 7.305(B)(5)(b)}\ as above.
 
-Furthermore to the extent that the interpretation of the Mathieu-Gast Act, a statute more than forty years old, is of significant public interest, this case satisfies \cite{MCR 7.305(B)(2)}.
+Furthermore to the extent that the interpretation of the Mathieu-Gast Act, a statute more than forty years old and just recently amended to include alternative energy, is of significant public interest, this case satisfies \cite{MCR 7.305(B)(2)}.
 
-Finally Appellee asserts that the MTT's assessment would not cause material injustice because the amount in question here is a TCV increase of \$2,400. \pincite{Answer}{6}. Actually, the TCV in dispute is the difference between the unrepaired house (\$32,000) and the repaired house (\$50,400). The tax on the repaired house would be 57.5\% more than on the unrepaired house. The deprivation of the protections of the Mathieu-Gast Act thus does cause Appellant material injustice and as the court of appeals is clearly erroneous, this Court may take this case under \cite{MCR 7.305(B)(5)(a)}.
+Finally Appellee asserts that the MTT's assessment would not cause material injustice because the amount in question here is a TCV increase of \$2,400. \pincite{Answer}{6}. Actually, the TCV in dispute is the difference between the unrepaired house (\$32,000) and the repaired house (\$50,400). The tax on the repaired house would be 57.5\% more than on the unrepaired house. Thus the deprivation of the protections of the Mathieu-Gast Act causes Appellant material injustice and as the court of appeals is clearly erroneous, this Court may take this case under \cite{MCR 7.305(B)(5)(a)}.
 
 
 \subsection{The Law of the Case}
 
-Appellee discusses the law of the case at \pincite{Answer}{7}. Although Appellant believes that \cite{Patru II}\ violated the law of the case expressed in \cite{Patru I},\footnote{As explained in his \pincite{Motion to COA for Reconsideration}{6-7}, Appellant believes that \pincite{Bennett}{501}\ teaches that the law of the case bars even correct arguments if they could have been brought up in the first appeal. Here the court in \cite{Patru II}\ violated the law of the case because it accepted the tribunal's uncapping and prior assessment exceptions even though they could have been presented in the first appeal.} he did not make this argument in his \cite{Leave to Appeal}. Appellant believes that this Court's limited and valuable time would be best spent on laying out the correct application of Mathieu-Gast, rather than simply correcting the outcome in this case only.
+Appellee discusses the law of the case at \pincite{Answer}{7}. Although Appellant believes that \cite{Patru II}\ violated the law of the case expressed in \cite{Patru I},\footnote{As explained in his \pincite{Motion to COA for Reconsideration}{6-7}, Appellant believes that \pincite{Bennett}{501}\ teaches that the law of the case bars even correct arguments if they could have been brought up in the first appeal. Here the court in \cite{Patru II}\ violated the law of the case because it accepted the tribunal's uncapping and prior assessment exceptions even though they could have been presented in the first appeal.} he did not make this argument in his \cite{Leave to Appeal}. Appellant believes that this Court's limited and valuable time would be best spent on laying out the correct application of Mathieu-Gast, rather than simply correcting the outcome in this one case.
 
 
 \section{Summary}
 
 \begin{enumerate}
-\item This Court should take this case \emph{because}\ its situation is ``garden-variety.'' This situation has already occurred again as several cases are waiting for resolution of this case. 
+\item This Court should take this case \emph{because}\ its situation is ``garden-variety.'' The law in this case is a precedent. And other cases are already waiting on the rule from this case.
+  
 \item While the situation is common, the tax tribunal's approach in creating two new exceptions to Mathieu-Gast is new and at odds with the STC. Therefore it is important that this Court clarify the law in this area.
+
 \item Appellee's plain language defense of the uncapping exception is undermined by the court of appeals itself. Furthermore, Appellee has chosen not to defend the court of appeals's own arguments for the uncapping exception.
+
 \item The prior assessment exception also violates the plain language of Mathieu-Gast as well as the tribunal's duty to make an independent determination, as laid out in \cite{Jones & Laughlin}\ and \cite{Great Lakes Div of Nat'l Steel Corp}. 
 %\item Losing this case will cause Appellee material injustice through 57\% higher yearly property tax. Also, it will establish a precedent that will result in similar injustice to other taxpayers in similar situations.
+
 \item This case satisfies the grounds requirement of \cite{MCR 7.305(B)}.
 \end{enumerate}
 
