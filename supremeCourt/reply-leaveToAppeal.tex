@@ -7,6 +7,8 @@
 \documentclass[12pt,\documentclassflag]{michiganCourtOfAppealsBrief}
 %\documentclass{article}
 
+\usepackage[super]{nth}% Format ordinal numbers, first = \nth{1}, second = \nth{2}. See https://tex.stackexchange.com/a/4119/135718.
+
 % for striking a row in a table, see https://tex.stackexchange.com/a/265728/135718
 \usepackage{tikz}
 \usetikzlibrary{tikzmark}
@@ -501,8 +503,7 @@
   John C. Clark (P51356) \newline
   Geoffrey S. Wagner (P70839)\newline
   \emph{Attorneys for Respondent-Appellee}\newline
-Giarmarco, Mullins \& Horton, P.C.\newline
-101 W. Big Beaver Road, 10 th floor\newline
+101 W. Big Beaver Road, \nth{10} floor\newline
 Troy, MI 48084\newline
 (248) 457-7024\newline
 sjh@gmhlaw.com\newline
